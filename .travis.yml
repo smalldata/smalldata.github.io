@@ -1,14 +1,18 @@
 language: python
+
 python:
-- '3.7'
+  - '3.7'
+
 dist: xenial
+
 branches:
   only:
   - master
-install:
-- pip install pelican bulrush webassets markdown ghp-import
-- npm install -g less
-script:
+  install:
+  - pip install pelican bulrush webassets markdown ghp-import
+  - npm install -g less
+
+  script:
 - rm -fr pelican-plugins
 - git clone https://github.com/getpelican/pelican-plugins.git
 - make publish
@@ -20,4 +24,4 @@ notifications:
 
 env:
   global:
-- secure: Mow7bobvFkOl4fN5ijdJV+bfUBG/pIwIEvrVbYJImU5lX9Y4WzTc0sGD3I1X4DxxcnIiv+PG2KvQQMyR0n4JMQIOaqqmqCgdSh+kaSehn/MAPRhDyGkJYY/5YHkLOxe1t9QsfEalcpvBPfsVhzOga1H6yTNCdo2gUpYkgpeIkPa+8wkDyrnMLaZTZ08rLml9M2kPwPlyBrNKcZIpWh4c1Fm5SPfeAV/N3Zx1ipT6zFI26P6WtOg7jPeJ7yQZRiIAuiQuhZJ9b6zv0UZPulBWUH5hn9aKOClT9OW+WVcw7blm+bvFW1Z9dgu0++zyVyCOWAMw0jBW5Pefipj1/V0Ql+DGrXKjl8VhW3RlVy/VGEECbB7ckg7N0g+ju8Ag4hXGpv4i18lA0diOD4iNzMWFmDsC8JMfo8uJKmGjS+UtHwY46q7w++aGsgeWxXmA3kCPCqkf0XC5XmPulDrlL2TN/vzJkPgzyQSL08s9v97os+M8PpmbHOPwqSGJYfNGcEdSXki/JCtZZ6tRmc50+Wr8pFIyoWYXTXd8mHzqE/z8WZ1dnA5FADjle8e2RhZy931gQB7YfMAi29IBorSTbRM/bmkqZvVUd+Yhzya2v09Igt5pUvC+undQ/b/dIoju2GwBQ3+886T5HeZD9+86n1+UYV3IIPT7W4clWoOXNvU6vM4=
+    secure: MVq1L0a3+pMGEUsj/ZSSHdaVynGYo91LHVVlPuc2abkyKcm8bewgCiNqexF1eTYWWyEuCNu8z/H3sF0PQJrFwycV1hjbe3P1ftMKsUSqBou+otHLDV3Zl/aymTtxdcWJmuPopQni/GCNy+MYqMI4KlJ8OouXk9gu5rIVhwPeMgV6SgNCTVRSee/IC5fQ0KjiJM/+CIC9GRoXjGRmpik4J0O3Z7XCBNo7/Po5H+cFxjWNKpqtNgRt6rhKA8+XK2kEXEaXs+JSg7ONJQL4yK1TdZq40GMU9v/vmK0eu4cqNAC6k14V4y0GcFUDC+gDf2QY8iPxEKCEA8N2wZ+CEDcnS4x5KWJN9I+DK/6EVLt8bTUcSeS5HJE/bkjZYuKcSorAmp9Lo6HE8EctB6hTQ/W4IIKMkcE+IYoRmqcdlBAxXCUyD3JJiYCUR5vMeDcVUf1Y9OnnBFL7rlYpDAnCKal9eGwDEx6sCsnJkqwe+YL64CO0v0pb5H0pcY9N/eBgOFekweChY4DP0iKqzPJ8oJTnaPrT8vkZXV7/L9334mhAlT0j975fcamGrhHlC7m5V7HoohsBDAsIS0DK88HZxqVfIVt77atyUlQYTjGtjIKAwLd1dG7alSRarhGpG2CFzwkYi9V4SuZqMGI4r9Qms3lVj0rbT3hpRQcKdEI8YseOVuk=
