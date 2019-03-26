@@ -1,4 +1,4 @@
-Title: Hiring healthy (at a cost to diversity?)
+Title: Healthy hiring (at a cost to diversity?)
 Date: 2019-03-26 12:00
 Category: work
 Tags: startup, jobs, diversity 
