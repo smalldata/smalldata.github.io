@@ -9,6 +9,5 @@
 /venv3.7/
 /node_modules/
 *.code-workspace
-package-lock.json
 .vscode
 INFO.txt
