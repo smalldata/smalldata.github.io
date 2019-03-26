@@ -21,7 +21,13 @@ DEFAULT_DATE = 'fs'
 # Appearance
 THEME = bulrush.PATH
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['assets','sitemap']
+PLUGINS = [
+    'assets',
+    'sitemap',
+    'gzip_cache',
+    'minify'
+    ]
+
 JINJA_ENVIRONMENT = bulrush.ENVIRONMENT
 JINJA_FILTERS = bulrush.FILTERS
 

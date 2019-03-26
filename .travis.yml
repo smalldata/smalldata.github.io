@@ -6,7 +6,7 @@ branches:
     only:
         - master
 install:
-    - 'pip install pelican bulrush webassets markdown ghp-import'
+    - 'pip install pelican bulrush webassets markdown ghp-import pelican-minify'
     - 'npm install -g less'
 script:
     - 'rm -fr pelican-plugins'
