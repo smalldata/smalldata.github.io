@@ -9,11 +9,13 @@ branches:
   - master
 install:
 - pip install pelican bulrush webassets markdown ghp-import
-- npm install less
+- npm install -g less
 
 script:
 - rm -fr pelican-plugins
 - git clone https://github.com/getpelican/pelican-plugins.git
+#- ghp-import output -b gh-pages
+#- git push git@github.com:philshem/philshem.github.io.git gh-pages:master
 - make publish github
 dd:
   secure: A4E/GkxJbm21yFKFyKAzglncnqKybvcnwhAeOdFacUA9xNNm+GUkUskjmJQ9GeBCNrw5dXrdow/1UQHyc4d7UiByPrVhXSPpDxY8DN7cpLn0i2mJDHiAHQlpEmBiYvqCkWYTX0KwasYEMb4bZimcnpu8a4ahvOe307MO3+pArwG2oZA130bM+sNygf+y3JUO55O5bC3X8dFqMPcMlu5rygBU6NoRl0ExyRRzT2zYj1IxXcI7UquPoGowfcjo3oeTZ700Qmbjd2Hz0ifZCkdDhVs304hHKtHaPePTpco6wqV6XEHaU8kSTausY1h4X8JfoP1NkTw04XZjmD0Zx4AZAmz6YRV3qOJFYb+nlKABwcJRnLZjb2JcwmhQnf4IG4Grjw9if+aCK+w07ucFMIgX2tU/62+vc3vmNmAxn/uX/1+w+LAvecUPzYfSEy/rahDrNFlwfBYwqk8ASQ54QzO2sAtZ68+lf3deh6cfiRELwv+g6uEH2Vpct6C/WhyhfoqpfBiDIOPtAFCXLM89lmfn+/eI6g2dXGcSS2kcfgoRCXQ0R15jekg4SOFcoWXIBqfJWF2/RHJlc2GAEDtXpCoDgvt2gqPyNgkOk3YI1nJdNdqudIvoE3MggZ+a3/NezxXGFmeyqXWy4GFCdCnfBdcuwygYmG5pHFXY6f7pCbvG/Mo=
