@@ -1,0 +1,38 @@
+Title: Hiring healthy (at a cost to diversity?)
+Date: 2019-03-26 12:00
+Category: work
+Tags: startup, jobs, diversity 
+Slug: smokers-at-work
+Authors: Philip Shemella
+
+
+I recently interviewed for a position with a fast-growing startup in food tech. The position checked all my boxes, and because I didn't make it past the interview stage, the following may be some sour grapes 🍇.
+
+Something in the text of the job posting stood out to me, and has stuck with me the past few months:
+
+> **No smoking:** You never smell like cigarettes and don’t smoke during the day: <s>XYZ</s> is about healthy living.
+
+And because this is Switzerland, also in German:
+
+> **Nichtraucher:** <s>XYZ</s> ist eine Nichtraucher Firma, weshalb das Rauchen während der Arbeitszeit nicht erlaubt ist und Du nie nach Rauch riechen darfst.
+
+and even in French:
+
+> **Non-fumeur :** <s>XYZ</s> est une société “non-fumeur”. Par conséquent fumer durant les heures de travail n’est pas autorisé, tout comme sentir la fumée.
+
+
+# Is hiring only non-smokers a form of discrimination?
+
+## What if instead the job posting had written _our company is about healthy living, and we don't hire overweight people_? Or people who drink excessive energy drinks? Or people who eat junk food?
+
+At what point does _healthy_ hiring become discrimination? I would say that forcing people to hide their behavior, and to not be themselves, in order to gain employment, is a mild form of discrimination. And if it's not discrimination, it's definitely a step toward decreasing diversity in the workplace.
+
+Now... I'm not a cigarette smoker, and I don't like smelling cigarette smoke, and I don't want to be exposed to cigarette smoke at work. But I also want a diverse work environment, where people are comfortable to be themselves. I accept that my co-workers may smoke cigarettes, even during working hours. Life is full of small differences and grievances and part of being a human being, especially when living in a city with so many other human beings, is accepting others as they are, and letting them be free to be themselves.
+
+# 🚭
+
+------
+
+(There may be a trickle of [health benefits](https://tonic.vice.com/en_us/article/xw7agz/four-surprising-potential-health-benefits-of-nicotine) from nicotine.)
+
+
