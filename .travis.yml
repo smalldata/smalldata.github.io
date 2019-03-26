@@ -1,25 +1,23 @@
 language: python
-python: 
-  - "3.7"
-    
-dist: xenial    
-
+python:
+- '3.7'
+dist: xenial
 branches:
   only:
   - master
 install:
 - pip install pelican bulrush webassets markdown ghp-import
 - npm install -g less
-
 script:
 - rm -fr pelican-plugins
 - git clone https://github.com/getpelican/pelican-plugins.git
-#- ghp-import output -b gh-pages
-#- git push git@github.com:philshem/philshem.github.io.git gh-pages:master
-- make publish github
-dd:
-  secure: A4E/GkxJbm21yFKFyKAzglncnqKybvcnwhAeOdFacUA9xNNm+GUkUskjmJQ9GeBCNrw5dXrdow/1UQHyc4d7UiByPrVhXSPpDxY8DN7cpLn0i2mJDHiAHQlpEmBiYvqCkWYTX0KwasYEMb4bZimcnpu8a4ahvOe307MO3+pArwG2oZA130bM+sNygf+y3JUO55O5bC3X8dFqMPcMlu5rygBU6NoRl0ExyRRzT2zYj1IxXcI7UquPoGowfcjo3oeTZ700Qmbjd2Hz0ifZCkdDhVs304hHKtHaPePTpco6wqV6XEHaU8kSTausY1h4X8JfoP1NkTw04XZjmD0Zx4AZAmz6YRV3qOJFYb+nlKABwcJRnLZjb2JcwmhQnf4IG4Grjw9if+aCK+w07ucFMIgX2tU/62+vc3vmNmAxn/uX/1+w+LAvecUPzYfSEy/rahDrNFlwfBYwqk8ASQ54QzO2sAtZ68+lf3deh6cfiRELwv+g6uEH2Vpct6C/WhyhfoqpfBiDIOPtAFCXLM89lmfn+/eI6g2dXGcSS2kcfgoRCXQ0R15jekg4SOFcoWXIBqfJWF2/RHJlc2GAEDtXpCoDgvt2gqPyNgkOk3YI1nJdNdqudIvoE3MggZ+a3/NezxXGFmeyqXWy4GFCdCnfBdcuwygYmG5pHFXY6f7pCbvG/Mo=
+- make publish
+- make github
 
 notifications:
   email:
-    - philshem@pm.me
+  - philshem@pm.me
+
+env:
+  global:
+- secure: Mow7bobvFkOl4fN5ijdJV+bfUBG/pIwIEvrVbYJImU5lX9Y4WzTc0sGD3I1X4DxxcnIiv+PG2KvQQMyR0n4JMQIOaqqmqCgdSh+kaSehn/MAPRhDyGkJYY/5YHkLOxe1t9QsfEalcpvBPfsVhzOga1H6yTNCdo2gUpYkgpeIkPa+8wkDyrnMLaZTZ08rLml9M2kPwPlyBrNKcZIpWh4c1Fm5SPfeAV/N3Zx1ipT6zFI26P6WtOg7jPeJ7yQZRiIAuiQuhZJ9b6zv0UZPulBWUH5hn9aKOClT9OW+WVcw7blm+bvFW1Z9dgu0++zyVyCOWAMw0jBW5Pefipj1/V0Ql+DGrXKjl8VhW3RlVy/VGEECbB7ckg7N0g+ju8Ag4hXGpv4i18lA0diOD4iNzMWFmDsC8JMfo8uJKmGjS+UtHwY46q7w++aGsgeWxXmA3kCPCqkf0XC5XmPulDrlL2TN/vzJkPgzyQSL08s9v97os+M8PpmbHOPwqSGJYfNGcEdSXki/JCtZZ6tRmc50+Wr8pFIyoWYXTXd8mHzqE/z8WZ1dnA5FADjle8e2RhZy931gQB7YfMAi29IBorSTbRM/bmkqZvVUd+Yhzya2v09Igt5pUvC+undQ/b/dIoju2GwBQ3+886T5HeZD9+86n1+UYV3IIPT7W4clWoOXNvU6vM4=
