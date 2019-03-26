@@ -9,6 +9,7 @@ branches:
   - master
 install:
 - pip install pelican ghp-import bulrush webassets markdown
+
 script:
 - make publish github
 dd:
