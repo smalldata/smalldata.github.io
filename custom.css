@@ -1,6 +1,9 @@
+
+/* https://github.com/politiken-journalism/scale-color-perceptual/blob/master/hex/viridis.json */
+
 .hero.is-primary {
-  /* background-color: #551a8b; */
-  background-color: #00d1b2;
+   background-color: #440154; 
+ /* background-color: #00d1b2; */
   color: rgba(255, 255, 255, 0.7);
   padding: 0;
 }
@@ -11,18 +14,19 @@
 }
 
 .hero.is-primary a.navbar-item.is-active, .hero.is-primary a.navbar-item:hover {
-  background-color: #00d1b2;
-  color: white;
+ /* background-color: #00d1b2; */
+ background-color: #3CBB75FF
+ /* color: white; */
 }
 
 footer.footer .github-fork-ribbon-wrapper .github-fork-ribbon {
-  /* background-color: #551a8b; */
-  background-color: #00d1b2;
+   background-color: #440154; 
+ /* background-color: #00d1b2; */
 }
 
 a, .card-content a h3 {
- /* color: #551a8b; */
- color: #00d1b2;
+  color: #440154; 
+ /* color: #00d1b2; */
 }
 
 .menu-list a.is-active {
@@ -69,9 +73,12 @@ article a:hover > code {
 }
 
 #mc_embed_signup_scroll button.is-success {
-  background-color: #00d1b2;
+ /* background-color: #00d1b2; */
+ background-color: #440154;
 }
 
 #mc_embed_signup_scroll .response.is-success {
-    color: #00d1b2;
+    /* color: #00d1b2; */
+    color: #440154; 
+    
 }
