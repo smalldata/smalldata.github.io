@@ -7,7 +7,6 @@
 *.py[cod]
 /output/
 /venv3.7/
-/pelican-plugins/
 *.code-workspace
 package-lock.json
 .vscode
