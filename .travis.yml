@@ -4,14 +4,14 @@ include:
 jobs:
   include:
     - python: 3.7
-
+    
 dist: xenial    
 
 branches:
   only:
   - master
 install:
-- pip install -r requirements.txt
+- pip install pelican bulrush webassets markdown ghp-import
 - npm install
 
 script:
