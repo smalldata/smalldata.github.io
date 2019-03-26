@@ -8,7 +8,7 @@ branches:
   only:
   - master
 install:
-- pip install pelican ghp-import bulrush webassets markdown pelican-extended-sitemap
+- pip install pelican ghp-import bulrush webassets markdown
 
 script:
 - rm -fr pelican-plugins
