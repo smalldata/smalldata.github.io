@@ -21,7 +21,7 @@ DEFAULT_DATE = 'fs'
 # Appearance
 THEME = bulrush.PATH
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['assets','extended-sitemap']
+PLUGINS = ['assets','sitemap']
 JINJA_ENVIRONMENT = bulrush.ENVIRONMENT
 JINJA_FILTERS = bulrush.FILTERS
 
@@ -34,18 +34,17 @@ PAGE_EXCLUDES = ['404.html']
 # SUMMARY_END_MARKER
 
 # sitemap
-EXTENDED_SITEMAP_PLUGIN = {
+SITEMAP = {
+    'format': 'xml',
     'priorities': {
-        'index': 1.0,
-        'articles': 0.8,
-        'pages': 0.5,
-        'others': 0.4
-    },
-    'changefrequencies': {
-        'index': 'daily',
-        'articles': 'weekly',
-        'pages': 'monthly',
-        'others': 'monthly',
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+     },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
     }
 }
 
