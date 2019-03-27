@@ -121,6 +121,8 @@ DEFAULT_PAGINATION = 5
 SLUGIFY_SOURCE = 'basename'
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
+
+ARTICLE_PATHS = ['articles',]
 ARTICLE_URL = 'posts/{slug}/'
 ARTICLE_SAVE_AS = 'posts/{slug}/index.html'
 PAGE_URL = '{slug}.html'
