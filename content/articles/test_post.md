@@ -10,5 +10,3 @@ Summary: This is a test
 # testing an image in pelican
 
 ![Giraffe]({static}/images/giraffe200.jpg)
-
-
