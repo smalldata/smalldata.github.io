@@ -1,6 +1,5 @@
 Title: test post
 Date: 2019-01-01 12:00
-Status: draft
 Category: testing
 Tags: data, template
 Slug: test-post
