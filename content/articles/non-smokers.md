@@ -23,7 +23,7 @@ and even in French:
 
 # Is hiring only non-smokers a form of discrimination?
 
-## What if instead the job posting had written _our company is about healthy living, and we don't hire overweight people_? Or people who drink excessive energy drinks? Or people who eat junk food?
+## What if instead the job posting had written _our company is about healthy living, and we don't hire overweight people_? Or people with body odor due to hormonal or hygiene issues? Or people who eat junk food? Or people who drink excessive energy drinks?
 
 At what point does _healthy_ hiring become discrimination? I would say that forcing people to hide their behavior, and to not be themselves, in order to gain employment, is a mild form of discrimination. And if it's not discrimination, it's definitely a step toward decreasing diversity in the workplace.
 
