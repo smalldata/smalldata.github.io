@@ -30,9 +30,3 @@ At what point does _healthy_ hiring become discrimination? I would say that forc
 Now... I'm not a cigarette smoker, and I don't like smelling cigarette smoke, and I don't want to be exposed to cigarette smoke at work. But I also want a diverse work environment, where people are comfortable to be themselves. I accept that my co-workers may smoke cigarettes, even during working hours. Life is full of small differences and grievances and part of being a human being, especially when living in a city with so many other human beings, is accepting others as they are, and letting them be free to be themselves.
 
 # 🚭
-
-------
-
-(There may be a trickle of [health benefits](https://tonic.vice.com/en_us/article/xw7agz/four-surprising-potential-health-benefits-of-nicotine) from nicotine.)
-
-
