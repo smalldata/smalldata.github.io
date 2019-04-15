@@ -5,6 +5,10 @@ Authors: Philip Shemella
 Summary: Short bio
 
 
-Philip Shemella is a full-stack data science generalist with both enterprise and startup experience. Based in Zürich, Switzerland, he is active in the [open data](https://opendata.stackexchange.com/users/1511/philshem) and data visualization communities.
+It's me, Philip Shemella, a full-stack data science generalist with experience in both startups and enterprise. Based in Zürich, Switzerland, I am active in the [open data](https://opendata.stackexchange.com/users/1511/philshem) and data visualization communities.
 
-Get in touch - I'm always open for small data projects!
+--------
+
+[Get in touch!](mailto:philshem@pm.me) - I'm always open to discuss small data projects!
+
+*Note:* I offer my services to startups and non-profits at either heavily discounted rates or even free, in the case that I support in their mission.
