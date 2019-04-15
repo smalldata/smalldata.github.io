@@ -1,7 +1,7 @@
 Title: Healthy hiring (at a cost to diversity?)
 Date: 2019-03-26 12:00
-Category: work
-Tags: startup, jobs, diversity 
+Category: career
+Tags: hiring, diversity, 1 min read
 Slug: smokers-at-work
 Authors: Philip Shemella
 
