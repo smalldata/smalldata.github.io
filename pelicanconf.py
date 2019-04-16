@@ -23,10 +23,14 @@ THEME = bulrush.PATH
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = [
     'assets',
+#    'better_figures_and_images',
     'sitemap',
     'gzip_cache',
     'minify'
     ]
+
+# Setting for the better_figures_and_images plugin
+#RESPONSIVE_IMAGES = True
 
 JINJA_ENVIRONMENT = bulrush.ENVIRONMENT
 JINJA_FILTERS = bulrush.FILTERS
