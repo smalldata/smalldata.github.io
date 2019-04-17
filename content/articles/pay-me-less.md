@@ -90,11 +90,11 @@ Here's a dataviz that shows a theoretical productivity drop with increasing hour
 
 ![Productivity doesn't scale!]({attach}/images/productivity_dataviz.jpg)
 
-But... hiring is a long-term exercise in risk avoidance. If any one candidate brings a complication, the hiring team will usually go with the safe bet to avoid any future criticism. It's same unspoken selling-point of the Big Four consulting companies: *Choose us, because even when we fail, no one will second guess you*.
+But... hiring is a long-term exercise in risk avoidance. If any one candidate brings a complication, the hiring team will usually go with the safe bet to avoid any future criticism. It's the same unspoken selling-point of the Big Four consulting companies: *Choose us, because even when we fail, no one will second guess you*.
 
 # the challenge moving forward
 
-It turns out that there are literally **zero** open jobs that fit my description. There are a handful of part-time developer jobs, and although I like writing code, my strength is prototyping and analysis, and not shipping apps and websites. There is a handful of part-time jobs for interns or students (I've even applied for some of those). I've tried remote jobs and Upwork, and although neither is panning out, and it would be hard to match a Swiss salary. In the meantime, I'm working on some small freelance projects, but for personal reasons, I don't actively pursuing freelance projects.
+It turns out that there are literally **zero** open jobs that fit my description. There are a handful of part-time developer jobs, and although I like writing code, my strength is prototyping and analysis, and not shipping apps and websites. There is a handful of part-time jobs for interns or students (I've even applied for some of those). I've tried remote jobs and Upwork, and although neither is panning out, and it would be hard to match a Swiss salary. In the meantime, I'm working on some small freelance projects, but for personal reasons, I don't actively pursue freelance projects.
 (*Note*: I offer my services to NGOs at either heavily discounted rates or even free, in the case that I support in their mission.)
 
 I still interview for full-time jobs, and I don't forewarn interviewers of my part-time job requirement. In general, until I have an offer, I try my hardest to not give any reason to not hire me. I do mention that my previous jobs were at 80%, because I have one regular weekday at home with the kids. In one recent interview, they asked *Are you flexible?* I answered *Yes, I'd also be open to 60%.*

@@ -35,7 +35,7 @@ It's anecdata, but I've observed that the jobs advertised as part-time are often
 
 > And a [study](https://academic.oup.com/oxrep/article-abstract/34/3/418/5047377) published last summer in the Oxford Review of Economic Policy—whose lead author, Carl Frey, is the same guy who made the list of the seven hundred and two most computerizable jobs—argues that the robot caravan got Trump elected. Measuring the density of robots and comparing them with election returns, Frey and his colleagues found that “electoral districts that became more exposed to automation during the years running up to the election were more likely to vote for Trump.”
 
-From that aforementioned list, the jobs displaced to due to automation are office admin, sales and service, most of which fall in the "high risk employment" category. That "high risk" category corresponds to 47% of the labor force! Here's the original dataviz:
+From that aforementioned list, the jobs displaced due to automation are office admin, sales and service, most of which fall in the "high risk employment" category. That "high risk" category corresponds to 47% of the labor force! Here's the original dataviz:
 
 ![Probability of computerization dataviz]({attach}/images/probability_of_computerization_dataviz.png)
 ![Probability of computerization legend]({attach}/images/probability_of_computerization_legend.png)
