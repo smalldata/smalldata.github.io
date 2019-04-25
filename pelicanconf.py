@@ -10,7 +10,7 @@ import bulrush
 
 # Base configuration
 AUTHOR = 'Philip Shemella'
-#AVATAR = 'giraffe200.jpg'
+#AVATAR = '.jpg'
 SITENAME = 'Small Data'
 SITESUBTITLE = '“Torture the data, and it will confess to anything.” – Ronald Coase'
 PATH = 'content'
@@ -64,9 +64,14 @@ DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 
 # Feed generation is usually not desired when developing
+#FEED_ALL_ATOM = 'feeds/all.atom.xml'
+#FEED_ALL_RSS = 'feeds/all.rss.xml'
 FEED_ALL_ATOM = None
+FEED_ALL_RSS = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
@@ -88,7 +93,7 @@ SOCIAL = (
     ('Instagram', 'https://instagram.com/philshem'),
     ('GitHub', 'https://github.com/philshem'),
     ('Stack Overflow', 'https://opendata.stackexchange.com/users/1511/philshem'),
-    ('E-mail', 'mailto:philshem@pm.me'),
+    ('E-mail', 'https://mailhide.io/e/2krEd'), #mailto:philshem@pm.me'),
 )
 
 # Other settings
