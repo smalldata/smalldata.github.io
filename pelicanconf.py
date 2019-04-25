@@ -24,6 +24,7 @@ PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = [
     'assets',
 #    'better_figures_and_images',
+    'pelican_youtube',
     'sitemap',
     'gzip_cache',
     'minify'

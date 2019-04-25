@@ -1,5 +1,6 @@
 Title: Healthy hiring (at a cost to diversity?)
 Date: 2019-03-26 12:00
+Modified: 2019-04-25 12:00
 Category: career
 Tags: hiring, diversity, 1 min read
 Slug: smokers-at-work
@@ -30,3 +31,14 @@ At what point does _healthy_ hiring become discrimination? I would say that forc
 Now... I'm not a cigarette smoker, and I don't like smelling cigarette smoke, and I don't want to be exposed to cigarette smoke at work. But I also want a diverse work environment, where people are comfortable to be themselves. I accept that my co-workers may smoke cigarettes, even during working hours. Life is full of small differences and grievances and part of being a human being, especially when living in a city with so many other human beings, is accepting others as they are, and letting them be free to be themselves.
 
 # 🚭
+
+
+-------
+
+*Update:* Here's a more scholarly take on the ethics of not hiring smokers.
+
+"The Ethics of Not Hiring Smokers", [New England Journal of Medicine (2013)](https://www.nejm.org/doi/full/10.1056/NEJMp1301951?query=TOC)
+
+**tl;dr**
+
+> We agree with those polled, believing that categorically refusing to hire smokers is unethical: it results in a failure to care for people, places an additional burden on already-disadvantaged populations, and preempts interventions that more effectively promote smoking cessation.

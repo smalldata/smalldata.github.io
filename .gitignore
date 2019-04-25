@@ -11,3 +11,4 @@
 *.code-workspace
 .vscode
 INFO.txt
+package-lock.json
