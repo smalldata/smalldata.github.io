@@ -1,3 +1,6 @@
 [submodule "bulrush"]
 	path = bulrush
 	url = git@github.com:philshem/bulrush
+[submodule "pelican-plugins"]
+	path = pelican-plugins
+	url = git@github.com:getpelican/pelican-plugins
