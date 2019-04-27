@@ -1,5 +1,5 @@
 Title: Free-fall and Personal Growth
-Date: 2019-04-26 12:00
+Date: 2019-04-27 12:00
 Category: thoughts
 Status: published
 Tags: life lessons, hobbies, 5 min read
