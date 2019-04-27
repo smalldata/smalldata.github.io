@@ -9,6 +9,7 @@ install:
     - 'pip install pelican webassets markdown ghp-import pelican-minify pelican-youtube'
     - 'npm install -g less'
 script:
+    - 'git submodule update --remote'
     - 'cd bulrush && python setup.py install && cd -'
     - 'make publish'
     - 'make github'
