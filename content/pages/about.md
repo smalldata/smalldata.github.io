@@ -1,16 +1,25 @@
-Title: About the author
+Title: About this site
 Date: 2019-01-01 12:00
 Slug: about
 Authors: Philip Shemella
-Summary: Short bio
+Summary: Short bio page
 
+**About the author**
 
 |              | |  |
 :-------------------------:|:-------------------------:|:-------------------------:
-| ![profile photo]({attach}/images/philshem.jpg)  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | It's me, Philip Shemella, a full-stack data science generalist with experience in both startups and enterprise. I have a PhD in computational physics. Based in Zürich, Switzerland, I am active in the [open data](https://opendata.stackexchange.com/users/1511/philshem) and data visualization communities. | 
+| ![profile photo]({attach}/images/philshem.jpg)  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | It's me, Philip Shemella, a full-stack data science and business intelligence professiona, with experience with startups, enterprise and consulting. I have a PhD in computational physics. Based in Zürich, Switzerland, I am active in the [open data](https://opendata.stackexchange.com/users/1511/philshem) and data visualization communities. | 
 
---------
 
 [Get in touch!](https://mailhide.io/e/2krEd) - I'm always open to discuss *small data* projects!
 
 (I offer my services to startups and non-profits at either heavily discounted rates or even free, in the case that I support in their mission.)
+
+--------
+
+**About this site**
+
+Built with Python using the static site generated [Pelican](https://github.com/getpelican/pelican). The theme is [Bulrush](https://github.com/textbook/bulrush), which is based on [Bulma.io](https://bulma.io/).
+
+Browse the [source code](https://github.com/philshem/smalldata.github.io) which is hosted at [Github Pages](https://pages.github.com/) and built automatically after each git push by [Travis-CI](https://travis-ci.org/philshem/smalldata.github.io).
+

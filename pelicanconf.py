@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 import os.path
 
+# local custom submodule installation (not pip)
 import bulrush
 
 # https://github.com/textbook/textbook.github.io-source
