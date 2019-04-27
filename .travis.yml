@@ -10,7 +10,7 @@ install:
     - 'npm install -g less'
 script:
     - 'rm -fr bulrush'
-    - 'git clone https://github.com:philshem/bulrush'
+    - 'git clone https://github.com/philshem/bulrush.git'
     - 'cd bulrush && python setup.py install && cd -'
     - 'rm -fr pelican-plugins'
     - 'git clone https://github.com/getpelican/pelican-plugins.git'
