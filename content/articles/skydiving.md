@@ -3,7 +3,7 @@ Date: 2019-04-27 12:00
 Category: thoughts
 Status: published
 Tags: life lessons, hobbies, 5 min read
-Slug: skydiving-lessons
+Slug: skydiving-freefall
 Authors: Philip Shemella
 
 I'm not a skydiver. I never got a license. It's been ten years since I did my  fifteen measly jumps.
