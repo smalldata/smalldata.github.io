@@ -1,6 +1,6 @@
-[submodule "bulrush"]
-	path = bulrush
-	url = https://github.com/philshem/bulrush
 [submodule "pelican-plugins"]
 	path = pelican-plugins
 	url = https://github.com/philshem/pelican-plugins
+#[submodule "bulrush"]
+#	path = bulrush
+#	url = https://github.com/philshem/bulrush
