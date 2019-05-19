@@ -5,9 +5,9 @@
 *.swp
 *.out
 *.py[cod]
-/output/
-/venv3.7/
-/node_modules/
+output/
+venv/
+node_modules/
 *.code-workspace
 .vscode
 INFO.txt
