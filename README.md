@@ -1,7 +1,7 @@
 
 
-Homepage of Philip Shemella (https://philshem.github.io, https://smalldata.dev)
+Homepage of Philip Shemella - https://smalldata.dev/about
 
 [![Build Status](https://api.travis-ci.org/philshem/smalldata.github.io.svg?branch=master)](https://travis-ci.org/philshem/smalldata.github.io)
 
-Page uses [Pelican](https://github.com/getpelican/pelican/) with [Bulrush](https://github.com/textbook/bulrush) theme.
+This page is built with [Pelican](https://github.com/getpelican/pelican/) and the [Bulrush](https://github.com/textbook/bulrush) theme.
