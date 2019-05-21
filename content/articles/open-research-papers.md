@@ -350,7 +350,7 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 [www](https://arxiv.org/abs/0903.4570) - 
 [pdf]({attach}/pdfs/2008_Shemella_PhD_Thesis.pdf) -
-[wayback archive]()
+[wayback archive](https://web.archive.org/web/20190521092517/https://smalldata.dev/posts/open-access-research/2008_Shemella_PhD_Thesis.pdf)
 
 
 ```
