@@ -72,7 +72,7 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 [www](https://pubs.acs.org/doi/10.1021/jp300786s) -
 [pdf]({attach}/pdfs/jp300786s.pdf) - 
-archive
+[wayback archive])(https://web.archive.org/web/20190521091453/https://smalldata.dev/posts/open-access-research/jp300786s.pdf)
 
 ```
 @article{pmid22624664,
@@ -96,7 +96,7 @@ archive
 
 [www](https://pubs.acs.org/doi/abs/10.1021/jp207589p) -
 [pdf]({attach}/pdfs/jp207589p.pdf) -
-archive
+[wayback archive](https://web.archive.org/web/20190521091545/https://smalldata.dev/posts/open-access-research/jp207589p.pdf)
 
 ```
 @article{pmid22026429,
@@ -119,7 +119,7 @@ archive
 
 [www](https://pubs.acs.org/doi/abs/10.1021/jp111318d) - 
 [pdf]({attach}/pdfs/jp111318d.pdf) -
-archive
+[wayback archive](https://web.archive.org/web/20190521091621/https://smalldata.dev/posts/open-access-research/jp111318d.pdf)
 
 ```
 @article{pmid21370843,
@@ -144,7 +144,7 @@ archive
 
 [www](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3149237/) - 
 [pdf]({attach}/pdfs/2011_Shemella_Biophys_J.pdf) ([supplement]({attach}/pdfs/2011_Shemella_Biophys_J_Supp.pdf)) -
-archive
+[wayback archive](https://web.archive.org/web/20190521091804/https://smalldata.dev/posts/open-access-research/2011_Shemella_Biophys_J.pdf)
 
 ```
 @article{pmid21539790,
@@ -168,7 +168,8 @@ archive
 
 [www](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3034788/) - 
 [pdf]({attach}/pdfs/2011_Pereira_JMB.pdf) -
-archive
+[wayback archive](https://web.archive.org/web/20190521091832/https://smalldata.dev/posts/open-access-research/2011_Pereira_JMB.pdf)
+
 
 
 ```
@@ -194,7 +195,8 @@ archive
 
 [www](https://doi.org/10.1007/s00410-010-0505-3) - 
 [pdf]({attach}/pdfs/2010_Thomas_CMP.pdf) -
-archive
+[wayback archive](https://web.archive.org/web/20190521091901/https://smalldata.dev/posts/open-access-research/2010_Thomas_CMP.pdf)
+
 
 ```
 @article{thomas2010titaniq,
@@ -218,7 +220,8 @@ archive
 
 [www](https://pubs.acs.org/doi/abs/10.1021/ja904318w) - 
 [pdf]({attach}/pdfs/2009_Du_JACS.pdf) -
-archive
+[wayback archive](https://web.archive.org/web/20190521091923/https://smalldata.dev/posts/open-access-research/2009_Du_JACS.pdf)
+
 
 
 ```
@@ -242,7 +245,8 @@ archive
 
 [www](https://aip.scitation.org/doi/abs/10.1063/1.3070238) - 
 [pdf]({attach}/pdfs/2009_Shemella_APL.pdf) -
-archive
+[wayback archive](https://web.archive.org/web/20190521091945/https://smalldata.dev/posts/open-access-research/2009_Shemella_APL.pdf)
+
 
 ```
 @article{doi:10.1063/1.3070238,
@@ -267,7 +271,8 @@ archive
 
 [www](https://doi.org/10.1063/1.2761531) -
 [pdf]({attach}/pdfs/2007_Shemella_APL.pdf) -
-archive
+[wayback archive](https://web.archive.org/web/20190521092014/https://smalldata.dev/posts/open-access-research/2007_Shemella_APL.pdf)
+
 
 
 ```
@@ -293,7 +298,8 @@ archive
 
 [www](https://www.ncbi.nlm.nih.gov/entrez?Db=pubmed&Cmd=ShowDetailView&uid=17085503) -
 [pdf]({attach}/pdfs/2007_Shemella_Biophysical_Journal.pdf) -
-archive
+[wayback archive](https://web.archive.org/web/20190521092041/https://smalldata.dev/posts/open-access-research/2007_Shemella_Biophysical_Journal.pdf)
+
 
 
 ```
@@ -318,7 +324,8 @@ archive
 
 [www](https://link.springer.com/chapter/10.1007/978-90-481-3575-2_16) -
 [pdf]({attach}/pdfs/Chapter1.pdf) -
-archive
+[wayback archive](https://web.archive.org/web/20190521092107/https://smalldata.dev/posts/open-access-research/Chapter1.pdf)
+
 
 
 ```
@@ -342,8 +349,9 @@ archive
 	Department of Physics, Applied Physics & Astronomy, Rensselaer Polytechnic Institute
 
 [www](https://arxiv.org/abs/0903.4570) - 
-[pdf](2008_Shemella_PhD_Thesis.pdf) -
-archive
+[pdf]({attach}/pdfs/2008_Shemella_PhD_Thesis.pdf) -
+[wayback archive]()
+
 
 ```
 @phdthesis{phdthesis,
