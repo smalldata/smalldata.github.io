@@ -2,7 +2,7 @@ Title: Open Access Research
 Date: 2019-05-21 12:00
 Category: research
 Status: published
-Tags: opendata, academic, publishing, 3 min read
+Tags: opendata, academic, publishing, 2 min read
 Slug: open-access-research
 Authors: Philip Shemella
 
@@ -62,6 +62,8 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 
 ---
+
+##Bibliography
 
 ###Research Papers
 
