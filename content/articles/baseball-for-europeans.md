@@ -1,5 +1,5 @@
 Title: Baseball, for Europeans
-Date: 1999-06-07 12:00
+Date: 2019-06-07 12:00
 Category: fun
 Status: published
 Tags: fun, sports, 8 min read
@@ -18,27 +18,19 @@ Baseball is more international than you may think. In addition to the US, it's a
 
 In fact, the idea for this article came from a confused chat message in a WhatsApp group from an Australian couple at a baseball game in San Diego.
 
-![WhatsApp screenshot]({attach}/images/baseball_whatsapp.jpg)
+![image: WhatsApp screenshot]({attach}/images/baseball_whatsapp.jpg)
 
 As one of the only US-Americans in the group chat, and born and raised into a baseball family, I felt that I needed to share my opinion about *discovering* baseball as an adult:
 
-> Baseball is a beautiful game of strategy and statistics but I wouldn’t want to have to learn the rules as an adult. Like grammar in a foreign language, it’s built on exceptions to the rule, and those exceptions have their own exceptions (for example, three strikes and your \[sic\] out, EXCEPT if you hit a foul ball, EXCEPT EXCEPT if that foul ball was hit while bunting).
+> Baseball is a beautiful game of strategy and statistics but I wouldn’t want to have to learn the rules as an adult. Like grammar in a foreign language, it’s built on exceptions to the rule, and those exceptions have their own exceptions (for example, three strikes and you're out, EXCEPT if you hit a foul ball, EXCEPT EXCEPT if that foul ball was hit while bunting).
 
-If you keep reading, I'll explain more about the rules that govern the beautiful game of baseball.
+If you keep reading, I'll explain more about the rules that govern the beautiful game of baseball. To make an article about baseball for non-baseball people less boring, I'll sprinkle in baseball gifs. Here's Ozzie Smith's trademark backflip.
 
-![Baseball is boring]({attach}/images/baseball_sleeping.gif)
-
-To make an article about baseball for non-baseball people less boring, I'll sprinkle in baseball gifs. Here's Ozzie Smith's trademark backflip.
-
-![Ozzie Smith backflip]({attach}/images/baseball_ozzie_smith_backflip.gif)
+![gif: Ozzie Smith backflip]({attach}/images/baseball_ozzie_smith_backflip.gif)
 
 If that's too much athleticism for your pre-conceived notions about baseball players being out of shape, how about this *professional athlete*?
 
-![#dadbod]({attach}/images/baseball_dadbod.gif)
-
-And for you soccer fans, here's the baseball version of an own-goal header. The ball bounces off Jose Canseco's head and over the wall for a home run.
-
-![Header home run]({attach}/images/baseball_jose_canseco_headball.gif)
+![gif: #dadbod]({attach}/images/baseball_dadbod.gif)
 
 Now to the serious stuff. **How can you learn the rules of baseball as an adult?**
 
@@ -46,14 +38,13 @@ Now to the serious stuff. **How can you learn the rules of baseball as an adult?
 
 Professional Major League Baseball (MLB) has 162 regular season games, and a never-ending post-season of playoffs and a "world" championship that follow. Then comes Christmas, and the pre-season "Spring Training" starts. Yes, it's a summer sport with a season so long that it can snow at both the beginning AND end of the season.
 
-![Snowy game]({attach}/images/baseball_snow.gif)
+![gif: snowy game]({attach}/images/baseball_snow.gif)
 
-The earliest game will start on the East Coast of the US is 1pm, meaning 7pm in Central Europe. Those games are often on Sundays, and it's not a bad time to watch a game if nothing else is on. The remaining 5 to 6 games on the East Coast start at 7pm local time, so 1am in Europe. Games from the West Coast of the US that start at 7pm there will start at 3am in Europe. That means at 6am, when the rest of us are dreaming about waking up, you could turn off the TV and question the decisions you've made in your life. One-hundred-and-sixty-one more to go.
+The earliest a normal game will start on the East Coast of the US is 1pm, meaning 7pm in Central Europe. Those games are often on Sundays, and it's not a bad time to watch a game if nothing else is on. The remaining 5 to 6 games on the East Coast start at 7pm local time, so 1am in Europe. Games from the West Coast of the US that start at 7pm there will start at 3am in Europe. That means at 6am, when the rest of us are dreaming about waking up, you could turn off the TV and question the decisions you've made in your life. One-hundred-and-sixty-one more games to go.
 
 If you've read this far, and you have the existential craving to know how and why baseball functions, *keep reading*.
 
-![umpire flex]({attach}/images/baseball_umpire_flex.gif)
-
+![gif: umpire flex]({attach}/images/baseball_umpire_flex.gif)
 
 # the written rules
 
@@ -75,32 +66,18 @@ The home team, who is hosting the game, bats in the bottom half or second part o
 
 ## 3 outs
 
-Each inning, whether the game has 9, or 4.5, or ∞, has three outs. An out can come from: (1) a strikeout, where the batter fails to put the ball into play. I'll explain more later, but for now, here's a swinging strikeout.
+Each inning, whether the game has 9, or 4.5, or ∞, has six outs. Each team in their half-inning gets three outs. An out can come from: (1) a strikeout, where the batter fails to put the ball into play - more later about strikeouts. The second way to record an out is ground-out, where the ball is hit on the ground and the defensive player either (2a) tags the player with the ball either with the glove hand if the ball is in the glove, or with the ball in the non-glove hand, or (2b) throws to a base where a runner is forced to run and the player who catches the ball touches the base with any part of his body (perhaps a toe).
 
-![strike out]({attach}/images/baseball_strike_out.gif)
+Here's an example of a pathetic ground-out that was an embarrassment to even the player's mom and grandma.
 
-The second way to record an out is ground-out, where the ball is hit on the ground and the defensive player either (2a) tags the player with the ball either with the glove hand if the ball is in the glove, or with the ball in the non-glove hand, or (2b) throws to a base where a runner is forced to run and the player who catches the ball touches the base with perhaps a foot while having the ball simultaneously in possession.
-
-Here's an example of a weak ground-out. His mom and grandma are not impressed.
-
-![ground out]({attach}/images/baseball_ground_out.gif)
+![gif: ground out]({attach}/images/baseball_ground_out.gif)
 
 
 The third way to record an out is a fly-out (3a) to the outfield or a pop-out (3b) to the infield. In this case, the ball is hit in the air and caught by a player without touching the ground.
 
-![fly out]({attach}/images/baseball_nice_catch.gif)
+It's possible to get more than one out per play, for example a triple play, where all three outs of the inning are recorded in one play. It's not very common. Double plays are more common and a great way to kill your team's momentum by canceling out baserunners.
 
-It's possible to get more than one out per play, for example a triple play, where all three outs of the inning are recorded in one play. It's not very common.
-
-![triple play]({attach}/images/baseball_triple_play.gif)
-
-
-Double plays are more common and a great way to kill your team's momentum.
-
-![double play]({attach}/images/baseball_double_play.gif)
-
-
-So three outs to an inning, and three ways to make an out. If you're a baserunner, you can also make an out by being tagged out when you aren't touching the base. But let's skip those for now.
+So three outs to a half-inning, and three ways to make an out. If you're a baserunner, you can also make an out by being tagged out when you aren't touching the base. But let's skip that for now.
 
 + EXCEPT: ground-outs (out-type #2) must be inside the field of play, or between the painted white lines that are first and third base.
 
@@ -110,20 +87,20 @@ So three outs to an inning, and three ways to make an out. If you're a baserunne
 
 + EXCEPT EXCEPT: Foul balls in the air that are first caught by a fan do not count as outs.
 
-![Foul ball?]({attach}/images/baseball_fan_interference.gif)
+![gif: Foul ball?]({attach}/images/baseball_fan_interference.gif)
 
 
 + EXCEPT EXCEPT EXCEPT: If the ball is touched by a fan in the field of play, and affects the course of the game, the umpire can decide what to do. It's called "[spectator interference](https://en.wikipedia.org/wiki/Interference_(baseball)#Spectator_interference)" and as stadiums have recently been built to put fans close to the action, it happens often.
 
 One [infamous example](https://en.wikipedia.org/wiki/Steve_Bartman_incident) prolonged the 71 year-old "[Curse of the Billy Goat](https://en.wikipedia.org/wiki/Curse_of_the_Billy_Goat)" on the Chicago Cubs, and made Steve Bartman a pariah in Chicago. Did I mention that baseball players and fans are [superstitious](https://en.wikipedia.org/wiki/Baseball_superstition)? Did you know if you wear a "[rally cap](https://en.wikipedia.org/wiki/Rally_cap)", you can impact the outcome of the game from the sidelines?
 
-![Rally Cap]({attach}/images/baseball_rally_cap.gif)
+![image: Rally Cap]({attach}/images/baseball_rally_cap.jpg)
 
-With all those exceptions, the one thing is constant. An inning has three outs. Right?
+With all those exceptions, the one thing is constant. A half-inning has three outs. Right?
 
 + EXCEPT: An inning can have a [four outs](https://en.wikipedia.org/wiki/Fourth_out). I had never heard of this rule, so I asked a serious baseball fan.
 
-![Fourth out]({attach}/images/baseball_fourth_out.png)
+![image: Fourth out]({attach}/images/baseball_fourth_out.png)
 
 Let's skip this one.
 
@@ -157,8 +134,6 @@ Well, that's true most of the time.
  The rule is called "[the dropped third strike](https://en.wikipedia.org/wiki/Uncaught_third_strike)", if you insist to know more. Here's the full 184 page rulebook ([pdf](http://mlb.mlb.com/documents/0/8/0/268272080/2018_Official_Baseball_Rules.pdf
 )), in case you can stand any more.
 
-![Baseball is boring]({attach}/images/baseball_boring.gif)
-
 The rulebook contains such thrilling excerpts as:
 
 > **3.07  Pitcher’s Glove(a) *The pitcher’s glove may not, exclusive of piping, be white,gray, nor, in the judgment of an umpire, distracting in any manner. No fielder, regardless of position, may use a fielding glove that falls within a PANTONE® color set lighter than the current 14-series.*
@@ -175,11 +150,11 @@ If the batter is hit by the pitched ball, then he/she is awarded first base.
 
 # the unwritten rules
 
-Wikipedia has an entire article about the [unwritten rules of baseball](https://en.wikipedia.org/wiki/Unwritten_rules_of_baseball). Many are about respecting the game, and violating the rules can get cause the opposing pitcher to hit one of your players with the ball.
+Wikipedia has an entire article about the [unwritten rules of baseball](https://en.wikipedia.org/wiki/Unwritten_rules_of_baseball). Many are about respecting the game, and violating the rules can get cause the opposing pitcher to intentionally hit one of your players with the ball.
 
 + EXCEPT: the pitcher shouldn't throw at the head of the hitter
 
- In turn, throwing at a hitter can also cause a bench-clearing brawl. I don't condone violence, but all I can say is that if you charge the mound, at least know the fighting skills of the player you are charging.
+ In turn, throwing at a hitter can also cause a bench-clearing brawl. I don't condone violence, but all I can say is that if you charge the mound, at least know the skills of the player you are going after.
 
 ![headlock]({attach}/images/baseball_nolan_ryan_headlock.gif)
 
@@ -192,7 +167,9 @@ At this point, you may feel like you are in a headlock and being punched repeate
 Let's agree that it's easier to ignore all the rules, written and unwritten, and their exceptions, and their exceptions to their exceptions.
 We can still enjoy the game. Go to a stadium, enjoy the summer weather, cheer with the fans, eat a hot dog, drink a beer, and if you do all of this in in Milwaukee, Wisconsin, you may even get to see sausages in a footrace.
 
-![Sausage race]({attach}/images/baseball_sausage_race.gif)
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ns-sDcIMoLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ---
 
@@ -219,10 +196,18 @@ We can still enjoy the game. Go to a stadium, enjoy the summer weather, cheer wi
 
 ---
 
-### What happens when animals come on the field?
+### What happens when animals enter the field of play?
 
 <div class="youtube" align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uW3ZjbUJsVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+---
+
+### What is the baseball version of soccer's own goal, when scored by a header?
+
+<div class="youtube" align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QixQMUu4CKI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ---
@@ -254,6 +239,4 @@ We can still enjoy the game. Go to a stadium, enjoy the summer weather, cheer wi
 ---
 
 Thanks for reading.
-
-![young me]({attach}/images/baseball_me.jpg)
 
