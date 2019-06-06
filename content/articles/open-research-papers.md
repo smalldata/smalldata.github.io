@@ -61,20 +61,36 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 # *Stop reading! The remaining text is for search engine indexing.*
 
 
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
 ---
 
 ##Bibliography
 
 ###Research Papers
 
-2012 P.T. Shemella, T. Laino, O. Fritz, A. Curioni
-	Understanding the self-healing hydrophobic recovery of high-voltage insulators
-	Journal of Physical Chemistry B 116 (24), 7351–7356
+2012
+
+P.T. Shemella, T. Laino, O. Fritz, A. Curioni
+
+Understanding the self-healing hydrophobic recovery of high-voltage insulators
+
+Journal of Physical Chemistry B 116 (24), 7351–7356
 
 
 [www](https://pubs.acs.org/doi/10.1021/jp300786s) -
 [pdf]({attach}/pdfs/jp300786s.pdf) - 
-[wayback archive])(https://web.archive.org/web/20190521091453/https://smalldata.dev/posts/open-access-research/jp300786s.pdf)
+[wayback archive](https://web.archive.org/web/20190521091453/https://smalldata.dev/posts/open-access-research/jp300786s.pdf)
 
 ```
 @article{pmid22624664,
@@ -92,9 +108,14 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 ---
 
-2011	P.T. Shemella, T. Laino, O. Fritz, A. Curioni
-	Surface dynamics of amorphous polymers used for high-voltage insulators
-	Journal of Physical Chemistry B 115 (46), 13508–13512
+2011
+
+P.T. Shemella, T. Laino, O. Fritz, A. Curioni
+
+Surface dynamics of amorphous polymers used for high-voltage insulators
+
+Journal of Physical Chemistry B 115 (46), 13508–13512
+
 
 [www](https://pubs.acs.org/doi/abs/10.1021/jp207589p) -
 [pdf]({attach}/pdfs/jp207589p.pdf) -
@@ -115,9 +136,13 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 ---
 
-2011 	P.T. Shemella, T. Laino, O. Fritz, A. Curioni
-	Molecular motion of amorphous silicone polymers
-	Journal of Physical Chemistry B 115 (12) 2831–2835
+2011
+
+P.T. Shemella, T. Laino, O. Fritz, A. Curioni
+
+Molecular motion of amorphous silicone polymers
+
+Journal of Physical Chemistry B 115 (12) 2831–2835
 
 [www](https://pubs.acs.org/doi/abs/10.1021/jp111318d) - 
 [pdf]({attach}/pdfs/jp111318d.pdf) -
@@ -139,9 +164,13 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 ---
 
 
-2011 	P.T. Shemella, N. Topilina, I. Soga, B. Pereira, G. Belfort, M. Belfort, S.K. Nayak
-	Electronic structure of neighboring extein residue modulates intein C-terminal cleavage activity
-	Biophysical Journal 100 (9), 2217–2225
+2011
+
+P.T. Shemella, N. Topilina, I. Soga, B. Pereira, G. Belfort, M. Belfort, S.K. Nayak
+
+Electronic structure of neighboring extein residue modulates intein C-terminal cleavage activity
+
+Biophysical Journal 100 (9), 2217–2225
 
 
 [www](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3149237/) - 
@@ -164,14 +193,18 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 ---
 
 
-2011	B. Pereira*, P.T. Shemella*, G. Amitai, G. Belfort, S.K. Nayak, M. Belfort
-	Spontaneous proton transfer to a conserved intein residue determines on-pathway protein splicing
-	Journal of Molecular Biology 406 (3), 430–442 (*Joint first-authorship)
+2011
+
+B. Pereira*, P.T. Shemella*, G. Amitai, G. Belfort, S.K. Nayak, M. Belfort
+
+Spontaneous proton transfer to a conserved intein residue determines on-pathway protein splicing
+
+Journal of Molecular Biology 406 (3), 430–442 (*Joint first-authorship)
+
 
 [www](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3034788/) - 
 [pdf]({attach}/pdfs/2011_Pereira_JMB.pdf) -
 [wayback archive](https://web.archive.org/web/20190521091832/https://smalldata.dev/posts/open-access-research/2011_Pereira_JMB.pdf)
-
 
 
 ```
@@ -190,9 +223,13 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 ---
 
 
-2010	J.B. Thomas, E.B. Watson, F.S. Spear, P.T. Shemella, S.K. Nayak, A. Lanzirotti
-	TitaniQ under pressure: the effect of pressure and temperature on the solubility of Ti in quartz
-	Contributions to Mineralogy and Petrology 160 (5), 743–759
+2010
+
+J.B. Thomas, E.B. Watson, F.S. Spear, P.T. Shemella, S.K. Nayak, A. Lanzirotti
+
+TitaniQ under pressure: the effect of pressure and temperature on the solubility of Ti in quartz
+
+Contributions to Mineralogy and Petrology 160 (5), 743–759
 
 
 [www](https://doi.org/10.1007/s00410-010-0505-3) - 
@@ -216,14 +253,18 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 ---
 
 
-2009	Z. Du, P.T. Shemella, Y. Liu, S. McCallum, B. Pereira, S.K. Nayak, G. Belfort, M. Belfort, C. Wang
-	Highly conserved histidine plays a dual catalytic role in protein splicing: A pKa shift mechanism
-	Journal of the American Chemical Society 131 (32), 11581–11589
+2009
+
+Z. Du, P.T. Shemella, Y. Liu, S. McCallum, B. Pereira, S.K. Nayak, G. Belfort, M. Belfort, C. Wang
+
+Highly conserved histidine plays a dual catalytic role in protein splicing: A pKa shift mechanism
+
+Journal of the American Chemical Society 131 (32), 11581–11589
+
 
 [www](https://pubs.acs.org/doi/abs/10.1021/ja904318w) - 
 [pdf]({attach}/pdfs/2009_Du_JACS.pdf) -
 [wayback archive](https://web.archive.org/web/20190521091923/https://smalldata.dev/posts/open-access-research/2009_Du_JACS.pdf)
-
 
 
 ```
@@ -241,9 +282,14 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 ---
 
-2009	P.T. Shemella, S.K. Nayak
-	Electronic structure and band-gap modulation of graphene via substrate surface chemistry
-	Applied Physics Letters 94, 032101 (cover article)
+2009
+
+P.T. Shemella, S.K. Nayak
+
+Electronic structure and band-gap modulation of graphene via substrate surface chemistry
+
+Applied Physics Letters 94, 032101 (cover article)
+
 
 [www](https://aip.scitation.org/doi/abs/10.1063/1.3070238) - 
 [pdf]({attach}/pdfs/2009_Shemella_APL.pdf) -
@@ -267,9 +313,14 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 ---
 
-2007	P.T. Shemella, Y. Zhang, M. Mailman, P.M. Ajayan, S.K. Nayak
-	Energy gaps in zero-dimensional graphene nanoribbons
-	Applied Physics Letters 91, 042101
+2007
+
+P.T. Shemella, Y. Zhang, M. Mailman, P.M. Ajayan, S.K. Nayak
+
+Energy gaps in zero-dimensional graphene nanoribbons
+
+Applied Physics Letters 91, 042101
+
 
 [www](https://doi.org/10.1063/1.2761531) -
 [pdf]({attach}/pdfs/2007_Shemella_APL.pdf) -
@@ -294,9 +345,14 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 ---
 
-2007	P.T. Shemella, B. Pereira, Y. Zhang, P. van Roey, G. Belfort, S. Garde, S.K. Nayak
-	Mechanism for intein C-terminal cleavage: A proposal from quantum mechanical calculations
-	Biophysical Journal 92 (3), 847–853 (2007)
+2007
+
+P.T. Shemella, B. Pereira, Y. Zhang, P. van Roey, G. Belfort, S. Garde, S.K. Nayak
+
+Mechanism for intein C-terminal cleavage: A proposal from quantum mechanical calculations
+
+Biophysical Journal 92 (3), 847–853 (2007)
+
 
 [www](https://www.ncbi.nlm.nih.gov/entrez?Db=pubmed&Cmd=ShowDetailView&uid=17085503) -
 [pdf]({attach}/pdfs/2007_Shemella_Biophysical_Journal.pdf) -
@@ -320,9 +376,14 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 ###Book Chapter
 
-2010	P.T. Shemella, S.K. Nayak
-	Identifying the reaction mechanisms of inteins with QM/MM multiscale methods
-	Computational Modeling in Biomechanics, 469–489
+2010
+
+P.T. Shemella, S.K. Nayak
+
+Identifying the reaction mechanisms of inteins with QM/MM multiscale methods
+
+Computational Modeling in Biomechanics, 469–489
+
 
 [www](https://link.springer.com/chapter/10.1007/978-90-481-3575-2_16) -
 [pdf]({attach}/pdfs/Chapter1.pdf) -
@@ -347,8 +408,11 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 ###PhD Thesis
 
-2008	First principles study of intein reaction mechanisms
-	Department of Physics, Applied Physics & Astronomy, Rensselaer Polytechnic Institute
+2008
+
+First principles study of intein reaction mechanisms
+
+Department of Physics, Applied Physics & Astronomy, Rensselaer Polytechnic Institute
 
 [www](https://arxiv.org/abs/0903.4570) - 
 [pdf]({attach}/pdfs/2008_Shemella_PhD_Thesis.pdf) -

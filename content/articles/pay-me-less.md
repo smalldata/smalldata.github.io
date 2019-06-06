@@ -1,5 +1,6 @@
 Title: The Case for Part-time
 Date: 2019-04-15 12:00
+Modified: 2019-06-06 12:00
 Category: career
 Tags: career, family, hiring, 5 min read
 Slug: pay-me-less
@@ -104,6 +105,6 @@ I would think my proposition would be interesting for a startup or small company
 
 ----------
 
-As of `.now()` I'm still searching for a position. Want quality work for a part-time salary? [Get in touch!](mailto:philshem@pm.me)
+<s>As of `.now()` I'm still searching for a position. Want quality work for a part-time salary? [Get in touch!](mailto:philshem@pm.me)
 
-**SALE! For a limited time only - 40% off!**
+**SALE! For a limited time only - 40% off!**</s>
