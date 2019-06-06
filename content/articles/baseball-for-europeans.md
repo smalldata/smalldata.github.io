@@ -1,5 +1,5 @@
 Title: Baseball, for Europeans
-Date: 2019-06-07 12:00
+Date: 2019-06-06 12:00
 Category: fun
 Status: published
 Tags: fun, sports, 8 min read
