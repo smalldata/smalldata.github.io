@@ -92,7 +92,7 @@ SOCIAL = (
     ('Instagram', 'https://instagram.com/philshem'),
     ('GitHub', 'https://github.com/philshem'),
     ('Stack Overflow', 'https://opendata.stackexchange.com/users/1511/philshem'),
-    ('E-mail', 'https://mailhide.io/e/2krEd'), #mailto:philshem@pm.me'),
+    ('E-mail', 'mailto:philshem+smalldata@pm.me'), # 'https://mailhide.io/e/2krEd'
 )
 
 # Other settings
