@@ -14,6 +14,7 @@ AUTHOR = 'Philip Shemella'
 #AVATAR = '.jpg'
 SITENAME = 'Small Data'
 SITESUBTITLE = '“Torture the data, and it will confess to anything.” – Ronald Coase'
+SITEURL = 'https://smalldata.dev'
 PATH = 'content'
 TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
@@ -89,11 +90,11 @@ LINKS = (
 # Social widget
 SOCIAL = (
     ('Twitter', 'https://twitter.com/philshem'),
-    ('Instagram', 'https://instagram.com/philshem'),
     ('GitHub', 'https://github.com/philshem'),
     ('Stack Overflow', 'https://opendata.stackexchange.com/users/1511/philshem'),
     ('E-mail', 'mailto:philshem+smalldata@pm.me'), # 'https://mailhide.io/e/2krEd'
 )
+#     ('Instagram', 'https://instagram.com/philshem'),
 
 # Other settings
 #GITHUB_URL = 'https://github.com/textbook/textbook.github.io-source'
