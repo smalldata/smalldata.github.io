@@ -7,6 +7,7 @@
 *.py[cod]
 output/
 venv/
+py37/
 node_modules/
 *.code-workspace
 .vscode

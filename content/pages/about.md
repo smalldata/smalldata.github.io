@@ -7,15 +7,16 @@ Summary: Short bio page
 **About the author**
 
 |              | |  |
-:-------------------------:|:-------------------------:|:-------------------------:
-| ![profile photo]({attach}/images/philshem.jpg)  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | It's me, Philip Shemella, a full-stack data science and business intelligence professiona, with experience with startups, enterprise and consulting. I have a PhD in computational physics. Based in Zürich, Switzerland, I am active in the [open data](https://opendata.stackexchange.com/users/1511/philshem) and [data visualization](https://twitter.com/search?q=from%3Aphilshem%20%23dataviz&src=typd) communities. |
+:-------------------------:|:-------------------------:|:-------------------------
+| ![profile photo]({attach}/images/philshem.jpg)  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | It's me, Philip Shemella, a full-stack data science and business intelligence professional, with experience with startups, civic tech, enterprise and consulting. I have a PhD in computational physics from many years ago. Based in Zürich, Switzerland, I am active in the [open data](https://opendata.stackexchange.com/users/1511/philshem) and [data visualization](https://twitter.com/search?q=from%3Aphilshem%20%23dataviz&src=typd) communities. |
 
+---
 
-[Get in touch!](https://mailhide.io/e/2krEd) - I'm always open to discuss *small data* projects!
+[Get in touch!](mailto:philshem+smalldata@pm.me) - I'm always open to discuss *small data* projects!
 
 (I offer my services to startups and non-profits at either heavily discounted rates or even free, in the case that I support in their mission.)
 
---------
+---
 
 **About this site**
 
