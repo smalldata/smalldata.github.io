@@ -1,17 +1,17 @@
-Title: Data Science and Paw Patrol
-Date: 2018-04-21 12:00
+Title: Data Science and PAW Patrol
+Date: 2001-04-21 12:00
 Status: published
 Category: fun
 Tags: family, data science, 8 minute read
 Slug: paw-patrol
 Authors: Philip Shemella
-Summary: A fun look at Paw Patrol's effect on pet naming
+Summary: A fun look at PAW Patrol's effect on pet naming
 
 ## Step 0. The disclaimers
 
 1. I don't call myself a _data scientist_, but I wanted to share my approach to _data science_. This approach has been worked well for me in my career. There are surely many good approaches, and I don't want to gatekeep any of those.
 
-2. Paw Patrol is a registered trademark of someone else. I don't own any rights to Paw Patrol, although if I did, I probably would be doing something better with my time.
+2. PAW Patrol is a registered trademark of someone else. I don't own any rights to PAW Patrol, although if I did, I probably would be doing something better with my time.
 
 ## Step 1. Start with the science
 
@@ -21,16 +21,16 @@ This is a huge challenge to productionalize data science in a business environme
 
 At a recent (unnamed) employer, we had a big data-engineering effort to rebuild an analyis pipeline. As an analyst, it became slowly clear that with the new pipeline, we could only recreate 5 of the 6 key metrics. I left the company before the proposed workaround was implemented.
 
-For my example of methodology, I'll use [Paw Patrol](https://en.wikipedia.org/wiki/PAW_Patrol). It's a kids' animated TV series. It can be endearing, with the boy Ryder and his pup superheros saving the day, and being appreciated by the humans and animals around Adventure Bay.
+For my example of methodology, I'll use [PAW Patrol](https://en.wikipedia.org/wiki/PAW_Patrol). It's a kids' animated TV series. It can be endearing, with the boy Ryder and his pup superheros saving the day, and being appreciated by the humans and animals around Adventure Bay.
 
-If you take a vote in my household, a consensus of 50% of voters will declare Paw Patrol to be the single best achievement of humanity.
+If you take a vote in my household, a consensus of 50% of voters will declare PAW Patrol to be the single best achievement of humanity.
 
 ![paw patrol team]({attach}/images/paw-patrol-jump-i49016.jpg)
 
 
 ### The question
 
-I was curious - with Paw Patrol hype slowly sweeping the planet since 2013, do we see an increase in dogs named after the crew?
+I was curious - with PAW Patrol hype slowly sweeping the planet since 2013, do we see an increase in dogs named after the crew?
 
 ## Step 2. Curate the data
 
@@ -50,7 +50,7 @@ Only 16k total names between 2017 and 2019. That's not enough dogs when there ar
 
 > A list of active/current Seattle pet licenses, including animal type (species), pet's name, breed and the owner's ZIP code.
 
-This might be a good dataset because records go back to 2000 and are updated through 2019. I can get snapshots before and during the Paw Patrol era. But I counted dogs registered in 2019 and it was 11k. In 2018, 7k. Still not enough.
+This might be a good dataset because records go back to 2000 and are updated through 2019. I can get snapshots before and during the PAW Patrol era. But I counted dogs registered in 2019 and it was 11k. In 2018, 7k. Still not enough.
 
 ### [NYC Dog Licensing Dataset](https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp)
 
@@ -146,9 +146,9 @@ I've removed 2016 and 2017 now too, to try to more clearly show before and after
 
 ## Step 4. Shutting it down
 
-I can't believe I've spent this much time thinking about Paw Patrol. What I want to stress is that when you are working with data, for me it has been essential to 
+I can't believe I've spent this much time thinking about PAW Patrol. What I want to stress is that when you are working with data, for me it has been essential to 
 
-1. Understand the subject matter. In this case, that means passively absorbing all things Paw Patrol.
+1. Understand the subject matter. In this case, that means passively absorbing all things PAW Patrol.
  
 2. Get dirty with the data. If you try to plug an algorithm on top of data, it's unlikely to give any meaningful results. Can you imagine creating a fancy data pipeline that spits out the 3 most popular dog names? `UNKNOWN`, `BELLA` and `NAME NOT PROVIDED`.
 
@@ -165,4 +165,10 @@ And remember--_Whenever there’s trouble, just yelp for help!_
 
 ---
 
-For a less fun look at Paw Patrol's effect on society, take a look at this recent academic paper
+For a less fun look at PAW Patrol's effect on society, take a look at this recent academic paper:
+
+_[“Whenever there’s trouble, just yelp for help”: Crime, conservation, and corporatization in Paw Patrol](https://journals.sagepub.com/doi/abs/10.1177/1741659020903700)_
+
+> I argue that the series suggests to audiences that we can and should rely on corporations and technological advancements to combat crime and conserve, with responsibilized individuals assisting in this endeavor. 
+
+> Ultimately, PAW Patrol echoes core tenets of neoliberalism and encourages complicity in a global capitalist system that (re)produces inequalities and causes environmental harms.
