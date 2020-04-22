@@ -1,5 +1,5 @@
 Title: Data Science and PAW Patrol
-Date: 2001-04-21 12:00
+Date: 2020-04-22 12:00
 Status: published
 Category: fun
 Tags: family, data science, 8 minute read
@@ -9,24 +9,42 @@ Summary: A fun look at PAW Patrol's effect on pet naming
 
 ## Step 0. The disclaimers
 
-1. I don't call myself a _data scientist_, but I wanted to share my approach to _data science_. This approach has been worked well for me in my career. There are surely many good approaches, and I don't want to gatekeep any of those.
+1. I don't call myself a _data scientist_, but other people do, and I wanted to share my approach to _data science_. This approach has worked well for me professionally. There are many good approaches, and I don't want to gatekeep any of those.
 
-2. PAW Patrol is a registered trademark of someone else. I don't own any rights to PAW Patrol, although if I did, I probably would be doing something better with my time.
+2. PAW Patrol is a registered trademark of someone else. I don't own any rights to PAW Patrol. If I did, I would be doing something better with my free time.
 
 ## Step 1. Start with the science
 
-Thinking like a scientist means having a question, and then searching out an answer. Science isn't data-driven, in that the data should only answer the question. And the question should in most every case
+Thinking like a scientist means having a question, and then searching out an answer. Science isn't data-driven, in that the data can provide an answer, but the available data shouldn't suggest the question. At least in most of the cases I can think of.
 
-This is a huge challenge to productionalize data science in a business environment.
+This is a huge challenge to productionalize data science in a business environment. With a recent (unnamed) employer, we had a big data-engineering effort to rebuild an analysis pipeline. As an analyst, it became slowly clear that with the new pipeline, we could only recreate 5 of the 6 key metrics. I left the company before the proposed workaround was implemented.
 
-At a recent (unnamed) employer, we had a big data-engineering effort to rebuild an analyis pipeline. As an analyst, it became slowly clear that with the new pipeline, we could only recreate 5 of the 6 key metrics. I left the company before the proposed workaround was implemented.
+For my example of methodology, I'll use [PAW Patrol](https://en.wikipedia.org/wiki/PAW_Patrol). It's a kids' animated TV series. To describe cast of characters, and the _plot_, here are the lyrics to the theme song:
 
-For my example of methodology, I'll use [PAW Patrol](https://en.wikipedia.org/wiki/PAW_Patrol). It's a kids' animated TV series. It can be endearing, with the boy Ryder and his pup superheros saving the day, and being appreciated by the humans and animals around Adventure Bay.
+> <sub>PAW Patrol, PAW Patrol</sub>
 
-If you take a vote in my household, a consensus of 50% of voters will declare PAW Patrol to be the single best achievement of humanity.
+> <sub>We'll be there on the double</sub>
+
+> <sub>Whenever there's a problem</sub>
+
+> <sub>'Round Adventure Bay</sub>
+
+> <sub>Ryder and his team of pups</sub>
+
+> <sub>Will come and save the day</sub>
+
+> <sub>Marshall, Rubble, Chase</sub>
+
+> <sub>Rocky, Zuma, Skye</sub>
+
+> <sub>Yeah! They're on the way!</sub>
+
+Yeah. It goes on. You get the point. But the show can be endearing, and I think the deeper reason it resonates with kids is because the team is useful and appreciated by the adults they help. But that's a topic for another article.<sup>
+[1]</sup>
+
+If you take a vote in my household, a consensus of 50% of voters will declare PAW Patrol to be the single best achievement of humanity. And it's been decided, by compromise, that if we ever get a pet dog, the name shall be either `Zuma-Marshall`, or `Marshall-Zuma`.
 
 ![paw patrol team]({attach}/images/paw-patrol-jump-i49016.jpg)
-
 
 ### The question
 
@@ -66,13 +84,13 @@ and
 
 > _Each record represents a unique dog license that was active during the year, but not necessarily a unique record per dog, since a license that is renewed during the year results in a separate record of an active license period._
 
-This means that dog-names within a given year may actually be duplicate as well. If this was a real project, in order to fully trust my data, I would first count how many names are repeated. To do this, because there is no column `dog ID` which would unique idenitify a dog, I would have to create a surrogate key based on the columns such as `AnimalBirthMonth`, `AnimalGender` and `BreedName`, and perhaps also the geographical data `Borough` and `ZipCode`.
+This means that dog-names within a given year may actually be duplicate as well. If this was a real project, in order to fully trust my data, I would first count how many names are repeated. To do this, because there is no column `dog ID` which would uniquely identify a dog, I would have to create a surrogate key based on the columns such as `AnimalBirthMonth`, `AnimalGender` and `BreedName`, and perhaps also the geographical data `Borough` and `ZipCode`.
 
-If I cared more about Paw Patrol pet-naming theory, I could build a unified dog-name data-model and combine datasets, and keep looking for new sources to add. But I don't care that much. On to the answer. Let's hope NYC is a trend-setter, when it comes to naming pets after kids' cartoon superheros.
+If I cared more about Paw Patrol pet-naming theory, I could build a unified dog-name data-model and combine datasets, and keep looking for new sources to add. But I don't care that much. On to the answer. Let's hope NYC is a trend-setter -- when it comes to naming pets after kids' cartoon superheros.
 
 ## Step 3. Explore the data
 
-Lots of tools but because I _know_ that I won't productionalize this pipeline, I'm going to dump the data into the commercial BI tool Tableau Desktop. Licenses are expensive, and there are many solid open source tools that will do the job. But the software allows me to do fast visual anaylsis. If sign up for the [free audit of this Coursera](https://www.coursera.org/learn/analytics-tableau), you'll see that after clicking through until the 3rd week or so, you are given a 6-month software license. YMMV.
+Lots of tools but because I _know_ that I won't productionalize this pipeline, I'm going to dump the data into the commercial BI tool Tableau Desktop. Licenses are expensive, and there are many solid open source tools that will do the job. But the software allows me to do fast visual anaylsis. If you sign up for the [free audit of this Coursera](https://www.coursera.org/learn/analytics-tableau), you'll see that after clicking through the 3rd week or so, you are provided a 6-month software license to complete the rest of the course. _YMMV._
 
 ### Visual Analysis
 
@@ -80,35 +98,35 @@ In this step, I'm trying to get a feel for the data. Is it clean, is it reliable
 
 What are the 5 most common names for dogs in NYC? 
 
-Name | Frequency
---- | --- 
-UNKNOWN | 5379
-BELLA	| 3824
-NAME NOT PROVIDED	| 3763
-MAX	| 3582
-CHARLIE | 2852
-COCO | 2636
+<sub>Name</sub>|<sub>Frequency</sub>
+:-------------|:-------------:
+<sub>UNKNOWN</sub>|<sub>5379</sub>
+<sub>BELLA</sub>|<sub>3824</sub>
+<sub>NAME NOT PROVIDED</sub>|<sub>3763</sub>
+<sub>MAX</sub>|<sub>3582</sub>
+<sub>CHARLIE</sub>|<sub>2852</sub>
+<sub>COCO</sub>|<sub>2636</sub>
 
 Woof. That's a lot of _NULL_. Let's see how it's evenly distributed throughout the years
 
-AnimalName|2014|2015|2016|2017|2018
---- | --- | --- | --- | --- | ---
-UNKNOWN|3|1179|1903|1294|1000
-BELLA|19|427|1332|1233|813
-NAME NOT PROVIDED|11|963|1374|847|568
-MAX|34|444|1214|1166|724
-CHARLIE|26|293|1027|935|571
-COCO|22|296|941|817|560
+<sub>AnimalName</sub> | <sub>2014</sub> | <sub>2015</sub> | <sub>2016</sub> | <sub>2017</sub> | <sub>2018</sub>
+:---|:---:| :---: | :---: | :---: | :---:
+<sub>UNKNOWN</sub> | <sub>3</sub> | <sub>1179</sub> | <sub>1903</sub> | <sub>1294</sub> | <sub>1000</sub>
+<sub>BELLA</sub> | <sub>19</sub> | <sub>427</sub> | <sub>1332</sub> | <sub>1233</sub> | <sub>813</sub>
+<sub>NAME NOT PROVIDED</sub> | <sub>11</sub> | <sub>963</sub> | <sub>1374</sub> | <sub>847</sub> | <sub>568</sub>
+<sub>MAX</sub> | <sub>34</sub> | <sub>444</sub> | <sub>1214</sub> | <sub>1166</sub> | <sub>724</sub>
+<sub>CHARLIE</sub> | <sub>26</sub> | <sub>293</sub> | <sub>1027</sub> | <sub>935</sub> | <sub>571</sub>
+<sub>COCO</sub> | <sub>22</sub> | <sub>296</sub> | <sub>941</sub> | <sub>817</sub> | <sub>560</sub>
 
 OK, better. It seems pretty flat, except for 2014. Let's do a quick check of total names per year, to see that indeed 2014 has many fewer.
 
-Year of LicenseIssuedDate|Frequency
---- | ---
-2014|2650
-2015|42439
-2016|119080
-2017|110995
-2018|70563
+<sub>Year of LicenseIssuedDate</sub>|<sub>Frequency</sub>
+:--- | :---:
+<sub>2014</sub>|<sub>2650</sub>
+<sub>2015</sub>|<sub>42439</sub>
+<sub>2016</sub>|<sub>119080</sub>
+<sub>2017</sub>|<sub>110995</sub>
+<sub>2018</sub>|<sub>70563</sub>
 
 Bummer that 2019 registrations aren't there yet. I hope NYC is trend-setting enough to show a signal in 2018.
 
@@ -120,17 +138,17 @@ I want to start to measure trends, and I'll do so visually, since I need to only
 
 Marshall, Rubble, Chase, Rocky, Zuma and Skye. Let's add Ryder, even though he is a human in the cartoon. And the pups added in later seasons: Everest and Tracker.
 
-AnimalName|2014|2015|2016|2017|2018
----|---|---|---|---|---
-CHASE|7|49|115|170|86
-EVEREST||1|9|5|3
-MARSHALL||7|26|19|11
-ROCKY|20|300|823|785|486
-RUBBLE||||6|2
-RYDER||13|28|26|18
-SKYE||10|61|54|36
-TRACKER|||||1
-ZUMA||2|2|2|2
+<sub>AnimalName</sub> | <sub>2014</sub> | <sub>2015</sub> | <sub>2016</sub> | <sub>2017</sub> | <sub>2018</sub>
+:---|:---:|:---:|:---:|:---:|:---:
+<sub>CHASE</sub> | <sub>7</sub> | <sub>49</sub> | <sub>115</sub> | <sub>170</sub> | <sub>86</sub>
+<sub>EVEREST</sub> | <sub></sub> | <sub>1</sub> | <sub>9</sub> | <sub>5</sub> | <sub>3</sub>
+<sub>MARSHALL</sub> | <sub></sub> | <sub>7</sub> | <sub>26</sub> | <sub>19</sub> | <sub>11</sub>
+<sub>ROCKY</sub> | <sub>20</sub> | <sub>300</sub> | <sub>823</sub> | <sub>785</sub> | <sub>486</sub>
+<sub>RUBBLE</sub> | <sub></sub> | <sub></sub> | <sub></sub> | <sub>6</sub> | <sub>2</sub>
+<sub>RYDER</sub> | <sub></sub> | <sub>13</sub> | <sub>28</sub> | <sub>26</sub> | <sub>18</sub>
+<sub>SKYE</sub> | <sub></sub> | <sub>10</sub> | <sub>61</sub> | <sub>54</sub> | <sub>36</sub>
+<sub>TRACKER</sub> | <sub></sub> | <sub></sub> | <sub></sub> | <sub></sub> | <sub>1</sub>
+<sub>ZUMA</sub> | <sub></sub> | <sub>2</sub> | <sub>2</sub> | <sub>2</sub> | <sub>2</sub>
 
 A couple things to notice. There aren't enough Trackers, Rubbles or Zumas to use in any analysis. And Everest probably doesn't have enough data to compare, either, especially since she was a late addition to the pack.
 
@@ -161,14 +179,19 @@ In case you haven't heard it already, here's their theme song. I've been singing
 
 # 🐶🦴 
 
-And remember--_Whenever there’s trouble, just yelp for help!_ 
+### And remember--_Whenever there’s trouble, just yelp for help!_ 
 
 ---
 
-For a less fun look at PAW Patrol's effect on society, take a look at this recent academic paper:
+---
 
-_[“Whenever there’s trouble, just yelp for help”: Crime, conservation, and corporatization in Paw Patrol](https://journals.sagepub.com/doi/abs/10.1177/1741659020903700)_
 
-> I argue that the series suggests to audiences that we can and should rely on corporations and technological advancements to combat crime and conserve, with responsibilized individuals assisting in this endeavor. 
+### Footnotes
 
-> Ultimately, PAW Patrol echoes core tenets of neoliberalism and encourages complicity in a global capitalist system that (re)produces inequalities and causes environmental harms.
+<sub>[1] For a less fun look at PAW Patrol's effect on society, take a look at this recent academic paper:</sub>
+
+<sub>_[“Whenever there’s trouble, just yelp for help”: Crime, conservation, and corporatization in Paw Patrol](https://journals.sagepub.com/doi/abs/10.1177/1741659020903700)_</sub>
+
+> <sub>I argue that the series suggests to audiences that we can and should rely on corporations and technological advancements to combat crime and conserve, with responsibilized individuals assisting in this endeavor.</sub>
+
+> <sub>Ultimately, PAW Patrol echoes core tenets of neoliberalism and encourages complicity in a global capitalist system that (re)produces inequalities and causes environmental harms.</sub>
