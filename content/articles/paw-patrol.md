@@ -86,7 +86,7 @@ and
 
 This means that dog-names within a given year may actually be duplicate as well. If this was a real project, in order to fully trust my data, I would first count how many names are repeated. To do this, because there is no column `dog ID` which would uniquely identify a dog, I would have to create a surrogate key based on the columns such as `AnimalBirthMonth`, `AnimalGender` and `BreedName`, and perhaps also the geographical data `Borough` and `ZipCode`.
 
-If I cared more about Paw Patrol pet-naming theory, I could build a unified dog-name data-model and combine datasets, and keep looking for new sources to add. But I don't care that much. On to the answer. Let's hope NYC is a trend-setter -- when it comes to naming pets after kids' cartoon superheros.
+If I cared more about PAW Patrol pet-naming theory, I could build a unified dog-name data-model and combine datasets, and keep looking for new sources to add. Maybe even make some FOIA requests. But I don't care that much. On to the answer. Let's hope NYC is a trend-setter -- when it comes to naming pets after kids' cartoon superheros.
 
 ## Step 3. Explore the data
 
