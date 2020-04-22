@@ -2,7 +2,7 @@ Title: Data Science and PAW Patrol
 Date: 2020-04-22 12:00
 Status: published
 Category: fun
-Tags: family, data science, 8 minute read
+Tags: family, data science, 5 minute read
 Slug: paw-patrol
 Authors: Philip Shemella
 Summary: A fun look at PAW Patrol's effect on pet naming
@@ -186,7 +186,7 @@ In case you haven't heard it already, here's their theme song. I've been singing
 ---
 
 
-### Footnotes
+### Footnote
 
 <sub>[1] For a less fun look at PAW Patrol's effect on society, take a look at this recent academic paper:</sub>
 
