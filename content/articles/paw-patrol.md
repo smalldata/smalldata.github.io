@@ -183,6 +183,8 @@ In case you haven't heard it already, here's their theme song. I've been singing
 
 ---
 
+<sub>Got a comment? Share your thoughts on [Twitter](https://twitter.com/philshem/status/1252861430723837956) or [HackerNews](https://news.ycombinator.com/item?id=22943114).</sub>
+
 ---
 
 
