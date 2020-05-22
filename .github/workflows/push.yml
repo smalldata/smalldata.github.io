@@ -11,7 +11,7 @@ jobs:
       with:
         args: git submodule update --init --recursive
     - name: Publish to GitHub Pages
-      uses: nelsonjchen/gh-pages-pelican-action@0.1.5
+      uses: nelsonjchen/gh-pages-pelican-action@0.1.4
       env:
         GH_PAGES_BRANCH: gh-pages
         GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
