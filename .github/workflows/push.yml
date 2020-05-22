@@ -13,6 +13,6 @@ jobs:
     - name: Publish to GitHub Pages
       uses: nelsonjchen/gh-pages-pelican-action@0.1.5
       env:
-        GH_PAGES_BRANCH: gh-pages-test
+        GH_PAGES_BRANCH: gh-pages
         GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
         PELICAN_CONFIG_FILE: publishconf.py
