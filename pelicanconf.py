@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 import os.path
 
@@ -92,7 +91,7 @@ SOCIAL = (
     ('Twitter', 'https://twitter.com/philshem'),
     ('GitHub', 'https://github.com/philshem'),
     ('Stack Overflow', 'https://opendata.stackexchange.com/users/1511/philshem'),
-    ('E-mail', 'mailto:philshem+smalldata@pm.me'), # 'https://mailhide.io/e/2krEd'
+    ('E-mail', 'mailto:philip@smalldata.dev'), # 'https://mailhide.io/e/2krEd'
 )
 #     ('Instagram', 'https://instagram.com/philshem'),
 
