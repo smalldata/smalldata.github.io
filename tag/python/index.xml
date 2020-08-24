@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>python | small DATA</title><link>https://smalldata.dev/tag/python/</link><atom:link href="https://smalldata.dev/tag/python/index.xml" rel="self" type="application/rss+xml"/><description>python</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 17 Apr 2019 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu15c4e386fa9af0b23c15ab588f3cb903_1591_512x512_fill_lanczos_center_2.png</url><title>python</title><link>https://smalldata.dev/tag/python/</link></image><item><title>Fun with Favicons</title><link>https://smalldata.dev/posts/favicon-mosaic/</link><pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/favicon-mosaic/</guid><description>&lt;p>A recent
+&lt;a href="https://opendata.stackexchange.com/q/14007/1511" target="_blank" rel="noopener">question&lt;/a> on the Open Data Stack Exchange site got me thinking about how to download favicons from a bulk list of websites.&lt;/p>
+&lt;h3 id="idea-1-try-each-domain">Idea 1: try each domain&lt;/h3>
+&lt;p>Something like &lt;code>http://example.com/favicon.ico&lt;/code>. But using a &lt;code>favicon.ico&lt;/code> in the webroot folder is just a common implementation. Each website can host their favicon with another path, and another file format.&lt;/p>
+&lt;p>Let&amp;rsquo;s try something else&amp;hellip;&lt;/p>
+&lt;h3 id="idea-2-parse-html-for-favicon-urls">Idea 2: parse html for favicon urls&lt;/h3>
+&lt;p>If the website doesn&amp;rsquo;t use &lt;code>favicon.ico&lt;/code> in the webroot folder, the page html will contain a path to the favicon, with the following format:&lt;/p>
+&lt;pre>&lt;code>&amp;lt;link rel=icon href=https://smalldata.dev/favicon.png&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;p>There is python package aptly named
+&lt;a href="https://github.com/scottwernervt/favicon" target="_blank" rel="noopener">favicon&lt;/a> that will parse the html and return the urls to all favicons, with different formats and resolutions. I&amp;rsquo;m pasting their demo code here:&lt;/p>
+&lt;pre>&lt;code>&amp;gt;&amp;gt;&amp;gt; import favicon
+&amp;gt;&amp;gt;&amp;gt; icons = favicon.get('https://www.python.org/')
+Icon(url='https://www.python.org/static/apple-touch-icon-144x144-precomposed.png', width=144, height=144, format='png')
+Icon(url='https://www.python.org/static/apple-touch-icon-114x114-precomposed.png', width=114, height=114, format='png')
+Icon(url='https://www.python.org/static/apple-touch-icon-72x72-precomposed.png', width=72, height=72, format='png')
+Icon(url='https://www.python.org/static/apple-touch-icon-precomposed.png', width=0, height=0, format='png')
+Icon(url='https://www.python.org/static/favicon.ico', width=0, height=0, format='ico')
+&lt;/code>&lt;/pre>
+&lt;p>Getting better&amp;hellip; But if I download bulk favicons, I&amp;rsquo;d like to avoid normalizing their file format and resolutions.&lt;/p>
+&lt;h3 id="idea-3-get-favicons-directly-from-googles-cache">Idea 3: get favicons directly from google&amp;rsquo;s cache&lt;/h3>
+&lt;p>Google keeps the favicon cached for many sites (even my little website with basically zero traffic).&lt;/p>
+&lt;pre>&lt;code>https://www.google.com/s2/favicons?domain=smalldata.dev
+&lt;/code>&lt;/pre>
+&lt;p>And the favicons are all normalized: 16x16 pixels and png format. Perfect.&lt;/p>
+&lt;h2 id="now-for-some-fun">Now for some fun&lt;/h2>
+&lt;p>A
+&lt;a href="https://moz.com/top500" target="_blank" rel="noopener">top500 website list&lt;/a> has a
+&lt;a href="https://moz.com/top500/domains/csv" target="_blank" rel="noopener">csv export&lt;/a> and wrote a Python script to download each of these 500 favicons from Google&amp;rsquo;s cache and save to local folder &lt;code>images/&lt;/code>.&lt;/p>
+&lt;pre>&lt;code>import requests
+import pandas as pd
+import os
+from io import StringIO
+def request_function(domain):
+domain = domain.replace('/','')
+url = 'https://www.google.com/s2/favicons?domain=' + domain
+fav = requests.get(url).content
+with open('images'+os.sep+domain+'.png', 'wb') as handler:
+handler.write(fav)
+return
+# top 500 websites from mozilla https://moz.com/top500
+url = &amp;quot;https://moz.com:443/top500/domains/csv&amp;quot;
+headers = {&amp;quot;User-Agent&amp;quot;: &amp;quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0&amp;quot;}
+req = requests.get(url, headers=headers)
+data = StringIO(req.text)
+df = pd.read_csv(data)
+df.URL.apply(request_function)
+&lt;/code>&lt;/pre>
+&lt;h3 id="favicon-art">Favicon art&lt;/h3>
+&lt;p>What to do with 500 favicons. For fun, I made a mosaic from the collection, and I first needed a original piece of art that would be recongnizable when heavily pixelated. Van Gogh&amp;rsquo;s
+&lt;a href="https://en.wikipedia.org/wiki/The_Starry_Night" target="_blank" rel="noopener">Starry night&lt;/a> stood out.&lt;/p>
+&lt;p>Here&amp;rsquo;s the original:&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/1137px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="Starry Night">&lt;/p>
+&lt;p>&lt;em>Source&lt;/em>:
+&lt;a href="https://en.wikipedia.org/wiki/The_Starry_Night#/media/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" target="_blank" rel="noopener">Wikipedia&lt;/a>&lt;/p>
+&lt;p>Then I used a handy Python script called
+&lt;a href="https://github.com/codebox/mosaic" target="_blank" rel="noopener">mosaic.py&lt;/a>. No coding necessary.&lt;/p>
+&lt;pre>&lt;code>git clone https://github.com/codebox/mosaic.git
+python mosaic/mosaic.py source.jpg images/
+&lt;/code>&lt;/pre>
+&lt;p>And what pops out is a &lt;em>Starry Night of Favicons&lt;/em>.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/mosaic.jpeg" alt="Favicon Starry Night">&lt;/p>
+&lt;hr>
+&lt;p>(full resolution download:
+&lt;a href="https://smalldata.dev/images/mosaic_full.jpeg">22 MB&lt;/a>)&lt;/p>
+&lt;p>(python
+&lt;a href="https://gist.github.com/philshem/e59388197fd9ddb7dcdb8098f9f0aaf2" target="_blank" rel="noopener">source code&lt;/a>)&lt;/p>
+&lt;p>(top500 favicons:
+&lt;a href="https://smalldata.dev/images/top500_favicons.zip">zip&lt;/a>)&lt;/p></description></item></channel></rss>

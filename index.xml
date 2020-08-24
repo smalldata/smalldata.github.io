@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>small DATA</title><link>https://smalldata.dev/</link><atom:link href="https://smalldata.dev/index.xml" rel="self" type="application/rss+xml"/><description>small DATA</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu15c4e386fa9af0b23c15ab588f3cb903_1591_512x512_fill_lanczos_center_2.png</url><title>small DATA</title><link>https://smalldata.dev/</link></image><item><title>Data Science and PAW Patrol</title><link>https://smalldata.dev/posts/paw-patrol/</link><pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/paw-patrol/</guid><description>&lt;h2 id="step-0-the-disclaimers">Step 0. The disclaimers&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>I don&amp;rsquo;t call myself a &lt;em>data scientist&lt;/em>, but other people do, and I wanted to share my approach to &lt;em>data science&lt;/em>. This approach has worked well for me professionally. There are many good approaches, and I don&amp;rsquo;t want to gatekeep any of those.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>PAW Patrol is a registered trademark of someone else. I don&amp;rsquo;t own any rights to PAW Patrol. If I did, I would be doing something better with my free time.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="step-1-start-with-the-science">Step 1. Start with the science&lt;/h2>
+&lt;p>Thinking like a scientist means having a question, and then searching out an answer. Science isn&amp;rsquo;t data-driven, in that the data can provide an answer, but the available data shouldn&amp;rsquo;t suggest the question. At least in most of the cases I can think of.&lt;/p>
+&lt;p>This is a huge challenge to productionalize data science in a business environment. With a recent (unnamed) employer, we had a big data-engineering effort to rebuild an analysis pipeline. As an analyst, it became slowly clear that with the new pipeline, we could only recreate 5 of the 6 key metrics. I left the company before the proposed workaround was implemented.&lt;/p>
+&lt;p>For my example of methodology, I&amp;rsquo;ll use
+&lt;a href="https://en.wikipedia.org/wiki/PAW_Patrol" target="_blank" rel="noopener">PAW Patrol&lt;/a>. It&amp;rsquo;s a kids&amp;rsquo; animated TV series. To describe cast of characters, and the &lt;em>plot&lt;/em>, here are the lyrics to the theme song:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;sub>PAW Patrol, PAW Patrol&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>We&amp;rsquo;ll be there on the double&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Whenever there&amp;rsquo;s a problem&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>'Round Adventure Bay&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Ryder and his team of pups&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Will come and save the day&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Marshall, Rubble, Chase&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Rocky, Zuma, Skye&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Yeah! They&amp;rsquo;re on the way!&lt;/sub>&lt;/p>
+&lt;/blockquote>
+&lt;p>Yeah. It goes on. You get the point. But the show can be endearing, and I think the deeper reason it resonates with kids is because the team is useful and appreciated by the adults they help. But that&amp;rsquo;s a topic for another article.&lt;sup>
+[1]&lt;/sup>&lt;/p>
+&lt;p>If you take a vote in my household, a consensus of 50% of voters will declare PAW Patrol to be the single best achievement of humanity. And it&amp;rsquo;s been decided, by compromise, that if we ever get a pet dog, the name shall be either &lt;code>Zuma-Marshall&lt;/code>, or &lt;code>Marshall-Zuma&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/paw-patrol-jump-i49016.jpg" alt="paw patrol team">&lt;/p>
+&lt;h3 id="the-question">The question&lt;/h3>
+&lt;p>I was curious - with PAW Patrol hype slowly sweeping the planet since 2013, do we see an increase in dogs named after the crew?&lt;/p>
+&lt;h2 id="step-2-curate-the-data">Step 2. Curate the data&lt;/h2>
+&lt;p>I need open data with pet names. Dog names. There are several, and I&amp;rsquo;ll outline why they make a good or bad candidate for the analysis.&lt;/p>
+&lt;h3 id="hundenamen-aus-dem-hundebestand-der-stadt-zürichhttpsdatastadt-zuerichchdatasetsid_stapo_hundenamen">
+&lt;a href="https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen" target="_blank" rel="noopener">Hundenamen aus dem Hundebestand der Stadt Zürich&lt;/a>&lt;/h3>
+&lt;p>This one is from the city of Zürich, Switzerland, where I live. I&amp;rsquo;ve seen a
+&lt;a href="https://twitter.com/OpenDataZurich/status/1235887129047240704" target="_blank" rel="noopener">recent Twitter post&lt;/a> about this dataset, so that may have planted the idea that dog names can be open data.&lt;/p>
+&lt;p>Data goes back to 2015, and each year is one CSV file. To get an idea of the dataset size, I choose the complete year of
+&lt;a href="https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen/resource/37af5c6e-c101-41aa-8072-033280191f9c" target="_blank" rel="noopener">2019&lt;/a>. 7647 records. It may be hard to find trends in so few dog registrations. Additionally, the Paw Patrol trend is slowly making it here to Switzerland. Since it started in North America, I&amp;rsquo;ll go to look there.&lt;/p>
+&lt;h3 id="anchorage-dog-names-over-timehttpscatalogdatagovdatasetdog-names-over-time">
+&lt;a href="https://catalog.data.gov/dataset/dog-names-over-time" target="_blank" rel="noopener">Anchorage Dog Names over Time&lt;/a>&lt;/h3>
+&lt;p>Only 16k total names between 2017 and 2019. That&amp;rsquo;s not enough dogs when there are so many possible names. And starting in 2017, I may not get a good &lt;em>before&lt;/em> snapshot.&lt;/p>
+&lt;h3 id="seattle-pet-licenseshttpscatalogdatagovdatasetseattle-pet-licenses">
+&lt;a href="https://catalog.data.gov/dataset/seattle-pet-licenses" target="_blank" rel="noopener">Seattle Pet Licenses&lt;/a>&lt;/h3>
+&lt;blockquote>
+&lt;p>A list of active/current Seattle pet licenses, including animal type (species), pet&amp;rsquo;s name, breed and the owner&amp;rsquo;s ZIP code.&lt;/p>
+&lt;/blockquote>
+&lt;p>This might be a good dataset because records go back to 2000 and are updated through 2019. I can get snapshots before and during the PAW Patrol era. But I counted dogs registered in 2019 and it was 11k. In 2018, 7k. Still not enough.&lt;/p>
+&lt;h3 id="nyc-dog-licensing-datasethttpsdatacityofnewyorkushealthnyc-dog-licensing-datasetnu7n-tubp">
+&lt;a href="https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp" target="_blank" rel="noopener">NYC Dog Licensing Dataset&lt;/a>&lt;/h3>
+&lt;p>This could be it. Recently updated. 24.1 MB CSV file. 345k total rows going back more than 10 years. 79k dog registrations in 2019. Explore the data
+&lt;a href="https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp/data" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>The fine print:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>Each record stands as a unique license period for the dog over the course of the yearlong time frame.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>What does this mean for my data? It means that dog names are assigned at least once per year. If I count unique dog names over multiple years, I&amp;rsquo;ll be over counting.&lt;/p>
+&lt;p>and&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>Each record represents a unique dog license that was active during the year, but not necessarily a unique record per dog, since a license that is renewed during the year results in a separate record of an active license period.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>This means that dog-names within a given year may actually be duplicate as well. If this was a real project, in order to fully trust my data, I would first count how many names are repeated. To do this, because there is no column &lt;code>dog ID&lt;/code> which would uniquely identify a dog, I would have to create a surrogate key based on the columns such as &lt;code>AnimalBirthMonth&lt;/code>, &lt;code>AnimalGender&lt;/code> and &lt;code>BreedName&lt;/code>, and perhaps also the geographical data &lt;code>Borough&lt;/code> and &lt;code>ZipCode&lt;/code>.&lt;/p>
+&lt;p>If I cared more about PAW Patrol pet-naming theory, I could build a unified dog-name data-model and combine datasets, and keep looking for new sources to add. Maybe even make some FOIA requests. But I don&amp;rsquo;t care that much. On to the answer. Let&amp;rsquo;s hope NYC is a trend-setter &amp;ndash; when it comes to naming pets after kids&amp;rsquo; cartoon superheros.&lt;/p>
+&lt;h2 id="step-3-explore-the-data">Step 3. Explore the data&lt;/h2>
+&lt;p>Lots of tools but because I &lt;em>know&lt;/em> that I won&amp;rsquo;t productionalize this pipeline, I&amp;rsquo;m going to dump the data into the commercial BI tool Tableau Desktop. Licenses are expensive, and there are many solid open source tools that will do the job. But the software allows me to do fast visual anaylsis. If you sign up for the
+&lt;a href="https://www.coursera.org/learn/analytics-tableau" target="_blank" rel="noopener">free audit of this Coursera&lt;/a>, you&amp;rsquo;ll see that after clicking through the 3rd week or so, you are provided a 6-month software license to complete the rest of the course. &lt;em>YMMV.&lt;/em>&lt;/p>
+&lt;h3 id="visual-analysis">Visual Analysis&lt;/h3>
+&lt;p>In this step, I&amp;rsquo;m trying to get a feel for the data. Is it clean, is it reliable? Will it answer my question?&lt;/p>
+&lt;p>What are the 5 most common names for dogs in NYC?&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="left">&lt;sub>Name&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>Frequency&lt;/sub>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>5379&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>BELLA&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>3824&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>3763&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>MAX&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>3582&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2852&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>COCO&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2636&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Woof. That&amp;rsquo;s a lot of &lt;em>NULL&lt;/em>. Let&amp;rsquo;s see how it&amp;rsquo;s evenly distributed throughout the years&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2014&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2015&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2016&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2017&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2018&lt;/sub>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>3&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1179&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1903&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1294&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1000&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>BELLA&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>19&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>427&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1332&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1233&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>813&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>11&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>963&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1374&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>847&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>568&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>MAX&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>34&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>444&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1214&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1166&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>724&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>293&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1027&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>935&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>571&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>COCO&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>22&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>296&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>941&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>817&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>560&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>OK, better. It seems pretty flat, except for 2014. Let&amp;rsquo;s do a quick check of total names per year, to see that indeed 2014 has many fewer.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="left">&lt;sub>Year of LicenseIssuedDate&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>Frequency&lt;/sub>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="left">&lt;sub>2014&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2650&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>2015&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>42439&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>2016&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>119080&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>2017&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>110995&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>2018&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>70563&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Bummer that 2019 registrations aren&amp;rsquo;t there yet. I hope NYC is trend-setting enough to show a signal in 2018.&lt;/p>
+&lt;p>Another learning is that we should exclude 2014 from the calculation &amp;ndash; there are just not enough records, especially in comparison with other years.&lt;/p>
+&lt;h3 id="initial-calculation">Initial Calculation&lt;/h3>
+&lt;p>I want to start to measure trends, and I&amp;rsquo;ll do so visually, since I need to only compare a handful of names.&lt;/p>
+&lt;p>Marshall, Rubble, Chase, Rocky, Zuma and Skye. Let&amp;rsquo;s add Ryder, even though he is a human in the cartoon. And the pups added in later seasons: Everest and Tracker.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2014&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2015&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2016&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2017&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2018&lt;/sub>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="left">&lt;sub>CHASE&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>7&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>49&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>115&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>170&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>86&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>EVEREST&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>9&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>5&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>3&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>MARSHALL&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>7&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>19&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>11&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>ROCKY&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>20&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>300&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>823&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>785&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>486&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>RUBBLE&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>6&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>RYDER&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>13&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>28&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>18&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>SKYE&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>10&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>61&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>54&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>36&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>TRACKER&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>ZUMA&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>A couple things to notice. There aren&amp;rsquo;t enough Trackers, Rubbles or Zumas to use in any analysis. And Everest probably doesn&amp;rsquo;t have enough data to compare, either, especially since she was a late addition to the pack.&lt;/p>
+&lt;p>And because the yearly totals of registrations varies so greatly, I need to normalize my data. This means that I take the count of each unique name and divide by the total dogs registered in that year. Noticing that Rocky is the most popular from my list, and that in 2016 there were 823 Rockies registered, from a total of 119,080 registrations, I want to normalize for the prevalence of each name to a fixed integer, so that I can compare years. In effect, how popular a certain name was in that year. The metric is then be &lt;code>frequency of dog-name per 10000 dogs&lt;/code>.&lt;/p>
+&lt;h3 id="closing-the-calculation">Closing the calculation&lt;/h3>
+&lt;p>The math doesn&amp;rsquo;t get too complicated, because the data doesn&amp;rsquo;t require anything else. I&amp;rsquo;m going to use my normalized frequency metric to compare trends for Chase, Marshall, Rocky, Ryder, Rocky and Skye.&lt;/p>
+&lt;p>I&amp;rsquo;ve removed 2016 and 2017 now too, to try to more clearly show before and after. It&amp;rsquo;s only Skye that shows any trend &amp;ndash; effectively doubling in popularity.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/paw_patrol_results.png" alt="paw patrol results">&lt;/p>
+&lt;h2 id="step-4-shutting-it-down">Step 4. Shutting it down&lt;/h2>
+&lt;p>I can&amp;rsquo;t believe I&amp;rsquo;ve spent this much time thinking about PAW Patrol. What I want to stress is that when you are working with data, for me it has been essential to&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Understand the subject matter. In this case, that means passively absorbing all things PAW Patrol.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Get dirty with the data. If you try to plug an algorithm on top of data, it&amp;rsquo;s unlikely to give any meaningful results. Can you imagine creating a fancy data pipeline that spits out the 3 most popular dog names? &lt;code>UNKNOWN&lt;/code>, &lt;code>BELLA&lt;/code> and &lt;code>NAME NOT PROVIDED&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>In case you haven&amp;rsquo;t heard it already, here&amp;rsquo;s their theme song. I&amp;rsquo;ve been singing it to myself as I write this, and I hope it gets stuck in your head, too.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/1UdI_eoDPKQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;h1 id="heading">🐶🦴&lt;/h1>
+&lt;h3 id="and-remember--_whenever-theres-trouble-just-yelp-for-help_">And remember&amp;ndash;&lt;em>Whenever there’s trouble, just yelp for help!&lt;/em>&lt;/h3>
+&lt;hr>
+&lt;p>&lt;sub>Got a comment? Share your thoughts on
+&lt;a href="https://twitter.com/philshem/status/1252861430723837956" target="_blank" rel="noopener">Twitter&lt;/a> or
+&lt;a href="https://news.ycombinator.com/item?id=22943114" target="_blank" rel="noopener">HackerNews&lt;/a>.&lt;/sub>&lt;/p>
+&lt;hr>
+&lt;h3 id="footnote">Footnote&lt;/h3>
+&lt;p>&lt;sub>[1] For a less fun look at PAW Patrol&amp;rsquo;s effect on society, take a look at this recent academic paper:&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>
+&lt;a href="https://journals.sagepub.com/doi/abs/10.1177/1741659020903700" target="_blank" rel="noopener">&lt;em>&amp;ldquo;Whenever there’s trouble, just yelp for help&amp;rdquo;: Crime, conservation, and corporatization in Paw Patrol&lt;/em>&lt;/a>&lt;/sub>&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;sub>I argue that the series suggests to audiences that we can and should rely on corporations and technological advancements to combat crime and conserve, with responsibilized individuals assisting in this endeavor.&lt;/sub>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;sub>Ultimately, PAW Patrol echoes core tenets of neoliberalism and encourages complicity in a global capitalist system that (re)produces inequalities and causes environmental harms.&lt;/sub>&lt;/p>
+&lt;/blockquote></description></item><item><title>Baseball, for Europeans</title><link>https://smalldata.dev/posts/baseball-for-europeans/</link><pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/baseball-for-europeans/</guid><description>&lt;blockquote>
+&lt;p>Ninety percent of baseball is mental; the other half is physical.
+&lt;em>&amp;ndash;
+&lt;a href="https://en.wikipedia.org/wiki/Yogi_Berra#%22Yogi-isms%22" target="_blank" rel="noopener">Yogi Berra&lt;/a>&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;p>Baseball is a beautiful game of data-driven micro-strategy executed on the field by real-life chess pieces, who spring into action to chase down a fly ball or to sprint around the diamond. For data people like me, who grew up as baseball fans in the US, it&amp;rsquo;s a treasure trove of statistics, extrapolations, trends and trend-defying events. Now that&amp;rsquo;s action!&lt;/p>
+&lt;p>Baseball is more international than you may think. In addition to the US, it&amp;rsquo;s a top sport in Canada, Mexico, Puerto Rico, Cuba, the Dominican Republic, Panama, Venezuela, Japan, South Korea and Chinese Taipei (Taiwan). But in Europe, baseball is mostly unknown and mysterious. And boring.&lt;/p>
+&lt;p>In fact, the idea for this article came from a confused chat message in a WhatsApp group from an Australian couple at a baseball game in San Diego.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/baseball_whatsapp.jpg" alt="image: WhatsApp screenshot">&lt;/p>
+&lt;p>As one of the only US-Americans in the group chat, and born and raised into a baseball family, I felt that I needed to share my opinion about &lt;em>discovering&lt;/em> baseball as an adult:&lt;/p>
+&lt;blockquote>
+&lt;p>Baseball is a beautiful game of strategy and statistics but I wouldn’t want to have to learn the rules as an adult. Like grammar in a foreign language, it’s built on exceptions to the rule, and those exceptions have their own exceptions (for example, three strikes and you&amp;rsquo;re out, EXCEPT if you hit a foul ball, EXCEPT EXCEPT if that foul ball was hit while bunting).&lt;/p>
+&lt;/blockquote>
+&lt;p>If you keep reading, I&amp;rsquo;ll explain more about the rules that govern the beautiful game of baseball. To make an article about baseball for non-baseball people less boring, I&amp;rsquo;ll sprinkle in baseball gifs. Here&amp;rsquo;s Ozzie Smith&amp;rsquo;s trademark backflip.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/baseball_ozzie_smith_backflip.gif" alt="gif: Ozzie Smith backflip">&lt;/p>
+&lt;p>If that&amp;rsquo;s too much athleticism for your pre-conceived notions about baseball players being out of shape, how about this &lt;em>professional athlete&lt;/em>?&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/baseball_dadbod.gif" alt="gif: #dadbod">&lt;/p>
+&lt;p>Now to the serious stuff. &lt;strong>How can you learn the rules of baseball as an adult?&lt;/strong>&lt;/p>
+&lt;h2 id="tldr-dont-bother">&lt;strong>tl;dr&lt;/strong> don&amp;rsquo;t bother&lt;/h2>
+&lt;p>Professional Major League Baseball (MLB) has 162 regular season games, and a never-ending post-season of playoffs and a &amp;ldquo;world&amp;rdquo; championship that follow. Then comes Christmas, and the pre-season &amp;ldquo;Spring Training&amp;rdquo; starts. Yes, it&amp;rsquo;s a summer sport with a season so long that it can snow at both the beginning AND end of the season.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/baseball_snow.gif" alt="gif: snowy game">&lt;/p>
+&lt;p>The earliest a normal game will start on the East Coast of the US is 1pm, meaning 7pm in Central Europe. Those games are often on Sundays, and it&amp;rsquo;s not a bad time to watch a game if nothing else is on. The remaining 5 to 6 games on the East Coast start at 7pm local time, so 1am in Europe. Games from the West Coast of the US that start at 7pm there will start at 3am in Europe. That means at 6am, when the rest of us are dreaming about waking up, you could turn off the TV and question the decisions you&amp;rsquo;ve made in your life. One-hundred-and-sixty-one more games to go.&lt;/p>
+&lt;p>If you&amp;rsquo;ve read this far, and you have the existential craving to know how and why baseball functions, &lt;em>keep reading&lt;/em>.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/baseball_umpire_flex.gif" alt="gif: umpire flex">&lt;/p>
+&lt;h2 id="the-written-rules">the written rules&lt;/h2>
+&lt;h3 id="9-innings">9 innings&lt;/h3>
+&lt;p>Each game consists of nine innings. An inning gives each team a chance to hit the ball with the bat and score runs (offense), as well as a chance to switch sides and to pitch the ball and try to prevent the other team from scoring runs (defense).&lt;/p>
+&lt;p>The home team, who is hosting the game, bats in the bottom half or second part of each inning. The visiting team bats in the top half of each inning. The game is exactly 9 innings long.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>EXCEPT: if the home team is winning after 8.5 innings, the game ends after 8.5 innings.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT: if the teams are at a draw after 9.0 innings, then the game shall continue forever. Baseball is a discrete of incremental play, and baseball promises you no end.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT: if a game has started but can&amp;rsquo;t continue due to bad weather, then for the game to be &amp;ldquo;
+&lt;a href="https://en.wikipedia.org/wiki/Official_game" target="_blank" rel="noopener">official&lt;/a>&amp;rdquo;, then at minimum 5 innings must have been completed. Or 4.5 in case the home team is winning.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT EXCEPT: there are no rain-shortened games in the post-season. All games must be played to completion.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT EXCEPT EXCEPT: if the game has no significance for the post-season, and was started but can&amp;rsquo;t be finished due to weather, and the teams have an equal score after a minimum of 5 innings, it can be deemed a tie by Major League Baseball. There is no room in the standings for a draw, like there is in soccer, so in the
+&lt;a href="https://www.mlb.com/news/cubs-pirates-game-suspended-ends-in-tie/c-204121484" target="_blank" rel="noopener">rare case that it happens&lt;/a>, the teams show 161 games played but the players have 162 games worth of stats.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-outs">3 outs&lt;/h3>
+&lt;p>Each inning, whether the game has 9, or 4.5, or ∞, has six outs. Each team in their half-inning gets three outs. An out can come from: (1) a strikeout, where the batter fails to put the ball into play - more later about strikeouts. The second way to record an out is ground-out, where the ball is hit on the ground and the defensive player either (2a) tags the player with the ball either with the glove hand if the ball is in the glove, or with the ball in the non-glove hand, or (2b) throws to a base where a runner is forced to run and the player who catches the ball touches the base with any part of his body (perhaps a toe).&lt;/p>
+&lt;p>Here&amp;rsquo;s an example of a pathetic ground-out that was an embarrassment to even the player&amp;rsquo;s mom and grandma.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/baseball_ground_out.gif" alt="gif: ground out">&lt;/p>
+&lt;p>The third way to record an out is a fly-out (3a) to the outfield or a pop-out (3b) to the infield. In this case, the ball is hit in the air and caught by a player without touching the ground.&lt;/p>
+&lt;p>It&amp;rsquo;s possible to get more than one out per play, for example a triple play, where all three outs of the inning are recorded in one play. It&amp;rsquo;s not very common. Double plays are more common and a great way to kill your team&amp;rsquo;s momentum by canceling out baserunners.&lt;/p>
+&lt;p>So three outs to a half-inning, and three ways to make an out. If you&amp;rsquo;re a baserunner, you can also make an out by being tagged out when you aren&amp;rsquo;t touching the base. But let&amp;rsquo;s skip that for now.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>EXCEPT: ground-outs (out-type #2) must be inside the field of play, or between the painted white lines that are first and third base.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT: Fly-outs (3a) and pop-outs (3b) can be either fair or foul - basically anywhere the players can reach, including the stands.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT EXCEPT: According to the &amp;ldquo;
+&lt;a href="https://en.wikipedia.org/wiki/Infield_fly_rule" target="_blank" rel="noopener">infield fly rule&lt;/a>&amp;rdquo;, if there are one or more runners on bases that would be forced to run when the ball is hit, and the ball is hit in the air near enough to the runners that the fielder could drop the ball on purpose or pretend to fail to catch the ball, or actually fail to catch the ball, so as to create a double or triple play, than the umpire can call the hitter out and the runners are allowed to stay on their base.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT EXCEPT: Foul balls in the air that are first caught by a fan do not count as outs.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://smalldata.dev/images/baseball_fan_interference.gif" alt="gif: Foul ball?">&lt;/p>
+&lt;ul>
+&lt;li>EXCEPT EXCEPT EXCEPT: If the ball is touched by a fan in the field of play, and affects the course of the game, the umpire can decide what to do. It&amp;rsquo;s called &amp;ldquo;
+&lt;a href="https://en.wikipedia.org/wiki/Interference_%28baseball%29#Spectator_interference" target="_blank" rel="noopener">spectator interference&lt;/a>&amp;rdquo; and as stadiums have recently been built to put fans close to the action, it happens often.&lt;/li>
+&lt;/ul>
+&lt;p>One
+&lt;a href="https://en.wikipedia.org/wiki/Steve_Bartman_incident" target="_blank" rel="noopener">infamous example&lt;/a> prolonged the 71 year-old &amp;ldquo;
+&lt;a href="https://en.wikipedia.org/wiki/Curse_of_the_Billy_Goat" target="_blank" rel="noopener">Curse of the Billy Goat&lt;/a>&amp;rdquo; on the Chicago Cubs, and made Steve Bartman a pariah in Chicago. Did I mention that baseball players and fans are
+&lt;a href="https://en.wikipedia.org/wiki/Baseball_superstition" target="_blank" rel="noopener">superstitious&lt;/a>? Did you know if you wear a &amp;ldquo;
+&lt;a href="https://en.wikipedia.org/wiki/Rally_cap" target="_blank" rel="noopener">rally cap&lt;/a>&amp;rdquo;, you can impact the outcome of the game from the sidelines?&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/baseball_rally_cap.jpg" alt="image: Rally Cap">&lt;/p>
+&lt;p>With all those exceptions, the one thing is constant. A half-inning has three outs. Right?&lt;/p>
+&lt;ul>
+&lt;li>EXCEPT: An inning can have a
+&lt;a href="https://en.wikipedia.org/wiki/Fourth_out" target="_blank" rel="noopener">four outs&lt;/a>. I had never heard of this rule, so I asked a serious baseball fan.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://smalldata.dev/images/baseball_fourth_out.png" alt="image: Fourth out">&lt;/p>
+&lt;p>Let&amp;rsquo;s skip this one.&lt;/p>
+&lt;h3 id="3-strikes">3 strikes&lt;/h3>
+&lt;p>Balls thrown by the pitcher are categorized by the home-plate umpire as either balls or strikes. You may have heard the cliché &lt;em>Three strikes and you&amp;rsquo;re out&lt;/em>. A batter is indeed &lt;em>out&lt;/em> if they have three from the following:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>swing and miss&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>swing and hit the ball out of play (a.k.a. foul ball)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>don&amp;rsquo;t swing but the pitch is determined a strike by the umpire, for passing over the home-plate between the knees and chest-high &amp;ldquo;letters&amp;rdquo; of the hitter.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Well, that&amp;rsquo;s true most of the time.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>EXCEPT: The batter is &lt;em>not&lt;/em> out if the 3rd strike is a foul ball. The first two strikes can come from foul balls, but the third strike can&amp;rsquo;t come from a foul ball. And the hitter can remain hitting as long as they can hit foul balls. Baseball again approaches the infinite.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT EXCEPT: If 3rd strike is made with a bunting attempt, specifically running a hand up the bat to tap the ball into the field of play, and that bunted attempt goes foul, then the 3rd strike counts and an &lt;em>out&lt;/em> is recorded.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT EXCEPT EXCEPT: If the 3rd strike is recorded and the catcher, who catches the ball thrown by the pitcher, drops or misses the ball, then the batter is entitled to run to first base, and the catcher or another defense player may try to throw the ball to first base. If a position player tags first base with the ball before the hitter reaches first base, then the out is recored. Otherwise, no out is recorded and the hitter remains at first base.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT EXCEPT EXCEPT EXCEPT: If first base is already occupied, then the batter may not attempt to reach first base.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT EXCEPT EXCEPT EXCEPT EXCEPT: If first base is occupied, but if there are already two outs, then the batter may attempt to reach first base, and the previous occupant of first base must attempt to advance to second base.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT EXCEPT EXCEPT EXCEPT EXCEPT EXCEPT: to quote directly from the rulebook&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Rule 5.09(a)(2)   Comment: A batter who does not realize his situation on a third strike not caught, and who is not in the process of running to first base, shall be declared out once he leaves the dirt circle surrounding home plate&lt;/p>
+&lt;/blockquote>
+&lt;p>The rule is called &amp;ldquo;
+&lt;a href="https://en.wikipedia.org/wiki/Uncaught_third_strike" target="_blank" rel="noopener">the dropped third strike&lt;/a>&amp;rdquo;, if you insist to know more. Here&amp;rsquo;s the full 184 page rulebook (
+&lt;a href="http://mlb.mlb.com/documents/0/8/0/268272080/2018_Official_Baseball_Rules.pdf" target="_blank" rel="noopener">pdf&lt;/a>), in case you can stand any more.&lt;/p>
+&lt;p>The rulebook contains such thrilling excerpts as:&lt;/p>
+&lt;blockquote>
+&lt;p>**3.07 Pitcher’s Glove(a) &lt;em>The pitcher’s glove may not, exclusive of piping, be white,gray, nor, in the judgment of an umpire, distracting in any manner. No fielder, regardless of position, may use a fielding glove that falls within a PANTONE® color set lighter than the current 14-series.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="hit-by-pitch">hit-by-pitch&lt;/h3>
+&lt;p>If the batter is hit by the pitched ball, then he/she is awarded first base.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>EXCEPT: if umpire determines that the pitch was a strike, despite hitting the batter. This means that it was over the plate and between the knees and the &amp;ldquo;letters&amp;rdquo;. In this case, a strike is called.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT: if the batter swings at a pitch, even if it still hits him/her.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>EXCEPT: if the umpire determines that the batter did not make an effort to avoid being hit by the pitch.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="the-unwritten-rules">the unwritten rules&lt;/h2>
+&lt;p>Wikipedia has an entire article about the
+&lt;a href="https://en.wikipedia.org/wiki/Unwritten_rules_of_baseball" target="_blank" rel="noopener">unwritten rules of baseball&lt;/a>. Many are about respecting the game, and violating the rules can get cause the opposing pitcher to intentionally hit one of your players with the ball.&lt;/p>
+&lt;ul>
+&lt;li>EXCEPT: the pitcher shouldn&amp;rsquo;t throw at the head of the hitter&lt;/li>
+&lt;/ul>
+&lt;p>In turn, throwing at a hitter can also cause a bench-clearing brawl. I don&amp;rsquo;t condone violence, but all I can say is that if you charge the mound, at least know the skills of the player you are going after.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/baseball_nolan_ryan_headlock.gif" alt="headlock">&lt;/p>
+&lt;hr>
+&lt;h2 id="make-it-stop">make it stop&lt;/h2>
+&lt;p>At this point, you may feel like you are in a headlock and being punched repeatedly in the head.
+Let&amp;rsquo;s agree that it&amp;rsquo;s easier to ignore all the rules, written and unwritten, and their exceptions, and their exceptions to their exceptions.
+We can still enjoy the game. Go to a stadium, enjoy the summer weather, cheer with the fans, eat a hot dog, drink a beer, and if you do all of this in in Milwaukee, Wisconsin, you may even get to see sausages in a footrace.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/ns-sDcIMoLQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;hr>
+&lt;h2 id="want-to-know-more">want to know more?&lt;/h2>
+&lt;h4 id="what-happens-when-you-pitch-a-no-hitter-on-lsd">What happens when you pitch a no-hitter on LSD?&lt;/h4>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/_vUhSYLRw14" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;hr>
+&lt;h4 id="what-happens-when-you-charge-10-cents-for-a-beer">What happens when you charge 10 cents for a beer?&lt;/h4>
+&lt;p>&amp;ldquo;
+&lt;a href="https://en.wikipedia.org/wiki/Ten_Cent_Beer_Night" target="_blank" rel="noopener">Ten cent beer night&lt;/a>&amp;rdquo; is what happens.&lt;/p>
+&lt;blockquote>
+&lt;p>NBC newscaster Tim Russert, then a student at the Cleveland–Marshall College of Law, attended the game. &amp;ldquo;I went with $2 in my pocket,&amp;rdquo; recalled the Meet the Press host. &amp;ldquo;You do the math.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/VxTtzLUteDA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;hr>
+&lt;h4 id="what-happens-when-animals-enter-the-field-of-play">What happens when animals enter the field of play?&lt;/h4>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/uW3ZjbUJsVg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;hr>
+&lt;h4 id="what-is-the-baseball-version-of-soccers-own-goal-when-scored-by-a-header">What is the baseball version of soccer&amp;rsquo;s own goal, when scored by a header?&lt;/h4>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/QixQMUu4CKI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;hr>
+&lt;h4 id="what-happens-when-a-bird-and-a-ball-collide">What happens when a bird and a ball collide?&lt;/h4>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/1PyCpG06138" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;!--![bird explosion](/images/baseball_randy_johnson_bird.gif)-->
+&lt;hr>
+&lt;h4 id="what-is-the-hidden-ball-trickhttpsenwikipediaorgwikihidden_ball_trickbaseball">What is the &amp;ldquo;
+&lt;a href="https://en.wikipedia.org/wiki/Hidden_ball_trick#Baseball" target="_blank" rel="noopener">hidden ball trick&lt;/a>&amp;rdquo;?&lt;/h4>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/TrPdayoQ8Ak" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;hr>
+&lt;h4 id="what-happens-if-you-return-to-the-dugout-with-a-disguise-after-you-were-ejected-from-the-game">What happens if you return to the dugout with a disguise after you were ejected from the game?&lt;/h4>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/ok6pLKBD-XQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div></description></item><item><title>Hand-drawn Dataviz</title><link>https://smalldata.dev/posts/hand-drawn-dataviz/</link><pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/hand-drawn-dataviz/</guid><description>&lt;p>As a parent of small kids, and especially as a scientist parent, you search for patterns in a universe without patterns. This realization led me not try to collect data, but instead hand-draw a series of data visualizations about family, parenting, and the dream of a work-life balance.&lt;/p>
+&lt;p>These were posted to Twitter, and combined as a thread here.&lt;/p>
+&lt;hr>
+&lt;h2 id="the-broccoli-anomaly">The broccoli anomaly&lt;/h2>
+&lt;p>Young kids are happy to feed themselves, especially if its junk food. Once in a while, you&amp;rsquo;ll find yourself in a good phase where you can convince them that broccoli is a tiny tree 🌳 and they are a big hungry dinosaur 🦕.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/dataviz_kids_food.jpg" alt="Dataviz: kids eating">
+ 
+&lt;a href="https://twitter.com/philshem/status/563423500661452800" target="_blank" rel="noopener">View Tweet&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="the-exponential-growth-of-getting-sick">The exponential growth of getting sick&lt;/h2>
+&lt;p>Kids get colds and the flu and it isn&amp;rsquo;t until they are multiple and start going to daycare and school do you encounter the exponential growth that is childhood infectivity.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/dataviz_sick_kids.jpg" alt="Dataviz: sick kids">&lt;/p>
+&lt;p> 
+&lt;a href="https://twitter.com/philshem/status/563806411885645825" target="_blank" rel="noopener">View Tweet&lt;/a>&lt;/p>
+&lt;hr>
+&lt;p>## The kid bedtime&lt;/p>
+&lt;p>Putting a 3 year old to bed is an exercise in patience. Too early, and you&amp;rsquo;ll be there hours as they calm down. Too late, and you are against the storm that is an overtired kid. You gotta find that perfect moment: The Sleep Singularity.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/dataviz_kid_bedtime.jpg" alt="Dataviz: kid bedtime">&lt;/p>
+&lt;p> 
+&lt;a href="https://twitter.com/philshem/status/607975588121473025" target="_blank" rel="noopener">View Tweet&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="non-linear-aging">Non-linear aging&lt;/h2>
+&lt;p>My perceived age, in relation to my actual age, had two dips during undergad and grad school (parties??). Since becoming a parent, my perceived age has quickly outgrown my actual age.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/dataviz_dad_years.jpg" alt="Dataviz: dad years">&lt;/p>
+&lt;p> 
+&lt;a href="https://twitter.com/philshem/status/707658187340537856" target="_blank" rel="noopener">View Tweet&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="indoor-enthusiast">Indoor enthusiast&lt;/h2>
+&lt;p>Most of the good sunlight and weather is during regular office hours.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/dataviz_sunny_workday.jpg" alt="Dataviz: indoor workdays">&lt;/p>
+&lt;p> 
+&lt;a href="https://twitter.com/philshem/status/563064345715027968" target="_blank" rel="noopener">View Tweet&lt;/a>&lt;/p>
+&lt;hr>
+&lt;p>If you like my scattered thoughts on parenting-as-scientist, you may enjoy my article about life as a physicist dad:
+&lt;a href="https://medium.com/@philshem/life-in-the-baby-universe-f52561c4a8ae" target="_blank" rel="noopener">Life in the Baby Universe: The Physics of Babies&lt;/a>, and even a short, 6 minute 40 second, Pecha Kucha presentation.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/RbAYEdjcyjc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div></description></item><item><title>Open Access Research</title><link>https://smalldata.dev/posts/open-access-research/</link><pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/open-access-research/</guid><description>&lt;p>&lt;em>In my definition of Open Anything, &amp;ldquo;open&amp;rdquo; is an imperative verb.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;p>Unless you are an academic publisher, you&amp;rsquo;re probably not a big fan of for-profit academic publishing.&lt;/p>
+&lt;p>The business model of many journals is to charge the authors publication fees, and then charge the readers access fees. Double dipping - it&amp;rsquo;s what the credit card companies do.&lt;/p>
+&lt;p>What&amp;rsquo;s happening as a response?
+&lt;a href="https://www.nature.com/articles/d41586-019-00758-x" target="_blank" rel="noopener">Universities are dropping subscriptions&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>The move is the latest in an escalating global row between scholarly publishers and academic institutions, which are pushing to make more of the scientific literature freely available and say that the costs of publishers’ subscriptions are becoming unreasonably expensive.&lt;/p>
+&lt;/blockquote>
+&lt;p>
+&lt;a href="https://news.ycombinator.com/item?id=17688336" target="_blank" rel="noopener">And non-legal portals like sci-hub.tw are springing up&lt;/a>.&lt;/p>
+&lt;p>Open access to academic research is not only important for top universities like UC Berkley, it&amp;rsquo;s essential for researchers around the world. A few examples that come to mind:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>amateurs and hobbyists&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>citizen science and community groups&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>high school students or others without university library access&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>researchers in developing economies&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>those doing machine learning projects on bulk academic papers&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="creating-a-self-archive">Creating a self-archive&lt;/h2>
+&lt;p>I&amp;rsquo;ve read the articles about Elsevier and Springer but since I&amp;rsquo;m not publishing anymore, I hadn&amp;rsquo;t made much connection to my role in open access research.&lt;/p>
+&lt;p>But for a freelance data-project I&amp;rsquo;m working on with an NGO, I have to match citation metadata and full text PDF for more accurate screening, both manual and with machine learning. Getting full-text PDFs is a tiresome process, and we are looking for 1000s of papers.&lt;/p>
+&lt;p>Despite that my academic publishing ended 7 years ago, I wasn&amp;rsquo;t sure if my old research papers were openly available. Some of [my papers](
+&lt;a href="https://scholar.google.ch/citations?user=SczBp6kAAAAJ&amp;amp;hl=en&amp;amp;authuser=1&amp;amp;oi=ao" target="_blank" rel="noopener">google scholar&lt;/a>
+) are still being cited! (Actually, I had to dig deep to find my PDF copies!)&lt;/p>
+&lt;p>It turns out that I still do have PDF copies, and that many of my old papers are not easily available to the public.&lt;/p>
+&lt;p>Authors are
+&lt;a href="https://tomsaunders.co.nz/how-to-make-your-research-open-access/" target="_blank" rel="noopener">allowed to share copies of post-prints&lt;/a>, and so that is what I&amp;rsquo;m finally doing.&lt;/p>
+&lt;hr>
+&lt;h2 id="handy-tools-for-creating-a-self-archive">Handy tools for creating a self-archive&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>
+&lt;a href="https://www.bioinformatics.org/texmed/" target="_blank" rel="noopener">Export Pubmed citations as BibTex format&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://flamingtempura.github.io/bibtex-tidy/" target="_blank" rel="noopener">Tidy up and standardize BibTex format&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://blog.archive.org/2017/01/25/see-something-save-something/" target="_blank" rel="noopener">Archive your archive on the wayback machine&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="stop-reading-the-remaining-text-is-for-search-engine-indexing">&lt;em>Stop reading! The remaining text is for search engine indexing.&lt;/em>&lt;/h1>
+&lt;p>&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>&lt;/p>
+&lt;hr>
+&lt;p>##Bibliography&lt;/p>
+&lt;p>###Research Papers&lt;/p>
+&lt;p>2012&lt;/p>
+&lt;p>P.T. Shemella, T. Laino, O. Fritz, A. Curioni&lt;/p>
+&lt;p>Understanding the self-healing hydrophobic recovery of high-voltage insulators&lt;/p>
+&lt;p>Journal of Physical Chemistry B 116 (24), 7351–7356&lt;/p>
+&lt;p>
+&lt;a href="https://pubs.acs.org/doi/10.1021/jp300786s" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/jp300786s.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091453/https://smalldata.dev/posts/open-access-research/jp300786s.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid22624664,
+title = {{{U}nderstanding the self-healing hydrophobic recovery of high-voltage insulators}},
+author = {Shemella, P. T. and Laino, T. and Fritz, O. and Curioni, A.},
+year = 2012,
+month = jun,
+journal = {J Phys Chem B},
+volume = 116,
+number = 24,
+pages = {7351--7356}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2011&lt;/p>
+&lt;p>P.T. Shemella, T. Laino, O. Fritz, A. Curioni&lt;/p>
+&lt;p>Surface dynamics of amorphous polymers used for high-voltage insulators&lt;/p>
+&lt;p>Journal of Physical Chemistry B 115 (46), 13508–13512&lt;/p>
+&lt;p>
+&lt;a href="https://pubs.acs.org/doi/abs/10.1021/jp207589p" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/jp207589p.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091545/https://smalldata.dev/posts/open-access-research/jp207589p.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid22026429,
+title = {{{S}urface dynamics of amorphous polymers used for high-voltage insulators}},
+author = {Shemella, P. T. and Laino, T. and Fritz, O. and Curioni, A.},
+year = 2011,
+month = nov,
+journal = {J Phys Chem B},
+volume = 115,
+number = 46,
+pages = {13508--13512}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2011&lt;/p>
+&lt;p>P.T. Shemella, T. Laino, O. Fritz, A. Curioni&lt;/p>
+&lt;p>Molecular motion of amorphous silicone polymers&lt;/p>
+&lt;p>Journal of Physical Chemistry B 115 (12) 2831–2835&lt;/p>
+&lt;p>
+&lt;a href="https://pubs.acs.org/doi/abs/10.1021/jp111318d" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/jp111318d.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091621/https://smalldata.dev/posts/open-access-research/jp111318d.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid21370843,
+title = {{{M}olecular motion of amorphous silicone polymers}},
+author = {Shemella, P. T. and Laino, T. and Fritz, O. and Curioni, A.},
+year = 2011,
+month = mar,
+journal = {J Phys Chem B},
+volume = 115,
+number = 12,
+pages = {2831--2835}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2011&lt;/p>
+&lt;p>P.T. Shemella, N. Topilina, I. Soga, B. Pereira, G. Belfort, M. Belfort, S.K. Nayak&lt;/p>
+&lt;p>Electronic structure of neighboring extein residue modulates intein C-terminal cleavage activity&lt;/p>
+&lt;p>Biophysical Journal 100 (9), 2217–2225&lt;/p>
+&lt;p>
+&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3149237/" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2011_Shemella_Biophys_J.pdf">pdf&lt;/a> (
+&lt;a href="https://smalldata.dev/pdfs/2011_Shemella_Biophys_J_Supp.pdf">supplement&lt;/a>) -
+&lt;a href="https://web.archive.org/web/20190521091804/https://smalldata.dev/posts/open-access-research/2011_Shemella_Biophys_J.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid21539790,
+title = {{{E}lectronic structure of neighboring extein residue modulates intein {C}-terminal cleavage activity}},
+author = {Shemella, P. T. and Topilina, N. I. and Soga, I. and Pereira, B. and Belfort, G. and Belfort, M. and Nayak, S. K.},
+year = 2011,
+month = may,
+journal = {Biophys. J.},
+volume = 100,
+number = 9,
+pages = {2217--2225}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2011&lt;/p>
+&lt;p>B. Pereira*, P.T. Shemella*, G. Amitai, G. Belfort, S.K. Nayak, M. Belfort&lt;/p>
+&lt;p>Spontaneous proton transfer to a conserved intein residue determines on-pathway protein splicing&lt;/p>
+&lt;p>Journal of Molecular Biology 406 (3), 430–442 (*Joint first-authorship)&lt;/p>
+&lt;p>
+&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3034788/" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2011_Pereira_JMB.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091832/https://smalldata.dev/posts/open-access-research/2011_Pereira_JMB.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid21185311,
+title = {{{S}pontaneous proton transfer to a conserved intein residue determines on-pathway protein splicing}},
+author = {Pereira, B. and Shemella, P. T. and Amitai, G. and Belfort, G. and Nayak, S. K. and Belfort, M.},
+year = 2011,
+month = feb,
+journal = {J. Mol. Biol.},
+volume = 406,
+number = 3,
+pages = {430--442}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2010&lt;/p>
+&lt;p>J.B. Thomas, E.B. Watson, F.S. Spear, P.T. Shemella, S.K. Nayak, A. Lanzirotti&lt;/p>
+&lt;p>TitaniQ under pressure: the effect of pressure and temperature on the solubility of Ti in quartz&lt;/p>
+&lt;p>Contributions to Mineralogy and Petrology 160 (5), 743–759&lt;/p>
+&lt;p>
+&lt;a href="https://doi.org/10.1007/s00410-010-0505-3" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2010_Thomas_CMP.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091901/https://smalldata.dev/posts/open-access-research/2010_Thomas_CMP.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{thomas2010titaniq,
+title = {TitaniQ under pressure: the effect of pressure and temperature on the solubility of Ti in quartz},
+author = {Thomas, Jay B and Watson, E Bruce and Spear, Frank S and Shemella, Philip T and Nayak, Saroj K and Lanzirotti, Antonio},
+year = 2010,
+journal = {Contributions to Mineralogy and Petrology},
+publisher = {Springer},
+volume = 160,
+number = 5,
+pages = {743--759}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2009&lt;/p>
+&lt;p>Z. Du, P.T. Shemella, Y. Liu, S. McCallum, B. Pereira, S.K. Nayak, G. Belfort, M. Belfort, C. Wang&lt;/p>
+&lt;p>Highly conserved histidine plays a dual catalytic role in protein splicing: A pKa shift mechanism&lt;/p>
+&lt;p>Journal of the American Chemical Society 131 (32), 11581–11589&lt;/p>
+&lt;p>
+&lt;a href="https://pubs.acs.org/doi/abs/10.1021/ja904318w" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2009_Du_JACS.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091923/https://smalldata.dev/posts/open-access-research/2009_Du_JACS.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid19630416,
+title = {{{H}ighly conserved histidine plays a dual catalytic role in protein splicing: a p{K}a shift mechanism}},
+author = {Du, Z. and Shemella, P. T. and Liu, Y. and McCallum, S. A. and Pereira, B. and Nayak, S. K. and Belfort, G. and Belfort, M. and Wang, C.},
+year = 2009,
+month = aug,
+journal = {J. Am. Chem. Soc.},
+volume = 131,
+number = 32,
+pages = {11581--11589}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2009&lt;/p>
+&lt;p>P.T. Shemella, S.K. Nayak&lt;/p>
+&lt;p>Electronic structure and band-gap modulation of graphene via substrate surface chemistry&lt;/p>
+&lt;p>Applied Physics Letters 94, 032101 (cover article)&lt;/p>
+&lt;p>
+&lt;a href="https://aip.scitation.org/doi/abs/10.1063/1.3070238" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2009_Shemella_APL.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091945/https://smalldata.dev/posts/open-access-research/2009_Shemella_APL.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{doi:10.1063/1.3070238,
+title = {Electronic structure and band-gap modulation of graphene via substrate surface chemistry},
+author = {Shemella,Philip and Nayak,Saroj K.},
+year = 2009,
+journal = {Applied Physics Letters},
+volume = 94,
+number = 3,
+pages = 32101,
+doi = {10.1063/1.3070238},
+url = {https://doi.org/10.1063/1.3070238},
+eprint = {https://doi.org/10.1063/1.3070238}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2007&lt;/p>
+&lt;p>P.T. Shemella, Y. Zhang, M. Mailman, P.M. Ajayan, S.K. Nayak&lt;/p>
+&lt;p>Energy gaps in zero-dimensional graphene nanoribbons&lt;/p>
+&lt;p>Applied Physics Letters 91, 042101&lt;/p>
+&lt;p>
+&lt;a href="https://doi.org/10.1063/1.2761531" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2007_Shemella_APL.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521092014/https://smalldata.dev/posts/open-access-research/2007_Shemella_APL.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{doi:10.1063/1.2761531,
+title = {Energy gaps in zero-dimensional graphene nanoribbons},
+author = {Shemella,Philip and Zhang,Yiming and Mailman,Mitch and Ajayan,Pulickel M. and Nayak,Saroj K.},
+year = 2007,
+journal = {Applied Physics Letters},
+volume = 91,
+number = 4,
+pages = 42101,
+doi = {10.1063/1.2761531},
+url = {https://doi.org/10.1063/1.2761531},
+eprint = {https://doi.org/10.1063/1.2761531}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2007&lt;/p>
+&lt;p>P.T. Shemella, B. Pereira, Y. Zhang, P. van Roey, G. Belfort, S. Garde, S.K. Nayak&lt;/p>
+&lt;p>Mechanism for intein C-terminal cleavage: A proposal from quantum mechanical calculations&lt;/p>
+&lt;p>Biophysical Journal 92 (3), 847–853 (2007)&lt;/p>
+&lt;p>
+&lt;a href="https://www.ncbi.nlm.nih.gov/entrez?Db=pubmed&amp;amp;Cmd=ShowDetailView&amp;amp;uid=17085503" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2007_Shemella_Biophysical_Journal.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521092041/https://smalldata.dev/posts/open-access-research/2007_Shemella_Biophysical_Journal.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid17085503,
+title = {{{M}echanism for intein {C}-terminal cleavage: a proposal from quantum mechanical calculations}},
+author = {Shemella, P. and Pereira, B. and Zhang, Y. and Van Roey, P. and Belfort, G. and Garde, S. and Nayak, S. K.},
+year = 2007,
+month = feb,
+journal = {Biophys. J.},
+volume = 92,
+number = 3,
+pages = {847--853}
+}
+&lt;/code>&lt;/pre>
+&lt;p>###Book Chapter&lt;/p>
+&lt;p>2010&lt;/p>
+&lt;p>P.T. Shemella, S.K. Nayak&lt;/p>
+&lt;p>Identifying the reaction mechanisms of inteins with QM/MM multiscale methods&lt;/p>
+&lt;p>Computational Modeling in Biomechanics, 469–489&lt;/p>
+&lt;p>
+&lt;a href="https://link.springer.com/chapter/10.1007/978-90-481-3575-2_16" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/Chapter1.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521092107/https://smalldata.dev/posts/open-access-research/Chapter1.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@inbook{computational2010,
+title = {Identifying the Reaction Mechanisms of Inteins with QM/MM Multiscale Methods},
+author = {Shemella, Philip T. and Nayak, Saroj},
+year = 2010,
+month = 11,
+journal = {Computational Modeling in Biomechanics},
+pages = {469--489},
+doi = {10.1007/978-90-481-3575-2\_16}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>###PhD Thesis&lt;/p>
+&lt;p>2008&lt;/p>
+&lt;p>First principles study of intein reaction mechanisms&lt;/p>
+&lt;p>Department of Physics, Applied Physics &amp;amp; Astronomy, Rensselaer Polytechnic Institute&lt;/p>
+&lt;p>
+&lt;a href="https://arxiv.org/abs/0903.4570" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2008_Shemella_PhD_Thesis.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521092517/https://smalldata.dev/posts/open-access-research/2008_Shemella_PhD_Thesis.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@phdthesis{phdthesis,
+title = {First Principles Study of Intein Reaction Mechanisms},
+author = {Philip Shemella},
+year = 2008,
+month = 5,
+school = {Rensselaer Polytechnic Institute},
+eprint = {arXiv:0903.4570}
+}
+&lt;/code>&lt;/pre></description></item><item><title>Free-fall and Personal Growth</title><link>https://smalldata.dev/posts/skydiving-freefall/</link><pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/skydiving-freefall/</guid><description>&lt;p>I&amp;rsquo;m not a skydiver. I never got a license. It&amp;rsquo;s been ten years since I did my fifteen measly jumps.&lt;/p>
+&lt;p>But those few weeks of ground school, pre-instructed then video-analyzed jumps, and those several thousand bucks, provided both professional and personal lessons that I&amp;rsquo;ve thought about nearly every day since then – and hopefully put to some use. I&amp;rsquo;ll probably never skydive again, but the effect on my outlook has been long-lasting.&lt;/p>
+&lt;h2 id="1-slow-down">1. Slow down&lt;/h2>
+&lt;p>Skydiving is as safe as the equipment and the mindset of the jumper. New students memorize how to methodically check the equipment before boarding the plane.
+We were told to memorize the motion for pulling the ripcord.
+We were taught to mentally visualize the landing pattern.
+Checklists are known to improve certain detailed processes, such as
+&lt;a href="https://news.ycombinator.com/item?id=19682451" target="_blank" rel="noopener">surgery&lt;/a> and
+&lt;a href="https://en.wikipedia.org/wiki/Preflight_checklist" target="_blank" rel="noopener">aviation&lt;/a>.
+In skydiving, I felt safe because I could trust the equipment that I had methodically checked.&lt;/p>
+&lt;p>Skydiving is actually safe, and has gotten a lot safer in recent years. According to the United States Parachute Association (USPA), in 2018, there were 13 fatalities for an estimate 3.3 million jumps in the US. That&amp;rsquo;s 3.9 deaths per million jumps. And according to the USPA, tandem skydiving is even safer, with two deaths per million jumps.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/skydiving_fatalities_dataviz.png" alt="Skydiving Fatalities Dataviz!">&lt;/p>
+&lt;p>&lt;em>Data source:&lt;/em>
+&lt;a href="https://uspa.org/Find/FAQs/Safety" target="_blank" rel="noopener">USPA&lt;/a>&lt;/p>
+&lt;p>Skydivers are an enthusiastic group, and especially for the skydiver-tourists who have a limited amount of time at the dropzone, you try to maximize the number of jumps while the weather and winds are good.
+This means as soon as your feet hit the ground, you run to the parachute packing area, quickly pack, and get back to the plane before it takes off again.
+But if it&amp;rsquo;s a safe dropzone and they see you running to the plane, they will not let you board.
+And for good reason.
+Incorrect equipment usage is a major cause of
+&lt;a href="https://www.dropzone.com/fatalities/" target="_blank" rel="noopener">skydiving fatalities&lt;/a>, including some things so basic as not inserting one&amp;rsquo;s legs into the harness, or even
+&lt;a href="https://apnews.com/061807bba937de09d52077b194ee6f54" target="_blank" rel="noopener">mistaking video equipment for a parachute, multiple times&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;The harness McGuire wore for the video equipment is similar to that of a parachute. It has the same feel.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;em>My Takeaway:&lt;/em> Being methodical in preparation is a valuable skill. Use checklists to decrease the chances of missing something small but critical. Checklists also decrease your overall
+&lt;a href="https://en.wikipedia.org/wiki/Cognitive_load" target="_blank" rel="noopener">cognitive load&lt;/a>.&lt;/p>
+&lt;h2 id="2-relax-in-stressful-situations">2. Relax in stressful situations&lt;/h2>
+&lt;p>At some point, every student has to make their first solo jump. As soon as I exited the plane, my first subconscious reaction was Panic. My body went rigid.
+I spun out of control, rotating through free fall.
+If you open your parachute with this type of movement, there&amp;rsquo;s a good chance it gets twisted or tangled and you&amp;rsquo;ll have a hard landing. Opening is better than not-opening, but opening dangerously when you are not stabilized can often lead to serious injury or death. In my first solo jump, until I stabilized, I believed I was going to crash to the ground in an uncontrolled spin.&lt;/p>
+&lt;p>Here&amp;rsquo;s how it looks to not be stabilized:&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/skydiving_01.png" alt="not how to skydive">&lt;/p>
+&lt;p>I had this exact internal dialog after 5 eternal seconds of uncontrollable aerial rotations:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>What needs to be done?&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>     Stabilize the body.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;em>How does one achieve that?&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>     The body must relax.&lt;/p>
+&lt;/blockquote>
+&lt;p>That realization was an electrocution. To survive, my conscious brain quickly took over from my flailing body. As soon as my body relaxed, it snapped into a safer, stabilized position (although still lacking technique).&lt;/p>
+&lt;p>&lt;em>My Takeaway:&lt;/em> Try to regularly take measure of a &amp;ldquo;relaxation-status&amp;rdquo;. If not calm, don&amp;rsquo;t do anything else except take steps to achieve calmness.&lt;/p>
+&lt;h2 id="3-dont-blindly-use-technology">3. Don&amp;rsquo;t blindly use technology&lt;/h2>
+&lt;p>I was sitting at the pre-boarding zone, getting geared-up and ready to board. Skydivers wear
+&lt;a href="https://en.wikipedia.org/wiki/Altimeter#/media/File:Hand-mounted_skydiving_altimeter_with_analogue_display_being_used_in_free_fall.jpg" target="_blank" rel="noopener">altimeters&lt;/a> on their hand, to easily monitor the altitude during the jump, so you know when to pull the ripcord. As I put the altimeter on my hand, it dropped from knee-hight to the ground. &lt;em>No big deal, right?&lt;/em>&lt;/p>
+&lt;p>&lt;strong>Wrong.&lt;/strong> An instructor happened to see the altimeter fall, and worse, he saw that I put it on after it fell. He walked over to me and asked me if I was planning to use it. When I said Yes, he asked me to give him the altimeter, and brought me another to use. His thinking, which was 100% correct, was that if there is a miniscule chance that the altimeter was broken or mis-calibrated in the fall, it could mean an accident. The instructor then wore my potentially-broken altimeter in addition to his own, and confirmed after his jump that it was still working correctly.&lt;/p>
+&lt;p>&lt;em>My Takeaway:&lt;/em> Know when to &lt;em>not&lt;/em> trust the technology, and when the technology needs to be tested. This is especially important on analytical projects, where a result needs to be understood in the context of the data. The worst thing one can do is to make a business case on a faulty analytical presumption.&lt;/p>
+&lt;h2 id="4-waiting-may-be-better">4. Waiting may be better&lt;/h2>
+&lt;p>The &amp;ldquo;stress&amp;rdquo; of skydiving actually causes a hormone response:&lt;/p>
+&lt;blockquote>
+&lt;p>Higher post-jump happiness predicted faster cortisol recovery after jumping&amp;hellip;&lt;/p>
+&lt;/blockquote>
+&lt;p>And it&amp;rsquo;s not even just beginner skydivers:&lt;/p>
+&lt;blockquote>
+&lt;p>Intriguingly, even after hundreds of prior exposures, the experienced jumpers still showed a significant cortisol response to the jump&amp;hellip;&lt;/p>
+&lt;/blockquote>
+&lt;p>(&lt;em>Source:
+&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4373275/" target="_blank" rel="noopener">Experience, cortisol reactivity, and the coordination of emotional responses to skydiving&lt;/a>&lt;/em>&lt;/p>
+&lt;p>After my Advanced Free Fall course was complete, I was on my flight back home from the dropzone in Spain. The buzz of new addiction was overwhelming. I did some back-of-the-envelope math to calculate how many jumps I could afford if I quit my job and cashed-in my modest life savings.&lt;/p>
+&lt;p>Thankfully, the hormonal response eventually dulled, and I wasn&amp;rsquo;t overcome by a skydiving addiction. (Not that there&amp;rsquo;s anything wrong with it.)&lt;/p>
+&lt;p>&lt;em>My Takeaway:&lt;/em> Waiting to plan is not so good, but waiting to act is perfectly fine. Don&amp;rsquo;t feel pressured to act. It&amp;rsquo;s better to wait until all the information is known, or in this case, until the hormonal response has worn off.&lt;/p>
+&lt;p>An example from my professional life: I worked for an energy utility, and one task was the responsibility for the data-compliance of a European Union regulatory-framework. The deadlines were clear, but as they slowly approached, the exact implementation wasn&amp;rsquo;t getting any clearer. I decided to wait. We were a small player in the market, and I was confident the big Swiss players would iron out the details. The internal response was not so positive, and some may have said that I was procrastinating. But when the deadline arrived, we were fully compliant, and without an over-engineered solution.&lt;/p>
+&lt;hr>
+&lt;h3 id="ten-years-later">Ten years later&lt;/h3>
+&lt;p>We&amp;rsquo;ve packed ourselves like sardines, I&amp;rsquo;m nervously sweating in a roaring, ascending plane.
+The engine noise becomes slightly quieter: the climb is over.
+Light blinks from red to green.
+In floods the burst of cold air as the plane door slides open.
+Observe as the experienced skydivers fall gracefully from the open door.
+Wait for my turn (at the end with the other beginners).&lt;/p>
+&lt;p>Ten years later, these thoughts still make my stomach turn in knots – my moment to jump steadily approaches.&lt;/p>
+&lt;p>And for your entertainment, here&amp;rsquo;s the video of my first solo jump:&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/RkZCus9veaw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;hr>
+&lt;p>Why not
+&lt;a href="https://www.dropzone.com/dropzones/" target="_blank" rel="noopener">go for a jump?&lt;/a> You never know what you&amp;rsquo;ll learn about yourself once your brain has pushed your body out of an airplane!&lt;/p></description></item><item><title>Fun with Favicons</title><link>https://smalldata.dev/posts/favicon-mosaic/</link><pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/favicon-mosaic/</guid><description>&lt;p>A recent
+&lt;a href="https://opendata.stackexchange.com/q/14007/1511" target="_blank" rel="noopener">question&lt;/a> on the Open Data Stack Exchange site got me thinking about how to download favicons from a bulk list of websites.&lt;/p>
+&lt;h3 id="idea-1-try-each-domain">Idea 1: try each domain&lt;/h3>
+&lt;p>Something like &lt;code>http://example.com/favicon.ico&lt;/code>. But using a &lt;code>favicon.ico&lt;/code> in the webroot folder is just a common implementation. Each website can host their favicon with another path, and another file format.&lt;/p>
+&lt;p>Let&amp;rsquo;s try something else&amp;hellip;&lt;/p>
+&lt;h3 id="idea-2-parse-html-for-favicon-urls">Idea 2: parse html for favicon urls&lt;/h3>
+&lt;p>If the website doesn&amp;rsquo;t use &lt;code>favicon.ico&lt;/code> in the webroot folder, the page html will contain a path to the favicon, with the following format:&lt;/p>
+&lt;pre>&lt;code>&amp;lt;link rel=icon href=https://smalldata.dev/favicon.png&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;p>There is python package aptly named
+&lt;a href="https://github.com/scottwernervt/favicon" target="_blank" rel="noopener">favicon&lt;/a> that will parse the html and return the urls to all favicons, with different formats and resolutions. I&amp;rsquo;m pasting their demo code here:&lt;/p>
+&lt;pre>&lt;code>&amp;gt;&amp;gt;&amp;gt; import favicon
+&amp;gt;&amp;gt;&amp;gt; icons = favicon.get('https://www.python.org/')
+Icon(url='https://www.python.org/static/apple-touch-icon-144x144-precomposed.png', width=144, height=144, format='png')
+Icon(url='https://www.python.org/static/apple-touch-icon-114x114-precomposed.png', width=114, height=114, format='png')
+Icon(url='https://www.python.org/static/apple-touch-icon-72x72-precomposed.png', width=72, height=72, format='png')
+Icon(url='https://www.python.org/static/apple-touch-icon-precomposed.png', width=0, height=0, format='png')
+Icon(url='https://www.python.org/static/favicon.ico', width=0, height=0, format='ico')
+&lt;/code>&lt;/pre>
+&lt;p>Getting better&amp;hellip; But if I download bulk favicons, I&amp;rsquo;d like to avoid normalizing their file format and resolutions.&lt;/p>
+&lt;h3 id="idea-3-get-favicons-directly-from-googles-cache">Idea 3: get favicons directly from google&amp;rsquo;s cache&lt;/h3>
+&lt;p>Google keeps the favicon cached for many sites (even my little website with basically zero traffic).&lt;/p>
+&lt;pre>&lt;code>https://www.google.com/s2/favicons?domain=smalldata.dev
+&lt;/code>&lt;/pre>
+&lt;p>And the favicons are all normalized: 16x16 pixels and png format. Perfect.&lt;/p>
+&lt;h2 id="now-for-some-fun">Now for some fun&lt;/h2>
+&lt;p>A
+&lt;a href="https://moz.com/top500" target="_blank" rel="noopener">top500 website list&lt;/a> has a
+&lt;a href="https://moz.com/top500/domains/csv" target="_blank" rel="noopener">csv export&lt;/a> and wrote a Python script to download each of these 500 favicons from Google&amp;rsquo;s cache and save to local folder &lt;code>images/&lt;/code>.&lt;/p>
+&lt;pre>&lt;code>import requests
+import pandas as pd
+import os
+from io import StringIO
+def request_function(domain):
+domain = domain.replace('/','')
+url = 'https://www.google.com/s2/favicons?domain=' + domain
+fav = requests.get(url).content
+with open('images'+os.sep+domain+'.png', 'wb') as handler:
+handler.write(fav)
+return
+# top 500 websites from mozilla https://moz.com/top500
+url = &amp;quot;https://moz.com:443/top500/domains/csv&amp;quot;
+headers = {&amp;quot;User-Agent&amp;quot;: &amp;quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0&amp;quot;}
+req = requests.get(url, headers=headers)
+data = StringIO(req.text)
+df = pd.read_csv(data)
+df.URL.apply(request_function)
+&lt;/code>&lt;/pre>
+&lt;h3 id="favicon-art">Favicon art&lt;/h3>
+&lt;p>What to do with 500 favicons. For fun, I made a mosaic from the collection, and I first needed a original piece of art that would be recongnizable when heavily pixelated. Van Gogh&amp;rsquo;s
+&lt;a href="https://en.wikipedia.org/wiki/The_Starry_Night" target="_blank" rel="noopener">Starry night&lt;/a> stood out.&lt;/p>
+&lt;p>Here&amp;rsquo;s the original:&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/1137px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="Starry Night">&lt;/p>
+&lt;p>&lt;em>Source&lt;/em>:
+&lt;a href="https://en.wikipedia.org/wiki/The_Starry_Night#/media/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" target="_blank" rel="noopener">Wikipedia&lt;/a>&lt;/p>
+&lt;p>Then I used a handy Python script called
+&lt;a href="https://github.com/codebox/mosaic" target="_blank" rel="noopener">mosaic.py&lt;/a>. No coding necessary.&lt;/p>
+&lt;pre>&lt;code>git clone https://github.com/codebox/mosaic.git
+python mosaic/mosaic.py source.jpg images/
+&lt;/code>&lt;/pre>
+&lt;p>And what pops out is a &lt;em>Starry Night of Favicons&lt;/em>.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/mosaic.jpeg" alt="Favicon Starry Night">&lt;/p>
+&lt;hr>
+&lt;p>(full resolution download:
+&lt;a href="https://smalldata.dev/images/mosaic_full.jpeg">22 MB&lt;/a>)&lt;/p>
+&lt;p>(python
+&lt;a href="https://gist.github.com/philshem/e59388197fd9ddb7dcdb8098f9f0aaf2" target="_blank" rel="noopener">source code&lt;/a>)&lt;/p>
+&lt;p>(top500 favicons:
+&lt;a href="https://smalldata.dev/images/top500_favicons.zip">zip&lt;/a>)&lt;/p></description></item><item><title>The Case for Part-time, part 2</title><link>https://smalldata.dev/posts/one-is-many/</link><pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/one-is-many/</guid><description>&lt;h2 id="one-is-many">one is many&lt;/h2>
+&lt;p>The previous post
+&lt;a href="%7bfilename%7dpay-me-less.md">The Case for Part-time&lt;/a> came off more self-serving than I intended, and I wanted to frame my thoughts as part of the larger context.&lt;/p>
+&lt;p>If I&amp;rsquo;ve learned anything with the help of the internet, it&amp;rsquo;s that if I am in a certain situation, then there is a community of people in the same situation.&lt;/p>
+&lt;p>Employers take notice - there are many of us who need to work part-time. And if only a handful of people need part-time now, keep reading, because as automation, robotics, AI and virtual offshoring continue to grow, our part-time community will grow, too.&lt;/p>
+&lt;h1 id="the-robots-are-coming">the robots are coming&lt;/h1>
+&lt;p>A recent article &lt;em>Are Robots Competing for your Job?&lt;/em> (
+&lt;a href="https://www.newyorker.com/magazine/2019/03/04/are-robots-competing-for-your-job" target="_blank" rel="noopener">New Yorker, Feb. 25, 2019&lt;/a>) does a great job of condensing some economic theories and the potential displacement of workers from all sectors of the workforce. (Quotes below are from this article.)&lt;/p>
+&lt;h3 id="point-1-white-collar-jobs-will-be-displaced-too">point 1: white-collar jobs will be displaced, too&lt;/h3>
+&lt;p>If the job isn&amp;rsquo;t replaced by a robot or algorithm, it can be what the article calls and &amp;ldquo;augmented immigrant&amp;rdquo;.&lt;/p>
+&lt;blockquote>
+&lt;p>“this international talent tidal wave is coming straight for the good, stable jobs that have been the foundation of middle-class prosperity in the US and Europe, and other high-wage economies.”&lt;/p>
+&lt;/blockquote>
+&lt;p>Perfect example: A few weeks ago a news story went viral: a doctor informed a patient of a terminal diagnosis via
+&lt;a href="https://www.bbc.com/news/world-us-canada-47510038" target="_blank" rel="noopener">remote video chat&lt;/a>.&lt;/p>
+&lt;h3 id="point-2-jobs-that-cant-be-displaced-wont-be-paid-better">point 2: jobs that can&amp;rsquo;t be displaced won&amp;rsquo;t be paid better&lt;/h3>
+&lt;blockquote>
+&lt;p>The catch is that, historically, caring, sharing, understanding, and empathizing with people who are in the same room as you has been the work of women, and is therefore either unpaid, and not recognized as work, or paid very badly. Childcare, elementary-school teaching, nursing, geriatric care, and social work will not suddenly become high-paying, high-prestige professions simply because everything else is done by robots.&lt;/p>
+&lt;/blockquote>
+&lt;p>It&amp;rsquo;s anecdata, but I&amp;rsquo;ve observed that the jobs advertised as part-time are often in these poorly paid &amp;ldquo;care&amp;rdquo; jobs, which uncoincidentally &amp;ldquo;has been the work of women&amp;rdquo;. &lt;em>But that&amp;rsquo;s another story for another time&amp;hellip;&lt;/em>&lt;/p>
+&lt;h3 id="point-3-its-not-the-immigrants">point 3: it&amp;rsquo;s not the immigrants&lt;/h3>
+&lt;blockquote>
+&lt;p>And a
+&lt;a href="https://academic.oup.com/oxrep/article-abstract/34/3/418/5047377" target="_blank" rel="noopener">study&lt;/a> published last summer in the Oxford Review of Economic Policy—whose lead author, Carl Frey, is the same guy who made the list of the seven hundred and two most computerizable jobs—argues that the robot caravan got Trump elected. Measuring the density of robots and comparing them with election returns, Frey and his colleagues found that “electoral districts that became more exposed to automation during the years running up to the election were more likely to vote for Trump.”&lt;/p>
+&lt;/blockquote>
+&lt;p>From that aforementioned list, the jobs displaced due to automation are office admin, sales and service, most of which fall in the &amp;ldquo;high risk employment&amp;rdquo; category. That &amp;ldquo;high risk&amp;rdquo; category corresponds to 47% of the labor force! Here&amp;rsquo;s the original dataviz:&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/probability_of_computerization_dataviz.png" alt="Probability of computerization dataviz">
+&lt;img src="https://smalldata.dev/images/probability_of_computerization_legend.png" alt="Probability of computerization legend">&lt;/p>
+&lt;p>&lt;em>Source:
+&lt;a href="https://www.oxfordmartin.ox.ac.uk/downloads/academic/The_Future_of_Employment.pdf" target="_blank" rel="noopener">The Future of Employment (PDF)&lt;/a>&lt;/em>&lt;/p>
+&lt;h3 id="point-4-we-want-more-than-a-distraction">point 4: we want more than a distraction&lt;/h3>
+&lt;p>The article brings up universal basic income&lt;/p>
+&lt;blockquote>
+&lt;p>[There will be a] group of those who will be mostly unemployed and may be receiving a universal basic income as compensation for being the victims of technological unemployment.&lt;/p>
+&lt;/blockquote>
+&lt;p>and a further far-reaching idea:&lt;/p>
+&lt;blockquote>
+&lt;p>Some futurists suggest that, in our Asimov-y future, these sort of people might wind up spending their empty days playing video games. Otherwise, they’ll wage a revolution&amp;hellip;&lt;/p>
+&lt;/blockquote>
+&lt;p>Rather than &amp;ldquo;empty days&amp;rdquo;, let&amp;rsquo;s build a society where part-time is taken seriously, and with the extra time we can enjoy more moments with family and friends, and contribute back to our communities.&lt;/p></description></item><item><title>The Case for Part-time</title><link>https://smalldata.dev/posts/pay-me-less/</link><pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/pay-me-less/</guid><description>&lt;h1 id="ive-made-a-huge-mistake-in-my-professional-life">I&amp;rsquo;ve made a huge mistake (in my professional life)&lt;/h1>
+&lt;p>Eighteen months ago I quit my full-time job to follow my dreams and launch a startup. At the time, my boss offered my same job but part-time (2 days per week, or 40%). With the benefit of hindsight, the single biggest mistake in my career was to decline that offer.
+But at the time, I privately wanted something else: less time in the office, and more free-time both with and without the kids.
+Since then, the startup has gone stagnant. My bank account has emptied. I&amp;rsquo;m drowning in free-time.
+The time to get a job was months ago.&lt;/p>
+&lt;h2 id="the-job-market">the job market&lt;/h2>
+&lt;p>The unemployment rate in Switzerland is one of the lowest in Europe. I&amp;rsquo;ve marked the Swiss unemployment compared to all worldwide countries in the dataviz below.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/unemployment_wikipedia.png" alt="Unemployment rates worldwide">
+&lt;em>source:
+&lt;a href="https://en.wikipedia.org/wiki/List_of_countries_by_unemployment_rate" target="_blank" rel="noopener">Wikipedia&lt;/a>&lt;/em>&lt;/p>
+&lt;p>And for &lt;em>data-sciency&lt;/em> people like me, with a PhD in computational physics, years of experience in business intelligence and data science, and programming and databases and data visualization reporting and business development, with strong references from every previous position, the job market is strong and the effective unemployment rate is &lt;strong>0.0%&lt;/strong>.&lt;/p>
+&lt;p>No problem, right?&lt;/p>
+&lt;h1 id="choosing-part-time">choosing part-time&lt;/h1>
+&lt;p>Full-time employment in Switzerland is 8.5 hours per day, for a total of 42.5 hours per week.
+We call it here &amp;ldquo;100%&amp;rdquo;.
+It&amp;rsquo;s pretty common for jobs to be offered at 80%-100%.
+Because salaries for tech jobs are relatively high, even those without kids should enjoy a weekday free.&lt;/p>
+&lt;p>&lt;strong>I&amp;rsquo;ve decided to work part time - no more than 60%.&lt;/strong>&lt;/p>
+&lt;h3 id="family">family&lt;/h3>
+&lt;p>I have two healthy kids who &lt;em>still&lt;/em> like to spend time with me, and who are rapidly growing up.
+Part-time affords me the flexibility to cover for the many school holidays, events, meetings.
+(The city of Zürich has 13 calendar weeks of school vacation and
+&lt;a href="https://en.wikipedia.org/wiki/Sechsel%C3%A4uten" target="_blank" rel="noopener">all&lt;/a>
+&lt;a href="https://en.wikipedia.org/wiki/Knabenschiessen" target="_blank" rel="noopener">sorts&lt;/a> of other holidays scattered throughout the year.)
+We live in affordable housing in the city of Zürich, a &lt;em>Wohnungsbaugenossenschaft&lt;/em> (
+&lt;a href="https://en.wikipedia.org/wiki/Housing_cooperative" target="_blank" rel="noopener">EN&lt;/a>,
+&lt;a href="https://de.wikipedia.org/wiki/Wohnungsbaugenossenschaft" target="_blank" rel="noopener">DE&lt;/a>).
+I have a partner who likes to work, and earns well too. What a great place to be.&lt;/p>
+&lt;h3 id="free-time">free-time&lt;/h3>
+&lt;p>Some free-time should be without the kids around.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Trips to the (non-kids) library.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Reading books and magazines, doing crossword puzzles.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Browsing the second-hand stores.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Gardening in the backyard.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Projects around the house.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Rediscover old hobbies, and discover new ones.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="health">health&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>To work on my #dadbod.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>To swim laps in a 50m pool.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>To take my slow time on long forest walks.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>To take a nap.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Avoid rushing around.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>To prevent a burnout.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="current-status-bored">current status: &lt;em>bored&lt;/em>&lt;/h2>
+&lt;p>I have it good: family and free-time.&lt;/p>
+&lt;p>What&amp;rsquo;s missing: a paying job. And teamwork and office comradery. And a reason to put on pants.&lt;/p>
+&lt;p>I&amp;rsquo;ve applied to around 50 jobs over the past few months and have had a good rate of interest and interviews.&lt;/p>
+&lt;p>But the lurking secret? None of these jobs was advertised in my sweet spot: 40% - 60%.&lt;/p>
+&lt;h2 id="productivity-doesnt-scale">productivity doesn&amp;rsquo;t scale!&lt;/h2>
+&lt;p>I&amp;rsquo;m an abstract and creative thinker.
+Employers like me because I think out of the box, because I challenge the status quo, and because I deliver.
+Productivity for this kind of non-operational work doesn&amp;rsquo;t scale to 42.5 office hours per week.
+Somewhere between 60% and 100% is my productivity drop-off.&lt;/p>
+&lt;p>Here&amp;rsquo;s a dataviz that shows a theoretical productivity drop with increasing hours per work week. The &amp;ldquo;email zone&amp;rdquo; is where the operational tasks take up the entire working time. The &amp;ldquo;search for vacation zone&amp;rdquo; is where I don&amp;rsquo;t want to be. And what I offer my future employer is to pay me less, and then get me only when I&amp;rsquo;m maximally efficient.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/productivity_dataviz.jpg" alt="Productivity doesn&amp;rsquo;t scale!">&lt;/p>
+&lt;p>But&amp;hellip; hiring is a long-term exercise in risk avoidance. If any one candidate brings a complication, the hiring team will usually go with the safe bet to avoid any future criticism. It&amp;rsquo;s the same unspoken selling-point of the Big Four consulting companies: &lt;em>Choose us, because even when we fail, no one will second guess you&lt;/em>.&lt;/p>
+&lt;h1 id="the-challenge-moving-forward">the challenge moving forward&lt;/h1>
+&lt;p>It turns out that there are literally &lt;strong>zero&lt;/strong> open jobs that fit my description. There are a handful of part-time developer jobs, and although I like writing code, my strength is prototyping and analysis, and not shipping apps and websites. There is a handful of part-time jobs for interns or students (I&amp;rsquo;ve even applied for some of those). I&amp;rsquo;ve tried remote jobs and Upwork, and although neither is panning out, and it would be hard to match a Swiss salary. In the meantime, I&amp;rsquo;m working on some small freelance projects, but for personal reasons, I don&amp;rsquo;t actively pursue freelance projects.
+(&lt;em>Note&lt;/em>: I offer my services to NGOs at either heavily discounted rates or even free, in the case that I support in their mission.)&lt;/p>
+&lt;p>I still interview for full-time jobs, and I don&amp;rsquo;t forewarn interviewers of my part-time job requirement. In general, until I have an offer, I try my hardest to not give any reason to not hire me. I do mention that my previous jobs were at 80%, because I have one regular weekday at home with the kids. In one recent interview, they asked &lt;em>Are you flexible?&lt;/em> I answered &lt;em>Yes, I&amp;rsquo;d also be open to 60%.&lt;/em>
+Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩&lt;/p>
+&lt;p>I would think my proposition would be interesting for a startup or small company, who normally couldn&amp;rsquo;t hire a dedicated, full-time data scientist, either because of the high salary or uncertain need. Or a big company who wants to explore job sharing. As a compromise, I am open to fixed-term, non-permanent contracts. If things go bad, cut me loose and end the experiment. No hard feelings. So far, no takers.&lt;/p>
+&lt;hr>
+&lt;p>&lt;s>As of &lt;code>.now()&lt;/code> I&amp;rsquo;m still searching for a position. Want quality work for a part-time salary?
+&lt;a href="mailto:philshem@pm.me">Get in touch!&lt;/a>&lt;/p>
+&lt;p>**SALE! For a limited time only - 40% off!**&lt;/s>&lt;/p></description></item><item><title>Healthy hiring (at a cost to diversity?)</title><link>https://smalldata.dev/posts/smokers-at-work/</link><pubDate>Tue, 26 Mar 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/smokers-at-work/</guid><description>&lt;p>I recently interviewed for a position with a fast-growing startup in food tech. The position checked all my boxes, and because I didn&amp;rsquo;t make it past the interview stage, the following may be some sour grapes 🍇.&lt;/p>
+&lt;p>Something in the text of the job posting stood out to me, and has stuck with me the past few months:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>No smoking:&lt;/strong> You never smell like cigarettes and don’t smoke during the day: &lt;s>XYZ&lt;/s> is about healthy living.&lt;/p>
+&lt;/blockquote>
+&lt;p>And because this is Switzerland, also in German:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Nichtraucher:&lt;/strong> &lt;s>XYZ&lt;/s> ist eine Nichtraucher Firma, weshalb das Rauchen während der Arbeitszeit nicht erlaubt ist und Du nie nach Rauch riechen darfst.&lt;/p>
+&lt;/blockquote>
+&lt;p>and even in French:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Non-fumeur :&lt;/strong> &lt;s>XYZ&lt;/s> est une société “non-fumeur”. Par conséquent fumer durant les heures de travail n’est pas autorisé, tout comme sentir la fumée.&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="is-hiring-only-non-smokers-a-form-of-discrimination">Is hiring only non-smokers a form of discrimination?&lt;/h1>
+&lt;h2 id="what-if-instead-the-job-posting-had-written-_our-company-is-about-healthy-living-and-we-dont-hire-overweight-people_-or-people-with-body-odor-due-to-hormonal-or-hygiene-issues-or-people-who-eat-junk-food-or-people-who-drink-excessive-energy-drinks">What if instead the job posting had written &lt;em>our company is about healthy living, and we don&amp;rsquo;t hire overweight people&lt;/em>? Or people with body odor due to hormonal or hygiene issues? Or people who eat junk food? Or people who drink excessive energy drinks?&lt;/h2>
+&lt;p>At what point does &lt;em>healthy&lt;/em> hiring become discrimination? I would say that forcing people to hide their behavior, and to not be themselves, in order to gain employment, is a mild form of discrimination. And if it&amp;rsquo;s not discrimination, it&amp;rsquo;s definitely a step toward decreasing diversity in the workplace.&lt;/p>
+&lt;p>Now&amp;hellip; I&amp;rsquo;m not a cigarette smoker, and I don&amp;rsquo;t like smelling cigarette smoke, and I don&amp;rsquo;t want to be exposed to cigarette smoke at work. But I also want a diverse work environment, where people are comfortable to be themselves. I accept that my co-workers may smoke cigarettes, even during working hours. Life is full of small differences and grievances and part of being a human being, especially when living in a city with so many other human beings, is accepting others as they are, and letting them be free to be themselves.&lt;/p>
+&lt;h1 id="heading">🚭&lt;/h1>
+&lt;hr>
+&lt;p>&lt;em>Update:&lt;/em> Here&amp;rsquo;s a more scholarly take on the ethics of not hiring smokers.&lt;/p>
+&lt;p>&amp;ldquo;The Ethics of Not Hiring Smokers&amp;rdquo;,
+&lt;a href="https://www.nejm.org/doi/full/10.1056/NEJMp1301951?query=TOC" target="_blank" rel="noopener">New England Journal of Medicine (2013)&lt;/a>&lt;/p>
+&lt;p>&lt;strong>tl;dr&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>We agree with those polled, believing that categorically refusing to hire smokers is unethical: it results in a failure to care for people, places an additional burden on already-disadvantaged populations, and preempts interventions that more effectively promote smoking cessation.&lt;/p>
+&lt;/blockquote></description></item></channel></rss>

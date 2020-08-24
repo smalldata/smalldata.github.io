@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>data science | small DATA</title><link>https://smalldata.dev/tag/data-science/</link><atom:link href="https://smalldata.dev/tag/data-science/index.xml" rel="self" type="application/rss+xml"/><description>data science</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu15c4e386fa9af0b23c15ab588f3cb903_1591_512x512_fill_lanczos_center_2.png</url><title>data science</title><link>https://smalldata.dev/tag/data-science/</link></image><item><title>Data Science and PAW Patrol</title><link>https://smalldata.dev/posts/paw-patrol/</link><pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/paw-patrol/</guid><description>&lt;h2 id="step-0-the-disclaimers">Step 0. The disclaimers&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>I don&amp;rsquo;t call myself a &lt;em>data scientist&lt;/em>, but other people do, and I wanted to share my approach to &lt;em>data science&lt;/em>. This approach has worked well for me professionally. There are many good approaches, and I don&amp;rsquo;t want to gatekeep any of those.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>PAW Patrol is a registered trademark of someone else. I don&amp;rsquo;t own any rights to PAW Patrol. If I did, I would be doing something better with my free time.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="step-1-start-with-the-science">Step 1. Start with the science&lt;/h2>
+&lt;p>Thinking like a scientist means having a question, and then searching out an answer. Science isn&amp;rsquo;t data-driven, in that the data can provide an answer, but the available data shouldn&amp;rsquo;t suggest the question. At least in most of the cases I can think of.&lt;/p>
+&lt;p>This is a huge challenge to productionalize data science in a business environment. With a recent (unnamed) employer, we had a big data-engineering effort to rebuild an analysis pipeline. As an analyst, it became slowly clear that with the new pipeline, we could only recreate 5 of the 6 key metrics. I left the company before the proposed workaround was implemented.&lt;/p>
+&lt;p>For my example of methodology, I&amp;rsquo;ll use
+&lt;a href="https://en.wikipedia.org/wiki/PAW_Patrol" target="_blank" rel="noopener">PAW Patrol&lt;/a>. It&amp;rsquo;s a kids&amp;rsquo; animated TV series. To describe cast of characters, and the &lt;em>plot&lt;/em>, here are the lyrics to the theme song:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;sub>PAW Patrol, PAW Patrol&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>We&amp;rsquo;ll be there on the double&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Whenever there&amp;rsquo;s a problem&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>'Round Adventure Bay&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Ryder and his team of pups&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Will come and save the day&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Marshall, Rubble, Chase&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Rocky, Zuma, Skye&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>Yeah! They&amp;rsquo;re on the way!&lt;/sub>&lt;/p>
+&lt;/blockquote>
+&lt;p>Yeah. It goes on. You get the point. But the show can be endearing, and I think the deeper reason it resonates with kids is because the team is useful and appreciated by the adults they help. But that&amp;rsquo;s a topic for another article.&lt;sup>
+[1]&lt;/sup>&lt;/p>
+&lt;p>If you take a vote in my household, a consensus of 50% of voters will declare PAW Patrol to be the single best achievement of humanity. And it&amp;rsquo;s been decided, by compromise, that if we ever get a pet dog, the name shall be either &lt;code>Zuma-Marshall&lt;/code>, or &lt;code>Marshall-Zuma&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/paw-patrol-jump-i49016.jpg" alt="paw patrol team">&lt;/p>
+&lt;h3 id="the-question">The question&lt;/h3>
+&lt;p>I was curious - with PAW Patrol hype slowly sweeping the planet since 2013, do we see an increase in dogs named after the crew?&lt;/p>
+&lt;h2 id="step-2-curate-the-data">Step 2. Curate the data&lt;/h2>
+&lt;p>I need open data with pet names. Dog names. There are several, and I&amp;rsquo;ll outline why they make a good or bad candidate for the analysis.&lt;/p>
+&lt;h3 id="hundenamen-aus-dem-hundebestand-der-stadt-zürichhttpsdatastadt-zuerichchdatasetsid_stapo_hundenamen">
+&lt;a href="https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen" target="_blank" rel="noopener">Hundenamen aus dem Hundebestand der Stadt Zürich&lt;/a>&lt;/h3>
+&lt;p>This one is from the city of Zürich, Switzerland, where I live. I&amp;rsquo;ve seen a
+&lt;a href="https://twitter.com/OpenDataZurich/status/1235887129047240704" target="_blank" rel="noopener">recent Twitter post&lt;/a> about this dataset, so that may have planted the idea that dog names can be open data.&lt;/p>
+&lt;p>Data goes back to 2015, and each year is one CSV file. To get an idea of the dataset size, I choose the complete year of
+&lt;a href="https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen/resource/37af5c6e-c101-41aa-8072-033280191f9c" target="_blank" rel="noopener">2019&lt;/a>. 7647 records. It may be hard to find trends in so few dog registrations. Additionally, the Paw Patrol trend is slowly making it here to Switzerland. Since it started in North America, I&amp;rsquo;ll go to look there.&lt;/p>
+&lt;h3 id="anchorage-dog-names-over-timehttpscatalogdatagovdatasetdog-names-over-time">
+&lt;a href="https://catalog.data.gov/dataset/dog-names-over-time" target="_blank" rel="noopener">Anchorage Dog Names over Time&lt;/a>&lt;/h3>
+&lt;p>Only 16k total names between 2017 and 2019. That&amp;rsquo;s not enough dogs when there are so many possible names. And starting in 2017, I may not get a good &lt;em>before&lt;/em> snapshot.&lt;/p>
+&lt;h3 id="seattle-pet-licenseshttpscatalogdatagovdatasetseattle-pet-licenses">
+&lt;a href="https://catalog.data.gov/dataset/seattle-pet-licenses" target="_blank" rel="noopener">Seattle Pet Licenses&lt;/a>&lt;/h3>
+&lt;blockquote>
+&lt;p>A list of active/current Seattle pet licenses, including animal type (species), pet&amp;rsquo;s name, breed and the owner&amp;rsquo;s ZIP code.&lt;/p>
+&lt;/blockquote>
+&lt;p>This might be a good dataset because records go back to 2000 and are updated through 2019. I can get snapshots before and during the PAW Patrol era. But I counted dogs registered in 2019 and it was 11k. In 2018, 7k. Still not enough.&lt;/p>
+&lt;h3 id="nyc-dog-licensing-datasethttpsdatacityofnewyorkushealthnyc-dog-licensing-datasetnu7n-tubp">
+&lt;a href="https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp" target="_blank" rel="noopener">NYC Dog Licensing Dataset&lt;/a>&lt;/h3>
+&lt;p>This could be it. Recently updated. 24.1 MB CSV file. 345k total rows going back more than 10 years. 79k dog registrations in 2019. Explore the data
+&lt;a href="https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp/data" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>The fine print:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>Each record stands as a unique license period for the dog over the course of the yearlong time frame.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>What does this mean for my data? It means that dog names are assigned at least once per year. If I count unique dog names over multiple years, I&amp;rsquo;ll be over counting.&lt;/p>
+&lt;p>and&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>Each record represents a unique dog license that was active during the year, but not necessarily a unique record per dog, since a license that is renewed during the year results in a separate record of an active license period.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>This means that dog-names within a given year may actually be duplicate as well. If this was a real project, in order to fully trust my data, I would first count how many names are repeated. To do this, because there is no column &lt;code>dog ID&lt;/code> which would uniquely identify a dog, I would have to create a surrogate key based on the columns such as &lt;code>AnimalBirthMonth&lt;/code>, &lt;code>AnimalGender&lt;/code> and &lt;code>BreedName&lt;/code>, and perhaps also the geographical data &lt;code>Borough&lt;/code> and &lt;code>ZipCode&lt;/code>.&lt;/p>
+&lt;p>If I cared more about PAW Patrol pet-naming theory, I could build a unified dog-name data-model and combine datasets, and keep looking for new sources to add. Maybe even make some FOIA requests. But I don&amp;rsquo;t care that much. On to the answer. Let&amp;rsquo;s hope NYC is a trend-setter &amp;ndash; when it comes to naming pets after kids&amp;rsquo; cartoon superheros.&lt;/p>
+&lt;h2 id="step-3-explore-the-data">Step 3. Explore the data&lt;/h2>
+&lt;p>Lots of tools but because I &lt;em>know&lt;/em> that I won&amp;rsquo;t productionalize this pipeline, I&amp;rsquo;m going to dump the data into the commercial BI tool Tableau Desktop. Licenses are expensive, and there are many solid open source tools that will do the job. But the software allows me to do fast visual anaylsis. If you sign up for the
+&lt;a href="https://www.coursera.org/learn/analytics-tableau" target="_blank" rel="noopener">free audit of this Coursera&lt;/a>, you&amp;rsquo;ll see that after clicking through the 3rd week or so, you are provided a 6-month software license to complete the rest of the course. &lt;em>YMMV.&lt;/em>&lt;/p>
+&lt;h3 id="visual-analysis">Visual Analysis&lt;/h3>
+&lt;p>In this step, I&amp;rsquo;m trying to get a feel for the data. Is it clean, is it reliable? Will it answer my question?&lt;/p>
+&lt;p>What are the 5 most common names for dogs in NYC?&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="left">&lt;sub>Name&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>Frequency&lt;/sub>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>5379&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>BELLA&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>3824&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>3763&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>MAX&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>3582&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2852&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>COCO&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2636&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Woof. That&amp;rsquo;s a lot of &lt;em>NULL&lt;/em>. Let&amp;rsquo;s see how it&amp;rsquo;s evenly distributed throughout the years&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2014&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2015&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2016&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2017&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2018&lt;/sub>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>3&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1179&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1903&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1294&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1000&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>BELLA&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>19&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>427&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1332&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1233&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>813&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>11&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>963&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1374&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>847&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>568&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>MAX&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>34&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>444&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1214&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1166&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>724&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>293&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1027&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>935&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>571&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>COCO&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>22&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>296&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>941&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>817&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>560&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>OK, better. It seems pretty flat, except for 2014. Let&amp;rsquo;s do a quick check of total names per year, to see that indeed 2014 has many fewer.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="left">&lt;sub>Year of LicenseIssuedDate&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>Frequency&lt;/sub>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="left">&lt;sub>2014&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2650&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>2015&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>42439&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>2016&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>119080&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>2017&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>110995&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>2018&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>70563&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Bummer that 2019 registrations aren&amp;rsquo;t there yet. I hope NYC is trend-setting enough to show a signal in 2018.&lt;/p>
+&lt;p>Another learning is that we should exclude 2014 from the calculation &amp;ndash; there are just not enough records, especially in comparison with other years.&lt;/p>
+&lt;h3 id="initial-calculation">Initial Calculation&lt;/h3>
+&lt;p>I want to start to measure trends, and I&amp;rsquo;ll do so visually, since I need to only compare a handful of names.&lt;/p>
+&lt;p>Marshall, Rubble, Chase, Rocky, Zuma and Skye. Let&amp;rsquo;s add Ryder, even though he is a human in the cartoon. And the pups added in later seasons: Everest and Tracker.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th align="left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2014&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2015&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2016&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2017&lt;/sub>&lt;/th>
+&lt;th align="center">&lt;sub>2018&lt;/sub>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td align="left">&lt;sub>CHASE&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>7&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>49&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>115&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>170&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>86&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>EVEREST&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>9&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>5&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>3&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>MARSHALL&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>7&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>19&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>11&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>ROCKY&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>20&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>300&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>823&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>785&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>486&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>RUBBLE&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>6&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>RYDER&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>13&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>28&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>18&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>SKYE&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>10&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>61&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>54&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>36&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>TRACKER&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>1&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td align="left">&lt;sub>ZUMA&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>A couple things to notice. There aren&amp;rsquo;t enough Trackers, Rubbles or Zumas to use in any analysis. And Everest probably doesn&amp;rsquo;t have enough data to compare, either, especially since she was a late addition to the pack.&lt;/p>
+&lt;p>And because the yearly totals of registrations varies so greatly, I need to normalize my data. This means that I take the count of each unique name and divide by the total dogs registered in that year. Noticing that Rocky is the most popular from my list, and that in 2016 there were 823 Rockies registered, from a total of 119,080 registrations, I want to normalize for the prevalence of each name to a fixed integer, so that I can compare years. In effect, how popular a certain name was in that year. The metric is then be &lt;code>frequency of dog-name per 10000 dogs&lt;/code>.&lt;/p>
+&lt;h3 id="closing-the-calculation">Closing the calculation&lt;/h3>
+&lt;p>The math doesn&amp;rsquo;t get too complicated, because the data doesn&amp;rsquo;t require anything else. I&amp;rsquo;m going to use my normalized frequency metric to compare trends for Chase, Marshall, Rocky, Ryder, Rocky and Skye.&lt;/p>
+&lt;p>I&amp;rsquo;ve removed 2016 and 2017 now too, to try to more clearly show before and after. It&amp;rsquo;s only Skye that shows any trend &amp;ndash; effectively doubling in popularity.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/paw_patrol_results.png" alt="paw patrol results">&lt;/p>
+&lt;h2 id="step-4-shutting-it-down">Step 4. Shutting it down&lt;/h2>
+&lt;p>I can&amp;rsquo;t believe I&amp;rsquo;ve spent this much time thinking about PAW Patrol. What I want to stress is that when you are working with data, for me it has been essential to&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Understand the subject matter. In this case, that means passively absorbing all things PAW Patrol.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Get dirty with the data. If you try to plug an algorithm on top of data, it&amp;rsquo;s unlikely to give any meaningful results. Can you imagine creating a fancy data pipeline that spits out the 3 most popular dog names? &lt;code>UNKNOWN&lt;/code>, &lt;code>BELLA&lt;/code> and &lt;code>NAME NOT PROVIDED&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>In case you haven&amp;rsquo;t heard it already, here&amp;rsquo;s their theme song. I&amp;rsquo;ve been singing it to myself as I write this, and I hope it gets stuck in your head, too.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/1UdI_eoDPKQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;h1 id="heading">🐶🦴&lt;/h1>
+&lt;h3 id="and-remember--_whenever-theres-trouble-just-yelp-for-help_">And remember&amp;ndash;&lt;em>Whenever there’s trouble, just yelp for help!&lt;/em>&lt;/h3>
+&lt;hr>
+&lt;p>&lt;sub>Got a comment? Share your thoughts on
+&lt;a href="https://twitter.com/philshem/status/1252861430723837956" target="_blank" rel="noopener">Twitter&lt;/a> or
+&lt;a href="https://news.ycombinator.com/item?id=22943114" target="_blank" rel="noopener">HackerNews&lt;/a>.&lt;/sub>&lt;/p>
+&lt;hr>
+&lt;h3 id="footnote">Footnote&lt;/h3>
+&lt;p>&lt;sub>[1] For a less fun look at PAW Patrol&amp;rsquo;s effect on society, take a look at this recent academic paper:&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>
+&lt;a href="https://journals.sagepub.com/doi/abs/10.1177/1741659020903700" target="_blank" rel="noopener">&lt;em>&amp;ldquo;Whenever there’s trouble, just yelp for help&amp;rdquo;: Crime, conservation, and corporatization in Paw Patrol&lt;/em>&lt;/a>&lt;/sub>&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;sub>I argue that the series suggests to audiences that we can and should rely on corporations and technological advancements to combat crime and conserve, with responsibilized individuals assisting in this endeavor.&lt;/sub>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;sub>Ultimately, PAW Patrol echoes core tenets of neoliberalism and encourages complicity in a global capitalist system that (re)produces inequalities and causes environmental harms.&lt;/sub>&lt;/p>
+&lt;/blockquote></description></item></channel></rss>

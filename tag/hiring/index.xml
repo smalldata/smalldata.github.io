@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hiring | small DATA</title><link>https://smalldata.dev/tag/hiring/</link><atom:link href="https://smalldata.dev/tag/hiring/index.xml" rel="self" type="application/rss+xml"/><description>hiring</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu15c4e386fa9af0b23c15ab588f3cb903_1591_512x512_fill_lanczos_center_2.png</url><title>hiring</title><link>https://smalldata.dev/tag/hiring/</link></image><item><title>The Case for Part-time, part 2</title><link>https://smalldata.dev/posts/one-is-many/</link><pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/one-is-many/</guid><description>&lt;h2 id="one-is-many">one is many&lt;/h2>
+&lt;p>The previous post
+&lt;a href="%7bfilename%7dpay-me-less.md">The Case for Part-time&lt;/a> came off more self-serving than I intended, and I wanted to frame my thoughts as part of the larger context.&lt;/p>
+&lt;p>If I&amp;rsquo;ve learned anything with the help of the internet, it&amp;rsquo;s that if I am in a certain situation, then there is a community of people in the same situation.&lt;/p>
+&lt;p>Employers take notice - there are many of us who need to work part-time. And if only a handful of people need part-time now, keep reading, because as automation, robotics, AI and virtual offshoring continue to grow, our part-time community will grow, too.&lt;/p>
+&lt;h1 id="the-robots-are-coming">the robots are coming&lt;/h1>
+&lt;p>A recent article &lt;em>Are Robots Competing for your Job?&lt;/em> (
+&lt;a href="https://www.newyorker.com/magazine/2019/03/04/are-robots-competing-for-your-job" target="_blank" rel="noopener">New Yorker, Feb. 25, 2019&lt;/a>) does a great job of condensing some economic theories and the potential displacement of workers from all sectors of the workforce. (Quotes below are from this article.)&lt;/p>
+&lt;h3 id="point-1-white-collar-jobs-will-be-displaced-too">point 1: white-collar jobs will be displaced, too&lt;/h3>
+&lt;p>If the job isn&amp;rsquo;t replaced by a robot or algorithm, it can be what the article calls and &amp;ldquo;augmented immigrant&amp;rdquo;.&lt;/p>
+&lt;blockquote>
+&lt;p>“this international talent tidal wave is coming straight for the good, stable jobs that have been the foundation of middle-class prosperity in the US and Europe, and other high-wage economies.”&lt;/p>
+&lt;/blockquote>
+&lt;p>Perfect example: A few weeks ago a news story went viral: a doctor informed a patient of a terminal diagnosis via
+&lt;a href="https://www.bbc.com/news/world-us-canada-47510038" target="_blank" rel="noopener">remote video chat&lt;/a>.&lt;/p>
+&lt;h3 id="point-2-jobs-that-cant-be-displaced-wont-be-paid-better">point 2: jobs that can&amp;rsquo;t be displaced won&amp;rsquo;t be paid better&lt;/h3>
+&lt;blockquote>
+&lt;p>The catch is that, historically, caring, sharing, understanding, and empathizing with people who are in the same room as you has been the work of women, and is therefore either unpaid, and not recognized as work, or paid very badly. Childcare, elementary-school teaching, nursing, geriatric care, and social work will not suddenly become high-paying, high-prestige professions simply because everything else is done by robots.&lt;/p>
+&lt;/blockquote>
+&lt;p>It&amp;rsquo;s anecdata, but I&amp;rsquo;ve observed that the jobs advertised as part-time are often in these poorly paid &amp;ldquo;care&amp;rdquo; jobs, which uncoincidentally &amp;ldquo;has been the work of women&amp;rdquo;. &lt;em>But that&amp;rsquo;s another story for another time&amp;hellip;&lt;/em>&lt;/p>
+&lt;h3 id="point-3-its-not-the-immigrants">point 3: it&amp;rsquo;s not the immigrants&lt;/h3>
+&lt;blockquote>
+&lt;p>And a
+&lt;a href="https://academic.oup.com/oxrep/article-abstract/34/3/418/5047377" target="_blank" rel="noopener">study&lt;/a> published last summer in the Oxford Review of Economic Policy—whose lead author, Carl Frey, is the same guy who made the list of the seven hundred and two most computerizable jobs—argues that the robot caravan got Trump elected. Measuring the density of robots and comparing them with election returns, Frey and his colleagues found that “electoral districts that became more exposed to automation during the years running up to the election were more likely to vote for Trump.”&lt;/p>
+&lt;/blockquote>
+&lt;p>From that aforementioned list, the jobs displaced due to automation are office admin, sales and service, most of which fall in the &amp;ldquo;high risk employment&amp;rdquo; category. That &amp;ldquo;high risk&amp;rdquo; category corresponds to 47% of the labor force! Here&amp;rsquo;s the original dataviz:&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/probability_of_computerization_dataviz.png" alt="Probability of computerization dataviz">
+&lt;img src="https://smalldata.dev/images/probability_of_computerization_legend.png" alt="Probability of computerization legend">&lt;/p>
+&lt;p>&lt;em>Source:
+&lt;a href="https://www.oxfordmartin.ox.ac.uk/downloads/academic/The_Future_of_Employment.pdf" target="_blank" rel="noopener">The Future of Employment (PDF)&lt;/a>&lt;/em>&lt;/p>
+&lt;h3 id="point-4-we-want-more-than-a-distraction">point 4: we want more than a distraction&lt;/h3>
+&lt;p>The article brings up universal basic income&lt;/p>
+&lt;blockquote>
+&lt;p>[There will be a] group of those who will be mostly unemployed and may be receiving a universal basic income as compensation for being the victims of technological unemployment.&lt;/p>
+&lt;/blockquote>
+&lt;p>and a further far-reaching idea:&lt;/p>
+&lt;blockquote>
+&lt;p>Some futurists suggest that, in our Asimov-y future, these sort of people might wind up spending their empty days playing video games. Otherwise, they’ll wage a revolution&amp;hellip;&lt;/p>
+&lt;/blockquote>
+&lt;p>Rather than &amp;ldquo;empty days&amp;rdquo;, let&amp;rsquo;s build a society where part-time is taken seriously, and with the extra time we can enjoy more moments with family and friends, and contribute back to our communities.&lt;/p></description></item><item><title>The Case for Part-time</title><link>https://smalldata.dev/posts/pay-me-less/</link><pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/pay-me-less/</guid><description>&lt;h1 id="ive-made-a-huge-mistake-in-my-professional-life">I&amp;rsquo;ve made a huge mistake (in my professional life)&lt;/h1>
+&lt;p>Eighteen months ago I quit my full-time job to follow my dreams and launch a startup. At the time, my boss offered my same job but part-time (2 days per week, or 40%). With the benefit of hindsight, the single biggest mistake in my career was to decline that offer.
+But at the time, I privately wanted something else: less time in the office, and more free-time both with and without the kids.
+Since then, the startup has gone stagnant. My bank account has emptied. I&amp;rsquo;m drowning in free-time.
+The time to get a job was months ago.&lt;/p>
+&lt;h2 id="the-job-market">the job market&lt;/h2>
+&lt;p>The unemployment rate in Switzerland is one of the lowest in Europe. I&amp;rsquo;ve marked the Swiss unemployment compared to all worldwide countries in the dataviz below.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/unemployment_wikipedia.png" alt="Unemployment rates worldwide">
+&lt;em>source:
+&lt;a href="https://en.wikipedia.org/wiki/List_of_countries_by_unemployment_rate" target="_blank" rel="noopener">Wikipedia&lt;/a>&lt;/em>&lt;/p>
+&lt;p>And for &lt;em>data-sciency&lt;/em> people like me, with a PhD in computational physics, years of experience in business intelligence and data science, and programming and databases and data visualization reporting and business development, with strong references from every previous position, the job market is strong and the effective unemployment rate is &lt;strong>0.0%&lt;/strong>.&lt;/p>
+&lt;p>No problem, right?&lt;/p>
+&lt;h1 id="choosing-part-time">choosing part-time&lt;/h1>
+&lt;p>Full-time employment in Switzerland is 8.5 hours per day, for a total of 42.5 hours per week.
+We call it here &amp;ldquo;100%&amp;rdquo;.
+It&amp;rsquo;s pretty common for jobs to be offered at 80%-100%.
+Because salaries for tech jobs are relatively high, even those without kids should enjoy a weekday free.&lt;/p>
+&lt;p>&lt;strong>I&amp;rsquo;ve decided to work part time - no more than 60%.&lt;/strong>&lt;/p>
+&lt;h3 id="family">family&lt;/h3>
+&lt;p>I have two healthy kids who &lt;em>still&lt;/em> like to spend time with me, and who are rapidly growing up.
+Part-time affords me the flexibility to cover for the many school holidays, events, meetings.
+(The city of Zürich has 13 calendar weeks of school vacation and
+&lt;a href="https://en.wikipedia.org/wiki/Sechsel%C3%A4uten" target="_blank" rel="noopener">all&lt;/a>
+&lt;a href="https://en.wikipedia.org/wiki/Knabenschiessen" target="_blank" rel="noopener">sorts&lt;/a> of other holidays scattered throughout the year.)
+We live in affordable housing in the city of Zürich, a &lt;em>Wohnungsbaugenossenschaft&lt;/em> (
+&lt;a href="https://en.wikipedia.org/wiki/Housing_cooperative" target="_blank" rel="noopener">EN&lt;/a>,
+&lt;a href="https://de.wikipedia.org/wiki/Wohnungsbaugenossenschaft" target="_blank" rel="noopener">DE&lt;/a>).
+I have a partner who likes to work, and earns well too. What a great place to be.&lt;/p>
+&lt;h3 id="free-time">free-time&lt;/h3>
+&lt;p>Some free-time should be without the kids around.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Trips to the (non-kids) library.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Reading books and magazines, doing crossword puzzles.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Browsing the second-hand stores.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Gardening in the backyard.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Projects around the house.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Rediscover old hobbies, and discover new ones.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="health">health&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>To work on my #dadbod.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>To swim laps in a 50m pool.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>To take my slow time on long forest walks.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>To take a nap.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Avoid rushing around.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>To prevent a burnout.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="current-status-bored">current status: &lt;em>bored&lt;/em>&lt;/h2>
+&lt;p>I have it good: family and free-time.&lt;/p>
+&lt;p>What&amp;rsquo;s missing: a paying job. And teamwork and office comradery. And a reason to put on pants.&lt;/p>
+&lt;p>I&amp;rsquo;ve applied to around 50 jobs over the past few months and have had a good rate of interest and interviews.&lt;/p>
+&lt;p>But the lurking secret? None of these jobs was advertised in my sweet spot: 40% - 60%.&lt;/p>
+&lt;h2 id="productivity-doesnt-scale">productivity doesn&amp;rsquo;t scale!&lt;/h2>
+&lt;p>I&amp;rsquo;m an abstract and creative thinker.
+Employers like me because I think out of the box, because I challenge the status quo, and because I deliver.
+Productivity for this kind of non-operational work doesn&amp;rsquo;t scale to 42.5 office hours per week.
+Somewhere between 60% and 100% is my productivity drop-off.&lt;/p>
+&lt;p>Here&amp;rsquo;s a dataviz that shows a theoretical productivity drop with increasing hours per work week. The &amp;ldquo;email zone&amp;rdquo; is where the operational tasks take up the entire working time. The &amp;ldquo;search for vacation zone&amp;rdquo; is where I don&amp;rsquo;t want to be. And what I offer my future employer is to pay me less, and then get me only when I&amp;rsquo;m maximally efficient.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/productivity_dataviz.jpg" alt="Productivity doesn&amp;rsquo;t scale!">&lt;/p>
+&lt;p>But&amp;hellip; hiring is a long-term exercise in risk avoidance. If any one candidate brings a complication, the hiring team will usually go with the safe bet to avoid any future criticism. It&amp;rsquo;s the same unspoken selling-point of the Big Four consulting companies: &lt;em>Choose us, because even when we fail, no one will second guess you&lt;/em>.&lt;/p>
+&lt;h1 id="the-challenge-moving-forward">the challenge moving forward&lt;/h1>
+&lt;p>It turns out that there are literally &lt;strong>zero&lt;/strong> open jobs that fit my description. There are a handful of part-time developer jobs, and although I like writing code, my strength is prototyping and analysis, and not shipping apps and websites. There is a handful of part-time jobs for interns or students (I&amp;rsquo;ve even applied for some of those). I&amp;rsquo;ve tried remote jobs and Upwork, and although neither is panning out, and it would be hard to match a Swiss salary. In the meantime, I&amp;rsquo;m working on some small freelance projects, but for personal reasons, I don&amp;rsquo;t actively pursue freelance projects.
+(&lt;em>Note&lt;/em>: I offer my services to NGOs at either heavily discounted rates or even free, in the case that I support in their mission.)&lt;/p>
+&lt;p>I still interview for full-time jobs, and I don&amp;rsquo;t forewarn interviewers of my part-time job requirement. In general, until I have an offer, I try my hardest to not give any reason to not hire me. I do mention that my previous jobs were at 80%, because I have one regular weekday at home with the kids. In one recent interview, they asked &lt;em>Are you flexible?&lt;/em> I answered &lt;em>Yes, I&amp;rsquo;d also be open to 60%.&lt;/em>
+Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩&lt;/p>
+&lt;p>I would think my proposition would be interesting for a startup or small company, who normally couldn&amp;rsquo;t hire a dedicated, full-time data scientist, either because of the high salary or uncertain need. Or a big company who wants to explore job sharing. As a compromise, I am open to fixed-term, non-permanent contracts. If things go bad, cut me loose and end the experiment. No hard feelings. So far, no takers.&lt;/p>
+&lt;hr>
+&lt;p>&lt;s>As of &lt;code>.now()&lt;/code> I&amp;rsquo;m still searching for a position. Want quality work for a part-time salary?
+&lt;a href="mailto:philshem@pm.me">Get in touch!&lt;/a>&lt;/p>
+&lt;p>**SALE! For a limited time only - 40% off!**&lt;/s>&lt;/p></description></item><item><title>Healthy hiring (at a cost to diversity?)</title><link>https://smalldata.dev/posts/smokers-at-work/</link><pubDate>Tue, 26 Mar 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/smokers-at-work/</guid><description>&lt;p>I recently interviewed for a position with a fast-growing startup in food tech. The position checked all my boxes, and because I didn&amp;rsquo;t make it past the interview stage, the following may be some sour grapes 🍇.&lt;/p>
+&lt;p>Something in the text of the job posting stood out to me, and has stuck with me the past few months:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>No smoking:&lt;/strong> You never smell like cigarettes and don’t smoke during the day: &lt;s>XYZ&lt;/s> is about healthy living.&lt;/p>
+&lt;/blockquote>
+&lt;p>And because this is Switzerland, also in German:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Nichtraucher:&lt;/strong> &lt;s>XYZ&lt;/s> ist eine Nichtraucher Firma, weshalb das Rauchen während der Arbeitszeit nicht erlaubt ist und Du nie nach Rauch riechen darfst.&lt;/p>
+&lt;/blockquote>
+&lt;p>and even in French:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>Non-fumeur :&lt;/strong> &lt;s>XYZ&lt;/s> est une société “non-fumeur”. Par conséquent fumer durant les heures de travail n’est pas autorisé, tout comme sentir la fumée.&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="is-hiring-only-non-smokers-a-form-of-discrimination">Is hiring only non-smokers a form of discrimination?&lt;/h1>
+&lt;h2 id="what-if-instead-the-job-posting-had-written-_our-company-is-about-healthy-living-and-we-dont-hire-overweight-people_-or-people-with-body-odor-due-to-hormonal-or-hygiene-issues-or-people-who-eat-junk-food-or-people-who-drink-excessive-energy-drinks">What if instead the job posting had written &lt;em>our company is about healthy living, and we don&amp;rsquo;t hire overweight people&lt;/em>? Or people with body odor due to hormonal or hygiene issues? Or people who eat junk food? Or people who drink excessive energy drinks?&lt;/h2>
+&lt;p>At what point does &lt;em>healthy&lt;/em> hiring become discrimination? I would say that forcing people to hide their behavior, and to not be themselves, in order to gain employment, is a mild form of discrimination. And if it&amp;rsquo;s not discrimination, it&amp;rsquo;s definitely a step toward decreasing diversity in the workplace.&lt;/p>
+&lt;p>Now&amp;hellip; I&amp;rsquo;m not a cigarette smoker, and I don&amp;rsquo;t like smelling cigarette smoke, and I don&amp;rsquo;t want to be exposed to cigarette smoke at work. But I also want a diverse work environment, where people are comfortable to be themselves. I accept that my co-workers may smoke cigarettes, even during working hours. Life is full of small differences and grievances and part of being a human being, especially when living in a city with so many other human beings, is accepting others as they are, and letting them be free to be themselves.&lt;/p>
+&lt;h1 id="heading">🚭&lt;/h1>
+&lt;hr>
+&lt;p>&lt;em>Update:&lt;/em> Here&amp;rsquo;s a more scholarly take on the ethics of not hiring smokers.&lt;/p>
+&lt;p>&amp;ldquo;The Ethics of Not Hiring Smokers&amp;rdquo;,
+&lt;a href="https://www.nejm.org/doi/full/10.1056/NEJMp1301951?query=TOC" target="_blank" rel="noopener">New England Journal of Medicine (2013)&lt;/a>&lt;/p>
+&lt;p>&lt;strong>tl;dr&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>We agree with those polled, believing that categorically refusing to hire smokers is unethical: it results in a failure to care for people, places an additional burden on already-disadvantaged populations, and preempts interventions that more effectively promote smoking cessation.&lt;/p>
+&lt;/blockquote></description></item></channel></rss>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>publishing | small DATA</title><link>https://smalldata.dev/tag/publishing/</link><atom:link href="https://smalldata.dev/tag/publishing/index.xml" rel="self" type="application/rss+xml"/><description>publishing</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu15c4e386fa9af0b23c15ab588f3cb903_1591_512x512_fill_lanczos_center_2.png</url><title>publishing</title><link>https://smalldata.dev/tag/publishing/</link></image><item><title>Open Access Research</title><link>https://smalldata.dev/posts/open-access-research/</link><pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/open-access-research/</guid><description>&lt;p>&lt;em>In my definition of Open Anything, &amp;ldquo;open&amp;rdquo; is an imperative verb.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;p>Unless you are an academic publisher, you&amp;rsquo;re probably not a big fan of for-profit academic publishing.&lt;/p>
+&lt;p>The business model of many journals is to charge the authors publication fees, and then charge the readers access fees. Double dipping - it&amp;rsquo;s what the credit card companies do.&lt;/p>
+&lt;p>What&amp;rsquo;s happening as a response?
+&lt;a href="https://www.nature.com/articles/d41586-019-00758-x" target="_blank" rel="noopener">Universities are dropping subscriptions&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>The move is the latest in an escalating global row between scholarly publishers and academic institutions, which are pushing to make more of the scientific literature freely available and say that the costs of publishers’ subscriptions are becoming unreasonably expensive.&lt;/p>
+&lt;/blockquote>
+&lt;p>
+&lt;a href="https://news.ycombinator.com/item?id=17688336" target="_blank" rel="noopener">And non-legal portals like sci-hub.tw are springing up&lt;/a>.&lt;/p>
+&lt;p>Open access to academic research is not only important for top universities like UC Berkley, it&amp;rsquo;s essential for researchers around the world. A few examples that come to mind:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>amateurs and hobbyists&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>citizen science and community groups&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>high school students or others without university library access&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>researchers in developing economies&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>those doing machine learning projects on bulk academic papers&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="creating-a-self-archive">Creating a self-archive&lt;/h2>
+&lt;p>I&amp;rsquo;ve read the articles about Elsevier and Springer but since I&amp;rsquo;m not publishing anymore, I hadn&amp;rsquo;t made much connection to my role in open access research.&lt;/p>
+&lt;p>But for a freelance data-project I&amp;rsquo;m working on with an NGO, I have to match citation metadata and full text PDF for more accurate screening, both manual and with machine learning. Getting full-text PDFs is a tiresome process, and we are looking for 1000s of papers.&lt;/p>
+&lt;p>Despite that my academic publishing ended 7 years ago, I wasn&amp;rsquo;t sure if my old research papers were openly available. Some of [my papers](
+&lt;a href="https://scholar.google.ch/citations?user=SczBp6kAAAAJ&amp;amp;hl=en&amp;amp;authuser=1&amp;amp;oi=ao" target="_blank" rel="noopener">google scholar&lt;/a>
+) are still being cited! (Actually, I had to dig deep to find my PDF copies!)&lt;/p>
+&lt;p>It turns out that I still do have PDF copies, and that many of my old papers are not easily available to the public.&lt;/p>
+&lt;p>Authors are
+&lt;a href="https://tomsaunders.co.nz/how-to-make-your-research-open-access/" target="_blank" rel="noopener">allowed to share copies of post-prints&lt;/a>, and so that is what I&amp;rsquo;m finally doing.&lt;/p>
+&lt;hr>
+&lt;h2 id="handy-tools-for-creating-a-self-archive">Handy tools for creating a self-archive&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>
+&lt;a href="https://www.bioinformatics.org/texmed/" target="_blank" rel="noopener">Export Pubmed citations as BibTex format&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://flamingtempura.github.io/bibtex-tidy/" target="_blank" rel="noopener">Tidy up and standardize BibTex format&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>
+&lt;a href="https://blog.archive.org/2017/01/25/see-something-save-something/" target="_blank" rel="noopener">Archive your archive on the wayback machine&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="stop-reading-the-remaining-text-is-for-search-engine-indexing">&lt;em>Stop reading! The remaining text is for search engine indexing.&lt;/em>&lt;/h1>
+&lt;p>&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>
+&lt;br/>&lt;br/>&lt;/p>
+&lt;hr>
+&lt;p>##Bibliography&lt;/p>
+&lt;p>###Research Papers&lt;/p>
+&lt;p>2012&lt;/p>
+&lt;p>P.T. Shemella, T. Laino, O. Fritz, A. Curioni&lt;/p>
+&lt;p>Understanding the self-healing hydrophobic recovery of high-voltage insulators&lt;/p>
+&lt;p>Journal of Physical Chemistry B 116 (24), 7351–7356&lt;/p>
+&lt;p>
+&lt;a href="https://pubs.acs.org/doi/10.1021/jp300786s" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/jp300786s.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091453/https://smalldata.dev/posts/open-access-research/jp300786s.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid22624664,
+title = {{{U}nderstanding the self-healing hydrophobic recovery of high-voltage insulators}},
+author = {Shemella, P. T. and Laino, T. and Fritz, O. and Curioni, A.},
+year = 2012,
+month = jun,
+journal = {J Phys Chem B},
+volume = 116,
+number = 24,
+pages = {7351--7356}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2011&lt;/p>
+&lt;p>P.T. Shemella, T. Laino, O. Fritz, A. Curioni&lt;/p>
+&lt;p>Surface dynamics of amorphous polymers used for high-voltage insulators&lt;/p>
+&lt;p>Journal of Physical Chemistry B 115 (46), 13508–13512&lt;/p>
+&lt;p>
+&lt;a href="https://pubs.acs.org/doi/abs/10.1021/jp207589p" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/jp207589p.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091545/https://smalldata.dev/posts/open-access-research/jp207589p.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid22026429,
+title = {{{S}urface dynamics of amorphous polymers used for high-voltage insulators}},
+author = {Shemella, P. T. and Laino, T. and Fritz, O. and Curioni, A.},
+year = 2011,
+month = nov,
+journal = {J Phys Chem B},
+volume = 115,
+number = 46,
+pages = {13508--13512}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2011&lt;/p>
+&lt;p>P.T. Shemella, T. Laino, O. Fritz, A. Curioni&lt;/p>
+&lt;p>Molecular motion of amorphous silicone polymers&lt;/p>
+&lt;p>Journal of Physical Chemistry B 115 (12) 2831–2835&lt;/p>
+&lt;p>
+&lt;a href="https://pubs.acs.org/doi/abs/10.1021/jp111318d" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/jp111318d.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091621/https://smalldata.dev/posts/open-access-research/jp111318d.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid21370843,
+title = {{{M}olecular motion of amorphous silicone polymers}},
+author = {Shemella, P. T. and Laino, T. and Fritz, O. and Curioni, A.},
+year = 2011,
+month = mar,
+journal = {J Phys Chem B},
+volume = 115,
+number = 12,
+pages = {2831--2835}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2011&lt;/p>
+&lt;p>P.T. Shemella, N. Topilina, I. Soga, B. Pereira, G. Belfort, M. Belfort, S.K. Nayak&lt;/p>
+&lt;p>Electronic structure of neighboring extein residue modulates intein C-terminal cleavage activity&lt;/p>
+&lt;p>Biophysical Journal 100 (9), 2217–2225&lt;/p>
+&lt;p>
+&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3149237/" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2011_Shemella_Biophys_J.pdf">pdf&lt;/a> (
+&lt;a href="https://smalldata.dev/pdfs/2011_Shemella_Biophys_J_Supp.pdf">supplement&lt;/a>) -
+&lt;a href="https://web.archive.org/web/20190521091804/https://smalldata.dev/posts/open-access-research/2011_Shemella_Biophys_J.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid21539790,
+title = {{{E}lectronic structure of neighboring extein residue modulates intein {C}-terminal cleavage activity}},
+author = {Shemella, P. T. and Topilina, N. I. and Soga, I. and Pereira, B. and Belfort, G. and Belfort, M. and Nayak, S. K.},
+year = 2011,
+month = may,
+journal = {Biophys. J.},
+volume = 100,
+number = 9,
+pages = {2217--2225}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2011&lt;/p>
+&lt;p>B. Pereira*, P.T. Shemella*, G. Amitai, G. Belfort, S.K. Nayak, M. Belfort&lt;/p>
+&lt;p>Spontaneous proton transfer to a conserved intein residue determines on-pathway protein splicing&lt;/p>
+&lt;p>Journal of Molecular Biology 406 (3), 430–442 (*Joint first-authorship)&lt;/p>
+&lt;p>
+&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3034788/" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2011_Pereira_JMB.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091832/https://smalldata.dev/posts/open-access-research/2011_Pereira_JMB.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid21185311,
+title = {{{S}pontaneous proton transfer to a conserved intein residue determines on-pathway protein splicing}},
+author = {Pereira, B. and Shemella, P. T. and Amitai, G. and Belfort, G. and Nayak, S. K. and Belfort, M.},
+year = 2011,
+month = feb,
+journal = {J. Mol. Biol.},
+volume = 406,
+number = 3,
+pages = {430--442}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2010&lt;/p>
+&lt;p>J.B. Thomas, E.B. Watson, F.S. Spear, P.T. Shemella, S.K. Nayak, A. Lanzirotti&lt;/p>
+&lt;p>TitaniQ under pressure: the effect of pressure and temperature on the solubility of Ti in quartz&lt;/p>
+&lt;p>Contributions to Mineralogy and Petrology 160 (5), 743–759&lt;/p>
+&lt;p>
+&lt;a href="https://doi.org/10.1007/s00410-010-0505-3" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2010_Thomas_CMP.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091901/https://smalldata.dev/posts/open-access-research/2010_Thomas_CMP.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{thomas2010titaniq,
+title = {TitaniQ under pressure: the effect of pressure and temperature on the solubility of Ti in quartz},
+author = {Thomas, Jay B and Watson, E Bruce and Spear, Frank S and Shemella, Philip T and Nayak, Saroj K and Lanzirotti, Antonio},
+year = 2010,
+journal = {Contributions to Mineralogy and Petrology},
+publisher = {Springer},
+volume = 160,
+number = 5,
+pages = {743--759}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2009&lt;/p>
+&lt;p>Z. Du, P.T. Shemella, Y. Liu, S. McCallum, B. Pereira, S.K. Nayak, G. Belfort, M. Belfort, C. Wang&lt;/p>
+&lt;p>Highly conserved histidine plays a dual catalytic role in protein splicing: A pKa shift mechanism&lt;/p>
+&lt;p>Journal of the American Chemical Society 131 (32), 11581–11589&lt;/p>
+&lt;p>
+&lt;a href="https://pubs.acs.org/doi/abs/10.1021/ja904318w" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2009_Du_JACS.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091923/https://smalldata.dev/posts/open-access-research/2009_Du_JACS.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid19630416,
+title = {{{H}ighly conserved histidine plays a dual catalytic role in protein splicing: a p{K}a shift mechanism}},
+author = {Du, Z. and Shemella, P. T. and Liu, Y. and McCallum, S. A. and Pereira, B. and Nayak, S. K. and Belfort, G. and Belfort, M. and Wang, C.},
+year = 2009,
+month = aug,
+journal = {J. Am. Chem. Soc.},
+volume = 131,
+number = 32,
+pages = {11581--11589}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2009&lt;/p>
+&lt;p>P.T. Shemella, S.K. Nayak&lt;/p>
+&lt;p>Electronic structure and band-gap modulation of graphene via substrate surface chemistry&lt;/p>
+&lt;p>Applied Physics Letters 94, 032101 (cover article)&lt;/p>
+&lt;p>
+&lt;a href="https://aip.scitation.org/doi/abs/10.1063/1.3070238" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2009_Shemella_APL.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521091945/https://smalldata.dev/posts/open-access-research/2009_Shemella_APL.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{doi:10.1063/1.3070238,
+title = {Electronic structure and band-gap modulation of graphene via substrate surface chemistry},
+author = {Shemella,Philip and Nayak,Saroj K.},
+year = 2009,
+journal = {Applied Physics Letters},
+volume = 94,
+number = 3,
+pages = 32101,
+doi = {10.1063/1.3070238},
+url = {https://doi.org/10.1063/1.3070238},
+eprint = {https://doi.org/10.1063/1.3070238}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2007&lt;/p>
+&lt;p>P.T. Shemella, Y. Zhang, M. Mailman, P.M. Ajayan, S.K. Nayak&lt;/p>
+&lt;p>Energy gaps in zero-dimensional graphene nanoribbons&lt;/p>
+&lt;p>Applied Physics Letters 91, 042101&lt;/p>
+&lt;p>
+&lt;a href="https://doi.org/10.1063/1.2761531" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2007_Shemella_APL.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521092014/https://smalldata.dev/posts/open-access-research/2007_Shemella_APL.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{doi:10.1063/1.2761531,
+title = {Energy gaps in zero-dimensional graphene nanoribbons},
+author = {Shemella,Philip and Zhang,Yiming and Mailman,Mitch and Ajayan,Pulickel M. and Nayak,Saroj K.},
+year = 2007,
+journal = {Applied Physics Letters},
+volume = 91,
+number = 4,
+pages = 42101,
+doi = {10.1063/1.2761531},
+url = {https://doi.org/10.1063/1.2761531},
+eprint = {https://doi.org/10.1063/1.2761531}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>2007&lt;/p>
+&lt;p>P.T. Shemella, B. Pereira, Y. Zhang, P. van Roey, G. Belfort, S. Garde, S.K. Nayak&lt;/p>
+&lt;p>Mechanism for intein C-terminal cleavage: A proposal from quantum mechanical calculations&lt;/p>
+&lt;p>Biophysical Journal 92 (3), 847–853 (2007)&lt;/p>
+&lt;p>
+&lt;a href="https://www.ncbi.nlm.nih.gov/entrez?Db=pubmed&amp;amp;Cmd=ShowDetailView&amp;amp;uid=17085503" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2007_Shemella_Biophysical_Journal.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521092041/https://smalldata.dev/posts/open-access-research/2007_Shemella_Biophysical_Journal.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@article{pmid17085503,
+title = {{{M}echanism for intein {C}-terminal cleavage: a proposal from quantum mechanical calculations}},
+author = {Shemella, P. and Pereira, B. and Zhang, Y. and Van Roey, P. and Belfort, G. and Garde, S. and Nayak, S. K.},
+year = 2007,
+month = feb,
+journal = {Biophys. J.},
+volume = 92,
+number = 3,
+pages = {847--853}
+}
+&lt;/code>&lt;/pre>
+&lt;p>###Book Chapter&lt;/p>
+&lt;p>2010&lt;/p>
+&lt;p>P.T. Shemella, S.K. Nayak&lt;/p>
+&lt;p>Identifying the reaction mechanisms of inteins with QM/MM multiscale methods&lt;/p>
+&lt;p>Computational Modeling in Biomechanics, 469–489&lt;/p>
+&lt;p>
+&lt;a href="https://link.springer.com/chapter/10.1007/978-90-481-3575-2_16" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/Chapter1.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521092107/https://smalldata.dev/posts/open-access-research/Chapter1.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@inbook{computational2010,
+title = {Identifying the Reaction Mechanisms of Inteins with QM/MM Multiscale Methods},
+author = {Shemella, Philip T. and Nayak, Saroj},
+year = 2010,
+month = 11,
+journal = {Computational Modeling in Biomechanics},
+pages = {469--489},
+doi = {10.1007/978-90-481-3575-2\_16}
+}
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;p>###PhD Thesis&lt;/p>
+&lt;p>2008&lt;/p>
+&lt;p>First principles study of intein reaction mechanisms&lt;/p>
+&lt;p>Department of Physics, Applied Physics &amp;amp; Astronomy, Rensselaer Polytechnic Institute&lt;/p>
+&lt;p>
+&lt;a href="https://arxiv.org/abs/0903.4570" target="_blank" rel="noopener">www&lt;/a> -
+&lt;a href="https://smalldata.dev/pdfs/2008_Shemella_PhD_Thesis.pdf">pdf&lt;/a> -
+&lt;a href="https://web.archive.org/web/20190521092517/https://smalldata.dev/posts/open-access-research/2008_Shemella_PhD_Thesis.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
+&lt;pre>&lt;code>@phdthesis{phdthesis,
+title = {First Principles Study of Intein Reaction Mechanisms},
+author = {Philip Shemella},
+year = 2008,
+month = 5,
+school = {Rensselaer Polytechnic Institute},
+eprint = {arXiv:0903.4570}
+}
+&lt;/code>&lt;/pre></description></item></channel></rss>
