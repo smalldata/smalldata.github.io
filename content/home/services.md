@@ -1,11 +1,11 @@
 +++
-# A Skills section created with the Featurette widget.
+# A Services section created with the Featurette widget.
 widget = "featurette"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 30  # Order that this section will appear.
+weight = 35  # Order that this section will appear.
 
-title = "Skills"
+title = "Services"
 subtitle = ""
 
 # Showcase personal skills or business features.
@@ -15,40 +15,23 @@ subtitle = ""
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 
 [[feature]]
-  icon = "book-open"
+  icon = "flask"
   icon_pack = "fas"
-  name = "Data Storytelling"
-  description = " "
+  name = "Prototyping"
+  description = "Build your data app"
 
 [[feature]]
-  icon = "chart-line"
+  icon = "unlock"
   icon_pack = "fas"
-  name = "DataViz"
-  description = " "
+  name = "Web Scraping"
+  description = "_Everything_ is machine readable"
 
 [[feature]]
-  icon = "project-diagram"
+  icon = "robot"
   icon_pack = "fas"
-  name = "Project Management"
-  description = " "
+  name = "Data Pipelines"
+  description = "Automate your data life"
 
-[[feature]]
-  icon = "python"
-  icon_pack = "fab"
-  name = "Python"
-  # description = " "  
-
-[[feature]]
-  icon = "database"
-  icon_pack = "fas"
-  name = "Databases / SQL"
-  # description = " "
-
-[[feature]]
-  icon = "cloud-upload-alt"
-  icon_pack = "fas"
-  name = "Cloud Deployments"
-  # description = " "
 
 # Uncomment to use emoji icons.
 # [[feature]]

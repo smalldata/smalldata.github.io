@@ -76,6 +76,8 @@ email: "info@smalldata.dev"
 
 I'm Philip Shemella, a full-stack data science and business intelligence professional, with experience with startups, cloud computing, consulting and mentoring. Based in Zürich, Switzerland, I am active in the civic tech, open data and data visualization communities.
 
+I have a good day-job, but I do have availability for small DATA projects. [Get in touch!](/#contact)
+
 **...this page**
 
 is built using the static site generator [Hugo](https://github.com/gohugoio/hugo) with the theme [Academic](https://github.com/gcushen/hugo-academic). Browse the [open source code](https://github.com/philshem/smalldata.github.io).

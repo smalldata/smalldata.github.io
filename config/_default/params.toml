@@ -114,7 +114,7 @@ address = {city = "Zürich", postcode = "🇨🇭8045", country = "Switzerland",
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/philshem"},
+  {icon = "twitter", icon_pack = "fab", name = "Open DMs", link = "https://twitter.com/philshem"},
   #{icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
   ]
