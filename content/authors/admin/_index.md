@@ -74,11 +74,10 @@ email: "info@smalldata.dev"
 
 **...the author**
 
-It's me, Philip Shemella, a full-stack data science and business intelligence professional, with experience with startups, cloud, consulting and mentoring. Based in Zürich, Switzerland, I am active in the civic tech, open data and data visualization communities.
+I'm Philip Shemella, a full-stack data science and business intelligence professional, with experience with startups, cloud computing, consulting and mentoring. Based in Zürich, Switzerland, I am active in the civic tech, open data and data visualization communities.
 
 **...this page**
 
-Built with the static site generator [Hugo](https://github.com/gohugoio/hugo) built with theme [Academic](https://github.com/gcushen/hugo-academic). Browse the [open source code](https://github.com/philshem/smalldata.github.io).
+is built the static site generator [Hugo](https://github.com/gohugoio/hugo) using theme [Academic](https://github.com/gcushen/hugo-academic). Browse the [open source code](https://github.com/philshem/smalldata.github.io).
 
 This site uses no trackers nor analytics, so I have no idea about visitors and traffic. For that reason, I especially appreciate your feedback.
-

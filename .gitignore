@@ -4,4 +4,4 @@
 .DS_Store
 *.code-workspace
 .vscode
-INFO.txt
+public/
