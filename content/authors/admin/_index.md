@@ -78,6 +78,6 @@ I'm Philip Shemella, a full-stack data science and business intelligence profess
 
 **...this page**
 
-is built the static site generator [Hugo](https://github.com/gohugoio/hugo) using theme [Academic](https://github.com/gcushen/hugo-academic). Browse the [open source code](https://github.com/philshem/smalldata.github.io).
+is built using the static site generator [Hugo](https://github.com/gohugoio/hugo) with the theme [Academic](https://github.com/gcushen/hugo-academic). Browse the [open source code](https://github.com/philshem/smalldata.github.io).
 
 This site uses no trackers nor analytics, so I have no idea about visitors and traffic. For that reason, I especially appreciate your feedback.
