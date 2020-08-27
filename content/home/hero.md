@@ -54,4 +54,4 @@ hero_media = "undraw_data_trends_b0wg.svg"
 
 Put Your Data to Work for You
 
-```{ Pipelines : Analysis : Visualization }```
+```{ DataOps : Analysis : Visualization }```
