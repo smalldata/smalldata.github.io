@@ -29,7 +29,7 @@ subtitle = ""
 [[feature]]
   icon = "robot"
   icon_pack = "fas"
-  name = "Data Pipelines"
+  name = "DataOps"
   description = "Automate your data life"
 
 
