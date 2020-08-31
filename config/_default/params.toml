@@ -37,15 +37,15 @@ font_size = "M"
 #   For personal sites, choose "Person".
 #   For organizations and projects, choose from https://schema.org/Organization#subtypes
 #   E.g. Person, Organization, LocalBusiness, Project, EducationalOrganization
-site_type = "Person"
+site_type = "LocalBusiness"
 
 # Local business type (optional)
 # If you entered "LocalBusiness" above, choose the type of business from https://schema.org/LocalBusiness#subtypes
-local_business_type = ""
+local_business_type = "ProfessionalService"
 
 # Organization name (optional)
 # Enter an organization or project name. Defaults to the site title from `config.toml`.
-org_name = ""
+org_name = "small DATA"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
 description = "Personal website of Philip Shemella - Small Data Services"

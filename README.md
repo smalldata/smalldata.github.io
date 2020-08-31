@@ -6,7 +6,7 @@ Personal website for Philip Shemella :: https://smalldata.dev
 
 writes to the `public/` folder
 
-## dev serve
+## dev server
 
     hugo serve -D
 
