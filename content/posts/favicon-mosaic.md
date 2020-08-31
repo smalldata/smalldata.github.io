@@ -2,7 +2,7 @@
 title: "Fun with Favicons"
 date: 2019-04-17
 category: "programming"
-tags: ["python", "open data"]
+tags: ["python", "open data", "coding"]
 slug: "favicon-mosaic"
 ---
 
@@ -21,7 +21,7 @@ If the website doesn't use `favicon.ico` in the webroot folder, the page html wi
 
 There is python package aptly named [favicon](https://github.com/scottwernervt/favicon) that will parse the html and return the urls to all favicons, with different formats and resolutions. I'm pasting their demo code here:
 
-```
+```python
 >>> import favicon
 >>> icons = favicon.get('https://www.python.org/')
 Icon(url='https://www.python.org/static/apple-touch-icon-144x144-precomposed.png', width=144, height=144, format='png')

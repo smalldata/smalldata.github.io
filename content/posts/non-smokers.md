@@ -3,7 +3,7 @@ title: "Healthy hiring (at a cost to diversity?)"
 date: 2019-03-26
 modified: 2019-04-25
 category: "career"
-tags: ["hiring", "diversity"]
+tags: ["career", "thoughts"]
 slug: "smokers-at-work"
 ---
 

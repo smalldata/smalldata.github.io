@@ -2,7 +2,7 @@
 title: "Free-fall and Personal Growth"
 date: 2019-04-27
 category: "thoughts"
-tags: ["life lessons", "hobbies"]
+tags: ["thoughts"]
 slug: "skydiving-freefall"
 ---
 

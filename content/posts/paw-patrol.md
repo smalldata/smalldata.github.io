@@ -2,7 +2,7 @@
 title: "Data Science and PAW Patrol"
 date: 2020-04-22
 category: "fun"
-tags: ["family", "data science"]
+tags: ["open data", "data science"]
 slug: "paw-patrol"
 ---
 

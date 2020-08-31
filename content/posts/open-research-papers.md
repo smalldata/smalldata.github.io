@@ -2,7 +2,7 @@
 title: "Open Access Research"
 date: 2019-05-21
 category: "research"
-tags: ["opendata", "academic", "publishing"]
+tags: ["open data", "academic", "publishing"]
 slug: "open-access-research"
 ---
 
