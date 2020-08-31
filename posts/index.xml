@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | small DATA</title><link>https://smalldata.dev/posts/</link><atom:link href="https://smalldata.dev/posts/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu15c4e386fa9af0b23c15ab588f3cb903_1591_512x512_fill_lanczos_center_2.png</url><title>Posts</title><link>https://smalldata.dev/posts/</link></image><item><title>Data Science and PAW Patrol</title><link>https://smalldata.dev/posts/paw-patrol/</link><pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/paw-patrol/</guid><description>&lt;h2 id="step-0-the-disclaimers">Step 0. The disclaimers&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | small DATA</title><link>https://smalldata.dev/posts/</link><atom:link href="https://smalldata.dev/posts/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu15c4e386fa9af0b23c15ab588f3cb903_1591_512x512_fill_lanczos_center_2.png</url><title>Posts</title><link>https://smalldata.dev/posts/</link></image><item><title>Generating folders with smart dates in Python + Pandas</title><link>https://smalldata.dev/posts/python-date-folders/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/python-date-folders/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>Not everything your mother told you is true.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;small>&amp;ndash;my CompSci 101 professor, when a student &lt;em>insisted&lt;/em> that, without exception, every 4th year was a leap year&lt;/small>&lt;/p>
+&lt;hr>
+&lt;h3 id="the-idea">the idea&lt;/h3>
+&lt;p>For a hobby project, I needed to generate thousands folders and sub-folders and sub-sub-folders based on calendar dates within a range.&lt;/p>
+&lt;p>This means, I wanted to have a main folder, called something like &lt;code>tmp_dates/&lt;/code>. In that folder, I wanted to have sub-folders for each year within a range: &lt;code>tmp_dates/2020/&lt;/code>. And sub-folders for months: &lt;code>tmp_dates/2020/06/&lt;/code>. And sub-folders for days: &lt;code>tmp_dates/2020/06/30&lt;/code>.&lt;/p>
+&lt;h3 id="smart-calendar-dates-and-leap-years">smart calendar dates and leap years&lt;/h3>
+&lt;p>Using Python&amp;rsquo;s &lt;code>datetime&lt;/code> library, I can easily generate date ranges with &lt;code>timedelta()&lt;/code>. This is going to be necessary for generating &amp;ldquo;smart&amp;rdquo;-dates that take into account varying days per month, as well as leap years. It turns out that the
+&lt;a href="https://en.wikipedia.org/wiki/Leap_year#Algorithm" target="_blank" rel="noopener">rules for leap years&lt;/a> are &lt;strong>not&lt;/strong> as simple as to divide by 4. &lt;small>Sadly, for those of us born in the late 20th Century, we won&amp;rsquo;t be alive to see a year divisible by 4 that is &lt;em>not&lt;/em> a leap year. The next one of those is year &lt;code>2100&lt;/code>. The year &lt;code>2000&lt;/code> was a leap year despite being divisible by 100 because it was also divisible by 400.&lt;/small>&lt;/p>
+&lt;p>Wrapping the date-range functionality with Pandas makes the code extremely small. Here&amp;rsquo;s a
+&lt;a href="https://stackoverflow.com/a/59882807/2327328" target="_blank" rel="noopener">StackOverflow snippet&lt;/a> which does the heavy lifting.&lt;/p>
+&lt;pre>&lt;code class="language-python">import pandas as pd
+sdate = date(2000,1,1) # start date
+edate = date.today() # end date
+df = pd.date_range(sdate,edate-timedelta(days=1),freq='d')
+&lt;/code>&lt;/pre>
+&lt;h3 id="generating-sub-folders-based-on-a-date-range">generating (sub-)folders based on a date range&lt;/h3>
+&lt;p>In addition to generating the date-folders, I want my code to create folders but not overwrite files if a folder exists. For this I used
+&lt;a href="https://stackoverflow.com/a/273227/2327328" target="_blank" rel="noopener">this snippet&lt;/a> that uses the super Python3 library
+&lt;a href="https://docs.python.org/3/library/pathlib.html" target="_blank" rel="noopener">&lt;code>pathlib.Path()&lt;/code>&lt;/a>.&lt;/p>
+&lt;pre>&lt;code class="language-python">from pathlib import Path
+Path('tmp_dates/').mkdir(parents=True, exist_ok=True)
+&lt;/code>&lt;/pre>
+&lt;h3 id="adding-an-empty-file-to-each-folder">adding an empty file to each folder&lt;/h3>
+&lt;p>Git cannot add a completely empty directory. To include empty directories on Github at least, there is an
+&lt;a href="https://stackoverflow.com/a/7229996/2327328" target="_blank" rel="noopener">undocumented feature&lt;/a> where an empty folder that has the empty file &lt;code>.gitkeep&lt;/code> will be included in the version control. The &lt;code>pathlib.Path()&lt;/code> library can even create an empty file, using the
+&lt;a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.touch" target="_blank" rel="noopener">&lt;code>touch&lt;/code>&lt;/a> command.&lt;/p>
+&lt;pre>&lt;code class="language-python">from pathlib import Path
+Path('tmp_dates/').mkdir(parents=True, exist_ok=True)
+Path('tmp_dates/'+os.sep+'.gitkeep').touch()
+&lt;/code>&lt;/pre>
+&lt;h3 id="putting-it-all-together">putting it all together&lt;/h3>
+&lt;p>All that&amp;rsquo;s left is to combine all the pieces into one Python3 script that safely generates sub-folders for individual calendar dates in a date range.&lt;/p>
+&lt;pre>&lt;code class="language-python">from datetime import date, timedelta
+import pandas as pd
+from pathlib import Path #requires Python&amp;gt;=3.5
+import os
+# safe generate folders for all dates within a range
+def create_folder(p):
+Path(p).mkdir(parents=True, exist_ok=True)
+Path(p+os.sep+'.gitkeep').touch()
+# where to start to put the many folders
+subpath = 'tmp_dates'
+# start and end date
+sdate = date(2000,1,1) # start date
+edate = date.today() # end date
+# use pandas for the heavy lifting of building the calendar-aware date range
+df = pd.date_range(sdate,edate-timedelta(days=1),freq='d')
+# loop over all values and create a folder for each possible date
+for d in df:
+#print(d.year, d.month, d.day)
+path = subpath + os.sep + str(d.year).zfill(4) + os.sep + str(d.month).zfill(2) + os.sep + str(d.day).zfill(2)
+create_folder(path)
+#break # debugging
+&lt;/code>&lt;/pre></description></item><item><title>Data Science and PAW Patrol</title><link>https://smalldata.dev/posts/paw-patrol/</link><pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/paw-patrol/</guid><description>&lt;h2 id="step-0-the-disclaimers">Step 0. The disclaimers&lt;/h2>
 &lt;ol>
 &lt;li>
 &lt;p>I don&amp;rsquo;t call myself a &lt;em>data scientist&lt;/em>, but other people do, and I wanted to share my approach to &lt;em>data science&lt;/em>. This approach has worked well for me professionally. There are many good approaches, and I don&amp;rsquo;t want to gatekeep any of those.&lt;/p>
@@ -965,7 +1021,7 @@ Wait for my turn (at the end with the other beginners).&lt;/p>
 &lt;/code>&lt;/pre>
 &lt;p>There is python package aptly named
 &lt;a href="https://github.com/scottwernervt/favicon" target="_blank" rel="noopener">favicon&lt;/a> that will parse the html and return the urls to all favicons, with different formats and resolutions. I&amp;rsquo;m pasting their demo code here:&lt;/p>
-&lt;pre>&lt;code>&amp;gt;&amp;gt;&amp;gt; import favicon
+&lt;pre>&lt;code class="language-python">&amp;gt;&amp;gt;&amp;gt; import favicon
 &amp;gt;&amp;gt;&amp;gt; icons = favicon.get('https://www.python.org/')
 Icon(url='https://www.python.org/static/apple-touch-icon-144x144-precomposed.png', width=144, height=144, format='png')
 Icon(url='https://www.python.org/static/apple-touch-icon-114x114-precomposed.png', width=114, height=114, format='png')
