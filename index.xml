@@ -7,26 +7,28 @@
 &lt;p>For a hobby project, I needed to generate thousands folders and sub-folders and sub-sub-folders based on calendar dates within a range.&lt;/p>
 &lt;p>This means, I wanted to have a main folder, called something like &lt;code>tmp_dates/&lt;/code>. In that folder, I wanted to have sub-folders for each year within a range: &lt;code>tmp_dates/2020/&lt;/code>. And sub-folders for months: &lt;code>tmp_dates/2020/06/&lt;/code>. And sub-folders for days: &lt;code>tmp_dates/2020/06/30&lt;/code>.&lt;/p>
 &lt;h3 id="smart-calendar-dates-and-leap-years">smart calendar dates and leap years&lt;/h3>
-&lt;p>Using Python&amp;rsquo;s &lt;code>datetime&lt;/code> library, I can easily generate date ranges with &lt;code>timedelta()&lt;/code>. This is going to be necessary for generating &amp;ldquo;smart&amp;rdquo;-dates that take into account varying days per month, as well as leap years. It turns out that the
-&lt;a href="https://en.wikipedia.org/wiki/Leap_year#Algorithm" target="_blank" rel="noopener">rules for leap years&lt;/a> are &lt;strong>not&lt;/strong> as simple as to divide by 4. &lt;small>Sadly, for those of us born in the late 20th Century, we won&amp;rsquo;t be alive to see a year divisible by 4 that is &lt;em>not&lt;/em> a leap year. The next one of those is year &lt;code>2100&lt;/code>. The year &lt;code>2000&lt;/code> was a leap year despite being divisible by 100 because it was also divisible by 400.&lt;/small>&lt;/p>
-&lt;p>Wrapping the date-range functionality with Pandas makes the code extremely small. Here&amp;rsquo;s a
+&lt;p>Using Python&amp;rsquo;s standard &lt;code>datetime&lt;/code> library, I can easily generate date ranges with &lt;code>timedelta()&lt;/code>. This is necessary for generating &amp;ldquo;smart&amp;rdquo;-dates that take into account varying days per month, as well as those pesky leap years. It turns out that the
+&lt;a href="https://en.wikipedia.org/wiki/Leap_year#Algorithm" target="_blank" rel="noopener">rules for leap years&lt;/a> are &lt;strong>not&lt;/strong> as simple as years that are multiples of 4. &lt;small>Sadly, for those of us born in the late 20th Century, we won&amp;rsquo;t be alive to see a year divisible by 4 that is &lt;em>not&lt;/em> a leap year. The next one of those is year &lt;code>2100&lt;/code>. The year &lt;code>2000&lt;/code> was a leap year despite being divisible by 100 because it was also divisible by 400.&lt;/small>&lt;/p>
+&lt;p>Wrapping the date-range functionality with Pandas makes the code extremely efficient. Here&amp;rsquo;s an adapted
 &lt;a href="https://stackoverflow.com/a/59882807/2327328" target="_blank" rel="noopener">StackOverflow snippet&lt;/a> which does the heavy lifting.&lt;/p>
 &lt;pre>&lt;code class="language-python">import pandas as pd
+from datetime import date, timedelta
 sdate = date(2000,1,1) # start date
 edate = date.today() # end date
 df = pd.date_range(sdate,edate-timedelta(days=1),freq='d')
 &lt;/code>&lt;/pre>
 &lt;h3 id="generating-sub-folders-based-on-a-date-range">generating (sub-)folders based on a date range&lt;/h3>
 &lt;p>In addition to generating the date-folders, I want my code to create folders but not overwrite files if a folder exists. For this I used
-&lt;a href="https://stackoverflow.com/a/273227/2327328" target="_blank" rel="noopener">this snippet&lt;/a> that uses the super Python3 library
-&lt;a href="https://docs.python.org/3/library/pathlib.html" target="_blank" rel="noopener">&lt;code>pathlib.Path()&lt;/code>&lt;/a>.&lt;/p>
+&lt;a href="https://stackoverflow.com/a/273227/2327328" target="_blank" rel="noopener">this snippet&lt;/a> that uses the wonderful new Python3 library
+&lt;a href="https://docs.python.org/3/library/pathlib.html" target="_blank" rel="noopener">&lt;code>pathlib.Path()&lt;/code>&lt;/a> to create a folder called &lt;code>tmp_dates/&lt;/code> in the current working directory. If that folder already exists, it will otherwise ignored.&lt;/p>
 &lt;pre>&lt;code class="language-python">from pathlib import Path
 Path('tmp_dates/').mkdir(parents=True, exist_ok=True)
 &lt;/code>&lt;/pre>
 &lt;h3 id="adding-an-empty-file-to-each-folder">adding an empty file to each folder&lt;/h3>
-&lt;p>Git cannot add a completely empty directory. To include empty directories on Github at least, there is an
+&lt;p>Git can&amp;rsquo;t handle an empty directory. To include empty directories, on Github at least, there is an
 &lt;a href="https://stackoverflow.com/a/7229996/2327328" target="_blank" rel="noopener">undocumented feature&lt;/a> where an empty folder that has the empty file &lt;code>.gitkeep&lt;/code> will be included in the version control. The &lt;code>pathlib.Path()&lt;/code> library can even create an empty file, using the
-&lt;a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.touch" target="_blank" rel="noopener">&lt;code>touch&lt;/code>&lt;/a> command.&lt;/p>
+&lt;a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.touch" target="_blank" rel="noopener">&lt;code>.touch()&lt;/code>&lt;/a> function, which copies its functionality from the
+&lt;a href="https://en.wikipedia.org/wiki/Touch_%28command%29#Overview" target="_blank" rel="noopener">Unix touch command&lt;/a>.&lt;/p>
 &lt;pre>&lt;code class="language-python">from pathlib import Path
 Path('tmp_dates/').mkdir(parents=True, exist_ok=True)
 Path('tmp_dates/'+os.sep+'.gitkeep').touch()
