@@ -1,4 +1,131 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | small DATA</title><link>https://smalldata.dev/posts/</link><atom:link href="https://smalldata.dev/posts/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_2.png</url><title>Posts</title><link>https://smalldata.dev/posts/</link></image><item><title>Generating folders with smart dates in Python + Pandas</title><link>https://smalldata.dev/posts/python-date-folders/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/python-date-folders/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | small DATA</title><link>https://smalldata.dev/posts/</link><atom:link href="https://smalldata.dev/posts/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 18 Sep 2020 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_2.png</url><title>Posts</title><link>https://smalldata.dev/posts/</link></image><item><title>Getting stats on browsing history from the browser database</title><link>https://smalldata.dev/posts/browsing-stats/</link><pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/browsing-stats/</guid><description>&lt;p>If you didn&amp;rsquo;t know, there are more SQLite databases in the universe (
+&lt;a href="https://www.sqlite.org/mostdeployed.html" target="_blank" rel="noopener">1+ trillion&lt;/a>) than there are known galaxies (
+&lt;a href="https://www.discovermagazine.com/the-sciences/how-many-galaxies-are-there-astronomers-are-revealing-the-enormity-of-the" target="_blank" rel="noopener">100 billion&lt;/a>). And one of those SQLite databases happens to be your browsing history. As a short proof-of-concept, here&amp;rsquo;s how to access the history of your Firefox browser via the SQLite database.&lt;/p>
+&lt;h2 id="find-your-database-file">find your database file&lt;/h2>
+&lt;p>Mozilla Firefox stores your cookies, bookmarks, form inputs, and browsing history under the path defined in your profile settings. To find the path of those files in your file system, visit &lt;strong>about:profiles&lt;/strong> in a Firefox window.&lt;/p>
+&lt;p>In my case, I only use really one profile, which is shown in the orange box.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/firefox-profile-path.png" alt="showing file system path to profile in firefox">&lt;/p>
+&lt;p>You can click &amp;ldquo;Show in Finder&amp;rdquo; and then scroll down to the file &lt;code>places.sqlite&lt;/code>. Trying to directly open this database file gives the error &amp;ldquo;locked database&amp;rdquo; &amp;ndash; you&amp;rsquo;ll need to make a copy of the file in a different folder before opening.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-locked.png" alt="database is locked">&lt;/p>
+&lt;h2 id="explore-the-database">explore the database&lt;/h2>
+&lt;p>The go-to SQLite client is
+&lt;a href="https://sqlitebrowser.org/" target="_blank" rel="noopener">DB Browser for SQLite&lt;/a>. Once installed, you can easily open your &lt;code>places.sqlite&lt;/code> file with &amp;ldquo;Open With&amp;rdquo; from Finder.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-openwith.png" alt="opening the db file">&lt;/p>
+&lt;p>Once the database file is open, you&amp;rsquo;ll see 13 tables&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-tables.png" alt="finding the right tables">&lt;/p>
+&lt;p>After digging through a couple tables, the one with your browsing history is called &lt;code>moz_places&lt;/code>. By viewing this table, you&amp;rsquo;ll see that the field &lt;code>url&lt;/code> stores the page visited, and last visit date is the UNIX timestamp of the last visit.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-history-view.png" alt="viewing the table with browsing history">&lt;/p>
+&lt;p>Sort descending by &lt;code>visit_count&lt;/code> and you&amp;rsquo;ll find your most commonly viewed website. For me, it&amp;rsquo;s HackerNews, and then various permutations of Twitter. (I use the mobile Twitter site instead of the app, and I sync my history between devices.)&lt;/p>
+&lt;h2 id="query-the-database">query the database&lt;/h2>
+&lt;p>Despite using Twitter, I&amp;rsquo;m a private person, and I don&amp;rsquo;t want to share any real analysis of my browsing history. I do want to share one result: the distribution of &lt;code>http://localhost&lt;/code> ports. Here&amp;rsquo;s a short python3 script that reads the copy of the &lt;code>place.sqlite&lt;/code> file, and returns a count of localhost ports from the browsing history.&lt;/p>
+&lt;pre>&lt;code class="language-python">import pandas as pd
+import sqlite3
+# connect and read database
+con = sqlite3.connect('places.sqlite')
+df = pd.read_sql_query('select * from moz_places', con)
+con.close()
+# filter for urls containing localhost
+# notice I include ':', which means a port should be defined
+df = df[df.url.str.contains('localhost:',case=False)]
+# parse the url to get just the port
+df.port = df.url.str.split(':').str[-1].str.split('/').str[0]
+# keep only port column and do a count by grouping each port
+df = df.port
+df = df.groupby(df).count()
+print(df.to_markdown())
+&lt;/code>&lt;/pre>
+&lt;p>Here&amp;rsquo;s the results, with my annotation:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">port&lt;/th>
+&lt;th style="text-align:center">count&lt;/th>
+&lt;th style="text-align:left">description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">1313&lt;/td>
+&lt;td style="text-align:center">144&lt;/td>
+&lt;td style="text-align:left">Hugo devserver - this site!&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">3000&lt;/td>
+&lt;td style="text-align:center">41&lt;/td>
+&lt;td style="text-align:left">Metabase (?), which I tested a while ago&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">5000&lt;/td>
+&lt;td style="text-align:center">4&lt;/td>
+&lt;td style="text-align:left">Flask web server (work stuff)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">50222&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:left">Callback for Tableau authentication&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">58595&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:left">Not sure, but probably similar to 50222&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">8000&lt;/td>
+&lt;td style="text-align:center">137&lt;/td>
+&lt;td style="text-align:left">Old faithful, in this case mkdocs (work stuff)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">8888&lt;/td>
+&lt;td style="text-align:center">37&lt;/td>
+&lt;td style="text-align:left">Jupyter notebook server&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">8889&lt;/td>
+&lt;td style="text-align:center">4&lt;/td>
+&lt;td style="text-align:left">Jupyter notebook server&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">9005&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:left">Callback for Firebase CLI authentication&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:center">7&lt;/td>
+&lt;td style="text-align:left">No port means URL had multiple &lt;code>:&lt;/code>. See below.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Similar aggregation could be done directly in SQL:&lt;/p>
+&lt;pre>&lt;code class="language-sql">select
+port,
+count(1)
+from
+(
+select
+url,
+replace( replace( substr(url, instr(url, 'localhost:'), 15), 'localhost:' , ''), '/', '') as port
+from
+moz_places
+where
+url like '%localhost:%'
+)
+group by
+port
+&lt;/code>&lt;/pre>
+&lt;p>which generates &lt;em>almost&lt;/em> identical results.&lt;/p>
+&lt;p>The SQL query picked up one instance of &lt;code>localhost:9005&lt;/code> that the Python script didn&amp;rsquo;t find.&lt;/p>
+&lt;p>Digging deeper:&lt;/p>
+&lt;pre>&lt;code class="language-sql">select
+*
+from
+moz_places
+where
+url like '%localhost:9005%'
+&lt;/code>&lt;/pre>
+&lt;p>shows that port 9005 was used for the Callback on Firebase CLI authentication. The reason is because the Python script splits on the &lt;code>:&lt;/code> character, for which this URL has more than one. The table shows 7 localhost URLs without ports, but these are actually URLs that have more than one &lt;code>:&lt;/code> character. I&amp;rsquo;ve updated the table above, but not the Python script.&lt;/p>
+&lt;h2 id="conclusion">conclusion&lt;/h2>
+&lt;p>Everything is a SQLite database.&lt;/p></description></item><item><title>Generating folders with smart dates in Python + Pandas</title><link>https://smalldata.dev/posts/python-date-folders/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/python-date-folders/</guid><description>&lt;blockquote>
 &lt;p>&lt;em>Not everything your mother told you is true.&lt;/em>&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;small>&amp;ndash;my CompSci 101 professor, when a student &lt;em>insisted&lt;/em> that, without exception, every 4th year was a leap year&lt;/small>&lt;/p>
@@ -69,12 +196,12 @@ create_folder(path)
 &lt;p>Thinking like a scientist means having a question, and then searching out an answer. Science isn&amp;rsquo;t data-driven, in that the data can provide an answer, but the available data shouldn&amp;rsquo;t suggest the question. At least in most of the cases I can think of.&lt;/p>
 &lt;p>This is a huge challenge to productionalize data science in a business environment. With a recent (unnamed) employer, we had a big data-engineering effort to rebuild an analysis pipeline. As an analyst, it became slowly clear that with the new pipeline, we could only recreate 5 of the 6 key metrics. I left the company before the proposed workaround was implemented.&lt;/p>
 &lt;p>For my example of methodology, I&amp;rsquo;ll use
-&lt;a href="https://en.wikipedia.org/wiki/PAW_Patrol" target="_blank" rel="noopener">PAW Patrol&lt;/a>. It&amp;rsquo;s a kids&amp;rsquo; animated TV series. To describe cast of characters, and the &lt;em>plot&lt;/em>, here are the lyrics to the theme song:&lt;/p>
+&lt;a href="https://en.wikipedia.org/wiki/PAW_Patrol" target="_blank" rel="noopener">PAW Patrol&lt;/a>. It&amp;rsquo;s a kids' animated TV series. To describe cast of characters, and the &lt;em>plot&lt;/em>, here are the lyrics to the theme song:&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;sub>PAW Patrol, PAW Patrol&lt;/sub>&lt;/p>
 &lt;p>&lt;sub>We&amp;rsquo;ll be there on the double&lt;/sub>&lt;/p>
 &lt;p>&lt;sub>Whenever there&amp;rsquo;s a problem&lt;/sub>&lt;/p>
-&lt;p>&lt;sub>'Round Adventure Bay&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>&amp;lsquo;Round Adventure Bay&lt;/sub>&lt;/p>
 &lt;p>&lt;sub>Ryder and his team of pups&lt;/sub>&lt;/p>
 &lt;p>&lt;sub>Will come and save the day&lt;/sub>&lt;/p>
 &lt;p>&lt;sub>Marshall, Rubble, Chase&lt;/sub>&lt;/p>
@@ -128,34 +255,34 @@ create_folder(path)
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="left">&lt;sub>Name&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>Frequency&lt;/sub>&lt;/th>
+&lt;th style="text-align:left">&lt;sub>Name&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>Frequency&lt;/sub>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>5379&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>5379&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>BELLA&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>3824&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>BELLA&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>3824&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>3763&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>3763&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>MAX&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>3582&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>MAX&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>3582&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2852&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2852&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>COCO&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2636&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>COCO&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2636&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -163,62 +290,62 @@ create_folder(path)
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2014&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2015&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2016&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2017&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2018&lt;/sub>&lt;/th>
+&lt;th style="text-align:left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2014&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2015&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2016&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2017&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2018&lt;/sub>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>3&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1179&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1903&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1294&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1000&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>3&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1179&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1903&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1294&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1000&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>BELLA&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>19&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>427&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1332&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1233&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>813&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>BELLA&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>19&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>427&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1332&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1233&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>813&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>11&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>963&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1374&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>847&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>568&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>11&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>963&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1374&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>847&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>568&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>MAX&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>34&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>444&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1214&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1166&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>724&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>MAX&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>34&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>444&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1214&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1166&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>724&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>293&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1027&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>935&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>571&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>293&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1027&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>935&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>571&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>COCO&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>22&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>296&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>941&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>817&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>560&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>COCO&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>22&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>296&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>941&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>817&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>560&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -226,30 +353,30 @@ create_folder(path)
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="left">&lt;sub>Year of LicenseIssuedDate&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>Frequency&lt;/sub>&lt;/th>
+&lt;th style="text-align:left">&lt;sub>Year of LicenseIssuedDate&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>Frequency&lt;/sub>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="left">&lt;sub>2014&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2650&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>2014&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2650&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>2015&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>42439&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>2015&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>42439&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>2016&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>119080&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>2016&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>119080&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>2017&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>110995&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>2017&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>110995&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>2018&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>70563&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>2018&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>70563&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -261,86 +388,86 @@ create_folder(path)
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2014&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2015&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2016&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2017&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2018&lt;/sub>&lt;/th>
+&lt;th style="text-align:left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2014&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2015&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2016&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2017&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2018&lt;/sub>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="left">&lt;sub>CHASE&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>7&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>49&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>115&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>170&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>86&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>CHASE&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>7&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>49&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>115&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>170&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>86&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>EVEREST&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>9&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>5&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>3&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>EVEREST&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>9&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>5&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>3&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>MARSHALL&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>7&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>19&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>11&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>MARSHALL&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>7&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>19&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>11&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>ROCKY&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>20&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>300&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>823&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>785&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>486&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>ROCKY&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>20&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>300&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>823&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>785&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>486&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>RUBBLE&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>6&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>RUBBLE&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>6&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>RYDER&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>13&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>28&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>18&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>RYDER&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>13&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>28&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>18&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>SKYE&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>10&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>61&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>54&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>36&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>SKYE&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>10&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>61&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>54&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>36&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>TRACKER&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>TRACKER&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>ZUMA&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>ZUMA&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1212,7 +1339,7 @@ Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩
 &lt;hr>
 &lt;p>&lt;s>As of &lt;code>.now()&lt;/code> I&amp;rsquo;m still searching for a position. Want quality work for a part-time salary?
 &lt;a href="mailto:philshem@pm.me">Get in touch!&lt;/a>&lt;/p>
-&lt;p>**SALE! For a limited time only - 40% off!**&lt;/s>&lt;/p></description></item><item><title>Healthy hiring (at a cost to diversity?)</title><link>https://smalldata.dev/posts/smokers-at-work/</link><pubDate>Tue, 26 Mar 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/smokers-at-work/</guid><description>&lt;p>I recently interviewed for a position with a fast-growing startup in food tech. The position checked all my boxes, and because I didn&amp;rsquo;t make it past the interview stage, the following may be some sour grapes 🍇.&lt;/p>
+&lt;p>&lt;strong>SALE! For a limited time only - 40% off!&lt;/strong>&lt;/s>&lt;/p></description></item><item><title>Healthy hiring (at a cost to diversity?)</title><link>https://smalldata.dev/posts/smokers-at-work/</link><pubDate>Tue, 26 Mar 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/smokers-at-work/</guid><description>&lt;p>I recently interviewed for a position with a fast-growing startup in food tech. The position checked all my boxes, and because I didn&amp;rsquo;t make it past the interview stage, the following may be some sour grapes 🍇.&lt;/p>
 &lt;p>Something in the text of the job posting stood out to me, and has stuck with me the past few months:&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>No smoking:&lt;/strong> You never smell like cigarettes and don’t smoke during the day: &lt;s>XYZ&lt;/s> is about healthy living.&lt;/p>

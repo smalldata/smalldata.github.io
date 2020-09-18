@@ -11,12 +11,12 @@
 &lt;p>Thinking like a scientist means having a question, and then searching out an answer. Science isn&amp;rsquo;t data-driven, in that the data can provide an answer, but the available data shouldn&amp;rsquo;t suggest the question. At least in most of the cases I can think of.&lt;/p>
 &lt;p>This is a huge challenge to productionalize data science in a business environment. With a recent (unnamed) employer, we had a big data-engineering effort to rebuild an analysis pipeline. As an analyst, it became slowly clear that with the new pipeline, we could only recreate 5 of the 6 key metrics. I left the company before the proposed workaround was implemented.&lt;/p>
 &lt;p>For my example of methodology, I&amp;rsquo;ll use
-&lt;a href="https://en.wikipedia.org/wiki/PAW_Patrol" target="_blank" rel="noopener">PAW Patrol&lt;/a>. It&amp;rsquo;s a kids&amp;rsquo; animated TV series. To describe cast of characters, and the &lt;em>plot&lt;/em>, here are the lyrics to the theme song:&lt;/p>
+&lt;a href="https://en.wikipedia.org/wiki/PAW_Patrol" target="_blank" rel="noopener">PAW Patrol&lt;/a>. It&amp;rsquo;s a kids' animated TV series. To describe cast of characters, and the &lt;em>plot&lt;/em>, here are the lyrics to the theme song:&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;sub>PAW Patrol, PAW Patrol&lt;/sub>&lt;/p>
 &lt;p>&lt;sub>We&amp;rsquo;ll be there on the double&lt;/sub>&lt;/p>
 &lt;p>&lt;sub>Whenever there&amp;rsquo;s a problem&lt;/sub>&lt;/p>
-&lt;p>&lt;sub>'Round Adventure Bay&lt;/sub>&lt;/p>
+&lt;p>&lt;sub>&amp;lsquo;Round Adventure Bay&lt;/sub>&lt;/p>
 &lt;p>&lt;sub>Ryder and his team of pups&lt;/sub>&lt;/p>
 &lt;p>&lt;sub>Will come and save the day&lt;/sub>&lt;/p>
 &lt;p>&lt;sub>Marshall, Rubble, Chase&lt;/sub>&lt;/p>
@@ -70,34 +70,34 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="left">&lt;sub>Name&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>Frequency&lt;/sub>&lt;/th>
+&lt;th style="text-align:left">&lt;sub>Name&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>Frequency&lt;/sub>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>5379&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>5379&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>BELLA&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>3824&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>BELLA&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>3824&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>3763&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>3763&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>MAX&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>3582&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>MAX&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>3582&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2852&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2852&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>COCO&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2636&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>COCO&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2636&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -105,62 +105,62 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2014&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2015&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2016&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2017&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2018&lt;/sub>&lt;/th>
+&lt;th style="text-align:left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2014&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2015&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2016&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2017&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2018&lt;/sub>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>3&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1179&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1903&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1294&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1000&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>UNKNOWN&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>3&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1179&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1903&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1294&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1000&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>BELLA&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>19&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>427&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1332&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1233&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>813&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>BELLA&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>19&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>427&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1332&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1233&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>813&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>11&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>963&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1374&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>847&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>568&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>NAME NOT PROVIDED&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>11&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>963&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1374&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>847&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>568&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>MAX&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>34&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>444&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1214&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1166&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>724&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>MAX&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>34&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>444&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1214&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1166&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>724&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>293&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1027&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>935&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>571&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>CHARLIE&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>293&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1027&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>935&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>571&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>COCO&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>22&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>296&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>941&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>817&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>560&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>COCO&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>22&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>296&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>941&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>817&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>560&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -168,30 +168,30 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="left">&lt;sub>Year of LicenseIssuedDate&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>Frequency&lt;/sub>&lt;/th>
+&lt;th style="text-align:left">&lt;sub>Year of LicenseIssuedDate&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>Frequency&lt;/sub>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="left">&lt;sub>2014&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2650&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>2014&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2650&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>2015&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>42439&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>2015&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>42439&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>2016&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>119080&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>2016&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>119080&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>2017&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>110995&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>2017&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>110995&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>2018&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>70563&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>2018&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>70563&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -203,86 +203,86 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th align="left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2014&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2015&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2016&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2017&lt;/sub>&lt;/th>
-&lt;th align="center">&lt;sub>2018&lt;/sub>&lt;/th>
+&lt;th style="text-align:left">&lt;sub>AnimalName&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2014&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2015&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2016&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2017&lt;/sub>&lt;/th>
+&lt;th style="text-align:center">&lt;sub>2018&lt;/sub>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td align="left">&lt;sub>CHASE&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>7&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>49&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>115&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>170&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>86&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>CHASE&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>7&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>49&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>115&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>170&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>86&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>EVEREST&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>9&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>5&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>3&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>EVEREST&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>9&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>5&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>3&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>MARSHALL&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>7&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>19&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>11&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>MARSHALL&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>7&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>19&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>11&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>ROCKY&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>20&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>300&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>823&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>785&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>486&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>ROCKY&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>20&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>300&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>823&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>785&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>486&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>RUBBLE&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>6&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>RUBBLE&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>6&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>RYDER&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>13&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>28&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>26&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>18&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>RYDER&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>13&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>28&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>26&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>18&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>SKYE&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>10&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>61&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>54&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>36&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>SKYE&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>10&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>61&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>54&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>36&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>TRACKER&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>1&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>TRACKER&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>1&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td align="left">&lt;sub>ZUMA&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
-&lt;td align="center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td style="text-align:left">&lt;sub>ZUMA&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2&lt;/sub>&lt;/td>
+&lt;td style="text-align:center">&lt;sub>2&lt;/sub>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
