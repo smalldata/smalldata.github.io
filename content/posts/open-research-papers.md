@@ -75,9 +75,9 @@ Authors are [allowed to share copies of post-prints](https://tomsaunders.co.nz/h
 
 ---
 
-##Bibliography
+## Bibliography
 
-###Research Papers
+### Research Papers
 
 2012
 
@@ -374,7 +374,7 @@ Biophysical Journal 92 (3), 847–853 (2007)
 ```
 
 
-###Book Chapter
+### Book Chapter
 
 2010
 
@@ -406,7 +406,7 @@ Computational Modeling in Biomechanics, 469–489
 ---
 
 
-###PhD Thesis
+### PhD Thesis
 
 2008
 
