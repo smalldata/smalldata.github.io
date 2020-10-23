@@ -66,8 +66,8 @@
 &lt;br/>&lt;br/>
 &lt;br/>&lt;br/>&lt;/p>
 &lt;hr>
-&lt;p>##Bibliography&lt;/p>
-&lt;p>###Research Papers&lt;/p>
+&lt;h2 id="bibliography">Bibliography&lt;/h2>
+&lt;h3 id="research-papers">Research Papers&lt;/h3>
 &lt;p>2012&lt;/p>
 &lt;p>P.T. Shemella, T. Laino, O. Fritz, A. Curioni&lt;/p>
 &lt;p>Understanding the self-healing hydrophobic recovery of high-voltage insulators&lt;/p>
@@ -272,7 +272,7 @@ number = 3,
 pages = {847--853}
 }
 &lt;/code>&lt;/pre>
-&lt;p>###Book Chapter&lt;/p>
+&lt;h3 id="book-chapter">Book Chapter&lt;/h3>
 &lt;p>2010&lt;/p>
 &lt;p>P.T. Shemella, S.K. Nayak&lt;/p>
 &lt;p>Identifying the reaction mechanisms of inteins with QM/MM multiscale methods&lt;/p>
@@ -292,7 +292,7 @@ doi = {10.1007/978-90-481-3575-2\_16}
 }
 &lt;/code>&lt;/pre>
 &lt;hr>
-&lt;p>###PhD Thesis&lt;/p>
+&lt;h3 id="phd-thesis">PhD Thesis&lt;/h3>
 &lt;p>2008&lt;/p>
 &lt;p>First principles study of intein reaction mechanisms&lt;/p>
 &lt;p>Department of Physics, Applied Physics &amp;amp; Astronomy, Rensselaer Polytechnic Institute&lt;/p>
