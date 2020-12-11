@@ -3,7 +3,7 @@ title: "Life in the Baby Universe: The Physics of Babies"
 date: 2014-01-09
 category: "fun"
 tags: ["family", "thoughts", "fun"]
-slug: "baby-universe"
+slug: "physics-of-babies"
 ---
 
 <sub>_This article was originally published in_ [_Physics World_](https://physicsworld.com/a/the-september-2013-issue-of-physics-world-is-out-now/) _September 2013, copyright IOP Publishing, reproduced here with permission._</sub>
