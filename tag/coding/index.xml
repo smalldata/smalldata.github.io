@@ -211,7 +211,7 @@ Icon(url='https://www.python.org/static/favicon.ico', width=0, height=0, format=
 &lt;h2 id="now-for-some-fun">Now for some fun&lt;/h2>
 &lt;p>A
 &lt;a href="https://moz.com/top500" target="_blank" rel="noopener">top500 website list&lt;/a> has a
-&lt;a href="https://moz.com/top500/domains/csv" target="_blank" rel="noopener">csv export&lt;/a> and wrote a Python script to download each of these 500 favicons from Google&amp;rsquo;s cache and save to local folder &lt;code>images/&lt;/code>.&lt;/p>
+&lt;a href="https://web.archive.org/web/20150226044534/http://moz.com:80/top500/domains/csv" target="_blank" rel="noopener">csv export&lt;/a> and wrote a Python script to download each of these 500 favicons from Google&amp;rsquo;s cache and save to local folder &lt;code>images/&lt;/code>.&lt;/p>
 &lt;pre>&lt;code>import requests
 import pandas as pd
 import os
@@ -224,7 +224,7 @@ with open('images'+os.sep+domain+'.png', 'wb') as handler:
 handler.write(fav)
 return
 # top 500 websites from mozilla https://moz.com/top500
-url = &amp;quot;https://moz.com:443/top500/domains/csv&amp;quot;
+url = &amp;quot;https://web.archive.org/web/20150226044534/http://moz.com:80/top500/domains/csv&amp;quot;
 headers = {&amp;quot;User-Agent&amp;quot;: &amp;quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0&amp;quot;}
 req = requests.get(url, headers=headers)
 data = StringIO(req.text)
