@@ -322,4 +322,58 @@
 &lt;/blockquote>
 &lt;blockquote>
 &lt;p>&lt;sub>Ultimately, PAW Patrol echoes core tenets of neoliberalism and encourages complicity in a global capitalist system that (re)produces inequalities and causes environmental harms.&lt;/sub>&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;/blockquote></description></item><item><title>Data are Beautiful: Data's story in grammar</title><link>https://smalldata.dev/posts/data-are-beautiful/</link><pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/data-are-beautiful/</guid><description>&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/header.jpeg" alt="header: punch card">&lt;/p>
+&lt;p>&lt;sup>Photo credit:
+&lt;a href="https://www.flickr.com/photos/binaryape/5151286161/in/photolist-8RcFUD-8RcGgz-Gxg1E-8RcFv8-5Ri9d" target="_blank" rel="noopener">Flicker:binaryape&lt;/a>&lt;/sup>&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>A datum is a single piece of information.&lt;/strong> There are two plural forms for &lt;em>datum&lt;/em>. The lesser known form,
+&lt;a href="https://en.wikipedia.org/wiki/Datum_%28geodesy%29" target="_blank" rel="noopener">&lt;em>datums&lt;/em>&lt;/a>, is used exclusively in surveying and geodesy. The other plural form surrounds us both physically and figuratively. It can be big or small, right or wrong, new or old, dull or interesting. In the end it&amp;rsquo;s just a long line of 1s and 0s, stored right here or way over there. I&amp;rsquo;m talking about &lt;strong>data&lt;/strong>.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image01.png" alt="define &amp;ldquo;data&amp;rdquo;">&lt;/p>
+&lt;p>&lt;strong>There are even multiple ways to pronounce it.&lt;/strong>&lt;/p>
+&lt;p>Because &lt;em>data&lt;/em> is a plural noun, it&amp;rsquo;s technically more correct in English to say &amp;ldquo;data are&amp;rdquo;. But in the real-world, using &amp;ldquo;data is&amp;rdquo; is fine, especially because it&amp;rsquo;s considered to be a
+&lt;a href="https://en.wikipedia.org/wiki/Mass_noun" target="_blank" rel="noopener">mass noun&lt;/a>. Outside of the real world, there is some debate between &amp;ldquo;data is&amp;rdquo; and &amp;ldquo;data are&amp;rdquo; (
+&lt;a href="http://blog.apastyle.org/apastyle/2012/07/data-is-or-data-are.html" target="_blank" rel="noopener">here&lt;/a>,
+&lt;a href="https://www.theguardian.com/news/datablog/2010/jul/16/data-plural-singular" target="_blank" rel="noopener">here&lt;/a> or
+&lt;a href="https://blogs.wsj.com/economics/2012/07/05/is-data-is-or-is-data-aint-a-plural/" target="_blank" rel="noopener">here&lt;/a>, for example). But languages evolve — I&amp;rsquo;m cool with that. I don&amp;rsquo;t even care if you say
+&lt;a href="https://forum.wordreference.com/showthread.php?t=11171" target="_blank" rel="noopener">&lt;em>datas&lt;/em>&lt;/a>, as long as those &lt;em>datas&lt;/em> are good.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image02.png" alt="the growth of &amp;ldquo;data&amp;rdquo; vs. &amp;ldquo;datum&amp;rdquo;">&lt;/p>
+&lt;p>&lt;sup>
+&lt;a href="https://books.google.com/ngrams/interactive_chart?content=data%2Cdatum&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cdata%3B%2Cc0%3B.t1%3B%2Cdatum%3B%2Cc0#t1%3B%2Cdata%3B%2Cc1%3B.t1%3B%2Cdatum%3B%2Cc1" target="_blank" rel="noopener">No contest in the 20th century: data vs. datum.&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>It turns out that &amp;ldquo;data is&amp;rdquo; and &amp;ldquo;data are&amp;rdquo; occur about equally, after the strong decline of &amp;ldquo;data are&amp;rdquo; in the 80s and 90s. And this data ain&amp;rsquo;t for
+&lt;a href="https://en.wikipedia.org/wiki/SMS_language" target="_blank" rel="noopener">chatspeak&lt;/a>, it&amp;rsquo;s text that was published and hopefully edited, according to
+&lt;a href="https://books.google.com/ngrams/graph?content=lawyers%2Cdrugs%2Cmoney&amp;amp;year_start=1800&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Clawyers%3B%2Cc0%3B.t1%3B%2Cdrugs%3B%2Cc0%3B.t1%3B%2Cmoney%3B%2Cc0" target="_blank" rel="noopener">Google&amp;rsquo;s N-gram viewer&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image03.png" alt="the growth of &amp;ldquo;data is&amp;rdquo; vs. &amp;ldquo;data are&amp;rdquo;">&lt;/p>
+&lt;p>&lt;sup>
+&lt;a href="https://books.google.com/ngrams/interactive_chart?content=data&amp;#43;is%2C&amp;#43;data&amp;#43;are&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cdata%20is%3B%2Cc0%3B.t1%3B%2Cdata%20are%3B%2Cc0#t1%3B%2Cdata%20is%3B%2Cc1%3B.t1%3B%2Cdata%20are%3B%2Cc1" target="_blank" rel="noopener">&amp;ldquo;data are&amp;rdquo;, you&amp;rsquo;ve had your day. &amp;ldquo;data is&amp;rdquo; is here to stay!&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>Who is more likely to still use the proper phrasing? It&amp;rsquo;s those pesky British English speakers and writers in &lt;strong>red&lt;/strong> that are holding on. (As compared to American English, in &lt;strong>blue&lt;/strong>.)&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image04.png" alt="the growth of &amp;ldquo;data is&amp;rdquo; vs. &amp;ldquo;data are&amp;rdquo;, American vs. British">&lt;/p>
+&lt;p>&lt;sup>
+&lt;a href="https://books.google.com/ngrams/interactive_chart?content=data&amp;#43;are%3Aeng_us_2012%2Cdata&amp;#43;are%3Aeng_gb_2012&amp;amp;year_start=1950&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cdata%20are%3Aeng_us_2012%3B%2Cc0%3B.t1%3B%2Cdata%20are%3Aeng_gb_2012%3B%2Cc0#t1%3B%2Cdata%20are%3Aeng_us_2012%3B%2Cc1%3B.t1%3B%2Cdata%20are%3Aeng_gb_2012%3B%2Cc1" target="_blank" rel="noopener">So Propper!&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>In all forms of English, an interesting observation stands out: When starting a sentence, the trend reverses. &amp;ldquo;The data are&amp;rdquo; and &amp;ldquo;Data are&amp;rdquo; are approximately twice as common as &amp;ldquo;The data is&amp;rdquo; and &amp;ldquo;Data is&amp;rdquo;.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image05.png" alt="starting a sentence">&lt;/p>
+&lt;p>&lt;sup>
+&lt;a href="https://books.google.com/ngrams/interactive_chart?content=The&amp;#43;data&amp;#43;are%2C&amp;#43;The&amp;#43;data&amp;#43;is%2C&amp;#43;Data&amp;#43;are%2C&amp;#43;Data&amp;#43;is&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2CThe%20data%20are%3B%2Cc0%3B.t1%3B%2CThe%20data%20is%3B%2Cc0%3B.t1%3B%2CData%20are%3B%2Cc0%3B.t1%3B%2CData%20is%3B%2Cc0#t1%3B%2CThe%20data%20are%3B%2Cc1%3B.t1%3B%2CThe%20data%20is%3B%2Cc1%3B.t1%3B%2CData%20are%3B%2Cc0%3B.t1%3B%2CData%20is%3B%2Cc0-1" target="_blank" rel="noopener">Who doesn&amp;rsquo;t get a little sloppy by the end of a good sentence?&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>I have no idea why, but I&amp;rsquo;ll list any good guess here:&lt;/p>
+&lt;p>&lt;em>Idea 1.&lt;/em>
+&lt;a href="https://www.reddit.com/r/grammar/comments/1tbuwb/question_why_are_sentences_more_likely_to_start/ce6fsi7" target="_blank" rel="noopener">&lt;em>People tend to be more careful with their words at the beginning of a statement&amp;hellip;&lt;/em>&lt;/a>&lt;/p>
+&lt;p>&lt;em>Idea 2. ________________________&lt;/em>&lt;/p>
+&lt;p>Whatever you prefer, we can agree that &lt;strong>Data&lt;/strong> was, were, is, are, and will be
+&lt;a href="https://www.reddit.com/r/dataisbeautiful" target="_blank" rel="noopener">Beautiful&lt;/a>. (And sometimes
+&lt;a href="https://viz.wtf/" target="_blank" rel="noopener">ugly&lt;/a>.)&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image06.png" alt="all possibilities">&lt;/p>
+&lt;p>&lt;sup>
+&lt;a href="https://books.google.com/ngrams/interactive_chart?content=data&amp;#43;was%2Cdata&amp;#43;were%2Cdata&amp;#43;is%2Cdata&amp;#43;are%2Cdata&amp;#43;will&amp;#43;be&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cdata%20was%3B%2Cc0%3B.t1%3B%2Cdata%20were%3B%2Cc0%3B.t1%3B%2Cdata%20is%3B%2Cc0%3B.t1%3B%2Cdata%20are%3B%2Cc0%3B.t1%3B%2Cdata%20will%20be%3B%2Cc0#t1%3B%2Cdata%20was%3B%2Cc1%3B.t1%3B%2Cdata%20were%3B%2Cc1%3B.t1%3B%2Cdata%20is%3B%2Cc1%3B.t1%3B%2Cdata%20are%3B%2Cc1%3B.t1%3B%2Cdata%20will%20be%3B%2Cc1" target="_blank" rel="noopener">Almost done.&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>&lt;strong>Data&lt;/strong> - it&amp;rsquo;s still more popular than
+&lt;a href="https://sex-drugs-and-rock-n-roll.urbanup.com/2247232" target="_blank" rel="noopener">sex, drugs, and rock &amp;amp; roll&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image07.png" alt="sex drugs rock &amp; roll AND data">&lt;/p>
+&lt;p>&lt;sup>
+&lt;a href="https://books.google.com/ngrams/interactive_chart?content=data%2Csex%2Cdrugs%2Crock&amp;#43;and&amp;#43;roll&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cdata%3B%2Cc0%3B.t1%3B%2Csex%3B%2Cc0%3B.t1%3B%2Cdrugs%3B%2Cc0%3B.t1%3B%2Crock%20and%20roll%3B%2Cc0#t1%3B%2Cdata%3B%2Cc1%3B.t1%3B%2Csex%3B%2Cc1%3B.t1%3B%2Cdrugs%3B%2Cc1%3B.t1%3B%2Crock%20and%20roll%3B%2Cc1" target="_blank" rel="noopener">Data wins this round.&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>But only in books.&lt;/p>
+&lt;p>Across the entire internet,&lt;/p>
+&lt;h3 id="sex-still-wins">sex still wins&lt;/h3>
+&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image08.png" alt="sex drugs rock &amp; roll AND data - across the entire internet">&lt;/p>
+&lt;p>&lt;sup>
+&lt;a href="http://www.google.com/trends/explore#q=data%2C%20sex%2C%20drugs%2C%20rock%20and%20roll" target="_blank" rel="noopener">&amp;ldquo;Sex and Data&amp;rdquo; would be a decent band name.&lt;/a>&lt;/sup>&lt;/p>
+&lt;hr>
+&lt;p>&lt;sup>This article is also available on
+&lt;a href="https://medium.com/@philshem/data-are-beautiful-356332cdb81" target="_blank" rel="noopener">Medium&lt;/a>.&lt;/sup>&lt;/p></description></item></channel></rss>
