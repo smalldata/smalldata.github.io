@@ -59,7 +59,7 @@ This one is from the city of Zürich, Switzerland, where I live. I've seen a [re
 
 Data goes back to 2015, and each year is one CSV file. To get an idea of the dataset size, I choose the complete year of [2019](https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen/resource/37af5c6e-c101-41aa-8072-033280191f9c). 7647 records. It may be hard to find trends in so few dog registrations. Additionally, the Paw Patrol trend is slowly making it here to Switzerland. Since it started in North America, I'll go to look there.
 
-### [Anchorage Dog Names over Time](https://catalog.data.gov/dataset/dog-names-over-time)
+### [Anchorage Dog Names over Time](https://data.muni.org/Other/Dog-Names-over-Time/da3g-dkms)
 
 Only 16k total names between 2017 and 2019. That's not enough dogs when there are so many possible names. And starting in 2017, I may not get a good _before_ snapshot.
 

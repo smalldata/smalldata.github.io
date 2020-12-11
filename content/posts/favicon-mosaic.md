@@ -43,7 +43,7 @@ And the favicons are all normalized: 16x16 pixels and png format. Perfect.
 
 ## Now for some fun
 
-A [top500 website list](https://moz.com/top500) has a [csv export](https://moz.com/top500/domains/csv) and wrote a Python script to download each of these 500 favicons from Google's cache and save to local folder `images/`.
+A [top500 website list](https://moz.com/top500) has a [csv export](https://web.archive.org/web/20150226044534/http://moz.com:80/top500/domains/csv) and wrote a Python script to download each of these 500 favicons from Google's cache and save to local folder `images/`.
 
 ```
 import requests
@@ -60,7 +60,7 @@ def request_function(domain):
 	return
 
 # top 500 websites from mozilla https://moz.com/top500
-url = "https://moz.com:443/top500/domains/csv"
+url = "https://web.archive.org/web/20150226044534/http://moz.com:80/top500/domains/csv"
 headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:66.0) Gecko/20100101 Firefox/66.0"}
 req = requests.get(url, headers=headers)
 data = StringIO(req.text)
