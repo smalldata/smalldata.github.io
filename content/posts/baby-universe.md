@@ -1,6 +1,6 @@
 ---
 title: "Life in the Baby Universe: The Physics of Babies"
-date: 2014-01-08
+date: 2014-01-09
 category: "fun"
 tags: ["family", "thoughts", "fun"]
 slug: "physics-of-babies"
