@@ -7,7 +7,7 @@ tags: ["open data", "fun", "python", "word puzzle"]
 slug: "knuckle-tattoo"
 ---
 
-Introducing **𝕜𝕟𝕦𝕔𝕜𝕝𝕖 𝕥𝕒𝕥𝕥𝕠𝕠** -- a recursive word search puzzle.
+Introducing **𝕜𝕟𝕦𝕔𝕜𝕝𝕖 𝕥𝕒𝕥𝕥𝕠𝕠** -- a recursive word search puzzle. This puzzle was created by brothers Philip and Stephen Shemella.
 
 ## the puzzle
 
@@ -143,9 +143,7 @@ When tattooing two words across your hands, there are two main variations:
 
 #### What if there was a way to combine these variations, so that each fist spelled a word, **and** when you intertwine your fingers, the tattoos spelled other valid words?!
 
-Being a word geek, I had to know.
-
-Thanks to my brother, Stephen, for being the first to solve these puzzles, and for his valuable feedback.
+Being a word geek, I had to know. Now I know.
 
 ### puzzle generation source code
 
