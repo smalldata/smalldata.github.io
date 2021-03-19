@@ -1,4 +1,86 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>fun | small DATA</title><link>https://smalldata.dev/tag/fun/</link><atom:link href="https://smalldata.dev/tag/fun/index.xml" rel="self" type="application/rss+xml"/><description>fun</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_2.png</url><title>fun</title><link>https://smalldata.dev/tag/fun/</link></image><item><title>Baseball, for Europeans</title><link>https://smalldata.dev/posts/baseball-for-europeans/</link><pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/baseball-for-europeans/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>fun | small DATA</title><link>https://smalldata.dev/tag/fun/</link><atom:link href="https://smalldata.dev/tag/fun/index.xml" rel="self" type="application/rss+xml"/><description>fun</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_2.png</url><title>fun</title><link>https://smalldata.dev/tag/fun/</link></image><item><title>Knuckle Tattoo: A Recursive Word Search Puzzle</title><link>https://smalldata.dev/posts/knuckle-tattoo/</link><pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/knuckle-tattoo/</guid><description>&lt;p>Introducing &lt;strong>𝕜𝕟𝕦𝕔𝕜𝕝𝕖 𝕥𝕒𝕥𝕥𝕠𝕠&lt;/strong> &amp;ndash; a recursive word search puzzle.&lt;/p>
+&lt;h2 id="the-puzzle">the puzzle&lt;/h2>
+&lt;p>To solve the puzzle, you are given eight (8) letters. You need to find two commonly-used English words, each with four (4) letters, that could be tattooed across your knuckles. When you fingers are intertwined, the resulting spelling creates two new, commonly-used four letter words. There are often many possibile pairs of words, but only one solution where both the knuckles and the intertwined fingers will result in two sets of valid four-letter words.&lt;/p>
+&lt;p>Think of this puzzle like New York Times'
+&lt;a href="https://www.nytimes.com/puzzles/spelling-bee" target="_blank" rel="noopener">Spelling Bee&lt;/a>, except recursive, and harder on your brain. I suggest using scratch paper.&lt;/p>
+&lt;p>There are not so many possible puzzles with commonly-used words. That&amp;rsquo;s why I can&amp;rsquo;t give a real, working example.&lt;/p>
+&lt;p>&lt;em>But here&amp;rsquo;s a hypothetical puzzle&lt;/em>: You are provided the letters&lt;/p>
+&lt;pre>&lt;code class="language-txt">A B C D W X Y Z
+&lt;/code>&lt;/pre>
+&lt;p>If you tattooed &lt;code>ABCD&lt;/code> on one hand, and &lt;code>WXYZ&lt;/code> on the other hand, then one variation of intertwined the fingers would spell &lt;code>AWBX&lt;/code> and &lt;code>CYDZ&lt;/code>. If this were a real example, all four words would be valid.&lt;/p>
+&lt;h3 id="rules-of-play">rules of play&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>All words are easily recognizeable and commonly-used English words. Each puzzle has been hand-selected.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>All letters provided in alphabetical order, with many puzzles including letters used more than once.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Hints:
+Solving subsequent puzzles should be exponentially faster.&lt;/p>
+&lt;h2 id="the-first-puzzle">the first puzzle&lt;/h2>
+&lt;p>Happy solving!&lt;/p>
+&lt;pre>&lt;code class="language-txt">A E E K N O P S
+&lt;/code>&lt;/pre>
+&lt;h2 id="more-puzzles">more puzzles&lt;/h2>
+&lt;p>Solving more puzzles should get exponentially faster.&lt;/p>
+&lt;pre>&lt;code class="language-txt">A B D D E E I T
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">B E E E F R T U
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">A E E I L L R S
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">A D E F H I L T
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">E E L N O O P S
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">A E L N O S S T
+&lt;/code>&lt;/pre>
+&lt;h2 id="even-more-puzzles">even more puzzles&lt;/h2>
+&lt;p>You may see some similar patterns to the other puzzles.&lt;/p>
+&lt;pre>&lt;code class="language-txt">D E E E N R T U
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">D E E F I L S T
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">A E E I L L M S
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">A D H K L O O Y
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">E E G I K N N S
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">A E E I L L S S
+&lt;/code>&lt;/pre>
+&lt;pre>&lt;code class="language-txt">D E I I K N S T
+&lt;/code>&lt;/pre>
+&lt;h2 id="other-interesting-puzzles">other interesting puzzles&lt;/h2>
+&lt;p>An interesting outlier, same rules&lt;/p>
+&lt;pre>&lt;code class="language-txt">D D D G O O O S
+&lt;/code>&lt;/pre>
+&lt;p>An eight-letter final word (should be easier to solve)&lt;/p>
+&lt;pre>&lt;code class="language-txt">A I N O R S T U
+&lt;/code>&lt;/pre>
+&lt;p>&lt;em>Thanks for playing!&lt;/em>&lt;/p>
+&lt;hr>
+&lt;hr>
+&lt;h3 id="strategies-for-solving">strategies for solving&lt;/h3>
+&lt;p>I won&amp;rsquo;t give any hints or suggest a solving strategy until a later blog post. I&amp;rsquo;m guessing that people may have wildly divergent ways of solving.&lt;/p>
+&lt;p>If you are an early solver, please share your solving strategy. I&amp;rsquo;d like to write a follow-up post that shows different solving methods.&lt;/p>
+&lt;h3 id="the-background">the background&lt;/h3>
+&lt;p>When tattooing two words across your hands, there are two main variations:&lt;/p>
+&lt;p>&lt;strong>words across two fists&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/fist/staytrue.png" alt="stay true knuckle tattoo">&lt;/p>
+&lt;p>&lt;sup>&lt;em>source:
+&lt;a href="https://tattooicon.com/blogs/news/best-stay-true-knuckle-tattoos" target="_blank" rel="noopener">tattooicon&lt;/a>&lt;/em>&lt;/sup>&lt;/p>
+&lt;p>&lt;strong>words which are legible only when the fingers are intertwined&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://smalldata.dev/images/fist/letsfuck.jpg" alt="let&amp;rsquo;s fuck knuckle tattoo">&lt;/p>
+&lt;p>&lt;sup>&lt;em>source:
+&lt;a href="https://www.inkedmag.com/culture/knuckle-tattoos-will-crack#gid=ci0234ff9450032718&amp;amp;pid=olympus-digital-camera" target="_blank" rel="noopener">inked&lt;/a>&lt;/em>&lt;/sup>&lt;/p>
+&lt;h4 id="what-if-there-was-a-way-to-combine-these-variations-so-that-each-fist-spelled-a-word-and-when-you-intertwine-your-fingers-the-tattoos-spelled-other-valid-words">What if there was a way to combine these variations, so that each fist spelled a word, &lt;strong>and&lt;/strong> when you intertwine your fingers, the tattoos spelled other valid words?!&lt;/h4>
+&lt;p>Being a word geek, I had to know.&lt;/p>
+&lt;p>Thanks to my brother, Stephen, for being the first to solve these puzzles, and for his valuable feedback.&lt;/p>
+&lt;h3 id="puzzle-generation-source-code">puzzle generation source code&lt;/h3>
+&lt;p>For generating the puzzles, please follow the steps in this repository: &lt;a href="https://github.com/philshem/knuckle-tattoo">https://github.com/philshem/knuckle-tattoo&lt;/a>&lt;/p></description></item><item><title>Baseball, for Europeans</title><link>https://smalldata.dev/posts/baseball-for-europeans/</link><pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/baseball-for-europeans/</guid><description>&lt;blockquote>
 &lt;p>Ninety percent of baseball is mental; the other half is physical.
 &lt;em>&amp;ndash;
 &lt;a href="https://en.wikipedia.org/wiki/Yogi_Berra#%22Yogi-isms%22" target="_blank" rel="noopener">Yogi Berra&lt;/a>&lt;/em>&lt;/p>
