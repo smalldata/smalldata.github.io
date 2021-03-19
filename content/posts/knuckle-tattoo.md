@@ -9,6 +9,12 @@ slug: "knuckle-tattoo"
 
 Introducing **𝕜𝕟𝕦𝕔𝕜𝕝𝕖 𝕥𝕒𝕥𝕥𝕠𝕠** -- a recursive word search puzzle. This puzzle was created by brothers Philip and Stephen Shemella.
 
+
+![self made knuckle tattoo](/images/fist/selfmade.jpg)
+
+<sup>_source: [Edward Bishop](https://www.creativeboom.com/inspiration/knuckles-photographer-documents-the-fascinating-world-of-knuckle-tattoos-/)_</sup>
+
+
 ## the puzzle
 
 To solve the puzzle, you are given eight (8) letters. You need to find two commonly-used English words, each with four (4) letters, that could be tattooed across your knuckles. When you fingers are intertwined, the resulting spelling creates two new, commonly-used four letter words. There are often many possibile pairs of words, but only one solution where both the knuckles and the intertwined fingers will result in two sets of valid four-letter words.
