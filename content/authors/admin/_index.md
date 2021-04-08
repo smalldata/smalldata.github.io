@@ -74,7 +74,7 @@ email: "info@smalldata.dev"
 
 **...the person**
 
-I'm Philip Shemella, a full-stack business intelligence and data analyst professional. I have a PhD in Computational Physics. In my career, I've gained experience with startups, cloud computing, dataops, consulting and mentoring. Based in Zürich, Switzerland, I am active in the civic tech, open data and data visualization communities.
+I'm Philip Shemella, a full-stack data professional. I have a PhD in Computational Physics. In my career so far, I've gained experience with data analysis, business intelligence, startups, cloud computing, dataops, consulting and mentoring. Based in Zürich, Switzerland, I am active in the civic tech, open data and data visualization communities.
 
 I have a good day-job, but I do have availability for **small DATA** projects. [Get in touch!](/#contact)
 
