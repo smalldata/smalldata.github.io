@@ -62,7 +62,7 @@ social:
 #   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "philip@smalldata.dev"
+email: "philshem+smalldata@pm.me"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -76,10 +76,11 @@ email: "philip@smalldata.dev"
 
 I'm Philip Shemella, a full-stack data professional. I have a PhD in Computational Physics. In my career so far, I've gained experience with data analysis, business intelligence, startups, cloud computing, dataops, consulting and mentoring. Based in Zürich, Switzerland, I am active in the civic tech, open data and data visualization communities.
 
-I have a good day-job, but I do have availability for **small DATA** projects. [Get in touch!](/#contact)
+<!--I have a good day-job, but I do have availability for **small DATA** projects.-->
+[Get in touch!](/#contact)
 
 **...this page**
 
-is built using the static site generator [Hugo](https://github.com/gohugoio/hugo) with the theme [Academic](https://github.com/gcushen/hugo-academic). Browse the [open source code](https://github.com/philshem/smalldata.github.io).
+is built using the static site generator [Hugo](https://github.com/gohugoio/hugo) with the theme [Academic](https://github.com/gcushen/hugo-academic). Browse the [open source code](https://github.com/smalldata/smalldata.github.io).
 
 This site uses no trackers, no logging and no analytics. I have no idea about visitors and traffic. For that reason, I especially appreciate your feedback.

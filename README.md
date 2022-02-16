@@ -1,4 +1,4 @@
-Personal website for Philip Shemella :: https://smalldata.dev
+Personal website for Philip Shemella :: https://smalldata.github.io
 
 ## build
 

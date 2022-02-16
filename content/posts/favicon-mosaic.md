@@ -37,7 +37,7 @@ Getting better... But if I download bulk favicons, I'd like to avoid normalizing
 
 Google keeps the favicon cached for many sites (even my little website with basically zero traffic).
 
-    https://www.google.com/s2/favicons?domain=smalldata.dev
+    https://www.google.com/s2/favicons?domain=apache.org
 
 And the favicons are all normalized: 16x16 pixels and png format. Perfect.
 
