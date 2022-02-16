@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>language | small DATA</title><link>https://smalldata.dev/tag/language/</link><atom:link href="https://smalldata.dev/tag/language/index.xml" rel="self" type="application/rss+xml"/><description>language</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 27 Feb 2014 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_2.png</url><title>language</title><link>https://smalldata.dev/tag/language/</link></image><item><title>Advisor or Adviser?</title><link>https://smalldata.dev/posts/advisor-or-adviser/</link><pubDate>Thu, 27 Feb 2014 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/advisor-or-adviser/</guid><description>&lt;p>&lt;img src="https://smalldata.dev/images/advsr/header.jpeg" alt="header image: scrabble board">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>language | small DATA</title><link>https://smalldata.github.io/tag/language/</link><atom:link href="https://smalldata.github.io/tag/language/index.xml" rel="self" type="application/rss+xml"/><description>language</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 27 Feb 2014 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.github.io/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_3.png</url><title>language</title><link>https://smalldata.github.io/tag/language/</link></image><item><title>Advisor or Adviser?</title><link>https://smalldata.github.io/posts/advisor-or-adviser/</link><pubDate>Thu, 27 Feb 2014 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/advisor-or-adviser/</guid><description>&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/header.jpeg" alt="header image: scrabble board">&lt;/p>
 &lt;p>&lt;sup>Photo credit: Michael Popowich&lt;/sup>&lt;/p>
 &lt;hr>
 &lt;p>In written language there are rules to explain away most uncertainties. When there are no explicit rules, there is context. But without a rule and without context, what are we to do?&lt;/p>
@@ -12,29 +12,29 @@
 &lt;p>In English, an
 &lt;a href="https://en.wikipedia.org/wiki/Agent_noun" target="_blank" rel="noopener">agent noun&lt;/a> is how a verb is transformed into the thing doing that action. For example, a swimmer swims and a player plays. To convert a verb into an agent noun, it&amp;rsquo;s typical to add &lt;strong>-er&lt;/strong>. But &lt;strong>-or&lt;/strong> works, too, primarily for words derived from Latin. And &lt;strong>-ist&lt;/strong> is sometimes used, often for verbs ending in &lt;em>-ize (e.g. apologist).&lt;/em>&lt;/p>
 &lt;p>Originally, &lt;strong>adviser&lt;/strong> was the one true spelling. It was only recently, at the start of the 20th century, that &lt;strong>advisor&lt;/strong> began its ascent, and it will be only a few more years into the 21st before it overtakes &lt;strong>adviser&lt;/strong>.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image01.png" alt="google n-grams">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image01.png" alt="google n-grams">&lt;/p>
 &lt;p>&lt;em>Historically, there have been more advisers than advisors. That says nothing about the quality of the advice.&lt;/em>&lt;/p>
 &lt;p>&lt;sub>source: Google Books
 &lt;a href="https://books.google.com/ngrams/graph?content=advisor%2F%28advisor%2Badviser%29%2Cadviser%2F%28advisor%2Badviser%29&amp;amp;year_start=1850&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2C%28advisor%20/%20%28advisor%20%2B%20adviser%29%29%3B%2Cc0%3B.t1%3B%2C%28adviser%20/%20%28advisor%20%2B%20adviser%29%29%3B%2Cc0#t1%3B%2C%28advisor%20%2F%20%28advisor%20%2B%20adviser%29%29%3B%2Cc1%3B.t1%3B%2C%28adviser%20%2F%20%28advisor%20%2B%20adviser%29%29%3B%2Cc1" target="_blank" rel="noopener">N-gram Viewer&lt;/a>&lt;/sub>&lt;/p>
 &lt;p>Interestingly, some early instances of &lt;strong>advisor&lt;/strong> are due to mistakes in reading the scanned pages, called OCR (optical character recognition). In
 &lt;a href="https://books.google.ch/books?id=XQAFAAAAQAAJ&amp;amp;dq=advisor&amp;amp;pg=PP9#v=onepage&amp;amp;q=advisor&amp;amp;f=false" target="_blank" rel="noopener">this 1869 case&lt;/a> it could have been the hand-drawn &amp;ldquo;firewood&amp;rdquo; typeface that confused the algorithm.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image02.png" alt="bad ocr">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image02.png" alt="bad ocr">&lt;/p>
 &lt;p>It&amp;rsquo;s often claimed that American English writers use &lt;strong>advisor&lt;/strong> while British English writers use &lt;strong>adviser&lt;/strong>—and the data below seems to agree. Counting instances in American English, &lt;strong>advisor&lt;/strong> (blue) and &lt;strong>adviser&lt;/strong> (red) are about equal in 2008, the most recent year that is available. In British English, &lt;strong>advisor&lt;/strong> (green) is gaining in popularity but &lt;strong>adviser&lt;/strong> (orange) is still preferred. Seems straightforward, right?&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image03.png" alt="is it british?">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image03.png" alt="is it british?">&lt;/p>
 &lt;p>&lt;sup>Fewer advisors in the UK
 &lt;a href="https://books.google.com/ngrams/graph?content=advisor%3Aeng_us_2012%2Cadviser%3Aeng_us_2012%2Cadvisor%3Aeng_gb_2012%2Cadviser%3Aeng_gb_2012%2C&amp;#43;&amp;#43;&amp;amp;year_start=1950&amp;amp;year_end=2008&amp;amp;corpus=17&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cadvisor%3Aeng_us_2012%3B%2Cc0%3B.t1%3B%2Cadviser%3Aeng_us_2012%3B%2Cc0%3B.t1%3B%2Cadvisor%3Aeng_gb_2012%3B%2Cc0%3B.t1%3B%2Cadviser%3Aeng_gb_2012%3B%2Cc0#t1%3B%2Cadvisor%3Aeng_us_2012%3B%2Cc1%3B.t1%3B%2Cadviser%3Aeng_us_2012%3B%2Cc1%3B.t1%3B%2Cadvisor%3Aeng_gb_2012%3B%2Cc1%3B.t1%3B%2Cadviser%3Aeng_gb_2012%3B%2Cc1" target="_blank" rel="noopener">(source)&lt;/a>.&lt;/sup>&lt;/p>
 &lt;h4 id="but-wait-theres-more">But wait, there&amp;rsquo;s more!&lt;/h4>
 &lt;p>Advisor in the States is far from the default &amp;ndash; the NY Times and Associated Press &lt;em>insist&lt;/em> on &lt;strong>adviser&lt;/strong>, while the Federal Government goes with &lt;strong>advisor&lt;/strong>. Separately searching for
 &lt;a href="https://encrypted.google.com/search?hl=en&amp;amp;q=adviser%20site%3Aox.ac.uk" target="_blank" rel="noopener">adviser&lt;/a> and
 &lt;a href="https://encrypted.google.com/search?hl=en&amp;amp;q=advisor%20site%3Aox.ac.uk" target="_blank" rel="noopener">advisor&lt;/a> on individual websites for well-known institutions in the US and the UK, we can approximate which spelling is more common. As an indicator, let&amp;rsquo;s use the ratio of &lt;strong>advisor&lt;/strong>-results to &lt;strong>adviser&lt;/strong>-results: the &amp;ldquo;o/e ratio&amp;rdquo;. An o/e ratio greater than one means that &lt;strong>advisor&lt;/strong> returns more results; less than one and adviser is more commonly found.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image04.png" alt="more ngrams">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image04.png" alt="more ngrams">&lt;/p>
 &lt;p>UK university websites use each spelling about equally. US university websites go heavy on &lt;strong>advisor&lt;/strong>. (One exception is my PhD university, RPI, which has a low o/e ratio that approaches the &amp;ldquo;NY Times abyss.&amp;quot;)&lt;/p>
 &lt;p>Not only is the debate not clearly split on geographical lines, there may not even be a debate. Maybe it&amp;rsquo;s just a semantic stubbornness that creates a misplaced superiority and leaves the rest of us confused. This guy falls uncomfortably hard on one side of the advisor/adviser debate.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image05.png" alt="bad twitter">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image05.png" alt="bad twitter">&lt;/p>
 &lt;p>But with deplorable comma usage&lt;/p>
 &lt;p>And
 &lt;a href="https://twitter.com/CulinaryAdvisor" target="_blank" rel="noopener">this guy&lt;/a> falls comfortably on both sides of the debate. A true Quantum Twitterer.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image06.png" alt="bad twitter">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image06.png" alt="bad twitter">&lt;/p>
 &lt;h3 id="so-what">So what?&lt;/h3>
 &lt;p>There may be a small non-geographical distinction, actually. The
 &lt;a href="https://grammarist.com/spelling/adviser-advisor/" target="_blank" rel="noopener">Grammarist,&lt;/a>
@@ -42,13 +42,13 @@
 &lt;a href="https://separatedbyacommonlanguage.blogspot.ch/2007/10/agentive-suffixes-er-and-or-and-little.html?showComment=1192296420000#c2862081211059967581" target="_blank" rel="noopener">guy who wrote a comment on a blog&lt;/a> make the minor distinction, and I&amp;rsquo;ll summarize:&lt;/p>
 &lt;h4 id="_advisor_-is-a-title-and-_adviser_-is-anyone-else-who-advises-and-is-not-already-an-advisor">&lt;strong>&lt;em>advisor&lt;/em>&lt;/strong> is a title, and &lt;strong>&lt;em>adviser&lt;/em>&lt;/strong> is anyone else who advises and is not already an &lt;strong>advisor.&lt;/strong>&lt;/h4>
 &lt;p>The data backs up this claim. By selecting only capitalized &lt;strong>Advisor&lt;/strong> and &lt;strong>Adviser&lt;/strong>, the &lt;strong>-or&lt;/strong> spelling has already passed &lt;strong>-er&lt;/strong>. To capitalize Advisor indicates a title, and its dominance compared to Adviser suggests that there is indeed a distinction, albeit tiny.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image07.png" alt="more n-grams">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image07.png" alt="more n-grams">&lt;/p>
 &lt;p>Capitalized Advisor/Adviser starting a sentence does not influence this result, see
 &lt;a href="https://books.google.com/ngrams/graph?content=_START_&amp;#43;Advisor%2CAdvisor%2C_START_&amp;#43;Adviser%2CAdviser&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2C_START_%20Advisor%3B%2Cc0%3B.t1%3B%2CAdvisor%3B%2Cc0%3B.t1%3B%2C_START_%20Adviser%3B%2Cc0%3B.t1%3B%2CAdviser%3B%2Cc0" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;h4 id="so-how-does-2014-tech-society-handle-ambiguity">So, how does 2014 tech society handle ambiguity?&lt;/h4>
 &lt;p>At the time of writing, Wikipedia has a
 &lt;a href="https://en.wikipedia.org/wiki/Adviser" target="_blank" rel="noopener">link&lt;/a> for &lt;strong>adviser&lt;/strong> but shows the page for &lt;strong>advisor.&lt;/strong> A great side effect of having separate pages with the same content is the possibility to compare page views for each spelling. For all of 2013, the &lt;strong>advisor&lt;/strong> page received 100,361 page views, while &lt;strong>adviser&lt;/strong> 4,165. See the chart below for the 2008-2014 weekly page views.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image08.png" alt="comparing wiki pageviews">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image08.png" alt="comparing wiki pageviews">&lt;/p>
 &lt;p>Wikipedia page views per calendar week, for Advisor (blue) and Adviser (red).&lt;/p>
 &lt;p>What&amp;rsquo;s even more interesting for Wikipedia is that there are many specific types &lt;strong>advisers&lt;/strong> with
 &lt;a href="https://encrypted.google.com/search?hl=en&amp;amp;q=adviser%20site%3Aen.wikipedia.org" target="_blank" rel="noopener">their own page&lt;/a>, and many &lt;strong>advisors&lt;/strong>
@@ -57,31 +57,31 @@
 &lt;a href="https://www.oxforddictionaries.com/definition/english/adviser?q=advisor" target="_blank" rel="noopener">Oxford English Dictionary&lt;/a> and the American
 &lt;a href="https://www.merriam-webster.com/thesaurus/advisor" target="_blank" rel="noopener">Merriam-Webster&lt;/a>, have links for &lt;strong>advisor&lt;/strong> but show the main spelling as &lt;strong>adviser&lt;/strong>. Interestingly, if you search directly at m-w.com, the o/e-neutral page for
 &lt;a href="https://www.merriam-webster.com/dictionary/advisor" target="_blank" rel="noopener">&lt;em>advise&lt;/em>&lt;/a> comes up, which seems to equally frustrate everyone (e.g. the comments).&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image09.png" alt="confusion in the commments">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image09.png" alt="confusion in the commments">&lt;/p>
 &lt;p>Thesaurus.com show many more results for
 &lt;a href="https://thesaurus.com/browse/advisor" target="_blank" rel="noopener">advisor&lt;/a>. The first synonym listed is another victim of careless machine learning and is blazingly incorrect—&lt;strong>adviser&lt;/strong>! Then, to make matters worse, the
 &lt;a href="https://thesaurus.com/browse/adviser" target="_blank" rel="noopener">adviser&lt;/a> page doesn&amp;rsquo;t show &lt;strong>advisor&lt;/strong> as a synonym.&lt;/p>
 &lt;p>Tripadviser.com has a redirect to tripadvisor.com. And good thing for the redirect — there are still 10,400 Google results for
 &lt;a href="https://encrypted.google.com/search?hl=en&amp;amp;q=%22tripadviser.com%22#hl=en&amp;amp;q=%22tripadviser.com%22" target="_blank" rel="noopener">tripadviser.com&lt;/a>. (It&amp;rsquo;s common for large sites to buy domains of common spelling errors and typos, e.g. twittter.com). Here is an example of one Twitter user fighting for his/her semantic preference. Or maybe it was that pesky autocorrect, also guilty of forgetting the apostrophe in &amp;ldquo;
 &lt;a href="https://en.wikipedia.org/wiki/Cant_%28language%29" target="_blank" rel="noopener">cant&lt;/a>&amp;rdquo;.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image10.png" alt="trip adviser">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image10.png" alt="trip adviser">&lt;/p>
 &lt;p>&lt;strong>But let&amp;rsquo;s dig deeper and see what the data says.&lt;/strong>&lt;/p>
 &lt;p>&lt;sup>&lt;em>(please visit the Code Section for further description &amp;amp; links to codes)&lt;/em>&lt;/sup>&lt;/p>
 &lt;p>On Twitter, it&amp;rsquo;s not straightforward to count the number of tweets that are found with a search term. Doing so required some mini-mining with the Twitter API and a snippet of Python code. I downloaded tweets that have either advisor or adviser and then counted each separately. Going back in time one week, there were 50,165 times that the case-insensitive &lt;strong>advisor&lt;/strong> was used, compared to 23,016 for &lt;strong>adviser,&lt;/strong> corresponding to an o/e ratio of 2.2. Counting only instances of capitalized Advisor and Adviser, their counts were 25,383 and 7,825, respectively. With an increased o/e ratio of 3.2, the predominance of capitalized Advisor indicates a title or a role, as described above. By putting the tweets with public geo-location on the world map, with &lt;strong>advisor&lt;/strong> in blue and &lt;strong>adviser&lt;/strong> in red, nothing really stands out. But it&amp;rsquo;s sometimes fun to click and see what people around the world are saying about their advisors and their advisers?&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image11.png" alt="twitter map">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image11.png" alt="twitter map">&lt;/p>
 &lt;p>&lt;sup>Click
 &lt;a href="https://public.tableausoftware.com/views/world_tweets/Dashboard1?:embed=y&amp;amp;:display_count=no#2" target="_blank" rel="noopener">here&lt;/a> for the interactive version.&lt;/sup>&lt;/p>
 &lt;p>&lt;strong>Word clouds&lt;/strong>, which are normally pretty useless, show some distinctions between the spellings. Employment terms such as job, sales, financial, customer, and service are commonly found in tweets containing &lt;strong>advisor&lt;/strong>. Tweets with &lt;strong>adviser&lt;/strong> include more political terms, such as legal, national, security, and president. I guess word clouds are still pretty useless.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image12.png" alt="useless word clouds">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image12.png" alt="useless word clouds">&lt;/p>
 &lt;p>Finally, tweets are filtered by emotion, literally by adding a smiley or frowny face to the Twitter search string. Happy tweets over one week were well-balanced: 477 advisors and 593 advisers (0.8 o/e ratio, which is much fewer non-filtered tweets). In sad tweets, &lt;strong>advisor&lt;/strong> showed up 48 times, compared to 157 for &lt;strong>adviser&lt;/strong> (0.3 o/e ratio). It&amp;rsquo;s not a huge number of tweets and I don&amp;rsquo;t want to make any dramatic conclusions, such as claiming that &amp;ldquo;advisers are more polarizing than advisors.&amp;rdquo;&lt;/p>
 &lt;h4 id="et-tuhttpsenwikipediaorgwikiet_tu_brute3f-goo-gle">
 &lt;a href="https://en.wikipedia.org/wiki/Et_tu,_Brute%3F" target="_blank" rel="noopener">Et tu&lt;/a>, Goo-gle?&lt;/h4>
 &lt;p>At the time of writing, Google approximated 119,000,000 results for &lt;strong>advisor&lt;/strong> and only 20,500,000 for &lt;strong>adviser&lt;/strong>. That&amp;rsquo;s a very large o/e ratio of 5.8. Despite that lopsidedness, only &lt;strong>adviser&lt;/strong> brings up a definition box. (For a short discussion about using approximate Google search results, see &lt;strong>Appendix 1&lt;/strong>.)&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image13.png" alt="google results counting">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image13.png" alt="google results counting">&lt;/p>
 &lt;p>Welcome to my cozy little
 &lt;a href="https://dontbubble.us/" target="_blank" rel="noopener">filter bubble&lt;/a>.&lt;/p>
 &lt;p>By using approximate results from Google search, it&amp;rsquo;s possible to build an understanding of which spelling is preferred in certain contexts. For example, searching &amp;ldquo;Financial Advisor&amp;rdquo; with quotes returns 5,120,000 results and &amp;ldquo;Financial Adviser&amp;rdquo; returns 1,480,000. (For the methodology of term collection, see &lt;strong>Appendix 2&lt;/strong>.) In addition to well known roles like &amp;ldquo;Academic Advisor&amp;rdquo;, I&amp;rsquo;ve added some general adjectives, such as &amp;ldquo;trusted&amp;rdquo; and &amp;ldquo;good&amp;rdquo;.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image14.png" alt="dataviz, advisor vs. adviser">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image14.png" alt="dataviz, advisor vs. adviser">&lt;/p>
 &lt;p>&lt;sup>The interactive visualization is available
 &lt;a href="https://public.tableausoftware.com/views/GoogleSpellingCount/Dashboard1?:embed=y&amp;amp;:display_count=yes#1" target="_blank" rel="noopener">here&lt;/a>.&lt;/sup>&lt;/p>
 &lt;p>&lt;strong>The results are… complicated.&lt;/strong> &amp;ldquo;Financial advisor&amp;rdquo; is the most common. &amp;ldquo;Afraid adviser&amp;rdquo; is the least. &amp;ldquo;Stock adviso/er&amp;rdquo; has the highest o/e ratio (185.7). Categories consistently with more advisors than advisers are academic, business and health. Despite the US Government&amp;rsquo;s preference for advisor, most political advisers use the &lt;strong>-er&lt;/strong> spelling.&lt;/p>
@@ -103,12 +103,12 @@
 &lt;h4 id="appendix-1">&lt;strong>Appendix 1.&lt;/strong>&lt;/h4>
 &lt;p>&lt;em>Although extremely approximate and fluctuating, many language learners use the number of Google results to determine what sounds more natural. For example, in German,&lt;/em>
 &lt;a href="https://medium.com/" title="23" target="_blank" rel="noopener">&lt;strong>&lt;em>gern&lt;/em>&lt;/strong>&lt;/a> &lt;em>and&lt;/em> &lt;strong>&lt;em>gerne&lt;/em>&lt;/strong> &lt;em>are interchangeable, and mean &amp;ldquo;&lt;em>gladly&amp;rdquo;&lt;/em>. Despite that, native speakers will often converge on one spelling in one certain context.&lt;/em>&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image15.png" alt="german gern/e">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image15.png" alt="german gern/e">&lt;/p>
 &lt;p>More popular by a factor of Zwei.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image16.png" alt="german gern/e v2">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image16.png" alt="german gern/e v2">&lt;/p>
 &lt;p>Less popular, although what comes after must surely matter.&lt;/p>
 &lt;p>&lt;em>Interestingly, Google&amp;rsquo;s N-grams tool indicate that&lt;/em> &lt;strong>&lt;em>gerne&lt;/em>&lt;/strong> &lt;em>has recently passed&lt;/em> &lt;strong>&lt;em>gern&lt;/em>&lt;/strong> &lt;em>in popularity.&lt;/em>&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image17.png" alt="german gern/e comparison">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image17.png" alt="german gern/e comparison">&lt;/p>
 &lt;p>&lt;sup>
 &lt;a href="https://books.google.com/ngrams/graph?content=%28gern%2F%28gern%2Bgerne%29%29%2C%28gerne%2F%28gern%2Bgerne%29%29&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=20&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2C%28gern%20/%20%28gern%20%2B%20gerne%29%29%3B%2Cc0%3B.t1%3B%2C%28gerne%20/%20%28gern%20%2B%20gerne%29%29%3B%2Cc0#t1%3B%2C%28gern%20%2F%20%28gern%20%2B%20gerne%29%29%3B%2Cc1%3B.t1%3B%2C%28gerne%20%2F%20%28gern%20%2B%20gerne%29%29%3B%2Cc1" target="_blank" rel="noopener">source&lt;/a>&lt;/sup>&lt;/p>
 &lt;p>&lt;em>Which is good, because I prefer gerne. I think it makes my German sound Italian.&lt;/em> Ich hätte gerne eine pizza.&lt;/p>
@@ -126,7 +126,7 @@
 &lt;li>It&amp;rsquo;s possible to do a Google search with &amp;ldquo;Autostart&amp;rdquo;, instead of autocomplete.&lt;/li>
 &lt;li>&lt;em>Ejaculation Advisor&lt;/em> is a thing.&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image18.png" alt="a what advisor?">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image18.png" alt="a what advisor?">&lt;/p>
 &lt;hr>
 &lt;hr>
 &lt;h4 id="code-section">Code section.&lt;/h4>

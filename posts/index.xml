@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | small DATA</title><link>https://smalldata.dev/posts/</link><atom:link href="https://smalldata.dev/posts/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_2.png</url><title>Posts</title><link>https://smalldata.dev/posts/</link></image><item><title>Knuckle Tattoo: A Recursive Word Search Puzzle</title><link>https://smalldata.dev/posts/knuckle-tattoo/</link><pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/knuckle-tattoo/</guid><description>&lt;p>Introducing &lt;strong>𝕜𝕟𝕦𝕔𝕜𝕝𝕖 𝕥𝕒𝕥𝕥𝕠𝕠&lt;/strong> &amp;ndash; a recursive word search puzzle. This puzzle was created by brothers Philip and Stephen Shemella.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/fist/selfmade.jpg" alt="self made knuckle tattoo">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | small DATA</title><link>https://smalldata.github.io/posts/</link><atom:link href="https://smalldata.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.github.io/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_3.png</url><title>Posts</title><link>https://smalldata.github.io/posts/</link></image><item><title>Knuckle Tattoo: A Recursive Word Search Puzzle</title><link>https://smalldata.github.io/posts/knuckle-tattoo/</link><pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/knuckle-tattoo/</guid><description>&lt;p>Introducing &lt;strong>𝕜𝕟𝕦𝕔𝕜𝕝𝕖 𝕥𝕒𝕥𝕥𝕠𝕠&lt;/strong> &amp;ndash; a recursive word search puzzle. This puzzle was created by brothers Philip and Stephen Shemella.&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/fist/selfmade.jpg" alt="self made knuckle tattoo">&lt;/p>
 &lt;p>&lt;sup>&lt;em>source:
 &lt;a href="https://www.creativeboom.com/inspiration/knuckles-photographer-documents-the-fascinating-world-of-knuckle-tattoos-/" target="_blank" rel="noopener">Edward Bishop&lt;/a>&lt;/em>&lt;/sup>&lt;/p>
 &lt;h2 id="the-puzzle">the puzzle&lt;/h2>
@@ -72,33 +72,34 @@ Solving subsequent puzzles should be exponentially faster.&lt;/p>
 &lt;h3 id="the-background">the background&lt;/h3>
 &lt;p>When tattooing two words across your hands, there are two main variations:&lt;/p>
 &lt;p>&lt;strong>words across two fists&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/fist/staytrue.png" alt="stay true knuckle tattoo">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/fist/staytrue.png" alt="stay true knuckle tattoo">&lt;/p>
 &lt;p>&lt;sup>&lt;em>source:
 &lt;a href="https://tattooicon.com/blogs/news/best-stay-true-knuckle-tattoos" target="_blank" rel="noopener">tattooicon&lt;/a>&lt;/em>&lt;/sup>&lt;/p>
 &lt;p>&lt;strong>words which are legible only when the fingers are intertwined&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/fist/letsfuck.jpg" alt="let&amp;rsquo;s fuck knuckle tattoo">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/fist/letsfuck.jpg" alt="let&amp;rsquo;s fuck knuckle tattoo">&lt;/p>
 &lt;p>&lt;sup>&lt;em>source:
 &lt;a href="https://www.inkedmag.com/culture/knuckle-tattoos-will-crack#gid=ci0234ff9450032718&amp;amp;pid=olympus-digital-camera" target="_blank" rel="noopener">inked&lt;/a>&lt;/em>&lt;/sup>&lt;/p>
 &lt;h4 id="what-if-there-was-a-way-to-combine-these-variations-so-that-each-fist-spelled-a-word-and-when-you-intertwine-your-fingers-the-tattoos-spelled-other-valid-words">What if there was a way to combine these variations, so that each fist spelled a word, &lt;strong>and&lt;/strong> when you intertwine your fingers, the tattoos spelled other valid words?!&lt;/h4>
 &lt;p>Being a word geek, I had to know. Now I know.&lt;/p>
 &lt;h3 id="puzzle-generation-source-code">puzzle generation source code&lt;/h3>
-&lt;p>For generating the puzzles, please follow the steps in this repository: &lt;a href="https://github.com/philshem/knuckle-tattoo">https://github.com/philshem/knuckle-tattoo&lt;/a>&lt;/p></description></item><item><title>Getting stats on browsing history from the browser database</title><link>https://smalldata.dev/posts/browsing-stats/</link><pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/browsing-stats/</guid><description>&lt;p>If you didn&amp;rsquo;t know, there are more SQLite databases in the universe (
+&lt;p>For generating the puzzles, please follow the steps in this repository:
+&lt;a href="https://github.com/philshem/knuckle-tattoo" target="_blank" rel="noopener">https://github.com/philshem/knuckle-tattoo&lt;/a>&lt;/p></description></item><item><title>Getting stats on browsing history from the browser database</title><link>https://smalldata.github.io/posts/browsing-stats/</link><pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/browsing-stats/</guid><description>&lt;p>If you didn&amp;rsquo;t know, there are more SQLite databases in the universe (
 &lt;a href="https://www.sqlite.org/mostdeployed.html" target="_blank" rel="noopener">1+ trillion&lt;/a>) than there are known galaxies (
 &lt;a href="https://www.discovermagazine.com/the-sciences/how-many-galaxies-are-there-astronomers-are-revealing-the-enormity-of-the" target="_blank" rel="noopener">100 billion&lt;/a>). And one of those SQLite databases happens to be your browsing history. As a short proof-of-concept, here&amp;rsquo;s how to access the history of your Firefox browser via the SQLite database.&lt;/p>
 &lt;h2 id="find-your-database-file">find your database file&lt;/h2>
 &lt;p>Mozilla Firefox stores your cookies, bookmarks, form inputs, and browsing history under the path defined in your profile settings. To find the path of those files in your file system, visit &lt;strong>about:profiles&lt;/strong> in a Firefox window.&lt;/p>
 &lt;p>In my case, I only use really one profile, which is shown in the orange box.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/firefox-profile-path.png" alt="showing file system path to profile in firefox">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/firefox-profile-path.png" alt="showing file system path to profile in firefox">&lt;/p>
 &lt;p>You can click &amp;ldquo;Show in Finder&amp;rdquo; and then scroll down to the file &lt;code>places.sqlite&lt;/code>. Trying to directly open this database file gives the error &amp;ldquo;locked database&amp;rdquo; &amp;ndash; you&amp;rsquo;ll need to make a copy of the file in a different folder before opening.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-locked.png" alt="database is locked">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/firefox-db-locked.png" alt="database is locked">&lt;/p>
 &lt;h2 id="explore-the-database">explore the database&lt;/h2>
 &lt;p>The go-to SQLite client is
 &lt;a href="https://sqlitebrowser.org/" target="_blank" rel="noopener">DB Browser for SQLite&lt;/a>. Once installed, you can easily open your &lt;code>places.sqlite&lt;/code> file with &amp;ldquo;Open With&amp;rdquo; from Finder.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-openwith.png" alt="opening the db file">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/firefox-db-openwith.png" alt="opening the db file">&lt;/p>
 &lt;p>Once the database file is open, you&amp;rsquo;ll see 13 tables&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-tables.png" alt="finding the right tables">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/firefox-db-tables.png" alt="finding the right tables">&lt;/p>
 &lt;p>After digging through a couple tables, the one with your browsing history is called &lt;code>moz_places&lt;/code>. By viewing this table, you&amp;rsquo;ll see that the field &lt;code>url&lt;/code> stores the page visited, and last visit date is the UNIX timestamp of the last visit.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-history-view.png" alt="viewing the table with browsing history">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/firefox-db-history-view.png" alt="viewing the table with browsing history">&lt;/p>
 &lt;p>Sort descending by &lt;code>visit_count&lt;/code> and you&amp;rsquo;ll find your most commonly viewed website. For me, it&amp;rsquo;s HackerNews, and then various permutations of Twitter. (I use the mobile Twitter site instead of the app, and I sync my history between devices.)&lt;/p>
 &lt;h2 id="query-the-database">query the database&lt;/h2>
 &lt;p>Despite using Twitter, I&amp;rsquo;m a private person, and I don&amp;rsquo;t want to share any real analysis of my browsing history. I do want to share one result: the distribution of &lt;code>http://localhost&lt;/code> ports. Here&amp;rsquo;s a short python3 script that reads the copy of the &lt;code>place.sqlite&lt;/code> file, and returns a count of localhost ports from the browsing history.&lt;/p>
@@ -209,7 +210,7 @@ url like '%localhost:9005%'
 &lt;/code>&lt;/pre>
 &lt;p>shows that port 9005 was used for the Callback on Firebase CLI authentication. The reason is because the Python script splits on the &lt;code>:&lt;/code> character, for which this URL has more than one. The table shows 7 localhost URLs without ports, but these are actually URLs that have more than one &lt;code>:&lt;/code> character. I&amp;rsquo;ve updated the table above, but not the Python script.&lt;/p>
 &lt;h2 id="conclusion">conclusion&lt;/h2>
-&lt;p>Everything is a SQLite database.&lt;/p></description></item><item><title>Generating folders with smart dates in Python + Pandas</title><link>https://smalldata.dev/posts/python-date-folders/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/python-date-folders/</guid><description>&lt;blockquote>
+&lt;p>Everything is a SQLite database.&lt;/p></description></item><item><title>Generating folders with smart dates in Python + Pandas</title><link>https://smalldata.github.io/posts/python-date-folders/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/python-date-folders/</guid><description>&lt;blockquote>
 &lt;p>&lt;em>Not everything your mother told you is true.&lt;/em>&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;small>&amp;ndash;my CompSci 101 professor, when a student &lt;em>insisted&lt;/em> that, without exception, every 4th year was a leap year&lt;/small>&lt;/p>
@@ -267,7 +268,7 @@ for d in df:
 path = subpath + os.sep + str(d.year).zfill(4) + os.sep + str(d.month).zfill(2) + os.sep + str(d.day).zfill(2)
 create_folder(path)
 #break # debugging
-&lt;/code>&lt;/pre></description></item><item><title>Data Science and PAW Patrol</title><link>https://smalldata.dev/posts/paw-patrol/</link><pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/paw-patrol/</guid><description>&lt;h2 id="step-0-the-disclaimers">Step 0. The disclaimers&lt;/h2>
+&lt;/code>&lt;/pre></description></item><item><title>Data Science and PAW Patrol</title><link>https://smalldata.github.io/posts/paw-patrol/</link><pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/paw-patrol/</guid><description>&lt;h2 id="step-0-the-disclaimers">Step 0. The disclaimers&lt;/h2>
 &lt;ol>
 &lt;li>
 &lt;p>I don&amp;rsquo;t call myself a &lt;em>data scientist&lt;/em>, but other people do, and I wanted to share my approach to &lt;em>data science&lt;/em>. This approach has worked well for me professionally. There are many good approaches, and I don&amp;rsquo;t want to gatekeep any of those.&lt;/p>
@@ -295,7 +296,7 @@ create_folder(path)
 &lt;p>Yeah. It goes on. You get the point. But the show can be endearing, and I think the deeper reason it resonates with kids is because the team is useful and appreciated by the adults they help. But that&amp;rsquo;s a topic for another article.&lt;sup>
 [1]&lt;/sup>&lt;/p>
 &lt;p>If you take a vote in my household, a consensus of 50% of voters will declare PAW Patrol to be the single best achievement of humanity. And it&amp;rsquo;s been decided, by compromise, that if we ever get a pet dog, the name shall be either &lt;code>Zuma-Marshall&lt;/code>, or &lt;code>Marshall-Zuma&lt;/code>.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/paw-patrol-jump-i49016.jpg" alt="paw patrol team">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/paw-patrol-jump-i49016.jpg" alt="paw patrol team">&lt;/p>
 &lt;h3 id="the-question">The question&lt;/h3>
 &lt;p>I was curious - with PAW Patrol hype slowly sweeping the planet since 2013, do we see an increase in dogs named after the crew?&lt;/p>
 &lt;h2 id="step-2-curate-the-data">Step 2. Curate the data&lt;/h2>
@@ -560,7 +561,7 @@ create_folder(path)
 &lt;h3 id="closing-the-calculation">Closing the calculation&lt;/h3>
 &lt;p>The math doesn&amp;rsquo;t get too complicated, because the data doesn&amp;rsquo;t require anything else. I&amp;rsquo;m going to use my normalized frequency metric to compare trends for Chase, Marshall, Rocky, Ryder, Rocky and Skye.&lt;/p>
 &lt;p>I&amp;rsquo;ve removed 2016 and 2017 now too, to try to more clearly show before and after. It&amp;rsquo;s only Skye that shows any trend &amp;ndash; effectively doubling in popularity.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/paw_patrol_results.png" alt="paw patrol results">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/paw_patrol_results.png" alt="paw patrol results">&lt;/p>
 &lt;h2 id="step-4-shutting-it-down">Step 4. Shutting it down&lt;/h2>
 &lt;p>I can&amp;rsquo;t believe I&amp;rsquo;ve spent this much time thinking about PAW Patrol. What I want to stress is that when you are working with data, for me it has been essential to&lt;/p>
 &lt;ol>
@@ -591,7 +592,7 @@ create_folder(path)
 &lt;/blockquote>
 &lt;blockquote>
 &lt;p>&lt;sub>Ultimately, PAW Patrol echoes core tenets of neoliberalism and encourages complicity in a global capitalist system that (re)produces inequalities and causes environmental harms.&lt;/sub>&lt;/p>
-&lt;/blockquote></description></item><item><title>Baseball, for Europeans</title><link>https://smalldata.dev/posts/baseball-for-europeans/</link><pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/baseball-for-europeans/</guid><description>&lt;blockquote>
+&lt;/blockquote></description></item><item><title>Baseball, for Europeans</title><link>https://smalldata.github.io/posts/baseball-for-europeans/</link><pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/baseball-for-europeans/</guid><description>&lt;blockquote>
 &lt;p>Ninety percent of baseball is mental; the other half is physical.
 &lt;em>&amp;ndash;
 &lt;a href="https://en.wikipedia.org/wiki/Yogi_Berra#%22Yogi-isms%22" target="_blank" rel="noopener">Yogi Berra&lt;/a>&lt;/em>&lt;/p>
@@ -600,22 +601,22 @@ create_folder(path)
 &lt;p>Baseball is a beautiful game of data-driven micro-strategy executed on the field by real-life chess pieces, who spring into action to chase down a fly ball or to sprint around the diamond. For data people like me, who grew up as baseball fans in the US, it&amp;rsquo;s a treasure trove of statistics, extrapolations, trends and trend-defying events. Now that&amp;rsquo;s action!&lt;/p>
 &lt;p>Baseball is more international than you may think. In addition to the US, it&amp;rsquo;s a top sport in Canada, Mexico, Puerto Rico, Cuba, the Dominican Republic, Panama, Venezuela, Japan, South Korea and Chinese Taipei (Taiwan). But in Europe, baseball is mostly unknown and mysterious. And boring.&lt;/p>
 &lt;p>In fact, the idea for this article came from a confused chat message in a WhatsApp group from an Australian couple at a baseball game in San Diego.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baseball_whatsapp.jpg" alt="image: WhatsApp screenshot">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baseball_whatsapp.jpg" alt="image: WhatsApp screenshot">&lt;/p>
 &lt;p>As one of the only US-Americans in the group chat, and born and raised into a baseball family, I felt that I needed to share my opinion about &lt;em>discovering&lt;/em> baseball as an adult:&lt;/p>
 &lt;blockquote>
 &lt;p>Baseball is a beautiful game of strategy and statistics but I wouldn’t want to have to learn the rules as an adult. Like grammar in a foreign language, it’s built on exceptions to the rule, and those exceptions have their own exceptions (for example, three strikes and you&amp;rsquo;re out, EXCEPT if you hit a foul ball, EXCEPT EXCEPT if that foul ball was hit while bunting).&lt;/p>
 &lt;/blockquote>
 &lt;p>If you keep reading, I&amp;rsquo;ll explain more about the rules that govern the beautiful game of baseball. To make an article about baseball for non-baseball people less boring, I&amp;rsquo;ll sprinkle in baseball gifs. Here&amp;rsquo;s Ozzie Smith&amp;rsquo;s trademark backflip.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baseball_ozzie_smith_backflip.gif" alt="gif: Ozzie Smith backflip">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baseball_ozzie_smith_backflip.gif" alt="gif: Ozzie Smith backflip">&lt;/p>
 &lt;p>If that&amp;rsquo;s too much athleticism for your pre-conceived notions about baseball players being out of shape, how about this &lt;em>professional athlete&lt;/em>?&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baseball_dadbod.gif" alt="gif: #dadbod">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baseball_dadbod.gif" alt="gif: #dadbod">&lt;/p>
 &lt;p>Now to the serious stuff. &lt;strong>How can you learn the rules of baseball as an adult?&lt;/strong>&lt;/p>
 &lt;h2 id="tldr-dont-bother">&lt;strong>tl;dr&lt;/strong> don&amp;rsquo;t bother&lt;/h2>
 &lt;p>Professional Major League Baseball (MLB) has 162 regular season games, and a never-ending post-season of playoffs and a &amp;ldquo;world&amp;rdquo; championship that follow. Then comes Christmas, and the pre-season &amp;ldquo;Spring Training&amp;rdquo; starts. Yes, it&amp;rsquo;s a summer sport with a season so long that it can snow at both the beginning AND end of the season.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baseball_snow.gif" alt="gif: snowy game">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baseball_snow.gif" alt="gif: snowy game">&lt;/p>
 &lt;p>The earliest a normal game will start on the East Coast of the US is 1pm, meaning 7pm in Central Europe. Those games are often on Sundays, and it&amp;rsquo;s not a bad time to watch a game if nothing else is on. The remaining 5 to 6 games on the East Coast start at 7pm local time, so 1am in Europe. Games from the West Coast of the US that start at 7pm there will start at 3am in Europe. That means at 6am, when the rest of us are dreaming about waking up, you could turn off the TV and question the decisions you&amp;rsquo;ve made in your life. One-hundred-and-sixty-one more games to go.&lt;/p>
 &lt;p>If you&amp;rsquo;ve read this far, and you have the existential craving to know how and why baseball functions, &lt;em>keep reading&lt;/em>.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baseball_umpire_flex.gif" alt="gif: umpire flex">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baseball_umpire_flex.gif" alt="gif: umpire flex">&lt;/p>
 &lt;h2 id="the-written-rules">the written rules&lt;/h2>
 &lt;h3 id="9-innings">9 innings&lt;/h3>
 &lt;p>Each game consists of nine innings. An inning gives each team a chance to hit the ball with the bat and score runs (offense), as well as a chance to switch sides and to pitch the ball and try to prevent the other team from scoring runs (defense).&lt;/p>
@@ -642,7 +643,7 @@ create_folder(path)
 &lt;h3 id="3-outs">3 outs&lt;/h3>
 &lt;p>Each inning, whether the game has 9, or 4.5, or ∞, has six outs. Each team in their half-inning gets three outs. An out can come from: (1) a strikeout, where the batter fails to put the ball into play - more later about strikeouts. The second way to record an out is ground-out, where the ball is hit on the ground and the defensive player either (2a) tags the player with the ball either with the glove hand if the ball is in the glove, or with the ball in the non-glove hand, or (2b) throws to a base where a runner is forced to run and the player who catches the ball touches the base with any part of his body (perhaps a toe).&lt;/p>
 &lt;p>Here&amp;rsquo;s an example of a pathetic ground-out that was an embarrassment to even the player&amp;rsquo;s mom and grandma.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baseball_ground_out.gif" alt="gif: ground out">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baseball_ground_out.gif" alt="gif: ground out">&lt;/p>
 &lt;p>The third way to record an out is a fly-out (3a) to the outfield or a pop-out (3b) to the infield. In this case, the ball is hit in the air and caught by a player without touching the ground.&lt;/p>
 &lt;p>It&amp;rsquo;s possible to get more than one out per play, for example a triple play, where all three outs of the inning are recorded in one play. It&amp;rsquo;s not very common. Double plays are more common and a great way to kill your team&amp;rsquo;s momentum by canceling out baserunners.&lt;/p>
 &lt;p>So three outs to a half-inning, and three ways to make an out. If you&amp;rsquo;re a baserunner, you can also make an out by being tagged out when you aren&amp;rsquo;t touching the base. But let&amp;rsquo;s skip that for now.&lt;/p>
@@ -661,7 +662,7 @@ create_folder(path)
 &lt;p>EXCEPT EXCEPT: Foul balls in the air that are first caught by a fan do not count as outs.&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://smalldata.dev/images/baseball_fan_interference.gif" alt="gif: Foul ball?">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baseball_fan_interference.gif" alt="gif: Foul ball?">&lt;/p>
 &lt;ul>
 &lt;li>EXCEPT EXCEPT EXCEPT: If the ball is touched by a fan in the field of play, and affects the course of the game, the umpire can decide what to do. It&amp;rsquo;s called &amp;ldquo;
 &lt;a href="https://en.wikipedia.org/wiki/Interference_%28baseball%29#Spectator_interference" target="_blank" rel="noopener">spectator interference&lt;/a>&amp;rdquo; and as stadiums have recently been built to put fans close to the action, it happens often.&lt;/li>
@@ -671,13 +672,13 @@ create_folder(path)
 &lt;a href="https://en.wikipedia.org/wiki/Curse_of_the_Billy_Goat" target="_blank" rel="noopener">Curse of the Billy Goat&lt;/a>&amp;rdquo; on the Chicago Cubs, and made Steve Bartman a pariah in Chicago. Did I mention that baseball players and fans are
 &lt;a href="https://en.wikipedia.org/wiki/Baseball_superstition" target="_blank" rel="noopener">superstitious&lt;/a>? Did you know if you wear a &amp;ldquo;
 &lt;a href="https://en.wikipedia.org/wiki/Rally_cap" target="_blank" rel="noopener">rally cap&lt;/a>&amp;rdquo;, you can impact the outcome of the game from the sidelines?&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baseball_rally_cap.jpg" alt="image: Rally Cap">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baseball_rally_cap.jpg" alt="image: Rally Cap">&lt;/p>
 &lt;p>With all those exceptions, the one thing is constant. A half-inning has three outs. Right?&lt;/p>
 &lt;ul>
 &lt;li>EXCEPT: An inning can have a
 &lt;a href="https://en.wikipedia.org/wiki/Fourth_out" target="_blank" rel="noopener">four outs&lt;/a>. I had never heard of this rule, so I asked a serious baseball fan.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://smalldata.dev/images/baseball_fourth_out.png" alt="image: Fourth out">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baseball_fourth_out.png" alt="image: Fourth out">&lt;/p>
 &lt;p>Let&amp;rsquo;s skip this one.&lt;/p>
 &lt;h3 id="3-strikes">3 strikes&lt;/h3>
 &lt;p>Balls thrown by the pitcher are categorized by the home-plate umpire as either balls or strikes. You may have heard the cliché &lt;em>Three strikes and you&amp;rsquo;re out&lt;/em>. A batter is indeed &lt;em>out&lt;/em> if they have three from the following:&lt;/p>
@@ -743,7 +744,7 @@ create_folder(path)
 &lt;li>EXCEPT: the pitcher shouldn&amp;rsquo;t throw at the head of the hitter&lt;/li>
 &lt;/ul>
 &lt;p>In turn, throwing at a hitter can also cause a bench-clearing brawl. I don&amp;rsquo;t condone violence, but all I can say is that if you charge the mound, at least know the skills of the player you are going after.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baseball_nolan_ryan_headlock.gif" alt="headlock">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baseball_nolan_ryan_headlock.gif" alt="headlock">&lt;/p>
 &lt;hr>
 &lt;h2 id="make-it-stop">make it stop&lt;/h2>
 &lt;p>At this point, you may feel like you are in a headlock and being punched repeatedly in the head.
@@ -794,36 +795,36 @@ We can still enjoy the game. Go to a stadium, enjoy the summer weather, cheer wi
 &lt;h4 id="what-happens-if-you-return-to-the-dugout-with-a-disguise-after-you-were-ejected-from-the-game">What happens if you return to the dugout with a disguise after you were ejected from the game?&lt;/h4>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/ok6pLKBD-XQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div></description></item><item><title>Hand-drawn Dataviz</title><link>https://smalldata.dev/posts/hand-drawn-dataviz/</link><pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/hand-drawn-dataviz/</guid><description>&lt;p>As a parent of small kids, and especially as a scientist parent, you search for patterns in a universe without patterns. This realization led me not try to collect data, but instead hand-draw a series of data visualizations about family, parenting, and the dream of a work-life balance.&lt;/p>
+&lt;/div></description></item><item><title>Hand-drawn Dataviz</title><link>https://smalldata.github.io/posts/hand-drawn-dataviz/</link><pubDate>Sun, 26 May 2019 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/hand-drawn-dataviz/</guid><description>&lt;p>As a parent of small kids, and especially as a scientist parent, you search for patterns in a universe without patterns. This realization led me not try to collect data, but instead hand-draw a series of data visualizations about family, parenting, and the dream of a work-life balance.&lt;/p>
 &lt;p>These were posted to Twitter, and combined as a thread here.&lt;/p>
 &lt;hr>
 &lt;h2 id="the-broccoli-anomaly">The broccoli anomaly&lt;/h2>
 &lt;p>Young kids are happy to feed themselves, especially if its junk food. Once in a while, you&amp;rsquo;ll find yourself in a good phase where you can convince them that broccoli is a tiny tree 🌳 and they are a big hungry dinosaur 🦕.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/dataviz_kids_food.jpg" alt="Dataviz: kids eating">
+&lt;p>&lt;img src="https://smalldata.github.io/images/dataviz_kids_food.jpg" alt="Dataviz: kids eating">
  
 &lt;a href="https://twitter.com/philshem/status/563423500661452800" target="_blank" rel="noopener">View Tweet&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="the-exponential-growth-of-getting-sick">The exponential growth of getting sick&lt;/h2>
 &lt;p>Kids get colds and the flu and it isn&amp;rsquo;t until they are multiple and start going to daycare and school do you encounter the exponential growth that is childhood infectivity.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/dataviz_sick_kids.jpg" alt="Dataviz: sick kids">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/dataviz_sick_kids.jpg" alt="Dataviz: sick kids">&lt;/p>
 &lt;p> 
 &lt;a href="https://twitter.com/philshem/status/563806411885645825" target="_blank" rel="noopener">View Tweet&lt;/a>&lt;/p>
 &lt;hr>
 &lt;p>## The kid bedtime&lt;/p>
 &lt;p>Putting a 3 year old to bed is an exercise in patience. Too early, and you&amp;rsquo;ll be there hours as they calm down. Too late, and you are against the storm that is an overtired kid. You gotta find that perfect moment: The Sleep Singularity.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/dataviz_kid_bedtime.jpg" alt="Dataviz: kid bedtime">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/dataviz_kid_bedtime.jpg" alt="Dataviz: kid bedtime">&lt;/p>
 &lt;p> 
 &lt;a href="https://twitter.com/philshem/status/607975588121473025" target="_blank" rel="noopener">View Tweet&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="non-linear-aging">Non-linear aging&lt;/h2>
 &lt;p>My perceived age, in relation to my actual age, had two dips during undergad and grad school (parties??). Since becoming a parent, my perceived age has quickly outgrown my actual age.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/dataviz_dad_years.jpg" alt="Dataviz: dad years">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/dataviz_dad_years.jpg" alt="Dataviz: dad years">&lt;/p>
 &lt;p> 
 &lt;a href="https://twitter.com/philshem/status/707658187340537856" target="_blank" rel="noopener">View Tweet&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h2 id="indoor-enthusiast">Indoor enthusiast&lt;/h2>
 &lt;p>Most of the good sunlight and weather is during regular office hours.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/dataviz_sunny_workday.jpg" alt="Dataviz: indoor workdays">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/dataviz_sunny_workday.jpg" alt="Dataviz: indoor workdays">&lt;/p>
 &lt;p> 
 &lt;a href="https://twitter.com/philshem/status/563064345715027968" target="_blank" rel="noopener">View Tweet&lt;/a>&lt;/p>
 &lt;hr>
@@ -831,7 +832,7 @@ We can still enjoy the game. Go to a stadium, enjoy the summer weather, cheer wi
 &lt;a href="https://medium.com/@philshem/life-in-the-baby-universe-f52561c4a8ae" target="_blank" rel="noopener">Life in the Baby Universe: The Physics of Babies&lt;/a>, and even a short, 6 minute 40 second, Pecha Kucha presentation.&lt;/p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/RbAYEdjcyjc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div></description></item><item><title>Open Access Research</title><link>https://smalldata.dev/posts/open-access-research/</link><pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/open-access-research/</guid><description>&lt;p>&lt;em>In my definition of Open Anything, &amp;ldquo;open&amp;rdquo; is an imperative verb.&lt;/em>&lt;/p>
+&lt;/div></description></item><item><title>Open Access Research</title><link>https://smalldata.github.io/posts/open-access-research/</link><pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/open-access-research/</guid><description>&lt;p>&lt;em>In my definition of Open Anything, &amp;ldquo;open&amp;rdquo; is an imperative verb.&lt;/em>&lt;/p>
 &lt;hr>
 &lt;p>Unless you are an academic publisher, you&amp;rsquo;re probably not a big fan of for-profit academic publishing.&lt;/p>
 &lt;p>The business model of many journals is to charge the authors publication fees, and then charge the readers access fees. Double dipping - it&amp;rsquo;s what the credit card companies do.&lt;/p>
@@ -907,7 +908,7 @@ We can still enjoy the game. Go to a stadium, enjoy the summer weather, cheer wi
 &lt;p>Journal of Physical Chemistry B 116 (24), 7351–7356&lt;/p>
 &lt;p>
 &lt;a href="https://pubs.acs.org/doi/10.1021/jp300786s" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/jp300786s.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/jp300786s.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091453/https://smalldata.dev/posts/open-access-research/jp300786s.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid22624664,
 title = {{{U}nderstanding the self-healing hydrophobic recovery of high-voltage insulators}},
@@ -927,7 +928,7 @@ pages = {7351--7356}
 &lt;p>Journal of Physical Chemistry B 115 (46), 13508–13512&lt;/p>
 &lt;p>
 &lt;a href="https://pubs.acs.org/doi/abs/10.1021/jp207589p" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/jp207589p.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/jp207589p.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091545/https://smalldata.dev/posts/open-access-research/jp207589p.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid22026429,
 title = {{{S}urface dynamics of amorphous polymers used for high-voltage insulators}},
@@ -947,7 +948,7 @@ pages = {13508--13512}
 &lt;p>Journal of Physical Chemistry B 115 (12) 2831–2835&lt;/p>
 &lt;p>
 &lt;a href="https://pubs.acs.org/doi/abs/10.1021/jp111318d" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/jp111318d.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/jp111318d.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091621/https://smalldata.dev/posts/open-access-research/jp111318d.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid21370843,
 title = {{{M}olecular motion of amorphous silicone polymers}},
@@ -967,8 +968,8 @@ pages = {2831--2835}
 &lt;p>Biophysical Journal 100 (9), 2217–2225&lt;/p>
 &lt;p>
 &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3149237/" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2011_Shemella_Biophys_J.pdf">pdf&lt;/a> (
-&lt;a href="https://smalldata.dev/pdfs/2011_Shemella_Biophys_J_Supp.pdf">supplement&lt;/a>) -
+&lt;a href="https://smalldata.github.io/pdfs/2011_Shemella_Biophys_J.pdf">pdf&lt;/a> (
+&lt;a href="https://smalldata.github.io/pdfs/2011_Shemella_Biophys_J_Supp.pdf">supplement&lt;/a>) -
 &lt;a href="https://web.archive.org/web/20190521091804/https://smalldata.dev/posts/open-access-research/2011_Shemella_Biophys_J.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid21539790,
 title = {{{E}lectronic structure of neighboring extein residue modulates intein {C}-terminal cleavage activity}},
@@ -988,7 +989,7 @@ pages = {2217--2225}
 &lt;p>Journal of Molecular Biology 406 (3), 430–442 (*Joint first-authorship)&lt;/p>
 &lt;p>
 &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3034788/" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2011_Pereira_JMB.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2011_Pereira_JMB.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091832/https://smalldata.dev/posts/open-access-research/2011_Pereira_JMB.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid21185311,
 title = {{{S}pontaneous proton transfer to a conserved intein residue determines on-pathway protein splicing}},
@@ -1008,7 +1009,7 @@ pages = {430--442}
 &lt;p>Contributions to Mineralogy and Petrology 160 (5), 743–759&lt;/p>
 &lt;p>
 &lt;a href="https://doi.org/10.1007/s00410-010-0505-3" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2010_Thomas_CMP.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2010_Thomas_CMP.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091901/https://smalldata.dev/posts/open-access-research/2010_Thomas_CMP.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{thomas2010titaniq,
 title = {TitaniQ under pressure: the effect of pressure and temperature on the solubility of Ti in quartz},
@@ -1028,7 +1029,7 @@ pages = {743--759}
 &lt;p>Journal of the American Chemical Society 131 (32), 11581–11589&lt;/p>
 &lt;p>
 &lt;a href="https://pubs.acs.org/doi/abs/10.1021/ja904318w" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2009_Du_JACS.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2009_Du_JACS.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091923/https://smalldata.dev/posts/open-access-research/2009_Du_JACS.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid19630416,
 title = {{{H}ighly conserved histidine plays a dual catalytic role in protein splicing: a p{K}a shift mechanism}},
@@ -1048,7 +1049,7 @@ pages = {11581--11589}
 &lt;p>Applied Physics Letters 94, 032101 (cover article)&lt;/p>
 &lt;p>
 &lt;a href="https://aip.scitation.org/doi/abs/10.1063/1.3070238" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2009_Shemella_APL.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2009_Shemella_APL.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091945/https://smalldata.dev/posts/open-access-research/2009_Shemella_APL.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{doi:10.1063/1.3070238,
 title = {Electronic structure and band-gap modulation of graphene via substrate surface chemistry},
@@ -1070,7 +1071,7 @@ eprint = {https://doi.org/10.1063/1.3070238}
 &lt;p>Applied Physics Letters 91, 042101&lt;/p>
 &lt;p>
 &lt;a href="https://doi.org/10.1063/1.2761531" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2007_Shemella_APL.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2007_Shemella_APL.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521092014/https://smalldata.dev/posts/open-access-research/2007_Shemella_APL.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{doi:10.1063/1.2761531,
 title = {Energy gaps in zero-dimensional graphene nanoribbons},
@@ -1092,7 +1093,7 @@ eprint = {https://doi.org/10.1063/1.2761531}
 &lt;p>Biophysical Journal 92 (3), 847–853 (2007)&lt;/p>
 &lt;p>
 &lt;a href="https://www.ncbi.nlm.nih.gov/entrez?Db=pubmed&amp;amp;Cmd=ShowDetailView&amp;amp;uid=17085503" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2007_Shemella_Biophysical_Journal.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2007_Shemella_Biophysical_Journal.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521092041/https://smalldata.dev/posts/open-access-research/2007_Shemella_Biophysical_Journal.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid17085503,
 title = {{{M}echanism for intein {C}-terminal cleavage: a proposal from quantum mechanical calculations}},
@@ -1112,7 +1113,7 @@ pages = {847--853}
 &lt;p>Computational Modeling in Biomechanics, 469–489&lt;/p>
 &lt;p>
 &lt;a href="https://link.springer.com/chapter/10.1007/978-90-481-3575-2_16" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/Chapter1.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/Chapter1.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521092107/https://smalldata.dev/posts/open-access-research/Chapter1.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@inbook{computational2010,
 title = {Identifying the Reaction Mechanisms of Inteins with QM/MM Multiscale Methods},
@@ -1131,7 +1132,7 @@ doi = {10.1007/978-90-481-3575-2\_16}
 &lt;p>Department of Physics, Applied Physics &amp;amp; Astronomy, Rensselaer Polytechnic Institute&lt;/p>
 &lt;p>
 &lt;a href="https://arxiv.org/abs/0903.4570" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2008_Shemella_PhD_Thesis.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2008_Shemella_PhD_Thesis.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521092517/https://smalldata.dev/posts/open-access-research/2008_Shemella_PhD_Thesis.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@phdthesis{phdthesis,
 title = {First Principles Study of Intein Reaction Mechanisms},
@@ -1141,7 +1142,7 @@ month = 5,
 school = {Rensselaer Polytechnic Institute},
 eprint = {arXiv:0903.4570}
 }
-&lt;/code>&lt;/pre></description></item><item><title>Free-fall and Personal Growth</title><link>https://smalldata.dev/posts/skydiving-freefall/</link><pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/skydiving-freefall/</guid><description>&lt;p>I&amp;rsquo;m not a skydiver. I never got a license. It&amp;rsquo;s been ten years since I did my fifteen measly jumps.&lt;/p>
+&lt;/code>&lt;/pre></description></item><item><title>Free-fall and Personal Growth</title><link>https://smalldata.github.io/posts/skydiving-freefall/</link><pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/skydiving-freefall/</guid><description>&lt;p>I&amp;rsquo;m not a skydiver. I never got a license. It&amp;rsquo;s been ten years since I did my fifteen measly jumps.&lt;/p>
 &lt;p>But those few weeks of ground school, pre-instructed then video-analyzed jumps, and those several thousand bucks, provided both professional and personal lessons that I&amp;rsquo;ve thought about nearly every day since then – and hopefully put to some use. I&amp;rsquo;ll probably never skydive again, but the effect on my outlook has been long-lasting.&lt;/p>
 &lt;h2 id="1-slow-down">1. Slow down&lt;/h2>
 &lt;p>Skydiving is as safe as the equipment and the mindset of the jumper. New students memorize how to methodically check the equipment before boarding the plane.
@@ -1152,7 +1153,7 @@ Checklists are known to improve certain detailed processes, such as
 &lt;a href="https://en.wikipedia.org/wiki/Preflight_checklist" target="_blank" rel="noopener">aviation&lt;/a>.
 In skydiving, I felt safe because I could trust the equipment that I had methodically checked.&lt;/p>
 &lt;p>Skydiving is actually safe, and has gotten a lot safer in recent years. According to the United States Parachute Association (USPA), in 2018, there were 13 fatalities for an estimate 3.3 million jumps in the US. That&amp;rsquo;s 3.9 deaths per million jumps. And according to the USPA, tandem skydiving is even safer, with two deaths per million jumps.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/skydiving_fatalities_dataviz.png" alt="Skydiving Fatalities Dataviz!">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/skydiving_fatalities_dataviz.png" alt="Skydiving Fatalities Dataviz!">&lt;/p>
 &lt;p>&lt;em>Data source:&lt;/em>
 &lt;a href="https://uspa.org/Find/FAQs/Safety" target="_blank" rel="noopener">USPA&lt;/a>&lt;/p>
 &lt;p>Skydivers are an enthusiastic group, and especially for the skydiver-tourists who have a limited amount of time at the dropzone, you try to maximize the number of jumps while the weather and winds are good.
@@ -1172,7 +1173,7 @@ Incorrect equipment usage is a major cause of
 I spun out of control, rotating through free fall.
 If you open your parachute with this type of movement, there&amp;rsquo;s a good chance it gets twisted or tangled and you&amp;rsquo;ll have a hard landing. Opening is better than not-opening, but opening dangerously when you are not stabilized can often lead to serious injury or death. In my first solo jump, until I stabilized, I believed I was going to crash to the ground in an uncontrolled spin.&lt;/p>
 &lt;p>Here&amp;rsquo;s how it looks to not be stabilized:&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/skydiving_01.png" alt="not how to skydive">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/skydiving_01.png" alt="not how to skydive">&lt;/p>
 &lt;p>I had this exact internal dialog after 5 eternal seconds of uncontrollable aerial rotations:&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;em>What needs to be done?&lt;/em>&lt;/p>
@@ -1223,14 +1224,14 @@ Wait for my turn (at the end with the other beginners).&lt;/p>
 &lt;/div>
 &lt;hr>
 &lt;p>Why not
-&lt;a href="https://www.dropzone.com/dropzones/" target="_blank" rel="noopener">go for a jump?&lt;/a> You never know what you&amp;rsquo;ll learn about yourself once your brain has pushed your body out of an airplane!&lt;/p></description></item><item><title>Fun with Favicons</title><link>https://smalldata.dev/posts/favicon-mosaic/</link><pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/favicon-mosaic/</guid><description>&lt;p>A recent
+&lt;a href="https://www.dropzone.com/dropzones/" target="_blank" rel="noopener">go for a jump?&lt;/a> You never know what you&amp;rsquo;ll learn about yourself once your brain has pushed your body out of an airplane!&lt;/p></description></item><item><title>Fun with Favicons</title><link>https://smalldata.github.io/posts/favicon-mosaic/</link><pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/favicon-mosaic/</guid><description>&lt;p>A recent
 &lt;a href="https://opendata.stackexchange.com/q/14007/1511" target="_blank" rel="noopener">question&lt;/a> on the Open Data Stack Exchange site got me thinking about how to download favicons from a bulk list of websites.&lt;/p>
 &lt;h3 id="idea-1-try-each-domain">Idea 1: try each domain&lt;/h3>
 &lt;p>Something like &lt;code>http://example.com/favicon.ico&lt;/code>. But using a &lt;code>favicon.ico&lt;/code> in the webroot folder is just a common implementation. Each website can host their favicon with another path, and another file format.&lt;/p>
 &lt;p>Let&amp;rsquo;s try something else&amp;hellip;&lt;/p>
 &lt;h3 id="idea-2-parse-html-for-favicon-urls">Idea 2: parse html for favicon urls&lt;/h3>
 &lt;p>If the website doesn&amp;rsquo;t use &lt;code>favicon.ico&lt;/code> in the webroot folder, the page html will contain a path to the favicon, with the following format:&lt;/p>
-&lt;pre>&lt;code>&amp;lt;link rel=icon href=https://smalldata.dev/favicon.png&amp;gt;
+&lt;pre>&lt;code>&amp;lt;link rel=icon href=https://smalldata.github.io/favicon.png&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;p>There is python package aptly named
 &lt;a href="https://github.com/scottwernervt/favicon" target="_blank" rel="noopener">favicon&lt;/a> that will parse the html and return the urls to all favicons, with different formats and resolutions. I&amp;rsquo;m pasting their demo code here:&lt;/p>
@@ -1245,7 +1246,7 @@ Icon(url='https://www.python.org/static/favicon.ico', width=0, height=0, format=
 &lt;p>Getting better&amp;hellip; But if I download bulk favicons, I&amp;rsquo;d like to avoid normalizing their file format and resolutions.&lt;/p>
 &lt;h3 id="idea-3-get-favicons-directly-from-googles-cache">Idea 3: get favicons directly from google&amp;rsquo;s cache&lt;/h3>
 &lt;p>Google keeps the favicon cached for many sites (even my little website with basically zero traffic).&lt;/p>
-&lt;pre>&lt;code>https://www.google.com/s2/favicons?domain=smalldata.dev
+&lt;pre>&lt;code>https://www.google.com/s2/favicons?domain=apache.org
 &lt;/code>&lt;/pre>
 &lt;p>And the favicons are all normalized: 16x16 pixels and png format. Perfect.&lt;/p>
 &lt;h2 id="now-for-some-fun">Now for some fun&lt;/h2>
@@ -1275,7 +1276,7 @@ df.URL.apply(request_function)
 &lt;p>What to do with 500 favicons. For fun, I made a mosaic from the collection, and I first needed a original piece of art that would be recongnizable when heavily pixelated. Van Gogh&amp;rsquo;s
 &lt;a href="https://en.wikipedia.org/wiki/The_Starry_Night" target="_blank" rel="noopener">Starry night&lt;/a> stood out.&lt;/p>
 &lt;p>Here&amp;rsquo;s the original:&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/1137px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="Starry Night">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/1137px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="Starry Night">&lt;/p>
 &lt;p>&lt;em>Source&lt;/em>:
 &lt;a href="https://en.wikipedia.org/wiki/The_Starry_Night#/media/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" target="_blank" rel="noopener">Wikipedia&lt;/a>&lt;/p>
 &lt;p>Then I used a handy Python script called
@@ -1284,14 +1285,14 @@ df.URL.apply(request_function)
 python mosaic/mosaic.py source.jpg images/
 &lt;/code>&lt;/pre>
 &lt;p>And what pops out is a &lt;em>Starry Night of Favicons&lt;/em>.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/mosaic.jpeg" alt="Favicon Starry Night">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/mosaic.jpeg" alt="Favicon Starry Night">&lt;/p>
 &lt;hr>
 &lt;p>(full resolution download:
-&lt;a href="https://smalldata.dev/images/mosaic_full.jpeg">22 MB&lt;/a>)&lt;/p>
+&lt;a href="https://smalldata.github.io/images/mosaic_full.jpeg">22 MB&lt;/a>)&lt;/p>
 &lt;p>(python
 &lt;a href="https://gist.github.com/philshem/e59388197fd9ddb7dcdb8098f9f0aaf2" target="_blank" rel="noopener">source code&lt;/a>)&lt;/p>
 &lt;p>(top500 favicons:
-&lt;a href="https://smalldata.dev/images/top500_favicons.zip">zip&lt;/a>)&lt;/p></description></item><item><title>The Case for Part-time, part 2</title><link>https://smalldata.dev/posts/one-is-many/</link><pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/one-is-many/</guid><description>&lt;h2 id="one-is-many">one is many&lt;/h2>
+&lt;a href="https://smalldata.github.io/images/top500_favicons.zip">zip&lt;/a>)&lt;/p></description></item><item><title>The Case for Part-time, part 2</title><link>https://smalldata.github.io/posts/one-is-many/</link><pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/one-is-many/</guid><description>&lt;h2 id="one-is-many">one is many&lt;/h2>
 &lt;p>The previous post
 &lt;a href="%7bfilename%7dpay-me-less.md">The Case for Part-time&lt;/a> came off more self-serving than I intended, and I wanted to frame my thoughts as part of the larger context.&lt;/p>
 &lt;p>If I&amp;rsquo;ve learned anything with the help of the internet, it&amp;rsquo;s that if I am in a certain situation, then there is a community of people in the same situation.&lt;/p>
@@ -1317,8 +1318,8 @@ python mosaic/mosaic.py source.jpg images/
 &lt;a href="https://academic.oup.com/oxrep/article-abstract/34/3/418/5047377" target="_blank" rel="noopener">study&lt;/a> published last summer in the Oxford Review of Economic Policy—whose lead author, Carl Frey, is the same guy who made the list of the seven hundred and two most computerizable jobs—argues that the robot caravan got Trump elected. Measuring the density of robots and comparing them with election returns, Frey and his colleagues found that “electoral districts that became more exposed to automation during the years running up to the election were more likely to vote for Trump.”&lt;/p>
 &lt;/blockquote>
 &lt;p>From that aforementioned list, the jobs displaced due to automation are office admin, sales and service, most of which fall in the &amp;ldquo;high risk employment&amp;rdquo; category. That &amp;ldquo;high risk&amp;rdquo; category corresponds to 47% of the labor force! Here&amp;rsquo;s the original dataviz:&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/probability_of_computerization_dataviz.png" alt="Probability of computerization dataviz">
-&lt;img src="https://smalldata.dev/images/probability_of_computerization_legend.png" alt="Probability of computerization legend">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/probability_of_computerization_dataviz.png" alt="Probability of computerization dataviz">
+&lt;img src="https://smalldata.github.io/images/probability_of_computerization_legend.png" alt="Probability of computerization legend">&lt;/p>
 &lt;p>&lt;em>Source:
 &lt;a href="https://www.oxfordmartin.ox.ac.uk/downloads/academic/The_Future_of_Employment.pdf" target="_blank" rel="noopener">The Future of Employment (PDF)&lt;/a>&lt;/em>&lt;/p>
 &lt;h3 id="point-4-we-want-more-than-a-distraction">point 4: we want more than a distraction&lt;/h3>
@@ -1330,14 +1331,14 @@ python mosaic/mosaic.py source.jpg images/
 &lt;blockquote>
 &lt;p>Some futurists suggest that, in our Asimov-y future, these sort of people might wind up spending their empty days playing video games. Otherwise, they’ll wage a revolution&amp;hellip;&lt;/p>
 &lt;/blockquote>
-&lt;p>Rather than &amp;ldquo;empty days&amp;rdquo;, let&amp;rsquo;s build a society where part-time is taken seriously, and with the extra time we can enjoy more moments with family and friends, and contribute back to our communities.&lt;/p></description></item><item><title>The Case for Part-time</title><link>https://smalldata.dev/posts/pay-me-less/</link><pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/pay-me-less/</guid><description>&lt;h1 id="ive-made-a-huge-mistake-in-my-professional-life">I&amp;rsquo;ve made a huge mistake (in my professional life)&lt;/h1>
+&lt;p>Rather than &amp;ldquo;empty days&amp;rdquo;, let&amp;rsquo;s build a society where part-time is taken seriously, and with the extra time we can enjoy more moments with family and friends, and contribute back to our communities.&lt;/p></description></item><item><title>The Case for Part-time</title><link>https://smalldata.github.io/posts/pay-me-less/</link><pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/pay-me-less/</guid><description>&lt;h1 id="ive-made-a-huge-mistake-in-my-professional-life">I&amp;rsquo;ve made a huge mistake (in my professional life)&lt;/h1>
 &lt;p>Eighteen months ago I quit my full-time job to follow my dreams and launch a startup. At the time, my boss offered my same job but part-time (2 days per week, or 40%). With the benefit of hindsight, the single biggest mistake in my career was to decline that offer.
 But at the time, I privately wanted something else: less time in the office, and more free-time both with and without the kids.
 Since then, the startup has gone stagnant. My bank account has emptied. I&amp;rsquo;m drowning in free-time.
 The time to get a job was months ago.&lt;/p>
 &lt;h2 id="the-job-market">the job market&lt;/h2>
 &lt;p>The unemployment rate in Switzerland is one of the lowest in Europe. I&amp;rsquo;ve marked the Swiss unemployment compared to all worldwide countries in the dataviz below.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/unemployment_wikipedia.png" alt="Unemployment rates worldwide">
+&lt;p>&lt;img src="https://smalldata.github.io/images/unemployment_wikipedia.png" alt="Unemployment rates worldwide">
 &lt;em>source:
 &lt;a href="https://en.wikipedia.org/wiki/List_of_countries_by_unemployment_rate" target="_blank" rel="noopener">Wikipedia&lt;/a>&lt;/em>&lt;/p>
 &lt;p>And for &lt;em>data-sciency&lt;/em> people like me, with a PhD in computational physics, years of experience in business intelligence and data science, and programming and databases and data visualization reporting and business development, with strong references from every previous position, the job market is strong and the effective unemployment rate is &lt;strong>0.0%&lt;/strong>.&lt;/p>
@@ -1412,7 +1413,7 @@ Employers like me because I think out of the box, because I challenge the status
 Productivity for this kind of non-operational work doesn&amp;rsquo;t scale to 42.5 office hours per week.
 Somewhere between 60% and 100% is my productivity drop-off.&lt;/p>
 &lt;p>Here&amp;rsquo;s a dataviz that shows a theoretical productivity drop with increasing hours per work week. The &amp;ldquo;email zone&amp;rdquo; is where the operational tasks take up the entire working time. The &amp;ldquo;search for vacation zone&amp;rdquo; is where I don&amp;rsquo;t want to be. And what I offer my future employer is to pay me less, and then get me only when I&amp;rsquo;m maximally efficient.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/productivity_dataviz.jpg" alt="Productivity doesn&amp;rsquo;t scale!">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/productivity_dataviz.jpg" alt="Productivity doesn&amp;rsquo;t scale!">&lt;/p>
 &lt;p>But&amp;hellip; hiring is a long-term exercise in risk avoidance. If any one candidate brings a complication, the hiring team will usually go with the safe bet to avoid any future criticism. It&amp;rsquo;s the same unspoken selling-point of the Big Four consulting companies: &lt;em>Choose us, because even when we fail, no one will second guess you&lt;/em>.&lt;/p>
 &lt;h1 id="the-challenge-moving-forward">the challenge moving forward&lt;/h1>
 &lt;p>It turns out that there are literally &lt;strong>zero&lt;/strong> open jobs that fit my description. There are a handful of part-time developer jobs, and although I like writing code, my strength is prototyping and analysis, and not shipping apps and websites. There is a handful of part-time jobs for interns or students (I&amp;rsquo;ve even applied for some of those). I&amp;rsquo;ve tried remote jobs and Upwork, and although neither is panning out, and it would be hard to match a Swiss salary. In the meantime, I&amp;rsquo;m working on some small freelance projects, but for personal reasons, I don&amp;rsquo;t actively pursue freelance projects.
@@ -1423,7 +1424,7 @@ Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩
 &lt;hr>
 &lt;p>&lt;s>As of &lt;code>.now()&lt;/code> I&amp;rsquo;m still searching for a position. Want quality work for a part-time salary?
 &lt;a href="mailto:philshem@pm.me">Get in touch!&lt;/a>&lt;/p>
-&lt;p>&lt;strong>SALE! For a limited time only - 40% off!&lt;/strong>&lt;/s>&lt;/p></description></item><item><title>Healthy hiring (at a cost to diversity?)</title><link>https://smalldata.dev/posts/smokers-at-work/</link><pubDate>Tue, 26 Mar 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/smokers-at-work/</guid><description>&lt;p>I recently interviewed for a position with a fast-growing startup in food tech. The position checked all my boxes, and because I didn&amp;rsquo;t make it past the interview stage, the following may be some sour grapes 🍇.&lt;/p>
+&lt;p>&lt;strong>SALE! For a limited time only - 40% off!&lt;/strong>&lt;/s>&lt;/p></description></item><item><title>Healthy hiring (at a cost to diversity?)</title><link>https://smalldata.github.io/posts/smokers-at-work/</link><pubDate>Tue, 26 Mar 2019 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/smokers-at-work/</guid><description>&lt;p>I recently interviewed for a position with a fast-growing startup in food tech. The position checked all my boxes, and because I didn&amp;rsquo;t make it past the interview stage, the following may be some sour grapes 🍇.&lt;/p>
 &lt;p>Something in the text of the job posting stood out to me, and has stuck with me the past few months:&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>No smoking:&lt;/strong> You never smell like cigarettes and don’t smoke during the day: &lt;s>XYZ&lt;/s> is about healthy living.&lt;/p>
@@ -1448,7 +1449,7 @@ Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩
 &lt;p>&lt;strong>tl;dr&lt;/strong>&lt;/p>
 &lt;blockquote>
 &lt;p>We agree with those polled, believing that categorically refusing to hire smokers is unethical: it results in a failure to care for people, places an additional burden on already-disadvantaged populations, and preempts interventions that more effectively promote smoking cessation.&lt;/p>
-&lt;/blockquote></description></item><item><title>Advisor or Adviser?</title><link>https://smalldata.dev/posts/advisor-or-adviser/</link><pubDate>Thu, 27 Feb 2014 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/advisor-or-adviser/</guid><description>&lt;p>&lt;img src="https://smalldata.dev/images/advsr/header.jpeg" alt="header image: scrabble board">&lt;/p>
+&lt;/blockquote></description></item><item><title>Advisor or Adviser?</title><link>https://smalldata.github.io/posts/advisor-or-adviser/</link><pubDate>Thu, 27 Feb 2014 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/advisor-or-adviser/</guid><description>&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/header.jpeg" alt="header image: scrabble board">&lt;/p>
 &lt;p>&lt;sup>Photo credit: Michael Popowich&lt;/sup>&lt;/p>
 &lt;hr>
 &lt;p>In written language there are rules to explain away most uncertainties. When there are no explicit rules, there is context. But without a rule and without context, what are we to do?&lt;/p>
@@ -1462,29 +1463,29 @@ Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩
 &lt;p>In English, an
 &lt;a href="https://en.wikipedia.org/wiki/Agent_noun" target="_blank" rel="noopener">agent noun&lt;/a> is how a verb is transformed into the thing doing that action. For example, a swimmer swims and a player plays. To convert a verb into an agent noun, it&amp;rsquo;s typical to add &lt;strong>-er&lt;/strong>. But &lt;strong>-or&lt;/strong> works, too, primarily for words derived from Latin. And &lt;strong>-ist&lt;/strong> is sometimes used, often for verbs ending in &lt;em>-ize (e.g. apologist).&lt;/em>&lt;/p>
 &lt;p>Originally, &lt;strong>adviser&lt;/strong> was the one true spelling. It was only recently, at the start of the 20th century, that &lt;strong>advisor&lt;/strong> began its ascent, and it will be only a few more years into the 21st before it overtakes &lt;strong>adviser&lt;/strong>.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image01.png" alt="google n-grams">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image01.png" alt="google n-grams">&lt;/p>
 &lt;p>&lt;em>Historically, there have been more advisers than advisors. That says nothing about the quality of the advice.&lt;/em>&lt;/p>
 &lt;p>&lt;sub>source: Google Books
 &lt;a href="https://books.google.com/ngrams/graph?content=advisor%2F%28advisor%2Badviser%29%2Cadviser%2F%28advisor%2Badviser%29&amp;amp;year_start=1850&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2C%28advisor%20/%20%28advisor%20%2B%20adviser%29%29%3B%2Cc0%3B.t1%3B%2C%28adviser%20/%20%28advisor%20%2B%20adviser%29%29%3B%2Cc0#t1%3B%2C%28advisor%20%2F%20%28advisor%20%2B%20adviser%29%29%3B%2Cc1%3B.t1%3B%2C%28adviser%20%2F%20%28advisor%20%2B%20adviser%29%29%3B%2Cc1" target="_blank" rel="noopener">N-gram Viewer&lt;/a>&lt;/sub>&lt;/p>
 &lt;p>Interestingly, some early instances of &lt;strong>advisor&lt;/strong> are due to mistakes in reading the scanned pages, called OCR (optical character recognition). In
 &lt;a href="https://books.google.ch/books?id=XQAFAAAAQAAJ&amp;amp;dq=advisor&amp;amp;pg=PP9#v=onepage&amp;amp;q=advisor&amp;amp;f=false" target="_blank" rel="noopener">this 1869 case&lt;/a> it could have been the hand-drawn &amp;ldquo;firewood&amp;rdquo; typeface that confused the algorithm.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image02.png" alt="bad ocr">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image02.png" alt="bad ocr">&lt;/p>
 &lt;p>It&amp;rsquo;s often claimed that American English writers use &lt;strong>advisor&lt;/strong> while British English writers use &lt;strong>adviser&lt;/strong>—and the data below seems to agree. Counting instances in American English, &lt;strong>advisor&lt;/strong> (blue) and &lt;strong>adviser&lt;/strong> (red) are about equal in 2008, the most recent year that is available. In British English, &lt;strong>advisor&lt;/strong> (green) is gaining in popularity but &lt;strong>adviser&lt;/strong> (orange) is still preferred. Seems straightforward, right?&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image03.png" alt="is it british?">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image03.png" alt="is it british?">&lt;/p>
 &lt;p>&lt;sup>Fewer advisors in the UK
 &lt;a href="https://books.google.com/ngrams/graph?content=advisor%3Aeng_us_2012%2Cadviser%3Aeng_us_2012%2Cadvisor%3Aeng_gb_2012%2Cadviser%3Aeng_gb_2012%2C&amp;#43;&amp;#43;&amp;amp;year_start=1950&amp;amp;year_end=2008&amp;amp;corpus=17&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cadvisor%3Aeng_us_2012%3B%2Cc0%3B.t1%3B%2Cadviser%3Aeng_us_2012%3B%2Cc0%3B.t1%3B%2Cadvisor%3Aeng_gb_2012%3B%2Cc0%3B.t1%3B%2Cadviser%3Aeng_gb_2012%3B%2Cc0#t1%3B%2Cadvisor%3Aeng_us_2012%3B%2Cc1%3B.t1%3B%2Cadviser%3Aeng_us_2012%3B%2Cc1%3B.t1%3B%2Cadvisor%3Aeng_gb_2012%3B%2Cc1%3B.t1%3B%2Cadviser%3Aeng_gb_2012%3B%2Cc1" target="_blank" rel="noopener">(source)&lt;/a>.&lt;/sup>&lt;/p>
 &lt;h4 id="but-wait-theres-more">But wait, there&amp;rsquo;s more!&lt;/h4>
 &lt;p>Advisor in the States is far from the default &amp;ndash; the NY Times and Associated Press &lt;em>insist&lt;/em> on &lt;strong>adviser&lt;/strong>, while the Federal Government goes with &lt;strong>advisor&lt;/strong>. Separately searching for
 &lt;a href="https://encrypted.google.com/search?hl=en&amp;amp;q=adviser%20site%3Aox.ac.uk" target="_blank" rel="noopener">adviser&lt;/a> and
 &lt;a href="https://encrypted.google.com/search?hl=en&amp;amp;q=advisor%20site%3Aox.ac.uk" target="_blank" rel="noopener">advisor&lt;/a> on individual websites for well-known institutions in the US and the UK, we can approximate which spelling is more common. As an indicator, let&amp;rsquo;s use the ratio of &lt;strong>advisor&lt;/strong>-results to &lt;strong>adviser&lt;/strong>-results: the &amp;ldquo;o/e ratio&amp;rdquo;. An o/e ratio greater than one means that &lt;strong>advisor&lt;/strong> returns more results; less than one and adviser is more commonly found.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image04.png" alt="more ngrams">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image04.png" alt="more ngrams">&lt;/p>
 &lt;p>UK university websites use each spelling about equally. US university websites go heavy on &lt;strong>advisor&lt;/strong>. (One exception is my PhD university, RPI, which has a low o/e ratio that approaches the &amp;ldquo;NY Times abyss.&amp;quot;)&lt;/p>
 &lt;p>Not only is the debate not clearly split on geographical lines, there may not even be a debate. Maybe it&amp;rsquo;s just a semantic stubbornness that creates a misplaced superiority and leaves the rest of us confused. This guy falls uncomfortably hard on one side of the advisor/adviser debate.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image05.png" alt="bad twitter">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image05.png" alt="bad twitter">&lt;/p>
 &lt;p>But with deplorable comma usage&lt;/p>
 &lt;p>And
 &lt;a href="https://twitter.com/CulinaryAdvisor" target="_blank" rel="noopener">this guy&lt;/a> falls comfortably on both sides of the debate. A true Quantum Twitterer.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image06.png" alt="bad twitter">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image06.png" alt="bad twitter">&lt;/p>
 &lt;h3 id="so-what">So what?&lt;/h3>
 &lt;p>There may be a small non-geographical distinction, actually. The
 &lt;a href="https://grammarist.com/spelling/adviser-advisor/" target="_blank" rel="noopener">Grammarist,&lt;/a>
@@ -1492,13 +1493,13 @@ Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩
 &lt;a href="https://separatedbyacommonlanguage.blogspot.ch/2007/10/agentive-suffixes-er-and-or-and-little.html?showComment=1192296420000#c2862081211059967581" target="_blank" rel="noopener">guy who wrote a comment on a blog&lt;/a> make the minor distinction, and I&amp;rsquo;ll summarize:&lt;/p>
 &lt;h4 id="_advisor_-is-a-title-and-_adviser_-is-anyone-else-who-advises-and-is-not-already-an-advisor">&lt;strong>&lt;em>advisor&lt;/em>&lt;/strong> is a title, and &lt;strong>&lt;em>adviser&lt;/em>&lt;/strong> is anyone else who advises and is not already an &lt;strong>advisor.&lt;/strong>&lt;/h4>
 &lt;p>The data backs up this claim. By selecting only capitalized &lt;strong>Advisor&lt;/strong> and &lt;strong>Adviser&lt;/strong>, the &lt;strong>-or&lt;/strong> spelling has already passed &lt;strong>-er&lt;/strong>. To capitalize Advisor indicates a title, and its dominance compared to Adviser suggests that there is indeed a distinction, albeit tiny.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image07.png" alt="more n-grams">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image07.png" alt="more n-grams">&lt;/p>
 &lt;p>Capitalized Advisor/Adviser starting a sentence does not influence this result, see
 &lt;a href="https://books.google.com/ngrams/graph?content=_START_&amp;#43;Advisor%2CAdvisor%2C_START_&amp;#43;Adviser%2CAdviser&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2C_START_%20Advisor%3B%2Cc0%3B.t1%3B%2CAdvisor%3B%2Cc0%3B.t1%3B%2C_START_%20Adviser%3B%2Cc0%3B.t1%3B%2CAdviser%3B%2Cc0" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;h4 id="so-how-does-2014-tech-society-handle-ambiguity">So, how does 2014 tech society handle ambiguity?&lt;/h4>
 &lt;p>At the time of writing, Wikipedia has a
 &lt;a href="https://en.wikipedia.org/wiki/Adviser" target="_blank" rel="noopener">link&lt;/a> for &lt;strong>adviser&lt;/strong> but shows the page for &lt;strong>advisor.&lt;/strong> A great side effect of having separate pages with the same content is the possibility to compare page views for each spelling. For all of 2013, the &lt;strong>advisor&lt;/strong> page received 100,361 page views, while &lt;strong>adviser&lt;/strong> 4,165. See the chart below for the 2008-2014 weekly page views.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image08.png" alt="comparing wiki pageviews">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image08.png" alt="comparing wiki pageviews">&lt;/p>
 &lt;p>Wikipedia page views per calendar week, for Advisor (blue) and Adviser (red).&lt;/p>
 &lt;p>What&amp;rsquo;s even more interesting for Wikipedia is that there are many specific types &lt;strong>advisers&lt;/strong> with
 &lt;a href="https://encrypted.google.com/search?hl=en&amp;amp;q=adviser%20site%3Aen.wikipedia.org" target="_blank" rel="noopener">their own page&lt;/a>, and many &lt;strong>advisors&lt;/strong>
@@ -1507,31 +1508,31 @@ Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩
 &lt;a href="https://www.oxforddictionaries.com/definition/english/adviser?q=advisor" target="_blank" rel="noopener">Oxford English Dictionary&lt;/a> and the American
 &lt;a href="https://www.merriam-webster.com/thesaurus/advisor" target="_blank" rel="noopener">Merriam-Webster&lt;/a>, have links for &lt;strong>advisor&lt;/strong> but show the main spelling as &lt;strong>adviser&lt;/strong>. Interestingly, if you search directly at m-w.com, the o/e-neutral page for
 &lt;a href="https://www.merriam-webster.com/dictionary/advisor" target="_blank" rel="noopener">&lt;em>advise&lt;/em>&lt;/a> comes up, which seems to equally frustrate everyone (e.g. the comments).&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image09.png" alt="confusion in the commments">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image09.png" alt="confusion in the commments">&lt;/p>
 &lt;p>Thesaurus.com show many more results for
 &lt;a href="https://thesaurus.com/browse/advisor" target="_blank" rel="noopener">advisor&lt;/a>. The first synonym listed is another victim of careless machine learning and is blazingly incorrect—&lt;strong>adviser&lt;/strong>! Then, to make matters worse, the
 &lt;a href="https://thesaurus.com/browse/adviser" target="_blank" rel="noopener">adviser&lt;/a> page doesn&amp;rsquo;t show &lt;strong>advisor&lt;/strong> as a synonym.&lt;/p>
 &lt;p>Tripadviser.com has a redirect to tripadvisor.com. And good thing for the redirect — there are still 10,400 Google results for
 &lt;a href="https://encrypted.google.com/search?hl=en&amp;amp;q=%22tripadviser.com%22#hl=en&amp;amp;q=%22tripadviser.com%22" target="_blank" rel="noopener">tripadviser.com&lt;/a>. (It&amp;rsquo;s common for large sites to buy domains of common spelling errors and typos, e.g. twittter.com). Here is an example of one Twitter user fighting for his/her semantic preference. Or maybe it was that pesky autocorrect, also guilty of forgetting the apostrophe in &amp;ldquo;
 &lt;a href="https://en.wikipedia.org/wiki/Cant_%28language%29" target="_blank" rel="noopener">cant&lt;/a>&amp;rdquo;.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image10.png" alt="trip adviser">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image10.png" alt="trip adviser">&lt;/p>
 &lt;p>&lt;strong>But let&amp;rsquo;s dig deeper and see what the data says.&lt;/strong>&lt;/p>
 &lt;p>&lt;sup>&lt;em>(please visit the Code Section for further description &amp;amp; links to codes)&lt;/em>&lt;/sup>&lt;/p>
 &lt;p>On Twitter, it&amp;rsquo;s not straightforward to count the number of tweets that are found with a search term. Doing so required some mini-mining with the Twitter API and a snippet of Python code. I downloaded tweets that have either advisor or adviser and then counted each separately. Going back in time one week, there were 50,165 times that the case-insensitive &lt;strong>advisor&lt;/strong> was used, compared to 23,016 for &lt;strong>adviser,&lt;/strong> corresponding to an o/e ratio of 2.2. Counting only instances of capitalized Advisor and Adviser, their counts were 25,383 and 7,825, respectively. With an increased o/e ratio of 3.2, the predominance of capitalized Advisor indicates a title or a role, as described above. By putting the tweets with public geo-location on the world map, with &lt;strong>advisor&lt;/strong> in blue and &lt;strong>adviser&lt;/strong> in red, nothing really stands out. But it&amp;rsquo;s sometimes fun to click and see what people around the world are saying about their advisors and their advisers?&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image11.png" alt="twitter map">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image11.png" alt="twitter map">&lt;/p>
 &lt;p>&lt;sup>Click
 &lt;a href="https://public.tableausoftware.com/views/world_tweets/Dashboard1?:embed=y&amp;amp;:display_count=no#2" target="_blank" rel="noopener">here&lt;/a> for the interactive version.&lt;/sup>&lt;/p>
 &lt;p>&lt;strong>Word clouds&lt;/strong>, which are normally pretty useless, show some distinctions between the spellings. Employment terms such as job, sales, financial, customer, and service are commonly found in tweets containing &lt;strong>advisor&lt;/strong>. Tweets with &lt;strong>adviser&lt;/strong> include more political terms, such as legal, national, security, and president. I guess word clouds are still pretty useless.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image12.png" alt="useless word clouds">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image12.png" alt="useless word clouds">&lt;/p>
 &lt;p>Finally, tweets are filtered by emotion, literally by adding a smiley or frowny face to the Twitter search string. Happy tweets over one week were well-balanced: 477 advisors and 593 advisers (0.8 o/e ratio, which is much fewer non-filtered tweets). In sad tweets, &lt;strong>advisor&lt;/strong> showed up 48 times, compared to 157 for &lt;strong>adviser&lt;/strong> (0.3 o/e ratio). It&amp;rsquo;s not a huge number of tweets and I don&amp;rsquo;t want to make any dramatic conclusions, such as claiming that &amp;ldquo;advisers are more polarizing than advisors.&amp;rdquo;&lt;/p>
 &lt;h4 id="et-tuhttpsenwikipediaorgwikiet_tu_brute3f-goo-gle">
 &lt;a href="https://en.wikipedia.org/wiki/Et_tu,_Brute%3F" target="_blank" rel="noopener">Et tu&lt;/a>, Goo-gle?&lt;/h4>
 &lt;p>At the time of writing, Google approximated 119,000,000 results for &lt;strong>advisor&lt;/strong> and only 20,500,000 for &lt;strong>adviser&lt;/strong>. That&amp;rsquo;s a very large o/e ratio of 5.8. Despite that lopsidedness, only &lt;strong>adviser&lt;/strong> brings up a definition box. (For a short discussion about using approximate Google search results, see &lt;strong>Appendix 1&lt;/strong>.)&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image13.png" alt="google results counting">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image13.png" alt="google results counting">&lt;/p>
 &lt;p>Welcome to my cozy little
 &lt;a href="https://dontbubble.us/" target="_blank" rel="noopener">filter bubble&lt;/a>.&lt;/p>
 &lt;p>By using approximate results from Google search, it&amp;rsquo;s possible to build an understanding of which spelling is preferred in certain contexts. For example, searching &amp;ldquo;Financial Advisor&amp;rdquo; with quotes returns 5,120,000 results and &amp;ldquo;Financial Adviser&amp;rdquo; returns 1,480,000. (For the methodology of term collection, see &lt;strong>Appendix 2&lt;/strong>.) In addition to well known roles like &amp;ldquo;Academic Advisor&amp;rdquo;, I&amp;rsquo;ve added some general adjectives, such as &amp;ldquo;trusted&amp;rdquo; and &amp;ldquo;good&amp;rdquo;.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image14.png" alt="dataviz, advisor vs. adviser">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image14.png" alt="dataviz, advisor vs. adviser">&lt;/p>
 &lt;p>&lt;sup>The interactive visualization is available
 &lt;a href="https://public.tableausoftware.com/views/GoogleSpellingCount/Dashboard1?:embed=y&amp;amp;:display_count=yes#1" target="_blank" rel="noopener">here&lt;/a>.&lt;/sup>&lt;/p>
 &lt;p>&lt;strong>The results are… complicated.&lt;/strong> &amp;ldquo;Financial advisor&amp;rdquo; is the most common. &amp;ldquo;Afraid adviser&amp;rdquo; is the least. &amp;ldquo;Stock adviso/er&amp;rdquo; has the highest o/e ratio (185.7). Categories consistently with more advisors than advisers are academic, business and health. Despite the US Government&amp;rsquo;s preference for advisor, most political advisers use the &lt;strong>-er&lt;/strong> spelling.&lt;/p>
@@ -1553,12 +1554,12 @@ Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩
 &lt;h4 id="appendix-1">&lt;strong>Appendix 1.&lt;/strong>&lt;/h4>
 &lt;p>&lt;em>Although extremely approximate and fluctuating, many language learners use the number of Google results to determine what sounds more natural. For example, in German,&lt;/em>
 &lt;a href="https://medium.com/" title="23" target="_blank" rel="noopener">&lt;strong>&lt;em>gern&lt;/em>&lt;/strong>&lt;/a> &lt;em>and&lt;/em> &lt;strong>&lt;em>gerne&lt;/em>&lt;/strong> &lt;em>are interchangeable, and mean &amp;ldquo;&lt;em>gladly&amp;rdquo;&lt;/em>. Despite that, native speakers will often converge on one spelling in one certain context.&lt;/em>&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image15.png" alt="german gern/e">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image15.png" alt="german gern/e">&lt;/p>
 &lt;p>More popular by a factor of Zwei.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image16.png" alt="german gern/e v2">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image16.png" alt="german gern/e v2">&lt;/p>
 &lt;p>Less popular, although what comes after must surely matter.&lt;/p>
 &lt;p>&lt;em>Interestingly, Google&amp;rsquo;s N-grams tool indicate that&lt;/em> &lt;strong>&lt;em>gerne&lt;/em>&lt;/strong> &lt;em>has recently passed&lt;/em> &lt;strong>&lt;em>gern&lt;/em>&lt;/strong> &lt;em>in popularity.&lt;/em>&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image17.png" alt="german gern/e comparison">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image17.png" alt="german gern/e comparison">&lt;/p>
 &lt;p>&lt;sup>
 &lt;a href="https://books.google.com/ngrams/graph?content=%28gern%2F%28gern%2Bgerne%29%29%2C%28gerne%2F%28gern%2Bgerne%29%29&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=20&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2C%28gern%20/%20%28gern%20%2B%20gerne%29%29%3B%2Cc0%3B.t1%3B%2C%28gerne%20/%20%28gern%20%2B%20gerne%29%29%3B%2Cc0#t1%3B%2C%28gern%20%2F%20%28gern%20%2B%20gerne%29%29%3B%2Cc1%3B.t1%3B%2C%28gerne%20%2F%20%28gern%20%2B%20gerne%29%29%3B%2Cc1" target="_blank" rel="noopener">source&lt;/a>&lt;/sup>&lt;/p>
 &lt;p>&lt;em>Which is good, because I prefer gerne. I think it makes my German sound Italian.&lt;/em> Ich hätte gerne eine pizza.&lt;/p>
@@ -1576,7 +1577,7 @@ Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩
 &lt;li>It&amp;rsquo;s possible to do a Google search with &amp;ldquo;Autostart&amp;rdquo;, instead of autocomplete.&lt;/li>
 &lt;li>&lt;em>Ejaculation Advisor&lt;/em> is a thing.&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://smalldata.dev/images/advsr/image18.png" alt="a what advisor?">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/advsr/image18.png" alt="a what advisor?">&lt;/p>
 &lt;hr>
 &lt;hr>
 &lt;h4 id="code-section">Code section.&lt;/h4>
@@ -1598,18 +1599,18 @@ Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩
 &lt;/ul>
 &lt;hr>
 &lt;p>&lt;sup>This article is also available on
-&lt;a href="https://medium.com/dirty-data/advisor-or-adviser-cc063acef267" target="_blank" rel="noopener">Medium&lt;/a>.&lt;/sup>&lt;/p></description></item><item><title>Life in the Baby Universe: The Physics of Babies</title><link>https://smalldata.dev/posts/physics-of-babies/</link><pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/physics-of-babies/</guid><description>&lt;p>&lt;sub>&lt;em>This article was originally published in&lt;/em>
+&lt;a href="https://medium.com/dirty-data/advisor-or-adviser-cc063acef267" target="_blank" rel="noopener">Medium&lt;/a>.&lt;/sup>&lt;/p></description></item><item><title>Life in the Baby Universe: The Physics of Babies</title><link>https://smalldata.github.io/posts/physics-of-babies/</link><pubDate>Thu, 09 Jan 2014 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/physics-of-babies/</guid><description>&lt;p>&lt;sub>&lt;em>This article was originally published in&lt;/em>
 &lt;a href="https://physicsworld.com/a/the-september-2013-issue-of-physics-world-is-out-now/" target="_blank" rel="noopener">&lt;em>Physics World&lt;/em>&lt;/a> &lt;em>September 2013, copyright IOP Publishing, reproduced here with permission.&lt;/em>&lt;/sub>&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baby_physics/header.jpeg" alt="header image - baby with avocado face">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/baby_physics/header.jpeg" alt="header image - baby with avocado face">&lt;/p>
 &lt;hr>
 &lt;p>&lt;strong>I became a first-time father&lt;/strong> around the same time my postdoc contract ended. My wife had another year to finish her PhD, so I took a sabbatical to be a stay-at-home dad. My months away from research were intended to be full of fun projects. And relaxation. It was to be the Year of Naps – or so I thought.&lt;/p>
 &lt;p>Unfortunately, while physics problems have solutions that are constant, baby-related problems have solutions that are random and change from day to day. What had worked yesterday will not work today. Maybe it will work tomorrow. This is the gist of the Baby Universe. In this universe, time only means a start and a finish, and contains no information in-between. If the physicist-dad discovers a method to get the baby to eat her breakfast, it is unlikely to work by dinner. This is significant because eating is one of four fundamental dimensions of the Baby Universe, and the same principle of random solutions also applies to the other three: playing, crying and sleeping. (Some scientists consider pooping to be a separate dimension. However, I can assure you that this is always included as part of one of the other four.)&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baby_physics/sarah_photo.jpeg" alt="baby - who me?">
+&lt;p>&lt;img src="https://smalldata.github.io/images/baby_physics/sarah_photo.jpeg" alt="baby - who me?">
 &lt;sup>Photo credit :
 &lt;a href="https://www.sarahperryphotography.com/" target="_blank" rel="noopener">Sarah Perry&lt;/a>&lt;/sup>&lt;/p>
 &lt;p>&lt;strong>The first challenge&lt;/strong> in my physicist-to-dad transition came with my inability to feed my daughter naturally. My thesis-writing wife&amp;rsquo;s fresh-pumped milk was in demand and its administration required complex algorithms for its optimal, timely use. Solid food, once introduced, posed a whole new set of problems, as each spoonful required extensive parental coercion. This may have had its upsides: recent research shows that the more you talk to your child, the higher the child&amp;rsquo;s IQ will be. The fine print that the researchers don&amp;rsquo;t mention is that this IQ boost comes at your expense, as you must donate those IQ points to the child via non-stop one-way conversations: &amp;ldquo;Look. Yams. Mmmmm. You like yams. You liked yams yesterday. Oooh, yaaaaaams.&amp;rdquo;&lt;/p>
 &lt;p>Later, my daughter acquired a rudimentary ability to feed herself, and the physics of the eating dimension became more complex. If I offer her a spoonful of food, she comes running to see what is on the spoon. If the food is not to her liking, she is scattered like a charged particle from a similarly charged hard sphere. But when, instead, a sticky ball of white rice is presented to her, it triggers a primal urge to make chaos. The &amp;ldquo;entropy of rice&amp;rdquo; principle dictates that the dispersion of rice across a 2D &amp;ldquo;table&amp;rdquo; is sudden, yet erratic. After adequate time, every grain of rice is scattered into a circle with a radius equal to one baby arm. Given infinite time, it is predicted that babies would not rest until every grain of rice was at every end of the universe.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/baby_physics/yogurt_face.jpeg" alt="baby - yogurt face">
+&lt;p>&lt;img src="https://smalldata.github.io/images/baby_physics/yogurt_face.jpeg" alt="baby - yogurt face">
 &lt;sup>Photo credit : Debby Shemella, aka Grandma (2012)&lt;/sup>&lt;/p>
 &lt;p>As the preceding paragraph indicates, the &amp;ldquo;eating&amp;rdquo; dimension of the Baby Universe is closely coupled to the &amp;ldquo;playing&amp;rdquo; dimension. Before she could crawl or walk, my daughter would nevertheless want to change her position during playtime. She employed the theory of relativity to satisfy this urge: by moving her playmat from underneath her, she could therefore move herself off the mat. Once mobile, she liked to increase her potential energy by dragging herself up and onto whatever obstacle she could find. If stairs existed, that obstacle was most definitely stairs. This is unfortunate, because although babies understand gravity if they are dropping something (and can even anticipate the &amp;ldquo;Boom!&amp;rdquo; the object makes upon impact), they have no comprehension of gravity if they are the body upon which it is acting. It is therefore the physicist-parent&amp;rsquo;s job to decrease the baby&amp;rsquo;s potential energy whenever it grows too large, and it is the baby&amp;rsquo;s work to regain what was taken away.&lt;/p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -1622,17 +1623,17 @@ Their reply: &lt;em>No. We meant, are you flexible to work at 100%?&lt;/em> 😩
 &lt;p>Once the baby is asleep, the physicist-parent is faced with the challenge of escaping the room &amp;ndash; in my case over creaky hardwood floors. Doing this before my daughter realizes she is asleep requires knowledge of the &amp;ldquo;path of least noise&amp;rdquo;. Once I have exited the room, though, I have a dilemma. No sounds come from the crib. Is my daughter asleep or awake? A measurement is required. As I silently slide on my socks into the dark room, my measurement wakes her and her original state remains unknown. This is Schrödinger&amp;rsquo;s baby.&lt;/p>
 &lt;p>&lt;strong>My time at home&lt;/strong> has been a great period in my life and I know I will miss this when I&amp;rsquo;m back at work. As I write this essay in my head, my daughter rests on my shoulder. Her breathing turns to snoring and I synchronize my own breathing to be in phase with hers. Together we plan all the things I need to do during her naptime. I definitely don&amp;rsquo;t have time for a nap of my own.&lt;/p>
 &lt;hr>
-&lt;p>&lt;img src="https://smalldata.dev/images/baby_physics/author_muse.jpeg" alt="author and muse">
+&lt;p>&lt;img src="https://smalldata.github.io/images/baby_physics/author_muse.jpeg" alt="author and muse">
 The author and his muse (2013)&lt;/p>
 &lt;hr>
 &lt;p>&lt;sup>This article is also available on
-&lt;a href="https://medium.com/@philshem/life-in-the-baby-universe-f52561c4a8ae" target="_blank" rel="noopener">Medium&lt;/a>.&lt;/sup>&lt;/p></description></item><item><title>Data are Beautiful: Data's story in grammar</title><link>https://smalldata.dev/posts/data-are-beautiful/</link><pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/data-are-beautiful/</guid><description>&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/header.jpeg" alt="header: punch card">&lt;/p>
+&lt;a href="https://medium.com/@philshem/life-in-the-baby-universe-f52561c4a8ae" target="_blank" rel="noopener">Medium&lt;/a>.&lt;/sup>&lt;/p></description></item><item><title>Data are Beautiful: Data's story in grammar</title><link>https://smalldata.github.io/posts/data-are-beautiful/</link><pubDate>Wed, 08 Jan 2014 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/data-are-beautiful/</guid><description>&lt;p>&lt;img src="https://smalldata.github.io/images/beautifuldata/header.jpeg" alt="header: punch card">&lt;/p>
 &lt;p>&lt;sup>Photo credit:
 &lt;a href="https://www.flickr.com/photos/binaryape/5151286161/in/photolist-8RcFUD-8RcGgz-Gxg1E-8RcFv8-5Ri9d" target="_blank" rel="noopener">Flicker:binaryape&lt;/a>&lt;/sup>&lt;/p>
 &lt;hr>
 &lt;p>&lt;strong>A datum is a single piece of information.&lt;/strong> There are two plural forms for &lt;em>datum&lt;/em>. The lesser known form,
 &lt;a href="https://en.wikipedia.org/wiki/Datum_%28geodesy%29" target="_blank" rel="noopener">&lt;em>datums&lt;/em>&lt;/a>, is used exclusively in surveying and geodesy. The other plural form surrounds us both physically and figuratively. It can be big or small, right or wrong, new or old, dull or interesting. In the end it&amp;rsquo;s just a long line of 1s and 0s, stored right here or way over there. I&amp;rsquo;m talking about &lt;strong>data&lt;/strong>.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image01.png" alt="define &amp;ldquo;data&amp;rdquo;">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/beautifuldata/image01.png" alt="define &amp;ldquo;data&amp;rdquo;">&lt;/p>
 &lt;p>&lt;strong>There are even multiple ways to pronounce it.&lt;/strong>&lt;/p>
 &lt;p>Because &lt;em>data&lt;/em> is a plural noun, it&amp;rsquo;s technically more correct in English to say &amp;ldquo;data are&amp;rdquo;. But in the real-world, using &amp;ldquo;data is&amp;rdquo; is fine, especially because it&amp;rsquo;s considered to be a
 &lt;a href="https://en.wikipedia.org/wiki/Mass_noun" target="_blank" rel="noopener">mass noun&lt;/a>. Outside of the real world, there is some debate between &amp;ldquo;data is&amp;rdquo; and &amp;ldquo;data are&amp;rdquo; (
@@ -1640,21 +1641,21 @@ The author and his muse (2013)&lt;/p>
 &lt;a href="https://www.theguardian.com/news/datablog/2010/jul/16/data-plural-singular" target="_blank" rel="noopener">here&lt;/a> or
 &lt;a href="https://blogs.wsj.com/economics/2012/07/05/is-data-is-or-is-data-aint-a-plural/" target="_blank" rel="noopener">here&lt;/a>, for example). But languages evolve — I&amp;rsquo;m cool with that. I don&amp;rsquo;t even care if you say
 &lt;a href="https://forum.wordreference.com/showthread.php?t=11171" target="_blank" rel="noopener">&lt;em>datas&lt;/em>&lt;/a>, as long as those &lt;em>datas&lt;/em> are good.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image02.png" alt="the growth of &amp;ldquo;data&amp;rdquo; vs. &amp;ldquo;datum&amp;rdquo;">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/beautifuldata/image02.png" alt="the growth of &amp;ldquo;data&amp;rdquo; vs. &amp;ldquo;datum&amp;rdquo;">&lt;/p>
 &lt;p>&lt;sup>
 &lt;a href="https://books.google.com/ngrams/interactive_chart?content=data%2Cdatum&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cdata%3B%2Cc0%3B.t1%3B%2Cdatum%3B%2Cc0#t1%3B%2Cdata%3B%2Cc1%3B.t1%3B%2Cdatum%3B%2Cc1" target="_blank" rel="noopener">No contest in the 20th century: data vs. datum.&lt;/a>&lt;/sup>&lt;/p>
 &lt;p>It turns out that &amp;ldquo;data is&amp;rdquo; and &amp;ldquo;data are&amp;rdquo; occur about equally, after the strong decline of &amp;ldquo;data are&amp;rdquo; in the 80s and 90s. And this data ain&amp;rsquo;t for
 &lt;a href="https://en.wikipedia.org/wiki/SMS_language" target="_blank" rel="noopener">chatspeak&lt;/a>, it&amp;rsquo;s text that was published and hopefully edited, according to
 &lt;a href="https://books.google.com/ngrams/graph?content=lawyers%2Cdrugs%2Cmoney&amp;amp;year_start=1800&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Clawyers%3B%2Cc0%3B.t1%3B%2Cdrugs%3B%2Cc0%3B.t1%3B%2Cmoney%3B%2Cc0" target="_blank" rel="noopener">Google&amp;rsquo;s N-gram viewer&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image03.png" alt="the growth of &amp;ldquo;data is&amp;rdquo; vs. &amp;ldquo;data are&amp;rdquo;">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/beautifuldata/image03.png" alt="the growth of &amp;ldquo;data is&amp;rdquo; vs. &amp;ldquo;data are&amp;rdquo;">&lt;/p>
 &lt;p>&lt;sup>
 &lt;a href="https://books.google.com/ngrams/interactive_chart?content=data&amp;#43;is%2C&amp;#43;data&amp;#43;are&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cdata%20is%3B%2Cc0%3B.t1%3B%2Cdata%20are%3B%2Cc0#t1%3B%2Cdata%20is%3B%2Cc1%3B.t1%3B%2Cdata%20are%3B%2Cc1" target="_blank" rel="noopener">&amp;ldquo;data are&amp;rdquo;, you&amp;rsquo;ve had your day. &amp;ldquo;data is&amp;rdquo; is here to stay!&lt;/a>&lt;/sup>&lt;/p>
 &lt;p>Who is more likely to still use the proper phrasing? It&amp;rsquo;s those pesky British English speakers and writers in &lt;strong>red&lt;/strong> that are holding on. (As compared to American English, in &lt;strong>blue&lt;/strong>.)&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image04.png" alt="the growth of &amp;ldquo;data is&amp;rdquo; vs. &amp;ldquo;data are&amp;rdquo;, American vs. British">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/beautifuldata/image04.png" alt="the growth of &amp;ldquo;data is&amp;rdquo; vs. &amp;ldquo;data are&amp;rdquo;, American vs. British">&lt;/p>
 &lt;p>&lt;sup>
 &lt;a href="https://books.google.com/ngrams/interactive_chart?content=data&amp;#43;are%3Aeng_us_2012%2Cdata&amp;#43;are%3Aeng_gb_2012&amp;amp;year_start=1950&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cdata%20are%3Aeng_us_2012%3B%2Cc0%3B.t1%3B%2Cdata%20are%3Aeng_gb_2012%3B%2Cc0#t1%3B%2Cdata%20are%3Aeng_us_2012%3B%2Cc1%3B.t1%3B%2Cdata%20are%3Aeng_gb_2012%3B%2Cc1" target="_blank" rel="noopener">So Propper!&lt;/a>&lt;/sup>&lt;/p>
 &lt;p>In all forms of English, an interesting observation stands out: When starting a sentence, the trend reverses. &amp;ldquo;The data are&amp;rdquo; and &amp;ldquo;Data are&amp;rdquo; are approximately twice as common as &amp;ldquo;The data is&amp;rdquo; and &amp;ldquo;Data is&amp;rdquo;.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image05.png" alt="starting a sentence">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/beautifuldata/image05.png" alt="starting a sentence">&lt;/p>
 &lt;p>&lt;sup>
 &lt;a href="https://books.google.com/ngrams/interactive_chart?content=The&amp;#43;data&amp;#43;are%2C&amp;#43;The&amp;#43;data&amp;#43;is%2C&amp;#43;Data&amp;#43;are%2C&amp;#43;Data&amp;#43;is&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2CThe%20data%20are%3B%2Cc0%3B.t1%3B%2CThe%20data%20is%3B%2Cc0%3B.t1%3B%2CData%20are%3B%2Cc0%3B.t1%3B%2CData%20is%3B%2Cc0#t1%3B%2CThe%20data%20are%3B%2Cc1%3B.t1%3B%2CThe%20data%20is%3B%2Cc1%3B.t1%3B%2CData%20are%3B%2Cc0%3B.t1%3B%2CData%20is%3B%2Cc0-1" target="_blank" rel="noopener">Who doesn&amp;rsquo;t get a little sloppy by the end of a good sentence?&lt;/a>&lt;/sup>&lt;/p>
 &lt;p>I have no idea why, but I&amp;rsquo;ll list any good guess here:&lt;/p>
@@ -1664,18 +1665,18 @@ The author and his muse (2013)&lt;/p>
 &lt;p>Whatever you prefer, we can agree that &lt;strong>Data&lt;/strong> was, were, is, are, and will be
 &lt;a href="https://www.reddit.com/r/dataisbeautiful" target="_blank" rel="noopener">Beautiful&lt;/a>. (And sometimes
 &lt;a href="https://viz.wtf/" target="_blank" rel="noopener">ugly&lt;/a>.)&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image06.png" alt="all possibilities">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/beautifuldata/image06.png" alt="all possibilities">&lt;/p>
 &lt;p>&lt;sup>
 &lt;a href="https://books.google.com/ngrams/interactive_chart?content=data&amp;#43;was%2Cdata&amp;#43;were%2Cdata&amp;#43;is%2Cdata&amp;#43;are%2Cdata&amp;#43;will&amp;#43;be&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cdata%20was%3B%2Cc0%3B.t1%3B%2Cdata%20were%3B%2Cc0%3B.t1%3B%2Cdata%20is%3B%2Cc0%3B.t1%3B%2Cdata%20are%3B%2Cc0%3B.t1%3B%2Cdata%20will%20be%3B%2Cc0#t1%3B%2Cdata%20was%3B%2Cc1%3B.t1%3B%2Cdata%20were%3B%2Cc1%3B.t1%3B%2Cdata%20is%3B%2Cc1%3B.t1%3B%2Cdata%20are%3B%2Cc1%3B.t1%3B%2Cdata%20will%20be%3B%2Cc1" target="_blank" rel="noopener">Almost done.&lt;/a>&lt;/sup>&lt;/p>
 &lt;p>&lt;strong>Data&lt;/strong> - it&amp;rsquo;s still more popular than
 &lt;a href="https://sex-drugs-and-rock-n-roll.urbanup.com/2247232" target="_blank" rel="noopener">sex, drugs, and rock &amp;amp; roll&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image07.png" alt="sex drugs rock &amp; roll AND data">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/beautifuldata/image07.png" alt="sex drugs rock &amp; roll AND data">&lt;/p>
 &lt;p>&lt;sup>
 &lt;a href="https://books.google.com/ngrams/interactive_chart?content=data%2Csex%2Cdrugs%2Crock&amp;#43;and&amp;#43;roll&amp;amp;year_start=1900&amp;amp;year_end=2008&amp;amp;corpus=15&amp;amp;smoothing=3&amp;amp;share=&amp;amp;direct_url=t1%3B%2Cdata%3B%2Cc0%3B.t1%3B%2Csex%3B%2Cc0%3B.t1%3B%2Cdrugs%3B%2Cc0%3B.t1%3B%2Crock%20and%20roll%3B%2Cc0#t1%3B%2Cdata%3B%2Cc1%3B.t1%3B%2Csex%3B%2Cc1%3B.t1%3B%2Cdrugs%3B%2Cc1%3B.t1%3B%2Crock%20and%20roll%3B%2Cc1" target="_blank" rel="noopener">Data wins this round.&lt;/a>&lt;/sup>&lt;/p>
 &lt;p>But only in books.&lt;/p>
 &lt;p>Across the entire internet,&lt;/p>
 &lt;h3 id="sex-still-wins">sex still wins&lt;/h3>
-&lt;p>&lt;img src="https://smalldata.dev/images/beautifuldata/image08.png" alt="sex drugs rock &amp; roll AND data - across the entire internet">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/beautifuldata/image08.png" alt="sex drugs rock &amp; roll AND data - across the entire internet">&lt;/p>
 &lt;p>&lt;sup>
 &lt;a href="http://www.google.com/trends/explore#q=data%2C%20sex%2C%20drugs%2C%20rock%20and%20roll" target="_blank" rel="noopener">&amp;ldquo;Sex and Data&amp;rdquo; would be a decent band name.&lt;/a>&lt;/sup>&lt;/p>
 &lt;hr>

@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>coding | small DATA</title><link>https://smalldata.dev/tag/coding/</link><atom:link href="https://smalldata.dev/tag/coding/index.xml" rel="self" type="application/rss+xml"/><description>coding</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 18 Sep 2020 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_2.png</url><title>coding</title><link>https://smalldata.dev/tag/coding/</link></image><item><title>Getting stats on browsing history from the browser database</title><link>https://smalldata.dev/posts/browsing-stats/</link><pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/browsing-stats/</guid><description>&lt;p>If you didn&amp;rsquo;t know, there are more SQLite databases in the universe (
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>coding | small DATA</title><link>https://smalldata.github.io/tag/coding/</link><atom:link href="https://smalldata.github.io/tag/coding/index.xml" rel="self" type="application/rss+xml"/><description>coding</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 18 Sep 2020 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.github.io/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_3.png</url><title>coding</title><link>https://smalldata.github.io/tag/coding/</link></image><item><title>Getting stats on browsing history from the browser database</title><link>https://smalldata.github.io/posts/browsing-stats/</link><pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/browsing-stats/</guid><description>&lt;p>If you didn&amp;rsquo;t know, there are more SQLite databases in the universe (
 &lt;a href="https://www.sqlite.org/mostdeployed.html" target="_blank" rel="noopener">1+ trillion&lt;/a>) than there are known galaxies (
 &lt;a href="https://www.discovermagazine.com/the-sciences/how-many-galaxies-are-there-astronomers-are-revealing-the-enormity-of-the" target="_blank" rel="noopener">100 billion&lt;/a>). And one of those SQLite databases happens to be your browsing history. As a short proof-of-concept, here&amp;rsquo;s how to access the history of your Firefox browser via the SQLite database.&lt;/p>
 &lt;h2 id="find-your-database-file">find your database file&lt;/h2>
 &lt;p>Mozilla Firefox stores your cookies, bookmarks, form inputs, and browsing history under the path defined in your profile settings. To find the path of those files in your file system, visit &lt;strong>about:profiles&lt;/strong> in a Firefox window.&lt;/p>
 &lt;p>In my case, I only use really one profile, which is shown in the orange box.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/firefox-profile-path.png" alt="showing file system path to profile in firefox">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/firefox-profile-path.png" alt="showing file system path to profile in firefox">&lt;/p>
 &lt;p>You can click &amp;ldquo;Show in Finder&amp;rdquo; and then scroll down to the file &lt;code>places.sqlite&lt;/code>. Trying to directly open this database file gives the error &amp;ldquo;locked database&amp;rdquo; &amp;ndash; you&amp;rsquo;ll need to make a copy of the file in a different folder before opening.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-locked.png" alt="database is locked">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/firefox-db-locked.png" alt="database is locked">&lt;/p>
 &lt;h2 id="explore-the-database">explore the database&lt;/h2>
 &lt;p>The go-to SQLite client is
 &lt;a href="https://sqlitebrowser.org/" target="_blank" rel="noopener">DB Browser for SQLite&lt;/a>. Once installed, you can easily open your &lt;code>places.sqlite&lt;/code> file with &amp;ldquo;Open With&amp;rdquo; from Finder.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-openwith.png" alt="opening the db file">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/firefox-db-openwith.png" alt="opening the db file">&lt;/p>
 &lt;p>Once the database file is open, you&amp;rsquo;ll see 13 tables&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-tables.png" alt="finding the right tables">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/firefox-db-tables.png" alt="finding the right tables">&lt;/p>
 &lt;p>After digging through a couple tables, the one with your browsing history is called &lt;code>moz_places&lt;/code>. By viewing this table, you&amp;rsquo;ll see that the field &lt;code>url&lt;/code> stores the page visited, and last visit date is the UNIX timestamp of the last visit.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/firefox-db-history-view.png" alt="viewing the table with browsing history">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/firefox-db-history-view.png" alt="viewing the table with browsing history">&lt;/p>
 &lt;p>Sort descending by &lt;code>visit_count&lt;/code> and you&amp;rsquo;ll find your most commonly viewed website. For me, it&amp;rsquo;s HackerNews, and then various permutations of Twitter. (I use the mobile Twitter site instead of the app, and I sync my history between devices.)&lt;/p>
 &lt;h2 id="query-the-database">query the database&lt;/h2>
 &lt;p>Despite using Twitter, I&amp;rsquo;m a private person, and I don&amp;rsquo;t want to share any real analysis of my browsing history. I do want to share one result: the distribution of &lt;code>http://localhost&lt;/code> ports. Here&amp;rsquo;s a short python3 script that reads the copy of the &lt;code>place.sqlite&lt;/code> file, and returns a count of localhost ports from the browsing history.&lt;/p>
@@ -125,7 +125,7 @@ url like '%localhost:9005%'
 &lt;/code>&lt;/pre>
 &lt;p>shows that port 9005 was used for the Callback on Firebase CLI authentication. The reason is because the Python script splits on the &lt;code>:&lt;/code> character, for which this URL has more than one. The table shows 7 localhost URLs without ports, but these are actually URLs that have more than one &lt;code>:&lt;/code> character. I&amp;rsquo;ve updated the table above, but not the Python script.&lt;/p>
 &lt;h2 id="conclusion">conclusion&lt;/h2>
-&lt;p>Everything is a SQLite database.&lt;/p></description></item><item><title>Generating folders with smart dates in Python + Pandas</title><link>https://smalldata.dev/posts/python-date-folders/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/python-date-folders/</guid><description>&lt;blockquote>
+&lt;p>Everything is a SQLite database.&lt;/p></description></item><item><title>Generating folders with smart dates in Python + Pandas</title><link>https://smalldata.github.io/posts/python-date-folders/</link><pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/python-date-folders/</guid><description>&lt;blockquote>
 &lt;p>&lt;em>Not everything your mother told you is true.&lt;/em>&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;small>&amp;ndash;my CompSci 101 professor, when a student &lt;em>insisted&lt;/em> that, without exception, every 4th year was a leap year&lt;/small>&lt;/p>
@@ -183,14 +183,14 @@ for d in df:
 path = subpath + os.sep + str(d.year).zfill(4) + os.sep + str(d.month).zfill(2) + os.sep + str(d.day).zfill(2)
 create_folder(path)
 #break # debugging
-&lt;/code>&lt;/pre></description></item><item><title>Fun with Favicons</title><link>https://smalldata.dev/posts/favicon-mosaic/</link><pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/favicon-mosaic/</guid><description>&lt;p>A recent
+&lt;/code>&lt;/pre></description></item><item><title>Fun with Favicons</title><link>https://smalldata.github.io/posts/favicon-mosaic/</link><pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/favicon-mosaic/</guid><description>&lt;p>A recent
 &lt;a href="https://opendata.stackexchange.com/q/14007/1511" target="_blank" rel="noopener">question&lt;/a> on the Open Data Stack Exchange site got me thinking about how to download favicons from a bulk list of websites.&lt;/p>
 &lt;h3 id="idea-1-try-each-domain">Idea 1: try each domain&lt;/h3>
 &lt;p>Something like &lt;code>http://example.com/favicon.ico&lt;/code>. But using a &lt;code>favicon.ico&lt;/code> in the webroot folder is just a common implementation. Each website can host their favicon with another path, and another file format.&lt;/p>
 &lt;p>Let&amp;rsquo;s try something else&amp;hellip;&lt;/p>
 &lt;h3 id="idea-2-parse-html-for-favicon-urls">Idea 2: parse html for favicon urls&lt;/h3>
 &lt;p>If the website doesn&amp;rsquo;t use &lt;code>favicon.ico&lt;/code> in the webroot folder, the page html will contain a path to the favicon, with the following format:&lt;/p>
-&lt;pre>&lt;code>&amp;lt;link rel=icon href=https://smalldata.dev/favicon.png&amp;gt;
+&lt;pre>&lt;code>&amp;lt;link rel=icon href=https://smalldata.github.io/favicon.png&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;p>There is python package aptly named
 &lt;a href="https://github.com/scottwernervt/favicon" target="_blank" rel="noopener">favicon&lt;/a> that will parse the html and return the urls to all favicons, with different formats and resolutions. I&amp;rsquo;m pasting their demo code here:&lt;/p>
@@ -205,7 +205,7 @@ Icon(url='https://www.python.org/static/favicon.ico', width=0, height=0, format=
 &lt;p>Getting better&amp;hellip; But if I download bulk favicons, I&amp;rsquo;d like to avoid normalizing their file format and resolutions.&lt;/p>
 &lt;h3 id="idea-3-get-favicons-directly-from-googles-cache">Idea 3: get favicons directly from google&amp;rsquo;s cache&lt;/h3>
 &lt;p>Google keeps the favicon cached for many sites (even my little website with basically zero traffic).&lt;/p>
-&lt;pre>&lt;code>https://www.google.com/s2/favicons?domain=smalldata.dev
+&lt;pre>&lt;code>https://www.google.com/s2/favicons?domain=apache.org
 &lt;/code>&lt;/pre>
 &lt;p>And the favicons are all normalized: 16x16 pixels and png format. Perfect.&lt;/p>
 &lt;h2 id="now-for-some-fun">Now for some fun&lt;/h2>
@@ -235,7 +235,7 @@ df.URL.apply(request_function)
 &lt;p>What to do with 500 favicons. For fun, I made a mosaic from the collection, and I first needed a original piece of art that would be recongnizable when heavily pixelated. Van Gogh&amp;rsquo;s
 &lt;a href="https://en.wikipedia.org/wiki/The_Starry_Night" target="_blank" rel="noopener">Starry night&lt;/a> stood out.&lt;/p>
 &lt;p>Here&amp;rsquo;s the original:&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/1137px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="Starry Night">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/1137px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="Starry Night">&lt;/p>
 &lt;p>&lt;em>Source&lt;/em>:
 &lt;a href="https://en.wikipedia.org/wiki/The_Starry_Night#/media/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" target="_blank" rel="noopener">Wikipedia&lt;/a>&lt;/p>
 &lt;p>Then I used a handy Python script called
@@ -244,11 +244,11 @@ df.URL.apply(request_function)
 python mosaic/mosaic.py source.jpg images/
 &lt;/code>&lt;/pre>
 &lt;p>And what pops out is a &lt;em>Starry Night of Favicons&lt;/em>.&lt;/p>
-&lt;p>&lt;img src="https://smalldata.dev/images/mosaic.jpeg" alt="Favicon Starry Night">&lt;/p>
+&lt;p>&lt;img src="https://smalldata.github.io/images/mosaic.jpeg" alt="Favicon Starry Night">&lt;/p>
 &lt;hr>
 &lt;p>(full resolution download:
-&lt;a href="https://smalldata.dev/images/mosaic_full.jpeg">22 MB&lt;/a>)&lt;/p>
+&lt;a href="https://smalldata.github.io/images/mosaic_full.jpeg">22 MB&lt;/a>)&lt;/p>
 &lt;p>(python
 &lt;a href="https://gist.github.com/philshem/e59388197fd9ddb7dcdb8098f9f0aaf2" target="_blank" rel="noopener">source code&lt;/a>)&lt;/p>
 &lt;p>(top500 favicons:
-&lt;a href="https://smalldata.dev/images/top500_favicons.zip">zip&lt;/a>)&lt;/p></description></item></channel></rss>
+&lt;a href="https://smalldata.github.io/images/top500_favicons.zip">zip&lt;/a>)&lt;/p></description></item></channel></rss>

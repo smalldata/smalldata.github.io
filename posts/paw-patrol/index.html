@@ -1,16 +1,515 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Source Themes Academic 4.8.0"><meta name=author content="Philip Shemella"><meta name=description content="Step 0. The disclaimers   I don&rsquo;t call myself a data scientist, but other people do, and I wanted to share my approach to data science. This approach has worked well for me professionally."><link rel=alternate hreflang=en-us href=https://smalldata.dev/posts/paw-patrol/><meta name=theme-color content="#2962ff"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css crossorigin=anonymous title=hl-light><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css crossorigin=anonymous title=hl-dark disabled><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin=anonymous><script src=https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"><link rel=stylesheet href=/css/academic.css><link rel=manifest href=/index.webmanifest><link rel=icon type=image/png href=/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_32x32_fill_lanczos_center_2.png><link rel=apple-touch-icon type=image/png href=/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_192x192_fill_lanczos_center_2.png><link rel=canonical href=https://smalldata.dev/posts/paw-patrol/><meta property="twitter:card" content="summary"><meta property="twitter:site" content="@philshem"><meta property="twitter:creator" content="@philshem"><meta property="og:site_name" content="small DATA"><meta property="og:url" content="https://smalldata.dev/posts/paw-patrol/"><meta property="og:title" content="Data Science and PAW Patrol | small DATA"><meta property="og:description" content="Step 0. The disclaimers   I don&rsquo;t call myself a data scientist, but other people do, and I wanted to share my approach to data science. This approach has worked well for me professionally."><meta property="og:image" content="https://smalldata.dev/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_2.png"><meta property="twitter:image" content="https://smalldata.dev/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us"><meta property="article:published_time" content="2020-04-22T00:00:00+00:00"><meta property="article:modified_time" content="2020-04-22T00:00:00+00:00"><title>Data Science and PAW Patrol | small DATA</title></head><body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents><script>const isSiteThemeDark=!1</script><script src=/js/load-theme.js></script><aside class=search-results id=search><div class=container><section class=search-header><div class="row no-gutters justify-content-between mb-3"><div class=col-6><h1>Search</h1></div><div class="col-6 col-search-close"><a class=js-search href=#><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a></div></div><div id=search-box><input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control></div></section><section class=section-search-results><div id=search-hits></div></section></div></aside><nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main><div class=container><div class="d-none d-lg-inline-flex"><a class=navbar-brand href=/>small DATA</a></div><button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
-<span><i class="fas fa-bars"></i></span></button><div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none"><a class=navbar-brand href=/>small DATA</a></div><div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content><ul class="navbar-nav d-md-inline-flex"><li class=nav-item><a class=nav-link href=/#about><span>About</span></a></li><li class=nav-item><a class="nav-link active" href=/posts/><span>Posts</span></a></li><li class=nav-item><a class=nav-link href=/#contact><span>Contact</span></a></li></ul></div><ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"><li class=nav-item><a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a></li><li class="nav-item dropdown theme-dropdown"><a href=# class="nav-link js-theme-selector" data-toggle=dropdown aria-haspopup=true><i class="fas fa-palette" aria-hidden=true></i></a><div class=dropdown-menu><a href=# class="dropdown-item js-set-theme-light"><span>Light</span></a>
-<a href=# class="dropdown-item js-set-theme-dark"><span>Dark</span></a>
-<a href=# class="dropdown-item js-set-theme-auto"><span>Automatic</span></a></div></li></ul></div></nav><article class=article><div class="article-container pt-3"><h1>Data Science and PAW Patrol</h1><div class=article-metadata><span class=article-date>22 Apr 2020</span></div></div><div class=article-container><div class=article-style><h2 id=step-0-the-disclaimers>Step 0. The disclaimers</h2><ol><li><p>I don&rsquo;t call myself a <em>data scientist</em>, but other people do, and I wanted to share my approach to <em>data science</em>. This approach has worked well for me professionally. There are many good approaches, and I don&rsquo;t want to gatekeep any of those.</p></li><li><p>PAW Patrol is a registered trademark of someone else. I don&rsquo;t own any rights to PAW Patrol. If I did, I would be doing something better with my free time.</p></li></ol><h2 id=step-1-start-with-the-science>Step 1. Start with the science</h2><p>Thinking like a scientist means having a question, and then searching out an answer. Science isn&rsquo;t data-driven, in that the data can provide an answer, but the available data shouldn&rsquo;t suggest the question. At least in most of the cases I can think of.</p><p>This is a huge challenge to productionalize data science in a business environment. With a recent (unnamed) employer, we had a big data-engineering effort to rebuild an analysis pipeline. As an analyst, it became slowly clear that with the new pipeline, we could only recreate 5 of the 6 key metrics. I left the company before the proposed workaround was implemented.</p><p>For my example of methodology, I&rsquo;ll use
-<a href=https://en.wikipedia.org/wiki/PAW_Patrol target=_blank rel=noopener>PAW Patrol</a>. It&rsquo;s a kids' animated TV series. To describe cast of characters, and the <em>plot</em>, here are the lyrics to the theme song:</p><blockquote><p><sub>PAW Patrol, PAW Patrol</sub></p><p><sub>We&rsquo;ll be there on the double</sub></p><p><sub>Whenever there&rsquo;s a problem</sub></p><p><sub>&lsquo;Round Adventure Bay</sub></p><p><sub>Ryder and his team of pups</sub></p><p><sub>Will come and save the day</sub></p><p><sub>Marshall, Rubble, Chase</sub></p><p><sub>Rocky, Zuma, Skye</sub></p><p><sub>Yeah! They&rsquo;re on the way!</sub></p></blockquote><p>Yeah. It goes on. You get the point. But the show can be endearing, and I think the deeper reason it resonates with kids is because the team is useful and appreciated by the adults they help. But that&rsquo;s a topic for another article.<sup>
-[1]</sup></p><p>If you take a vote in my household, a consensus of 50% of voters will declare PAW Patrol to be the single best achievement of humanity. And it&rsquo;s been decided, by compromise, that if we ever get a pet dog, the name shall be either <code>Zuma-Marshall</code>, or <code>Marshall-Zuma</code>.</p><p><img src=/images/paw-patrol-jump-i49016.jpg alt="paw patrol team"></p><h3 id=the-question>The question</h3><p>I was curious - with PAW Patrol hype slowly sweeping the planet since 2013, do we see an increase in dogs named after the crew?</p><h2 id=step-2-curate-the-data>Step 2. Curate the data</h2><p>I need open data with pet names. Dog names. There are several, and I&rsquo;ll outline why they make a good or bad candidate for the analysis.</p><h3 id=hundenamen-aus-dem-hundebestand-der-stadt-zürichhttpsdatastadt-zuerichchdatasetsid_stapo_hundenamen><a href=https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen target=_blank rel=noopener>Hundenamen aus dem Hundebestand der Stadt Zürich</a></h3><p>This one is from the city of Zürich, Switzerland, where I live. I&rsquo;ve seen a
-<a href=https://twitter.com/OpenDataZurich/status/1235887129047240704 target=_blank rel=noopener>recent Twitter post</a> about this dataset, so that may have planted the idea that dog names can be open data.</p><p>Data goes back to 2015, and each year is one CSV file. To get an idea of the dataset size, I choose the complete year of
-<a href=https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen/resource/37af5c6e-c101-41aa-8072-033280191f9c target=_blank rel=noopener>2019</a>. 7647 records. It may be hard to find trends in so few dog registrations. Additionally, the Paw Patrol trend is slowly making it here to Switzerland. Since it started in North America, I&rsquo;ll go to look there.</p><h3 id=anchorage-dog-names-over-timehttpsdatamuniorgotherdog-names-over-timeda3g-dkms><a href=https://data.muni.org/Other/Dog-Names-over-Time/da3g-dkms target=_blank rel=noopener>Anchorage Dog Names over Time</a></h3><p>Only 16k total names between 2017 and 2019. That&rsquo;s not enough dogs when there are so many possible names. And starting in 2017, I may not get a good <em>before</em> snapshot.</p><h3 id=seattle-pet-licenseshttpscatalogdatagovdatasetseattle-pet-licenses><a href=https://catalog.data.gov/dataset/seattle-pet-licenses target=_blank rel=noopener>Seattle Pet Licenses</a></h3><blockquote><p>A list of active/current Seattle pet licenses, including animal type (species), pet&rsquo;s name, breed and the owner&rsquo;s ZIP code.</p></blockquote><p>This might be a good dataset because records go back to 2000 and are updated through 2019. I can get snapshots before and during the PAW Patrol era. But I counted dogs registered in 2019 and it was 11k. In 2018, 7k. Still not enough.</p><h3 id=nyc-dog-licensing-datasethttpsdatacityofnewyorkushealthnyc-dog-licensing-datasetnu7n-tubp><a href=https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp target=_blank rel=noopener>NYC Dog Licensing Dataset</a></h3><p>This could be it. Recently updated. 24.1 MB CSV file. 345k total rows going back more than 10 years. 79k dog registrations in 2019. Explore the data
-<a href=https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp/data target=_blank rel=noopener>here</a>.</p><p>The fine print:</p><blockquote><p><em>Each record stands as a unique license period for the dog over the course of the yearlong time frame.</em></p></blockquote><p>What does this mean for my data? It means that dog names are assigned at least once per year. If I count unique dog names over multiple years, I&rsquo;ll be over counting.</p><p>and</p><blockquote><p><em>Each record represents a unique dog license that was active during the year, but not necessarily a unique record per dog, since a license that is renewed during the year results in a separate record of an active license period.</em></p></blockquote><p>This means that dog-names within a given year may actually be duplicate as well. If this was a real project, in order to fully trust my data, I would first count how many names are repeated. To do this, because there is no column <code>dog ID</code> which would uniquely identify a dog, I would have to create a surrogate key based on the columns such as <code>AnimalBirthMonth</code>, <code>AnimalGender</code> and <code>BreedName</code>, and perhaps also the geographical data <code>Borough</code> and <code>ZipCode</code>.</p><p>If I cared more about PAW Patrol pet-naming theory, I could build a unified dog-name data-model and combine datasets, and keep looking for new sources to add. Maybe even make some FOIA requests. But I don&rsquo;t care that much. On to the answer. Let&rsquo;s hope NYC is a trend-setter &ndash; when it comes to naming pets after kids&rsquo; cartoon superheros.</p><h2 id=step-3-explore-the-data>Step 3. Explore the data</h2><p>Lots of tools but because I <em>know</em> that I won&rsquo;t productionalize this pipeline, I&rsquo;m going to dump the data into the commercial BI tool Tableau Desktop. Licenses are expensive, and there are many solid open source tools that will do the job. But the software allows me to do fast visual anaylsis. If you sign up for the
-<a href=https://www.coursera.org/learn/analytics-tableau target=_blank rel=noopener>free audit of this Coursera</a>, you&rsquo;ll see that after clicking through the 3rd week or so, you are provided a 6-month software license to complete the rest of the course. <em>YMMV.</em></p><h3 id=visual-analysis>Visual Analysis</h3><p>In this step, I&rsquo;m trying to get a feel for the data. Is it clean, is it reliable? Will it answer my question?</p><p>What are the 5 most common names for dogs in NYC?</p><table><thead><tr><th style=text-align:left><sub>Name</sub></th><th style=text-align:center><sub>Frequency</sub></th></tr></thead><tbody><tr><td style=text-align:left><sub>UNKNOWN</sub></td><td style=text-align:center><sub>5379</sub></td></tr><tr><td style=text-align:left><sub>BELLA</sub></td><td style=text-align:center><sub>3824</sub></td></tr><tr><td style=text-align:left><sub>NAME NOT PROVIDED</sub></td><td style=text-align:center><sub>3763</sub></td></tr><tr><td style=text-align:left><sub>MAX</sub></td><td style=text-align:center><sub>3582</sub></td></tr><tr><td style=text-align:left><sub>CHARLIE</sub></td><td style=text-align:center><sub>2852</sub></td></tr><tr><td style=text-align:left><sub>COCO</sub></td><td style=text-align:center><sub>2636</sub></td></tr></tbody></table><p>Woof. That&rsquo;s a lot of <em>NULL</em>. Let&rsquo;s see how it&rsquo;s evenly distributed throughout the years</p><table><thead><tr><th style=text-align:left><sub>AnimalName</sub></th><th style=text-align:center><sub>2014</sub></th><th style=text-align:center><sub>2015</sub></th><th style=text-align:center><sub>2016</sub></th><th style=text-align:center><sub>2017</sub></th><th style=text-align:center><sub>2018</sub></th></tr></thead><tbody><tr><td style=text-align:left><sub>UNKNOWN</sub></td><td style=text-align:center><sub>3</sub></td><td style=text-align:center><sub>1179</sub></td><td style=text-align:center><sub>1903</sub></td><td style=text-align:center><sub>1294</sub></td><td style=text-align:center><sub>1000</sub></td></tr><tr><td style=text-align:left><sub>BELLA</sub></td><td style=text-align:center><sub>19</sub></td><td style=text-align:center><sub>427</sub></td><td style=text-align:center><sub>1332</sub></td><td style=text-align:center><sub>1233</sub></td><td style=text-align:center><sub>813</sub></td></tr><tr><td style=text-align:left><sub>NAME NOT PROVIDED</sub></td><td style=text-align:center><sub>11</sub></td><td style=text-align:center><sub>963</sub></td><td style=text-align:center><sub>1374</sub></td><td style=text-align:center><sub>847</sub></td><td style=text-align:center><sub>568</sub></td></tr><tr><td style=text-align:left><sub>MAX</sub></td><td style=text-align:center><sub>34</sub></td><td style=text-align:center><sub>444</sub></td><td style=text-align:center><sub>1214</sub></td><td style=text-align:center><sub>1166</sub></td><td style=text-align:center><sub>724</sub></td></tr><tr><td style=text-align:left><sub>CHARLIE</sub></td><td style=text-align:center><sub>26</sub></td><td style=text-align:center><sub>293</sub></td><td style=text-align:center><sub>1027</sub></td><td style=text-align:center><sub>935</sub></td><td style=text-align:center><sub>571</sub></td></tr><tr><td style=text-align:left><sub>COCO</sub></td><td style=text-align:center><sub>22</sub></td><td style=text-align:center><sub>296</sub></td><td style=text-align:center><sub>941</sub></td><td style=text-align:center><sub>817</sub></td><td style=text-align:center><sub>560</sub></td></tr></tbody></table><p>OK, better. It seems pretty flat, except for 2014. Let&rsquo;s do a quick check of total names per year, to see that indeed 2014 has many fewer.</p><table><thead><tr><th style=text-align:left><sub>Year of LicenseIssuedDate</sub></th><th style=text-align:center><sub>Frequency</sub></th></tr></thead><tbody><tr><td style=text-align:left><sub>2014</sub></td><td style=text-align:center><sub>2650</sub></td></tr><tr><td style=text-align:left><sub>2015</sub></td><td style=text-align:center><sub>42439</sub></td></tr><tr><td style=text-align:left><sub>2016</sub></td><td style=text-align:center><sub>119080</sub></td></tr><tr><td style=text-align:left><sub>2017</sub></td><td style=text-align:center><sub>110995</sub></td></tr><tr><td style=text-align:left><sub>2018</sub></td><td style=text-align:center><sub>70563</sub></td></tr></tbody></table><p>Bummer that 2019 registrations aren&rsquo;t there yet. I hope NYC is trend-setting enough to show a signal in 2018.</p><p>Another learning is that we should exclude 2014 from the calculation &ndash; there are just not enough records, especially in comparison with other years.</p><h3 id=initial-calculation>Initial Calculation</h3><p>I want to start to measure trends, and I&rsquo;ll do so visually, since I need to only compare a handful of names.</p><p>Marshall, Rubble, Chase, Rocky, Zuma and Skye. Let&rsquo;s add Ryder, even though he is a human in the cartoon. And the pups added in later seasons: Everest and Tracker.</p><table><thead><tr><th style=text-align:left><sub>AnimalName</sub></th><th style=text-align:center><sub>2014</sub></th><th style=text-align:center><sub>2015</sub></th><th style=text-align:center><sub>2016</sub></th><th style=text-align:center><sub>2017</sub></th><th style=text-align:center><sub>2018</sub></th></tr></thead><tbody><tr><td style=text-align:left><sub>CHASE</sub></td><td style=text-align:center><sub>7</sub></td><td style=text-align:center><sub>49</sub></td><td style=text-align:center><sub>115</sub></td><td style=text-align:center><sub>170</sub></td><td style=text-align:center><sub>86</sub></td></tr><tr><td style=text-align:left><sub>EVEREST</sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub>1</sub></td><td style=text-align:center><sub>9</sub></td><td style=text-align:center><sub>5</sub></td><td style=text-align:center><sub>3</sub></td></tr><tr><td style=text-align:left><sub>MARSHALL</sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub>7</sub></td><td style=text-align:center><sub>26</sub></td><td style=text-align:center><sub>19</sub></td><td style=text-align:center><sub>11</sub></td></tr><tr><td style=text-align:left><sub>ROCKY</sub></td><td style=text-align:center><sub>20</sub></td><td style=text-align:center><sub>300</sub></td><td style=text-align:center><sub>823</sub></td><td style=text-align:center><sub>785</sub></td><td style=text-align:center><sub>486</sub></td></tr><tr><td style=text-align:left><sub>RUBBLE</sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub>6</sub></td><td style=text-align:center><sub>2</sub></td></tr><tr><td style=text-align:left><sub>RYDER</sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub>13</sub></td><td style=text-align:center><sub>28</sub></td><td style=text-align:center><sub>26</sub></td><td style=text-align:center><sub>18</sub></td></tr><tr><td style=text-align:left><sub>SKYE</sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub>10</sub></td><td style=text-align:center><sub>61</sub></td><td style=text-align:center><sub>54</sub></td><td style=text-align:center><sub>36</sub></td></tr><tr><td style=text-align:left><sub>TRACKER</sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub>1</sub></td></tr><tr><td style=text-align:left><sub>ZUMA</sub></td><td style=text-align:center><sub></sub></td><td style=text-align:center><sub>2</sub></td><td style=text-align:center><sub>2</sub></td><td style=text-align:center><sub>2</sub></td><td style=text-align:center><sub>2</sub></td></tr></tbody></table><p>A couple things to notice. There aren&rsquo;t enough Trackers, Rubbles or Zumas to use in any analysis. And Everest probably doesn&rsquo;t have enough data to compare, either, especially since she was a late addition to the pack.</p><p>And because the yearly totals of registrations varies so greatly, I need to normalize my data. This means that I take the count of each unique name and divide by the total dogs registered in that year. Noticing that Rocky is the most popular from my list, and that in 2016 there were 823 Rockies registered, from a total of 119,080 registrations, I want to normalize for the prevalence of each name to a fixed integer, so that I can compare years. In effect, how popular a certain name was in that year. The metric is then be <code>frequency of dog-name per 10000 dogs</code>.</p><h3 id=closing-the-calculation>Closing the calculation</h3><p>The math doesn&rsquo;t get too complicated, because the data doesn&rsquo;t require anything else. I&rsquo;m going to use my normalized frequency metric to compare trends for Chase, Marshall, Rocky, Ryder, Rocky and Skye.</p><p>I&rsquo;ve removed 2016 and 2017 now too, to try to more clearly show before and after. It&rsquo;s only Skye that shows any trend &ndash; effectively doubling in popularity.</p><p><img src=/images/paw_patrol_results.png alt="paw patrol results"></p><h2 id=step-4-shutting-it-down>Step 4. Shutting it down</h2><p>I can&rsquo;t believe I&rsquo;ve spent this much time thinking about PAW Patrol. What I want to stress is that when you are working with data, for me it has been essential to</p><ol><li><p>Understand the subject matter. In this case, that means passively absorbing all things PAW Patrol.</p></li><li><p>Get dirty with the data. If you try to plug an algorithm on top of data, it&rsquo;s unlikely to give any meaningful results. Can you imagine creating a fancy data pipeline that spits out the 3 most popular dog names? <code>UNKNOWN</code>, <code>BELLA</code> and <code>NAME NOT PROVIDED</code>.</p></li></ol><p>In case you haven&rsquo;t heard it already, here&rsquo;s their theme song. I&rsquo;ve been singing it to myself as I write this, and I hope it gets stuck in your head, too.</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe src=https://www.youtube.com/embed/1UdI_eoDPKQ style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe></div><h1 id=heading>🐶🦴</h1><h3 id=and-remember--_whenever-theres-trouble-just-yelp-for-help_>And remember&ndash;<em>Whenever there’s trouble, just yelp for help!</em></h3><hr><p><sub>Got a comment? Share your thoughts on
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Source Themes Academic 4.8.0">
+<meta name=author content="Philip Shemella">
+<meta name=description content="Step 0. The disclaimers   I don&rsquo;t call myself a data scientist, but other people do, and I wanted to share my approach to data science. This approach has worked well for me professionally.">
+<link rel=alternate hreflang=en-us href=https://smalldata.github.io/posts/paw-patrol/>
+<meta name=theme-color content="#2962ff">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css crossorigin=anonymous title=hl-light>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css crossorigin=anonymous title=hl-dark disabled>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin=anonymous>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel=stylesheet href=/css/academic.css>
+<link rel=manifest href=/index.webmanifest>
+<link rel=icon type=image/png href=/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_192x192_fill_lanczos_center_3.png>
+<link rel=canonical href=https://smalldata.github.io/posts/paw-patrol/>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@philshem">
+<meta property="twitter:creator" content="@philshem">
+<meta property="og:site_name" content="small DATA">
+<meta property="og:url" content="https://smalldata.github.io/posts/paw-patrol/">
+<meta property="og:title" content="Data Science and PAW Patrol | small DATA">
+<meta property="og:description" content="Step 0. The disclaimers   I don&rsquo;t call myself a data scientist, but other people do, and I wanted to share my approach to data science. This approach has worked well for me professionally."><meta property="og:image" content="https://smalldata.github.io/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="https://smalldata.github.io/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2020-04-22T00:00:00+00:00">
+<meta property="article:modified_time" content="2020-04-22T00:00:00+00:00">
+<title>Data Science and PAW Patrol | small DATA</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents>
+<script>const isSiteThemeDark=!1</script>
+<script src=/js/load-theme.js></script>
+<aside class=search-results id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=#><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>small DATA</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>small DATA</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>About</span></a>
+</li>
+<li class=nav-item>
+<a class="nav-link active" href=/posts/><span>Posts</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#contact><span>Contact</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class="nav-link js-theme-selector" data-toggle=dropdown aria-haspopup=true>
+<i class="fas fa-palette" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+<article class=article>
+<div class="article-container pt-3">
+<h1>Data Science and PAW Patrol</h1>
+<div class=article-metadata>
+<span class=article-date>
+22 Apr 2020
+</span>
+</div>
+</div>
+<div class=article-container>
+<div class=article-style>
+<h2 id=step-0-the-disclaimers>Step 0. The disclaimers</h2>
+<ol>
+<li>
+<p>I don&rsquo;t call myself a <em>data scientist</em>, but other people do, and I wanted to share my approach to <em>data science</em>. This approach has worked well for me professionally. There are many good approaches, and I don&rsquo;t want to gatekeep any of those.</p>
+</li>
+<li>
+<p>PAW Patrol is a registered trademark of someone else. I don&rsquo;t own any rights to PAW Patrol. If I did, I would be doing something better with my free time.</p>
+</li>
+</ol>
+<h2 id=step-1-start-with-the-science>Step 1. Start with the science</h2>
+<p>Thinking like a scientist means having a question, and then searching out an answer. Science isn&rsquo;t data-driven, in that the data can provide an answer, but the available data shouldn&rsquo;t suggest the question. At least in most of the cases I can think of.</p>
+<p>This is a huge challenge to productionalize data science in a business environment. With a recent (unnamed) employer, we had a big data-engineering effort to rebuild an analysis pipeline. As an analyst, it became slowly clear that with the new pipeline, we could only recreate 5 of the 6 key metrics. I left the company before the proposed workaround was implemented.</p>
+<p>For my example of methodology, I&rsquo;ll use
+<a href=https://en.wikipedia.org/wiki/PAW_Patrol target=_blank rel=noopener>PAW Patrol</a>. It&rsquo;s a kids' animated TV series. To describe cast of characters, and the <em>plot</em>, here are the lyrics to the theme song:</p>
+<blockquote>
+<p><sub>PAW Patrol, PAW Patrol</sub></p>
+<p><sub>We&rsquo;ll be there on the double</sub></p>
+<p><sub>Whenever there&rsquo;s a problem</sub></p>
+<p><sub>&lsquo;Round Adventure Bay</sub></p>
+<p><sub>Ryder and his team of pups</sub></p>
+<p><sub>Will come and save the day</sub></p>
+<p><sub>Marshall, Rubble, Chase</sub></p>
+<p><sub>Rocky, Zuma, Skye</sub></p>
+<p><sub>Yeah! They&rsquo;re on the way!</sub></p>
+</blockquote>
+<p>Yeah. It goes on. You get the point. But the show can be endearing, and I think the deeper reason it resonates with kids is because the team is useful and appreciated by the adults they help. But that&rsquo;s a topic for another article.<sup>
+[1]</sup></p>
+<p>If you take a vote in my household, a consensus of 50% of voters will declare PAW Patrol to be the single best achievement of humanity. And it&rsquo;s been decided, by compromise, that if we ever get a pet dog, the name shall be either <code>Zuma-Marshall</code>, or <code>Marshall-Zuma</code>.</p>
+<p><img src=/images/paw-patrol-jump-i49016.jpg alt="paw patrol team"></p>
+<h3 id=the-question>The question</h3>
+<p>I was curious - with PAW Patrol hype slowly sweeping the planet since 2013, do we see an increase in dogs named after the crew?</p>
+<h2 id=step-2-curate-the-data>Step 2. Curate the data</h2>
+<p>I need open data with pet names. Dog names. There are several, and I&rsquo;ll outline why they make a good or bad candidate for the analysis.</p>
+<h3 id=hundenamen-aus-dem-hundebestand-der-stadt-zürichhttpsdatastadt-zuerichchdatasetsid_stapo_hundenamen>
+<a href=https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen target=_blank rel=noopener>Hundenamen aus dem Hundebestand der Stadt Zürich</a></h3>
+<p>This one is from the city of Zürich, Switzerland, where I live. I&rsquo;ve seen a
+<a href=https://twitter.com/OpenDataZurich/status/1235887129047240704 target=_blank rel=noopener>recent Twitter post</a> about this dataset, so that may have planted the idea that dog names can be open data.</p>
+<p>Data goes back to 2015, and each year is one CSV file. To get an idea of the dataset size, I choose the complete year of
+<a href=https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen/resource/37af5c6e-c101-41aa-8072-033280191f9c target=_blank rel=noopener>2019</a>. 7647 records. It may be hard to find trends in so few dog registrations. Additionally, the Paw Patrol trend is slowly making it here to Switzerland. Since it started in North America, I&rsquo;ll go to look there.</p>
+<h3 id=anchorage-dog-names-over-timehttpsdatamuniorgotherdog-names-over-timeda3g-dkms>
+<a href=https://data.muni.org/Other/Dog-Names-over-Time/da3g-dkms target=_blank rel=noopener>Anchorage Dog Names over Time</a></h3>
+<p>Only 16k total names between 2017 and 2019. That&rsquo;s not enough dogs when there are so many possible names. And starting in 2017, I may not get a good <em>before</em> snapshot.</p>
+<h3 id=seattle-pet-licenseshttpscatalogdatagovdatasetseattle-pet-licenses>
+<a href=https://catalog.data.gov/dataset/seattle-pet-licenses target=_blank rel=noopener>Seattle Pet Licenses</a></h3>
+<blockquote>
+<p>A list of active/current Seattle pet licenses, including animal type (species), pet&rsquo;s name, breed and the owner&rsquo;s ZIP code.</p>
+</blockquote>
+<p>This might be a good dataset because records go back to 2000 and are updated through 2019. I can get snapshots before and during the PAW Patrol era. But I counted dogs registered in 2019 and it was 11k. In 2018, 7k. Still not enough.</p>
+<h3 id=nyc-dog-licensing-datasethttpsdatacityofnewyorkushealthnyc-dog-licensing-datasetnu7n-tubp>
+<a href=https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp target=_blank rel=noopener>NYC Dog Licensing Dataset</a></h3>
+<p>This could be it. Recently updated. 24.1 MB CSV file. 345k total rows going back more than 10 years. 79k dog registrations in 2019. Explore the data
+<a href=https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp/data target=_blank rel=noopener>here</a>.</p>
+<p>The fine print:</p>
+<blockquote>
+<p><em>Each record stands as a unique license period for the dog over the course of the yearlong time frame.</em></p>
+</blockquote>
+<p>What does this mean for my data? It means that dog names are assigned at least once per year. If I count unique dog names over multiple years, I&rsquo;ll be over counting.</p>
+<p>and</p>
+<blockquote>
+<p><em>Each record represents a unique dog license that was active during the year, but not necessarily a unique record per dog, since a license that is renewed during the year results in a separate record of an active license period.</em></p>
+</blockquote>
+<p>This means that dog-names within a given year may actually be duplicate as well. If this was a real project, in order to fully trust my data, I would first count how many names are repeated. To do this, because there is no column <code>dog ID</code> which would uniquely identify a dog, I would have to create a surrogate key based on the columns such as <code>AnimalBirthMonth</code>, <code>AnimalGender</code> and <code>BreedName</code>, and perhaps also the geographical data <code>Borough</code> and <code>ZipCode</code>.</p>
+<p>If I cared more about PAW Patrol pet-naming theory, I could build a unified dog-name data-model and combine datasets, and keep looking for new sources to add. Maybe even make some FOIA requests. But I don&rsquo;t care that much. On to the answer. Let&rsquo;s hope NYC is a trend-setter &ndash; when it comes to naming pets after kids&rsquo; cartoon superheros.</p>
+<h2 id=step-3-explore-the-data>Step 3. Explore the data</h2>
+<p>Lots of tools but because I <em>know</em> that I won&rsquo;t productionalize this pipeline, I&rsquo;m going to dump the data into the commercial BI tool Tableau Desktop. Licenses are expensive, and there are many solid open source tools that will do the job. But the software allows me to do fast visual anaylsis. If you sign up for the
+<a href=https://www.coursera.org/learn/analytics-tableau target=_blank rel=noopener>free audit of this Coursera</a>, you&rsquo;ll see that after clicking through the 3rd week or so, you are provided a 6-month software license to complete the rest of the course. <em>YMMV.</em></p>
+<h3 id=visual-analysis>Visual Analysis</h3>
+<p>In this step, I&rsquo;m trying to get a feel for the data. Is it clean, is it reliable? Will it answer my question?</p>
+<p>What are the 5 most common names for dogs in NYC?</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:left><sub>Name</sub></th>
+<th style=text-align:center><sub>Frequency</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><sub>UNKNOWN</sub></td>
+<td style=text-align:center><sub>5379</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>BELLA</sub></td>
+<td style=text-align:center><sub>3824</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>NAME NOT PROVIDED</sub></td>
+<td style=text-align:center><sub>3763</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>MAX</sub></td>
+<td style=text-align:center><sub>3582</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>CHARLIE</sub></td>
+<td style=text-align:center><sub>2852</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>COCO</sub></td>
+<td style=text-align:center><sub>2636</sub></td>
+</tr>
+</tbody>
+</table>
+<p>Woof. That&rsquo;s a lot of <em>NULL</em>. Let&rsquo;s see how it&rsquo;s evenly distributed throughout the years</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:left><sub>AnimalName</sub></th>
+<th style=text-align:center><sub>2014</sub></th>
+<th style=text-align:center><sub>2015</sub></th>
+<th style=text-align:center><sub>2016</sub></th>
+<th style=text-align:center><sub>2017</sub></th>
+<th style=text-align:center><sub>2018</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><sub>UNKNOWN</sub></td>
+<td style=text-align:center><sub>3</sub></td>
+<td style=text-align:center><sub>1179</sub></td>
+<td style=text-align:center><sub>1903</sub></td>
+<td style=text-align:center><sub>1294</sub></td>
+<td style=text-align:center><sub>1000</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>BELLA</sub></td>
+<td style=text-align:center><sub>19</sub></td>
+<td style=text-align:center><sub>427</sub></td>
+<td style=text-align:center><sub>1332</sub></td>
+<td style=text-align:center><sub>1233</sub></td>
+<td style=text-align:center><sub>813</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>NAME NOT PROVIDED</sub></td>
+<td style=text-align:center><sub>11</sub></td>
+<td style=text-align:center><sub>963</sub></td>
+<td style=text-align:center><sub>1374</sub></td>
+<td style=text-align:center><sub>847</sub></td>
+<td style=text-align:center><sub>568</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>MAX</sub></td>
+<td style=text-align:center><sub>34</sub></td>
+<td style=text-align:center><sub>444</sub></td>
+<td style=text-align:center><sub>1214</sub></td>
+<td style=text-align:center><sub>1166</sub></td>
+<td style=text-align:center><sub>724</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>CHARLIE</sub></td>
+<td style=text-align:center><sub>26</sub></td>
+<td style=text-align:center><sub>293</sub></td>
+<td style=text-align:center><sub>1027</sub></td>
+<td style=text-align:center><sub>935</sub></td>
+<td style=text-align:center><sub>571</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>COCO</sub></td>
+<td style=text-align:center><sub>22</sub></td>
+<td style=text-align:center><sub>296</sub></td>
+<td style=text-align:center><sub>941</sub></td>
+<td style=text-align:center><sub>817</sub></td>
+<td style=text-align:center><sub>560</sub></td>
+</tr>
+</tbody>
+</table>
+<p>OK, better. It seems pretty flat, except for 2014. Let&rsquo;s do a quick check of total names per year, to see that indeed 2014 has many fewer.</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:left><sub>Year of LicenseIssuedDate</sub></th>
+<th style=text-align:center><sub>Frequency</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><sub>2014</sub></td>
+<td style=text-align:center><sub>2650</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>2015</sub></td>
+<td style=text-align:center><sub>42439</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>2016</sub></td>
+<td style=text-align:center><sub>119080</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>2017</sub></td>
+<td style=text-align:center><sub>110995</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>2018</sub></td>
+<td style=text-align:center><sub>70563</sub></td>
+</tr>
+</tbody>
+</table>
+<p>Bummer that 2019 registrations aren&rsquo;t there yet. I hope NYC is trend-setting enough to show a signal in 2018.</p>
+<p>Another learning is that we should exclude 2014 from the calculation &ndash; there are just not enough records, especially in comparison with other years.</p>
+<h3 id=initial-calculation>Initial Calculation</h3>
+<p>I want to start to measure trends, and I&rsquo;ll do so visually, since I need to only compare a handful of names.</p>
+<p>Marshall, Rubble, Chase, Rocky, Zuma and Skye. Let&rsquo;s add Ryder, even though he is a human in the cartoon. And the pups added in later seasons: Everest and Tracker.</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:left><sub>AnimalName</sub></th>
+<th style=text-align:center><sub>2014</sub></th>
+<th style=text-align:center><sub>2015</sub></th>
+<th style=text-align:center><sub>2016</sub></th>
+<th style=text-align:center><sub>2017</sub></th>
+<th style=text-align:center><sub>2018</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><sub>CHASE</sub></td>
+<td style=text-align:center><sub>7</sub></td>
+<td style=text-align:center><sub>49</sub></td>
+<td style=text-align:center><sub>115</sub></td>
+<td style=text-align:center><sub>170</sub></td>
+<td style=text-align:center><sub>86</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>EVEREST</sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub>1</sub></td>
+<td style=text-align:center><sub>9</sub></td>
+<td style=text-align:center><sub>5</sub></td>
+<td style=text-align:center><sub>3</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>MARSHALL</sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub>7</sub></td>
+<td style=text-align:center><sub>26</sub></td>
+<td style=text-align:center><sub>19</sub></td>
+<td style=text-align:center><sub>11</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>ROCKY</sub></td>
+<td style=text-align:center><sub>20</sub></td>
+<td style=text-align:center><sub>300</sub></td>
+<td style=text-align:center><sub>823</sub></td>
+<td style=text-align:center><sub>785</sub></td>
+<td style=text-align:center><sub>486</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>RUBBLE</sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub>6</sub></td>
+<td style=text-align:center><sub>2</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>RYDER</sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub>13</sub></td>
+<td style=text-align:center><sub>28</sub></td>
+<td style=text-align:center><sub>26</sub></td>
+<td style=text-align:center><sub>18</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>SKYE</sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub>10</sub></td>
+<td style=text-align:center><sub>61</sub></td>
+<td style=text-align:center><sub>54</sub></td>
+<td style=text-align:center><sub>36</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>TRACKER</sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub>1</sub></td>
+</tr>
+<tr>
+<td style=text-align:left><sub>ZUMA</sub></td>
+<td style=text-align:center><sub></sub></td>
+<td style=text-align:center><sub>2</sub></td>
+<td style=text-align:center><sub>2</sub></td>
+<td style=text-align:center><sub>2</sub></td>
+<td style=text-align:center><sub>2</sub></td>
+</tr>
+</tbody>
+</table>
+<p>A couple things to notice. There aren&rsquo;t enough Trackers, Rubbles or Zumas to use in any analysis. And Everest probably doesn&rsquo;t have enough data to compare, either, especially since she was a late addition to the pack.</p>
+<p>And because the yearly totals of registrations varies so greatly, I need to normalize my data. This means that I take the count of each unique name and divide by the total dogs registered in that year. Noticing that Rocky is the most popular from my list, and that in 2016 there were 823 Rockies registered, from a total of 119,080 registrations, I want to normalize for the prevalence of each name to a fixed integer, so that I can compare years. In effect, how popular a certain name was in that year. The metric is then be <code>frequency of dog-name per 10000 dogs</code>.</p>
+<h3 id=closing-the-calculation>Closing the calculation</h3>
+<p>The math doesn&rsquo;t get too complicated, because the data doesn&rsquo;t require anything else. I&rsquo;m going to use my normalized frequency metric to compare trends for Chase, Marshall, Rocky, Ryder, Rocky and Skye.</p>
+<p>I&rsquo;ve removed 2016 and 2017 now too, to try to more clearly show before and after. It&rsquo;s only Skye that shows any trend &ndash; effectively doubling in popularity.</p>
+<p><img src=/images/paw_patrol_results.png alt="paw patrol results"></p>
+<h2 id=step-4-shutting-it-down>Step 4. Shutting it down</h2>
+<p>I can&rsquo;t believe I&rsquo;ve spent this much time thinking about PAW Patrol. What I want to stress is that when you are working with data, for me it has been essential to</p>
+<ol>
+<li>
+<p>Understand the subject matter. In this case, that means passively absorbing all things PAW Patrol.</p>
+</li>
+<li>
+<p>Get dirty with the data. If you try to plug an algorithm on top of data, it&rsquo;s unlikely to give any meaningful results. Can you imagine creating a fancy data pipeline that spits out the 3 most popular dog names? <code>UNKNOWN</code>, <code>BELLA</code> and <code>NAME NOT PROVIDED</code>.</p>
+</li>
+</ol>
+<p>In case you haven&rsquo;t heard it already, here&rsquo;s their theme song. I&rsquo;ve been singing it to myself as I write this, and I hope it gets stuck in your head, too.</p>
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+<iframe src=https://www.youtube.com/embed/1UdI_eoDPKQ style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+<h1 id=heading>🐶🦴</h1>
+<h3 id=and-remember--_whenever-theres-trouble-just-yelp-for-help_>And remember&ndash;<em>Whenever there’s trouble, just yelp for help!</em></h3>
+<hr>
+<p><sub>Got a comment? Share your thoughts on
 <a href=https://twitter.com/philshem/status/1252861430723837956 target=_blank rel=noopener>Twitter</a> or
-<a href="https://news.ycombinator.com/item?id=22943114" target=_blank rel=noopener>HackerNews</a>.</sub></p><hr><h3 id=footnote>Footnote</h3><p><sub>[1] For a less fun look at PAW Patrol&rsquo;s effect on society, take a look at this recent academic paper:</sub></p><p><sub><a href=https://journals.sagepub.com/doi/abs/10.1177/1741659020903700 target=_blank rel=noopener><em>&ldquo;Whenever there’s trouble, just yelp for help&rdquo;: Crime, conservation, and corporatization in Paw Patrol</em></a></sub></p><blockquote><p><sub>I argue that the series suggests to audiences that we can and should rely on corporations and technological advancements to combat crime and conserve, with responsibilized individuals assisting in this endeavor.</sub></p></blockquote><blockquote><p><sub>Ultimately, PAW Patrol echoes core tenets of neoliberalism and encourages complicity in a global capitalist system that (re)produces inequalities and causes environmental harms.</sub></p></blockquote></div><div class=article-tags><a class="badge badge-light" href=/tag/open-data/>open data</a>
-<a class="badge badge-light" href=/tag/data-science/>data science</a></div><div class=share-box aria-hidden=true><ul class=share><li><a href="https://twitter.com/intent/tweet?url=https://smalldata.dev/posts/paw-patrol/&text=Data%20Science%20and%20PAW%20Patrol" target=_blank rel=noopener class=share-btn-twitter><i class="fab fa-twitter"></i></a></li><li><a href="https://www.facebook.com/sharer.php?u=https://smalldata.dev/posts/paw-patrol/&t=Data%20Science%20and%20PAW%20Patrol" target=_blank rel=noopener class=share-btn-facebook><i class="fab fa-facebook"></i></a></li><li><a href="https://news.ycombinator.com/submitlink?u=https://smalldata.dev/posts/paw-patrol/&t=Data%20Science%20and%20PAW%20Patrol" target=_blank rel=noopener class=share-btn-hackernews><i class="fab fa-hacker-news-square"></i></a></li><li><a href="mailto:?subject=Data%20Science%20and%20PAW%20Patrol&body=https://smalldata.dev/posts/paw-patrol/" target=_blank rel=noopener class=share-btn-email><i class="fas fa-envelope"></i></a></li></ul></div><div class="media author-card content-widget-hr"><img class="avatar mr-3 avatar-circle" src=/author/philip-shemella/avatar_hu0a1728dd5a2ac31c8d08e46a4ab7469f_33690_270x270_fill_q90_lanczos_center.jpg alt="Philip Shemella"><div class=media-body><h5 class=card-title><a href=/author/philip-shemella/>Philip Shemella</a></h5><p class=card-text>Thanks for reading</p><ul class=network-icon aria-hidden=true><li><a href=mailto:philip@smalldata.dev><i class="fas fa-envelope"></i></a></li><li><a href=https://twitter.com/philshem target=_blank rel=noopener><i class="fab fa-twitter"></i></a></li><li><a href=https://github.com/philshem target=_blank rel=noopener><i class="fab fa-github"></i></a></li><li><a href=https://opendata.stackexchange.com/users/1511/philshem target=_blank rel=noopener><i class="fab fa-stack-overflow"></i></a></li></ul></div></div></div></article><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin=anonymous></script><script>const code_highlighting=!0</script><script>const search_config={indexURI:"/index.json",minLength:1,threshold:.3},i18n={no_results:"No results found",placeholder:"Search...",results:"results found"},content_type={post:"Posts",project:"Projects",publication:"Publications",talk:"Talks",slides:"Slides"}</script><script id=search-hit-fuse-template type=text/x-template>
+<a href="https://news.ycombinator.com/item?id=22943114" target=_blank rel=noopener>HackerNews</a>.</sub></p>
+<hr>
+<h3 id=footnote>Footnote</h3>
+<p><sub>[1] For a less fun look at PAW Patrol&rsquo;s effect on society, take a look at this recent academic paper:</sub></p>
+<p><sub>
+<a href=https://journals.sagepub.com/doi/abs/10.1177/1741659020903700 target=_blank rel=noopener><em>&ldquo;Whenever there’s trouble, just yelp for help&rdquo;: Crime, conservation, and corporatization in Paw Patrol</em></a></sub></p>
+<blockquote>
+<p><sub>I argue that the series suggests to audiences that we can and should rely on corporations and technological advancements to combat crime and conserve, with responsibilized individuals assisting in this endeavor.</sub></p>
+</blockquote>
+<blockquote>
+<p><sub>Ultimately, PAW Patrol echoes core tenets of neoliberalism and encourages complicity in a global capitalist system that (re)produces inequalities and causes environmental harms.</sub></p>
+</blockquote>
+</div>
+<div class=article-tags>
+<a class="badge badge-light" href=/tag/open-data/>open data</a>
+<a class="badge badge-light" href=/tag/data-science/>data science</a>
+</div>
+<div class=share-box aria-hidden=true>
+<ul class=share>
+<li>
+<a href="https://twitter.com/intent/tweet?url=https://smalldata.github.io/posts/paw-patrol/&text=Data%20Science%20and%20PAW%20Patrol" target=_blank rel=noopener class=share-btn-twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/sharer.php?u=https://smalldata.github.io/posts/paw-patrol/&t=Data%20Science%20and%20PAW%20Patrol" target=_blank rel=noopener class=share-btn-facebook>
+<i class="fab fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="https://news.ycombinator.com/submitlink?u=https://smalldata.github.io/posts/paw-patrol/&t=Data%20Science%20and%20PAW%20Patrol" target=_blank rel=noopener class=share-btn-hackernews>
+<i class="fab fa-hacker-news-square"></i>
+</a>
+</li>
+<li>
+<a href="mailto:?subject=Data%20Science%20and%20PAW%20Patrol&body=https://smalldata.github.io/posts/paw-patrol/" target=_blank rel=noopener class=share-btn-email>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<img class="avatar mr-3 avatar-circle" src=/author/philip-shemella/avatar_hu0a1728dd5a2ac31c8d08e46a4ab7469f_33690_270x270_fill_q90_lanczos_center.jpg alt="Philip Shemella">
+<div class=media-body>
+<h5 class=card-title><a href=/author/philip-shemella/>Philip Shemella</a></h5>
+<p class=card-text>Thanks for reading</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=mailto:philip@smalldata.dev>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/philshem target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/philshem target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=https://opendata.stackexchange.com/users/1511/philshem target=_blank rel=noopener>
+<i class="fab fa-stack-overflow"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin=anonymous></script>
+<script>const code_highlighting=!0</script>
+<script>const search_config={indexURI:"/index.json",minLength:1,threshold:.3},i18n={no_results:"No results found",placeholder:"Search...",results:"results found"},content_type={post:"Posts",project:"Projects",publication:"Publications",talk:"Talks",slides:"Slides"}</script>
+<script id=search-hit-fuse-template type=text/x-template>
       <div class="search-hit" id="summary-{{key}}">
       <div class="search-hit-content">
         <div class="search-hit-name">
@@ -20,6 +519,48 @@
         </div>
       </div>
       </div>
-    </script><script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script><script src=/js/academic.min.19912f59e37190f8d23e7f331b162e03.js></script><div class=container><footer class=site-footer><p class=powered-by></p><p class=powered-by><span class=float-right aria-hidden=true><a href=# class=back-to-top><span class=button_icon><i class="fas fa-chevron-up fa-2x"></i></span></a></span></p></footer></div><div id=modal class="modal fade" role=dialog><div class=modal-dialog><div class=modal-content><div class=modal-header><h5 class=modal-title>Cite</h5><button type=button class=close data-dismiss=modal aria-label=Close>
-<span aria-hidden=true>&#215;</span></button></div><div class=modal-body><pre><code class="tex hljs"></code></pre></div><div class=modal-footer><a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank><i class="fas fa-copy"></i> Copy</a>
-<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank><i class="fas fa-download"></i> Download</a><div id=modal-error></div></div></div></div></div></body></html>
+    </script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
+<script src=/js/academic.min.f6ecf7692215f2bc4850b72c8176bfa2.js></script>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+</p>
+<p class=powered-by>
+<span class=float-right aria-hidden=true>
+<a href=# class=back-to-top>
+<span class=button_icon>
+<i class="fas fa-chevron-up fa-2x"></i>
+</span>
+</a>
+</span>
+</p>
+</footer>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

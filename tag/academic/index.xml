@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>academic | small DATA</title><link>https://smalldata.dev/tag/academic/</link><atom:link href="https://smalldata.dev/tag/academic/index.xml" rel="self" type="application/rss+xml"/><description>academic</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.dev/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_2.png</url><title>academic</title><link>https://smalldata.dev/tag/academic/</link></image><item><title>Open Access Research</title><link>https://smalldata.dev/posts/open-access-research/</link><pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate><guid>https://smalldata.dev/posts/open-access-research/</guid><description>&lt;p>&lt;em>In my definition of Open Anything, &amp;ldquo;open&amp;rdquo; is an imperative verb.&lt;/em>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>academic | small DATA</title><link>https://smalldata.github.io/tag/academic/</link><atom:link href="https://smalldata.github.io/tag/academic/index.xml" rel="self" type="application/rss+xml"/><description>academic</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate><image><url>https://smalldata.github.io/images/icon_hu137b7eee8aa8b920cff43510025d0585_16891_512x512_fill_lanczos_center_3.png</url><title>academic</title><link>https://smalldata.github.io/tag/academic/</link></image><item><title>Open Access Research</title><link>https://smalldata.github.io/posts/open-access-research/</link><pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate><guid>https://smalldata.github.io/posts/open-access-research/</guid><description>&lt;p>&lt;em>In my definition of Open Anything, &amp;ldquo;open&amp;rdquo; is an imperative verb.&lt;/em>&lt;/p>
 &lt;hr>
 &lt;p>Unless you are an academic publisher, you&amp;rsquo;re probably not a big fan of for-profit academic publishing.&lt;/p>
 &lt;p>The business model of many journals is to charge the authors publication fees, and then charge the readers access fees. Double dipping - it&amp;rsquo;s what the credit card companies do.&lt;/p>
@@ -74,7 +74,7 @@
 &lt;p>Journal of Physical Chemistry B 116 (24), 7351–7356&lt;/p>
 &lt;p>
 &lt;a href="https://pubs.acs.org/doi/10.1021/jp300786s" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/jp300786s.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/jp300786s.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091453/https://smalldata.dev/posts/open-access-research/jp300786s.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid22624664,
 title = {{{U}nderstanding the self-healing hydrophobic recovery of high-voltage insulators}},
@@ -94,7 +94,7 @@ pages = {7351--7356}
 &lt;p>Journal of Physical Chemistry B 115 (46), 13508–13512&lt;/p>
 &lt;p>
 &lt;a href="https://pubs.acs.org/doi/abs/10.1021/jp207589p" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/jp207589p.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/jp207589p.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091545/https://smalldata.dev/posts/open-access-research/jp207589p.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid22026429,
 title = {{{S}urface dynamics of amorphous polymers used for high-voltage insulators}},
@@ -114,7 +114,7 @@ pages = {13508--13512}
 &lt;p>Journal of Physical Chemistry B 115 (12) 2831–2835&lt;/p>
 &lt;p>
 &lt;a href="https://pubs.acs.org/doi/abs/10.1021/jp111318d" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/jp111318d.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/jp111318d.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091621/https://smalldata.dev/posts/open-access-research/jp111318d.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid21370843,
 title = {{{M}olecular motion of amorphous silicone polymers}},
@@ -134,8 +134,8 @@ pages = {2831--2835}
 &lt;p>Biophysical Journal 100 (9), 2217–2225&lt;/p>
 &lt;p>
 &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3149237/" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2011_Shemella_Biophys_J.pdf">pdf&lt;/a> (
-&lt;a href="https://smalldata.dev/pdfs/2011_Shemella_Biophys_J_Supp.pdf">supplement&lt;/a>) -
+&lt;a href="https://smalldata.github.io/pdfs/2011_Shemella_Biophys_J.pdf">pdf&lt;/a> (
+&lt;a href="https://smalldata.github.io/pdfs/2011_Shemella_Biophys_J_Supp.pdf">supplement&lt;/a>) -
 &lt;a href="https://web.archive.org/web/20190521091804/https://smalldata.dev/posts/open-access-research/2011_Shemella_Biophys_J.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid21539790,
 title = {{{E}lectronic structure of neighboring extein residue modulates intein {C}-terminal cleavage activity}},
@@ -155,7 +155,7 @@ pages = {2217--2225}
 &lt;p>Journal of Molecular Biology 406 (3), 430–442 (*Joint first-authorship)&lt;/p>
 &lt;p>
 &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3034788/" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2011_Pereira_JMB.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2011_Pereira_JMB.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091832/https://smalldata.dev/posts/open-access-research/2011_Pereira_JMB.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid21185311,
 title = {{{S}pontaneous proton transfer to a conserved intein residue determines on-pathway protein splicing}},
@@ -175,7 +175,7 @@ pages = {430--442}
 &lt;p>Contributions to Mineralogy and Petrology 160 (5), 743–759&lt;/p>
 &lt;p>
 &lt;a href="https://doi.org/10.1007/s00410-010-0505-3" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2010_Thomas_CMP.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2010_Thomas_CMP.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091901/https://smalldata.dev/posts/open-access-research/2010_Thomas_CMP.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{thomas2010titaniq,
 title = {TitaniQ under pressure: the effect of pressure and temperature on the solubility of Ti in quartz},
@@ -195,7 +195,7 @@ pages = {743--759}
 &lt;p>Journal of the American Chemical Society 131 (32), 11581–11589&lt;/p>
 &lt;p>
 &lt;a href="https://pubs.acs.org/doi/abs/10.1021/ja904318w" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2009_Du_JACS.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2009_Du_JACS.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091923/https://smalldata.dev/posts/open-access-research/2009_Du_JACS.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid19630416,
 title = {{{H}ighly conserved histidine plays a dual catalytic role in protein splicing: a p{K}a shift mechanism}},
@@ -215,7 +215,7 @@ pages = {11581--11589}
 &lt;p>Applied Physics Letters 94, 032101 (cover article)&lt;/p>
 &lt;p>
 &lt;a href="https://aip.scitation.org/doi/abs/10.1063/1.3070238" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2009_Shemella_APL.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2009_Shemella_APL.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521091945/https://smalldata.dev/posts/open-access-research/2009_Shemella_APL.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{doi:10.1063/1.3070238,
 title = {Electronic structure and band-gap modulation of graphene via substrate surface chemistry},
@@ -237,7 +237,7 @@ eprint = {https://doi.org/10.1063/1.3070238}
 &lt;p>Applied Physics Letters 91, 042101&lt;/p>
 &lt;p>
 &lt;a href="https://doi.org/10.1063/1.2761531" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2007_Shemella_APL.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2007_Shemella_APL.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521092014/https://smalldata.dev/posts/open-access-research/2007_Shemella_APL.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{doi:10.1063/1.2761531,
 title = {Energy gaps in zero-dimensional graphene nanoribbons},
@@ -259,7 +259,7 @@ eprint = {https://doi.org/10.1063/1.2761531}
 &lt;p>Biophysical Journal 92 (3), 847–853 (2007)&lt;/p>
 &lt;p>
 &lt;a href="https://www.ncbi.nlm.nih.gov/entrez?Db=pubmed&amp;amp;Cmd=ShowDetailView&amp;amp;uid=17085503" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2007_Shemella_Biophysical_Journal.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2007_Shemella_Biophysical_Journal.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521092041/https://smalldata.dev/posts/open-access-research/2007_Shemella_Biophysical_Journal.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@article{pmid17085503,
 title = {{{M}echanism for intein {C}-terminal cleavage: a proposal from quantum mechanical calculations}},
@@ -279,7 +279,7 @@ pages = {847--853}
 &lt;p>Computational Modeling in Biomechanics, 469–489&lt;/p>
 &lt;p>
 &lt;a href="https://link.springer.com/chapter/10.1007/978-90-481-3575-2_16" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/Chapter1.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/Chapter1.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521092107/https://smalldata.dev/posts/open-access-research/Chapter1.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@inbook{computational2010,
 title = {Identifying the Reaction Mechanisms of Inteins with QM/MM Multiscale Methods},
@@ -298,7 +298,7 @@ doi = {10.1007/978-90-481-3575-2\_16}
 &lt;p>Department of Physics, Applied Physics &amp;amp; Astronomy, Rensselaer Polytechnic Institute&lt;/p>
 &lt;p>
 &lt;a href="https://arxiv.org/abs/0903.4570" target="_blank" rel="noopener">www&lt;/a> -
-&lt;a href="https://smalldata.dev/pdfs/2008_Shemella_PhD_Thesis.pdf">pdf&lt;/a> -
+&lt;a href="https://smalldata.github.io/pdfs/2008_Shemella_PhD_Thesis.pdf">pdf&lt;/a> -
 &lt;a href="https://web.archive.org/web/20190521092517/https://smalldata.dev/posts/open-access-research/2008_Shemella_PhD_Thesis.pdf" target="_blank" rel="noopener">wayback archive&lt;/a>&lt;/p>
 &lt;pre>&lt;code>@phdthesis{phdthesis,
 title = {First Principles Study of Intein Reaction Mechanisms},
